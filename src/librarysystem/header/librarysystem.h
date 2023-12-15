@@ -8,10 +8,6 @@ namespace Librarysystem {
 
 class Librarysystem {
  public:
-
-
-
-
 };
 }
 }
