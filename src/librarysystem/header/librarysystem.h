@@ -7,6 +7,13 @@
 using namespace std;
 namespace Coruh {
 namespace Librarysystem {
+
+struct Deneme {
+
+  int adminUserMenu();
+};
+
+};
 struct User {
   string email;
   string name;
@@ -32,9 +39,8 @@ struct WishList {
 
 struct ReadingTracker {
 
+
 };
-
 }
 }
-
 #endif
