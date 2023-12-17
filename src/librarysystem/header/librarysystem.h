@@ -13,6 +13,7 @@ struct Deneme {
   int adminUserMenu();
 };
 
+};
 struct User {
   string email;
   string name;
@@ -40,7 +41,6 @@ struct ReadingTracker {
 
 
 };
-
 }
 }
 #endif
