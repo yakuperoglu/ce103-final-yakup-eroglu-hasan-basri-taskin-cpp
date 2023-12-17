@@ -3,12 +3,11 @@
 #include <string>
 #include <sstream>
 #include <stdexcept>
-#include "../../librarysystem/header/librarysystem.h"
+#include "librarysystem.h"
 
-using namespace Coruh::Librarysystem;
 using namespace std;
 
-
 int main() {
+  mainMenu();
   return 0;
 }
