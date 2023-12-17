@@ -5,15 +5,12 @@
 
 namespace Coruh {
 namespace Librarysystem {
+struct Deneme {
 
-class Librarysystem {
- public:
-
-
-
+  int adminUserMenu();
 
 };
-}
-}
 
+}
+}
 #endif
