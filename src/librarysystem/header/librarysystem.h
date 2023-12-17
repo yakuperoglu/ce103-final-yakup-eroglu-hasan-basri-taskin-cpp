@@ -11,6 +11,7 @@ namespace Librarysystem {
 struct Deneme {
 
   int adminUserMenu();
+};
 
 struct User {
   string email;
