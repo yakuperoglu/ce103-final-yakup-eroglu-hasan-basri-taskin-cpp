@@ -1,21 +1,18 @@
 #ifndef LIBRARYSYSTEM_H
 #define LIBRARYSYSTEM_H
 
-#include <string>
+using namespace std;
 
-int mainMenu();
-
-bool userOperations();
-
+const int maxStringSize = 100;
 struct User {
-  std::string email;
-  std::string name;
-  std::string surname;
+  char email[maxStringSize];
+  char name[maxStringSize];
+  char surname[maxStringSize];
 };
 
 struct UserAuthentication {
-  User login(const std::string &email, const std::string &password);
-  bool registerUser(const std::string &email, const std::string &name, const std::string &surname, const std::string &password);
+  User login(const char &email, const char &password);
+  bool registerUser(const char &email, const char &name, const char &surname, const char &password);
 };
 
 struct BookSystem {
@@ -47,5 +44,10 @@ struct ReadingTracker {
 struct dataBase {
 
 };
-
+struct FileBinaryOperations {
+  bool WriteFile();
+  bool ReadFile();
+  bool ConvertBinaryToText();
+  bool ConvertTextToBinary();
+};
 #endif

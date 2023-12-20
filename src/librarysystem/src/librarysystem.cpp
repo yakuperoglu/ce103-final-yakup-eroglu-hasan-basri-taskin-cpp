@@ -1,8 +1,8 @@
+#include "../header/librarysystem.h"
 #include <iostream>
 #include <stdexcept>
 #include "librarysystem.h"
 #include <stdio.h>
-
 using namespace std;
 
 void clearScreen() {
@@ -83,7 +83,6 @@ bool adminOperations() {
         break;
     }
   }
-
   return 0;
 }
 
@@ -104,8 +103,6 @@ bool guestOperations() {
 
   return 0;
 }
-
-int mainMenu() {
   int choice;
 
   while (true) {
