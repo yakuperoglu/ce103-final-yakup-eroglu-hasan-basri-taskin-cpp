@@ -2,40 +2,47 @@
 #define LIBRARYSYSTEM_H
 
 #include <string>
-
 using namespace std;
 
 
-
-struct Deneme {
-  static int admin_UserMenu();
-};
-
 struct User {
-  string email;
-  string name;
-  string surname;
-
+  std::string email;
+  std::string name;
+  std::string surname;
 };
-struct UserAuthentication {
-  User login(const string &email, const string &password);
-  bool registerUser(const string &email, const string &name, const string &surname, const string &password);
 
+struct UserAuthentication {
+  User login(const std::string &email, const std::string &password);
+  bool registerUser(const std::string &email, const std::string &name, const std::string &surname, const std::string &password);
 };
 
 struct BookSystem {
-
+  static bool addBook();
+  static bool updateBook();
+  static bool deleteBook();
+  static bool viewCatalog();
 };
-struct LoanManagment {
 
+struct LoanManagment {
+  static bool lendBook();
+  static bool borrowBook();
+  static bool viewLoans();
 };
 
 struct WishList {
-
+  static bool wishList();
+  static bool addToWishList();
+  static bool removeFromWishList();
 };
 
-struct ReadingTracker {
 
+struct ReadingTracker {
+  static bool logProgress();
+  static bool markAsRead();
+  static bool viewHistory();
+};
+
+struct dataBase {
 
 };
 struct FileBinaryOperations {

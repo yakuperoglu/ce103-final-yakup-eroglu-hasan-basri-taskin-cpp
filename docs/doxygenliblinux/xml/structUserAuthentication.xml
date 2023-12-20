@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structUserAuthentication" kind="struct" language="C++" prot="public">
+    <compoundname>UserAuthentication</compoundname>
+    <includes refid="librarysystem_8h" local="no">librarysystem.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="structUserAuthentication_1ac5bef1a83850ed6f8334deae93a08d1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structUser" kindref="compound">User</ref></type>
+        <definition>User UserAuthentication::login</definition>
+        <argsstring>(const std::string &amp;email, const std::string &amp;password)</argsstring>
+        <name>login</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="17" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="structUserAuthentication_1a9623b520488ec81fa0729ca41e498c87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool UserAuthentication::registerUser</definition>
+        <argsstring>(const std::string &amp;email, const std::string &amp;name, const std::string &amp;surname, const std::string &amp;password)</argsstring>
+        <name>registerUser</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>email</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>surname</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>password</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="18" column="8"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>UserAuthentication</label>
+        <link refid="structUserAuthentication"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/librarysystem/header/librarysystem.h" line="16" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="16" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structUserAuthentication_1ac5bef1a83850ed6f8334deae93a08d1c" prot="public" virt="non-virtual"><scope>UserAuthentication</scope><name>login</name></member>
+      <member refid="structUserAuthentication_1a9623b520488ec81fa0729ca41e498c87" prot="public" virt="non-virtual"><scope>UserAuthentication</scope><name>registerUser</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

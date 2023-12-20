@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_book_system" kind="struct" language="C++" prot="public">
+    <compoundname>BookSystem</compoundname>
+    <includes refid="librarysystem_8h" local="no">librarysystem.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="struct_book_system_1ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BookSystem::addBook</definition>
+        <argsstring>()</argsstring>
+        <name>addBook</name>
+        <qualifiedname>BookSystem::addBook</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="22" column="13" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp" bodystart="16" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_book_system_1afd5d16e30133f994e7848bad853b997f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool BookSystem::updateBook</definition>
+        <argsstring>()</argsstring>
+        <name>updateBook</name>
+        <qualifiedname>BookSystem::updateBook</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="23" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_book_system_1abd98df330ab4a2a2b65912e70d78baee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool BookSystem::deleteBook</definition>
+        <argsstring>()</argsstring>
+        <name>deleteBook</name>
+        <qualifiedname>BookSystem::deleteBook</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="24" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_book_system_1afafdcd45359538d7c1855b719b2e650d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool BookSystem::viewCatalog</definition>
+        <argsstring>()</argsstring>
+        <name>viewCatalog</name>
+        <qualifiedname>BookSystem::viewCatalog</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="25" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>BookSystem</label>
+        <link refid="struct_book_system"/>
+      </node>
+    </collaborationgraph>
+    <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="21" column="1" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" bodystart="21" bodyend="26"/>
+    <listofallmembers>
+      <member refid="struct_book_system_1ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e" prot="public" virt="non-virtual"><scope>BookSystem</scope><name>addBook</name></member>
+      <member refid="struct_book_system_1abd98df330ab4a2a2b65912e70d78baee" prot="public" virt="non-virtual"><scope>BookSystem</scope><name>deleteBook</name></member>
+      <member refid="struct_book_system_1afd5d16e30133f994e7848bad853b997f" prot="public" virt="non-virtual"><scope>BookSystem</scope><name>updateBook</name></member>
+      <member refid="struct_book_system_1afafdcd45359538d7c1855b719b2e650d" prot="public" virt="non-virtual"><scope>BookSystem</scope><name>viewCatalog</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
