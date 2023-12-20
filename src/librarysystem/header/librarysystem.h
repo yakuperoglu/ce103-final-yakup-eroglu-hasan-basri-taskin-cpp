@@ -50,5 +50,5 @@ struct FileBinaryOperations {
   bool ReadFile();
   bool ConvertBinaryToText();
   bool ConvertTextToBinary();
-}
+};
 #endif
