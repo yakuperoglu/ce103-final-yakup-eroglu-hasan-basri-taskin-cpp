@@ -29,8 +29,8 @@ bool adminOperations() {
 bool guestOperations() {
   return 0;
 }
-  int choice;
-
+int choice;
+int mainMenu() {
   while (true) {
     clearScreen();
     cout << "Welcome To Personal Library System\nPlease Login\n\n";
