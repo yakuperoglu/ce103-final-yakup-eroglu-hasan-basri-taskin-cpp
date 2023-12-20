@@ -2,10 +2,8 @@
 #define LIBRARYSYSTEM_H
 
 #include <string>
+using namespace std;
 
-int mainMenu();
-
-bool userOperations();
 
 struct User {
   std::string email;
@@ -47,5 +45,10 @@ struct ReadingTracker {
 struct dataBase {
 
 };
-
+struct FileBinaryOperations {
+  bool WriteFile();
+  bool ReadFile();
+  bool ConvertBinaryToText();
+  bool ConvertTextToBinary();
+}
 #endif
