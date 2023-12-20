@@ -1,13 +1,10 @@
 #include "../header/librarysystem.h"
-#include <stdexcept>
 #include <stdio.h>
 #include <iostream>
 
-using namespace Coruh::Librarysystem;
 using namespace std;
 
-
-int adminUserMenu() {
+int Deneme::admin_UserMenu() {
   int choice;
   cout << "Welcome to PersonalLibrarySystem \n" << "Please Select User Or Admin";
   cin >> choice;
@@ -30,7 +27,4 @@ int adminUserMenu() {
   }
 
   return 0;
-}
-
-int mainMenu() {
 }

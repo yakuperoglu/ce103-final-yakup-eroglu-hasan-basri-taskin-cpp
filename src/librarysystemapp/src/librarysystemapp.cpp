@@ -1,14 +1,10 @@
 #include <iostream>
 #include <stack>
-#include <string>
-#include <sstream>
-#include <stdexcept>
-#include "../../librarysystem/header/librarysystem.h"
+#include "librarysystem.h"
 
-using namespace Coruh::Librarysystem;
 using namespace std;
 
-
 int main() {
+  Deneme::admin_UserMenu();
   return 0;
 }

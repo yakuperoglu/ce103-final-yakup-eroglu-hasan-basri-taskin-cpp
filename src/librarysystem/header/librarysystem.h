@@ -3,17 +3,14 @@
 
 #include <string>
 
-#include "../../utility/header/commonTypes.h"
 using namespace std;
-namespace Coruh {
-namespace Librarysystem {
+
+
 
 struct Deneme {
-
-  int adminUserMenu();
+  static int admin_UserMenu();
 };
 
-};
 struct User {
   string email;
   string name;
@@ -41,6 +38,10 @@ struct ReadingTracker {
 
 
 };
-}
+struct FileBinaryOperations {
+  bool WriteFile();
+  bool ReadFile();
+  bool ConvertBinaryToText();
+  bool ConvertTextToBinary();
 }
 #endif
