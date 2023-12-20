@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structLoanManagment" kind="struct" language="C++" prot="public">
+    <compoundname>LoanManagment</compoundname>
+    <includes refid="librarysystem_8h" local="no">librarysystem.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="structLoanManagment_1ad9a36d89e70979014d3e85cc1ffbd1eb" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool LoanManagment::lendBook</definition>
+        <argsstring>()</argsstring>
+        <name>lendBook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="29" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structLoanManagment_1a808715edaaa5db8fbdb5ed6f78aabd13" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool LoanManagment::borrowBook</definition>
+        <argsstring>()</argsstring>
+        <name>borrowBook</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="30" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="structLoanManagment_1a8e0a2e2503a3a5704be5888828bc9394" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool LoanManagment::viewLoans</definition>
+        <argsstring>()</argsstring>
+        <name>viewLoans</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="31" column="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>LoanManagment</label>
+        <link refid="structLoanManagment"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/librarysystem/header/librarysystem.h" line="28" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="28" bodyend="32"/>
+    <listofallmembers>
+      <member refid="structLoanManagment_1a808715edaaa5db8fbdb5ed6f78aabd13" prot="public" virt="non-virtual"><scope>LoanManagment</scope><name>borrowBook</name></member>
+      <member refid="structLoanManagment_1ad9a36d89e70979014d3e85cc1ffbd1eb" prot="public" virt="non-virtual"><scope>LoanManagment</scope><name>lendBook</name></member>
+      <member refid="structLoanManagment_1a8e0a2e2503a3a5704be5888828bc9394" prot="public" virt="non-virtual"><scope>LoanManagment</scope><name>viewLoans</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

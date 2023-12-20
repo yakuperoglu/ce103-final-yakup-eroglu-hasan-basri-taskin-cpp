@@ -13,6 +13,23 @@ void clearScreen() {
 #endif
 }
 
+bool BookSystem::addBook() {
+  cout << "hello ";
+  return 0;
+}
+
+bool userOperations() {
+  return 0;
+}
+
+bool adninOperations() {
+  return 0;
+}
+
+bool guestOperations() {
+  return 0;
+}
+
 int mainMenu() {
   int choice;
 
@@ -40,6 +57,7 @@ int mainMenu() {
 
       case 4:
         cout << "ExitProgram";
+        return 0;
         break;
 
       default:

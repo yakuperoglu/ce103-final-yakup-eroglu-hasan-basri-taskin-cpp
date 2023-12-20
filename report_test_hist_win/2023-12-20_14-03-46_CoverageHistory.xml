@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2023-12-20_14-03-46" tag="">
+  <assembly name="C:\Users\Yakup\Documents\GitHub\For Final\ce103-final-yakup-eroglu-hasan-basri-taskin-cpp\build_win\build\Debug\librarysystem_tests.exe">
+    <class name="librarysystem_test.cpp" coveredlines="4" coverablelines="4" totallines="22" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+  <assembly name="C:\Users\Yakup\Documents\GitHub\For Final\ce103-final-yakup-eroglu-hasan-basri-taskin-cpp\build_win\build\Debug\librarysystemapp.exe">
+    <class name="librarysystem.cpp" coveredlines="27" coverablelines="30" totallines="64" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+    <class name="librarysystemapp.cpp" coveredlines="5" coverablelines="5" totallines="14" coveredbranches="0" totalbranches="0" coveredcodeelements="0" totalcodeelements="0" />
+  </assembly>
+</coverage>
