@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_14c308945840d299965a51464014f066" kind="dir">
+    <compoundname> Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header</compoundname>
+    <innerfile refid="librarysystem_8h">librarysystem.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/"/>
+  </compounddef>
+</doxygen>

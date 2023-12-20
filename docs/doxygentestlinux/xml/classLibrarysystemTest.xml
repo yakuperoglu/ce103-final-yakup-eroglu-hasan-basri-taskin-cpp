@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="classLibrarysystemTest" kind="class" language="C++" prot="public">
+    <compoundname>LibrarysystemTest</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">testing::Test</basecompoundref>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classLibrarysystemTest_1ae06d15fccfe480822db83caf449bba65" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LibrarysystemTest::SetUp</definition>
+        <argsstring>() override</argsstring>
+        <name>SetUp</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="6" column="8" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="6" bodyend="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classLibrarysystemTest_1ac1b5cb74c061ecab507ab13da0745ef6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LibrarysystemTest::TearDown</definition>
+        <argsstring>() override</argsstring>
+        <name>TearDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="9" column="8" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="9" bodyend="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>testing::Test</label>
+      </node>
+      <node id="1">
+        <label>LibrarysystemTest</label>
+        <link refid="classLibrarysystemTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>testing::Test</label>
+      </node>
+      <node id="1">
+        <label>LibrarysystemTest</label>
+        <link refid="classLibrarysystemTest"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/tests/librarysystem/librarysystem_test.cpp" line="4" column="1" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="4" bodyend="11"/>
+    <listofallmembers>
+      <member refid="classLibrarysystemTest_1ae06d15fccfe480822db83caf449bba65" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>SetUp</name></member>
+      <member refid="classLibrarysystemTest_1ac1b5cb74c061ecab507ab13da0745ef6" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>TearDown</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

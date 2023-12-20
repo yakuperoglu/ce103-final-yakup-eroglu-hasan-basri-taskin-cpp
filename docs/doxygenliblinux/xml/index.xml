@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.1" xml:lang="en-US">
+  <compound refid="structBookSystem" kind="struct"><name>BookSystem</name>
+    <member refid="structBookSystem_1ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e" kind="function"><name>addBook</name></member>
+    <member refid="structBookSystem_1afd5d16e30133f994e7848bad853b997f" kind="function"><name>updateBook</name></member>
+    <member refid="structBookSystem_1abd98df330ab4a2a2b65912e70d78baee" kind="function"><name>deleteBook</name></member>
+    <member refid="structBookSystem_1afafdcd45359538d7c1855b719b2e650d" kind="function"><name>viewCatalog</name></member>
+  </compound>
+  <compound refid="structdataBase" kind="struct"><name>dataBase</name>
+  </compound>
+  <compound refid="structLoanManagment" kind="struct"><name>LoanManagment</name>
+    <member refid="structLoanManagment_1ad9a36d89e70979014d3e85cc1ffbd1eb" kind="function"><name>lendBook</name></member>
+    <member refid="structLoanManagment_1a808715edaaa5db8fbdb5ed6f78aabd13" kind="function"><name>borrowBook</name></member>
+    <member refid="structLoanManagment_1a8e0a2e2503a3a5704be5888828bc9394" kind="function"><name>viewLoans</name></member>
+  </compound>
+  <compound refid="structReadingTracker" kind="struct"><name>ReadingTracker</name>
+    <member refid="structReadingTracker_1a1c1698fca142233064e19922f35467e2" kind="function"><name>logProgress</name></member>
+    <member refid="structReadingTracker_1a65ea3781c96721b6c99b56dd7e1afe2d" kind="function"><name>markAsRead</name></member>
+    <member refid="structReadingTracker_1a4e88992e2bb701c52619bb63a92e1189" kind="function"><name>viewHistory</name></member>
+  </compound>
+  <compound refid="structUser" kind="struct"><name>User</name>
+    <member refid="structUser_1ac35b7c63228119cb91acdbd7ed32b8cb" kind="variable"><name>email</name></member>
+    <member refid="structUser_1a085d8d69282b6298964eab8351584536" kind="variable"><name>name</name></member>
+    <member refid="structUser_1a2ed359f3148bd0b95ec8d964c278dbbd" kind="variable"><name>surname</name></member>
+  </compound>
+  <compound refid="structUserAuthentication" kind="struct"><name>UserAuthentication</name>
+    <member refid="structUserAuthentication_1ac5bef1a83850ed6f8334deae93a08d1c" kind="function"><name>login</name></member>
+    <member refid="structUserAuthentication_1a9623b520488ec81fa0729ca41e498c87" kind="function"><name>registerUser</name></member>
+  </compound>
+  <compound refid="structWishList" kind="struct"><name>WishList</name>
+    <member refid="structWishList_1a4788c1d8dcddef223d1450e7d1eb14b0" kind="function"><name>wishList</name></member>
+    <member refid="structWishList_1a5233f14d72d13fbb88d69df73cb186b0" kind="function"><name>addToWishList</name></member>
+    <member refid="structWishList_1a8e4435e8d04722927cb497ae8b66e9e1" kind="function"><name>removeFromWishList</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="librarysystem_8h" kind="file"><name>librarysystem.h</name>
+    <member refid="librarysystem_8h_1a8396c50bf544009fb2fc4907b00cbad3" kind="function"><name>mainMenu</name></member>
+    <member refid="librarysystem_8h_1adc53ae8c72d75f7fd7054169f0808f69" kind="function"><name>userOperations</name></member>
+  </compound>
+  <compound refid="librarysystem_8cpp" kind="file"><name>librarysystem.cpp</name>
+    <member refid="librarysystem_8cpp_1a9d7e8af417b6d543da691e9c0e2f6f9f" kind="function"><name>clearScreen</name></member>
+    <member refid="librarysystem_8cpp_1adc53ae8c72d75f7fd7054169f0808f69" kind="function"><name>userOperations</name></member>
+    <member refid="librarysystem_8cpp_1a73f5ab77c6860bf0c0e6a86b46cf1298" kind="function"><name>adninOperations</name></member>
+    <member refid="librarysystem_8cpp_1a8c8550dee3fe391fe425061cfee209b5" kind="function"><name>guestOperations</name></member>
+    <member refid="librarysystem_8cpp_1a8396c50bf544009fb2fc4907b00cbad3" kind="function"><name>mainMenu</name></member>
+  </compound>
+  <compound refid="librarysystemapp_8h" kind="file"><name>librarysystemapp.h</name>
+  </compound>
+  <compound refid="librarysystemapp_8cpp" kind="file"><name>librarysystemapp.cpp</name>
+    <member refid="librarysystemapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="commonTypes_8h" kind="file"><name>commonTypes.h</name>
+  </compound>
+  <compound refid="mathUtility_8h" kind="file"><name>mathUtility.h</name>
+  </compound>
+  <compound refid="mathUtility_8cpp" kind="file"><name>mathUtility.cpp</name>
+  </compound>
+  <compound refid="dir_4e76df52fa7f72328277230951da1767" kind="dir"><name>src/librarysystem/header</name>
+  </compound>
+  <compound refid="dir_9fdab4eefcef229872e6cc2b3507d8cd" kind="dir"><name>src/librarysystemapp/header</name>
+  </compound>
+  <compound refid="dir_1a3b8499b331fe4e1564b1eb295a0893" kind="dir"><name>src/utility/header</name>
+  </compound>
+  <compound refid="dir_39e7d2ef6941a890097e9a67e73b43a0" kind="dir"><name>src/librarysystem</name>
+  </compound>
+  <compound refid="dir_f586dae50a00e0ad832860da9fb01ffa" kind="dir"><name>src/librarysystemapp</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+  <compound refid="dir_e19528fd32da302f4a4aca9cc53ac316" kind="dir"><name>src/librarysystem/src</name>
+  </compound>
+  <compound refid="dir_e321dbd61ee74a36648fb4a0d3c61f42" kind="dir"><name>src/librarysystemapp/src</name>
+  </compound>
+  <compound refid="dir_e82d5b00f3064e3249317b7e44769fc6" kind="dir"><name>src/utility/src</name>
+  </compound>
+  <compound refid="dir_0619a8f54b4fad7043a6de45be8fde0b" kind="dir"><name>src/utility</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>

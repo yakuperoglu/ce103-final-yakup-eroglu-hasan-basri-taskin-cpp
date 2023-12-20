@@ -1,0 +1,131 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="librarysystem_8h" kind="file" language="C++">
+    <compoundname>librarysystem.h</compoundname>
+    <includes local="no">string</includes>
+    <includedby refid="librarysystem_8cpp" local="yes">src/librarysystem/src/librarysystem.cpp</includedby>
+    <includedby refid="librarysystemapp_8cpp" local="yes">src/librarysystemapp/src/librarysystemapp.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>src/librarysystem/header/librarysystem.h</label>
+        <link refid="librarysystem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>src/librarysystem/src/librarysystem.cpp</label>
+        <link refid="librarysystem_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/librarysystem/header/librarysystem.h</label>
+        <link refid="librarysystem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/librarysystemapp/src/librarysystemapp.cpp</label>
+        <link refid="librarysystemapp_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structUser" prot="public">User</innerclass>
+    <innerclass refid="structUserAuthentication" prot="public">UserAuthentication</innerclass>
+    <innerclass refid="structBookSystem" prot="public">BookSystem</innerclass>
+    <innerclass refid="structLoanManagment" prot="public">LoanManagment</innerclass>
+    <innerclass refid="structWishList" prot="public">WishList</innerclass>
+    <innerclass refid="structReadingTracker" prot="public">ReadingTracker</innerclass>
+    <innerclass refid="structdataBase" prot="public">dataBase</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="librarysystem_8h_1a8396c50bf544009fb2fc4907b00cbad3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int mainMenu</definition>
+        <argsstring>()</argsstring>
+        <name>mainMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="6" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="37" bodyend="73" declfile="src/librarysystem/header/librarysystem.h" declline="6" declcolumn="5"/>
+      </memberdef>
+      <memberdef kind="function" id="librarysystem_8h_1adc53ae8c72d75f7fd7054169f0808f69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool userOperations</definition>
+        <argsstring>()</argsstring>
+        <name>userOperations</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="8" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="22" bodyend="25" declfile="src/librarysystem/header/librarysystem.h" declline="8" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a8396c50bf544009fb2fc4907b00cbad3" kindref="member">mainMenu</ref>();</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1adc53ae8c72d75f7fd7054169f0808f69" kindref="member">userOperations</ref>();</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="structUser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structUser" kindref="compound">User</ref><sp/>{</highlight></codeline>
+<codeline lineno="11" refid="structUser_1ac35b7c63228119cb91acdbd7ed32b8cb" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="structUser_1ac35b7c63228119cb91acdbd7ed32b8cb" kindref="member">email</ref>;</highlight></codeline>
+<codeline lineno="12" refid="structUser_1a085d8d69282b6298964eab8351584536" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="structUser_1a085d8d69282b6298964eab8351584536" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="13" refid="structUser_1a2ed359f3148bd0b95ec8d964c278dbbd" refkind="member"><highlight class="normal"><sp/><sp/>std::string<sp/><ref refid="structUser_1a2ed359f3148bd0b95ec8d964c278dbbd" kindref="member">surname</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="structUserAuthentication" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structUserAuthentication" kindref="compound">UserAuthentication</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="structUserAuthentication_1ac5bef1a83850ed6f8334deae93a08d1c" refkind="member"><highlight class="normal"><sp/><sp/><ref refid="structUser" kindref="compound">User</ref><sp/><ref refid="structUserAuthentication_1ac5bef1a83850ed6f8334deae93a08d1c" kindref="member">login</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;email,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;password);</highlight></codeline>
+<codeline lineno="18" refid="structUserAuthentication_1a9623b520488ec81fa0729ca41e498c87" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structUserAuthentication_1a9623b520488ec81fa0729ca41e498c87" kindref="member">registerUser</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;email,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;surname,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;password);</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="structBookSystem" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structBookSystem" kindref="compound">BookSystem</ref><sp/>{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBookSystem_1ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e" kindref="member">addBook</ref>();</highlight></codeline>
+<codeline lineno="23" refid="structBookSystem_1afd5d16e30133f994e7848bad853b997f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBookSystem_1afd5d16e30133f994e7848bad853b997f" kindref="member">updateBook</ref>();</highlight></codeline>
+<codeline lineno="24" refid="structBookSystem_1abd98df330ab4a2a2b65912e70d78baee" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBookSystem_1abd98df330ab4a2a2b65912e70d78baee" kindref="member">deleteBook</ref>();</highlight></codeline>
+<codeline lineno="25" refid="structBookSystem_1afafdcd45359538d7c1855b719b2e650d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBookSystem_1afafdcd45359538d7c1855b719b2e650d" kindref="member">viewCatalog</ref>();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="structLoanManagment" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structLoanManagment" kindref="compound">LoanManagment</ref><sp/>{</highlight></codeline>
+<codeline lineno="29" refid="structLoanManagment_1ad9a36d89e70979014d3e85cc1ffbd1eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLoanManagment_1ad9a36d89e70979014d3e85cc1ffbd1eb" kindref="member">lendBook</ref>();</highlight></codeline>
+<codeline lineno="30" refid="structLoanManagment_1a808715edaaa5db8fbdb5ed6f78aabd13" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLoanManagment_1a808715edaaa5db8fbdb5ed6f78aabd13" kindref="member">borrowBook</ref>();</highlight></codeline>
+<codeline lineno="31" refid="structLoanManagment_1a8e0a2e2503a3a5704be5888828bc9394" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structLoanManagment_1a8e0a2e2503a3a5704be5888828bc9394" kindref="member">viewLoans</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="structWishList" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structWishList" kindref="compound">WishList</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="structWishList_1a4788c1d8dcddef223d1450e7d1eb14b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structWishList_1a4788c1d8dcddef223d1450e7d1eb14b0" kindref="member">wishList</ref>();</highlight></codeline>
+<codeline lineno="36" refid="structWishList_1a5233f14d72d13fbb88d69df73cb186b0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structWishList_1a5233f14d72d13fbb88d69df73cb186b0" kindref="member">addToWishList</ref>();</highlight></codeline>
+<codeline lineno="37" refid="structWishList_1a8e4435e8d04722927cb497ae8b66e9e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structWishList_1a8e4435e8d04722927cb497ae8b66e9e1" kindref="member">removeFromWishList</ref>();</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="structReadingTracker" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structReadingTracker" kindref="compound">ReadingTracker</ref><sp/>{</highlight></codeline>
+<codeline lineno="42" refid="structReadingTracker_1a1c1698fca142233064e19922f35467e2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structReadingTracker_1a1c1698fca142233064e19922f35467e2" kindref="member">logProgress</ref>();</highlight></codeline>
+<codeline lineno="43" refid="structReadingTracker_1a65ea3781c96721b6c99b56dd7e1afe2d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structReadingTracker_1a65ea3781c96721b6c99b56dd7e1afe2d" kindref="member">markAsRead</ref>();</highlight></codeline>
+<codeline lineno="44" refid="structReadingTracker_1a4e88992e2bb701c52619bb63a92e1189" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structReadingTracker_1a4e88992e2bb701c52619bb63a92e1189" kindref="member">viewHistory</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47" refid="structdataBase" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="structdataBase" kindref="compound">dataBase</ref><sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="src/librarysystem/header/librarysystem.h"/>
+  </compounddef>
+</doxygen>
