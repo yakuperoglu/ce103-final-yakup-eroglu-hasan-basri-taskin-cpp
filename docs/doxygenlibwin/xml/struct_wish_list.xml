@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="35" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="35" column="15"/>
       </memberdef>
       <memberdef kind="function" id="struct_wish_list_1a5233f14d72d13fbb88d69df73cb186b0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="36" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="36" column="15"/>
       </memberdef>
       <memberdef kind="function" id="struct_wish_list_1a8e4435e8d04722927cb497ae8b66e9e1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="37" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="37" column="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

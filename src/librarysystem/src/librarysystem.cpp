@@ -18,15 +18,89 @@ bool BookSystem::addBook() {
   return 0;
 }
 
+bool BookSystem::deleteBook() {
+  cout << "hello ";
+  return 0;
+}
+
+bool BookSystem::updateBook() {
+  cout << "hello ";
+  return 0;
+}
+
+
 bool userOperations() {
+  int choice;
+
+  while (true) {
+    clearScreen();
+    cout << "welcome to User Operations\n\n";
+    cout << "1. Add Book\n";
+    cout << "2. Delete Book\n";
+    cout << "3. Update Book\n";
+    cout << "4. Return Main Menu\n";
+    cin >> choice;
+
+    switch (choice) {
+      case 1:
+        BookSystem::addBook();
+        return 0;
+        break;
+
+      case 2:
+        BookSystem::deleteBook();
+        return 0;
+        break;
+
+      case 3:
+        BookSystem::updateBook();
+        return 0;
+        break;
+
+      case 4:
+        return 0;
+        break;
+
+      default:
+        break;
+    }
+  }
+
   return 0;
 }
 
 bool adminOperations() {
+  int choice;
+  cin >> choice;
+
+  while (true) {
+    switch (choice) {
+      case 1:
+        return 0;
+        break;
+
+      default:
+        break;
+    }
+  }
   return 0;
 }
 
 bool guestOperations() {
+  int choice;
+  cin >> choice;
+
+  while (true) {
+    switch (choice) {
+      case 1:
+        return 0;
+        break;
+
+      default:
+        break;
+    }
+  }
+
   return 0;
 }
   int choice;
@@ -42,19 +116,26 @@ bool guestOperations() {
 
     switch (choice) {
       case 1:
-        cout << "User Operations";
+        clearScreen();
+        cout << "User Operations\n";
+        userOperations();
         break;
 
       case 2:
-        cout << "Admin Operations";
+        clearScreen();
+        cout << "Admin Operations\n";
+        adminOperations();
         break;
 
       case 3:
-        cout << "Guest Operations";
+        clearScreen();
+        cout << "Guest Operations\n";
+        guestOperations();
         break;
 
       case 4:
-        cout << "ExitProgram";
+        clearScreen();
+        cout << "ExitProgram\n";
         return 0;
         break;
 
