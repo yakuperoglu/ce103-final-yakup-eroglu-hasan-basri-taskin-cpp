@@ -8,11 +8,13 @@ struct User {
   char email[maxStringSize];
   char name[maxStringSize];
   char surname[maxStringSize];
+  char password[maxStringSize];
 };
 
 struct UserAuthentication {
   User login(const char &email, const char &password);
   bool registerUser(const char &email, const char &name, const char &surname, const char &password);
+  static bool writeUser(const User &user);
 };
 
 struct BookSystem {
@@ -41,13 +43,10 @@ struct ReadingTracker {
   static bool viewHistory();
 };
 
-struct dataBase {
-
-};
-struct FileBinaryOperations {
-  bool WriteFile();
-  bool ReadFile();
-  bool ConvertBinaryToText();
-  bool ConvertTextToBinary();
-};
+//struct FileBinaryOperations {
+//  bool WriteFile(const char* fileName);
+//  bool ReadFile();
+//  bool ConvertBinaryToText();
+//  bool ConvertTextToBinary();
+//};
 #endif
