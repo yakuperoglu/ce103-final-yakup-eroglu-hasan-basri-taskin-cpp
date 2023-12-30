@@ -64,7 +64,7 @@ User UserAuthentication::login(const char* email, const char* password) {
   const char* expectedPassword = "12345";
 
   if (strcmp(email, expectedEmail) == 0 && strcmp(password, expectedPassword) == 0) {
-    return ;
+  return ;
   }
   return ;
 }
@@ -74,7 +74,7 @@ bool UserAuthentication::registerUser(const char* email, const char* name, const
 
   if (email != nullptr && name != nullptr && surname != nullptr && password != nullptr) {
 
-    return true;
+  return true;
   }
   return false;
 }
@@ -152,9 +152,7 @@ bool WishList::wishList() {
 bool WishList::removeFromWishList() {
   return 0;
 }
-
 bool userOperations() {
-int mainMenu() {
   int choice;
 
   while (true) {
@@ -206,7 +204,6 @@ int mainMenu() {
 
   return 0;
 }
-
 bool guestOperation() {
   int choice;
 
@@ -253,54 +250,3 @@ bool guestOperation() {
 
   return 0;
 }//guests can only view the catalog
-
-int mainMenu() {
-  int choice;
-
-  while (true) {
-    clearScreen();
-    cout << "Welcome To Personal Library System\n\n";
-    cout << "1. Login\n";
-    cout << "2. Register\n";
-    cout << "3. Guest Mode\n";
-    cout << "4. Exit Program\n";
-    cin >> choice;
-
-    if (cin.fail()) {
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      cout << "Invalid input. Please enter a number.\n";
-      continue;
-    }
-
-    switch (choice) {
-      case 1:
-        clearScreen();
-        // login func
-        break;
-
-      case 2:
-        clearScreen();
-        // register func
-        break;
-
-      case 3:
-        clearScreen();
-        cout << "Guest Operations\n";
-        guestOperation();
-        break;
-
-      case 4:
-        clearScreen();
-        cout << "ExitProgram\n";
-        return 0;
-        break;
-
-      default:
-        cout << "Invalid choice";
-        break;
-    }
-  }
-
-  return 0;
-}
