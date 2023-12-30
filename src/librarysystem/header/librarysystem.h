@@ -20,10 +20,10 @@ struct UserAuthentication {
 };
 
 struct operationsFunc {
-  static bool bookCataLoging();
-  static bool loanManagement();
-  static bool wishList();
-  static bool readingTracker();
+  static bool bookCatalogingMenu();
+  static bool loanManagementMenu();
+  static bool wishListMenu();
+  static bool readingTrackerMenu();
 };
 
 struct BookSystem {
