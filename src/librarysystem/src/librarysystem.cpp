@@ -14,6 +14,7 @@ void clearScreen() {
   system("clear");
 #endif
 }
+
 bool UserAuthentication::writeUser(const User &user) {
   //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
   FILE *file = fopen("users.bin", "ab");
@@ -81,7 +82,7 @@ bool UserAuthentication::registerUser(const char* email, const char* name, const
 */
 // dear hasan I couldnt do this part so � just send to you :))
 
-bool operationsFunc::bookCataLoging() {
+bool operationsFunc::bookCatalogingMenu() {
   int choice;
 
   while (true) {
@@ -133,15 +134,15 @@ bool operationsFunc::bookCataLoging() {
   return 0;
 }
 
-bool operationsFunc::loanManagement() {
+bool operationsFunc::loanManagementMenu() {
   return 0;
 }
 
-bool operationsFunc::wishList() {
+bool operationsFunc::wishListMenu() {
   return 0;
 }
 
-bool operationsFunc::readingTracker() {
+bool operationsFunc::readingTrackerMenu() {
   return 0;
 }
 
@@ -174,22 +175,22 @@ bool userOperations() {
 
     switch (choice) {
       case 1:
-        operationsFunc::bookCataLoging();
+        operationsFunc::bookCatalogingMenu();
         return 0;
         break;
 
       case 2:
-        operationsFunc::loanManagement();
+        operationsFunc::loanManagementMenu();
         return 0;
         break;
 
       case 3:
-        operationsFunc::wishList();
+        operationsFunc::wishListMenu();
         return 0;
         break;
 
       case 4:
-        operationsFunc::readingTracker();
+        operationsFunc::readingTrackerMenu();
         return 0;
         break;
 
