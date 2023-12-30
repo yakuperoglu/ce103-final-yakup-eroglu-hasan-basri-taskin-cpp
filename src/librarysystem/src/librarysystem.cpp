@@ -2,6 +2,8 @@
 #include <iostream>
 #include <stdexcept>
 #include "librarysystem.h"
+
+#include <fstream>
 #include <stdio.h>
 using namespace std;
 
@@ -11,6 +13,30 @@ void clearScreen() {
 #else
   system("clear");
 #endif
+}
+bool UserAuthentication::writeUser(const User &user) {
+  //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
+  FILE *file = fopen("users.bin", "ab");
+
+  if (!file) {
+    perror("File couldn't be opened");
+    return false;
+  }
+
+  // Write Email and after that add a null character
+  fwrite(user.email, sizeof(char), strlen(user.email), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write Name and after that add a null character
+  fwrite(user.name, sizeof(char), strlen(user.name), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write SurName and after that add a null character
+  fwrite(user.surname, sizeof(char), strlen(user.surname), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write Password and after that add a null character
+  fwrite(user.password, sizeof(char), strlen(user.password), file);
+  fputc('\0', file); // Null karakter ekle
+  fclose(file);
+  return true;
 }
 
 bool BookSystem::addBook() {
@@ -32,7 +58,6 @@ bool BookSystem::viewCatalog() {
   cout << "hello";
   return 0;
 }
-
 /*
 User UserAuthentication::login(const char* email, const char* password) {
   const char* expectedEmail = "user@example.com";
@@ -54,7 +79,7 @@ bool UserAuthentication::registerUser(const char* email, const char* name, const
   return false;
 }
 */
-// dear hasan I couldnt do this part so ý just send to you :))
+// dear hasan I couldnt do this part so ï¿½ just send to you :))
 
 bool operationsFunc::bookCataLoging() {
   int choice;
@@ -129,6 +154,7 @@ bool WishList::removeFromWishList() {
 }
 
 bool userOperations() {
+int mainMenu() {
   int choice;
 
   while (true) {

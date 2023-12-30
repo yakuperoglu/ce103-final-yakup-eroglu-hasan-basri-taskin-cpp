@@ -10,6 +10,7 @@ struct User {
   char email[maxStringSize];
   char name[maxStringSize];
   char surname[maxStringSize];
+  char password[maxStringSize];
 };
 
 struct UserAuthentication {
