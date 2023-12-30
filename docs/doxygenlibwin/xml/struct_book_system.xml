@@ -16,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="22" column="13" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp" bodystart="16" bodyend="20"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="22" column="15" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp" bodystart="16" bodyend="19"/>
       </memberdef>
       <memberdef kind="function" id="struct_book_system_1afd5d16e30133f994e7848bad853b997f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -30,7 +30,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="23" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="23" column="15"/>
       </memberdef>
       <memberdef kind="function" id="struct_book_system_1abd98df330ab4a2a2b65912e70d78baee" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="24" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="24" column="15"/>
       </memberdef>
       <memberdef kind="function" id="struct_book_system_1afafdcd45359538d7c1855b719b2e650d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="25" column="13"/>
+        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h" line="25" column="15"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
