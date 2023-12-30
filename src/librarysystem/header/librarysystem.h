@@ -3,6 +3,8 @@
 
 using namespace std;
 
+int mainMenu();
+
 const int maxStringSize = 100;
 struct User {
   char email[maxStringSize];
@@ -11,8 +13,15 @@ struct User {
 };
 
 struct UserAuthentication {
-  User login(const char &email, const char &password);
-  bool registerUser(const char &email, const char &name, const char &surname, const char &password);
+  User login(const char *email, const char *password);
+  bool registerUser(const char *email, const char *name, const char *surname, const char *password);
+};
+
+struct operationsFunc {
+  static bool bookCataLoging();
+  static bool loanManagement();
+  static bool wishList();
+  static bool readingTracker();
 };
 
 struct BookSystem {
@@ -34,16 +43,12 @@ struct WishList {
   static bool removeFromWishList();
 };
 
-
 struct ReadingTracker {
   static bool logProgress();
   static bool markAsRead();
   static bool viewHistory();
 };
 
-struct dataBase {
-
-};
 struct FileBinaryOperations {
   bool WriteFile();
   bool ReadFile();
