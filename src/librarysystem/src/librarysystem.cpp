@@ -266,10 +266,11 @@ bool guestOperation() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
         return true;
-
+        switch (choice2) {
+          case 1:
+            return mainMenu();
       case 2:
         return false;
-
       default:
         cout << "Invalid choice. Please try again.\n";
         break;
@@ -312,6 +313,56 @@ int mainMenu() {
         clearScreen();
         cout << "ExitProgram\n";
         return 0;
+
+      default:
+        cout << "Invalid choice";
+        break;
+    }
+  }
+
+  return 0;
+}//guests can only view the catalog
+int mainMenu() {
+  int choice;
+
+  while (true) {
+    clearScreen();
+    cout << "Welcome To Personal Library System\n\n";
+    cout << "1. Login\n";
+    cout << "2. Register\n";
+    cout << "3. Guest Mode\n";
+    cout << "4. Exit Program\n";
+    cin >> choice;
+
+    if (cin.fail()) {
+      cin.clear();
+      cin.ignore(numeric_limits<streamsize>::max(), '\n');
+      cout << "Invalid input. Please enter a number.\n";
+      continue;
+    }
+
+    switch (choice) {
+      case 1:
+        clearScreen();
+        // login func
+        break;
+
+      case 2:
+        clearScreen();
+        // register func
+        break;
+
+      case 3:
+        clearScreen();
+        cout << "Guest Operations\n";
+        guestOperation();
+        break;
+
+      case 4:
+        clearScreen();
+        cout << "ExitProgram\n";
+        return 0;
+        break;
 
       default:
         cout << "Invalid choice";
