@@ -1,43 +1,78 @@
-#include "LibrarySystem.h"
-#include <gtest/gtest.h>
+#define ENABLE_LIBRARYSYSTEM_TEST
 
-using namespace std;
-class UserAuthenticationTest : public ::testing::Test {
+#include "gtest/gtest.h"
+#include <sstream>
+#include <limits>
+#include "librarysystem.h"
+
+class LibrarysystemTest : public ::testing::Test {
  protected:
-  UserAuthentication auth;
+  void SetUp() override {
+    // Setup test data
+  }
+
+  void TearDown() override {
+    // Clean up test data
+  }
 };
 
-TEST_F(UserAuthenticationTest, LoginWithValidCredentials) {
-  // Örnek geçerli kimlik bilgileri
-  char email[50] = "test@example.com";
-  char password[50] = "password123";
-  // Geçerli kimlik bilgileri ile giriþ yapma testi
-  User user = auth.login(email *, password);
-  // Beklenen sonucun kontrolü
-  EXPECT_EQ(user.email, email);
+TEST_F(LibrarysystemTest, OutputsErrorMessageAndReturnsFalse) {
+  std::istringstream simulatedInput("invalid input");
+  std::ostringstream simulatedOutput;
+  bool result = handleInputError(simulatedInput, simulatedOutput);
+  std::string expectedOutput = "Invalid input. Please enter a number.\n";
+  EXPECT_FALSE(result);
+  EXPECT_EQ(simulatedOutput.str(), expectedOutput);
 }
 
-TEST_F(UserAuthenticationTest, LoginWithInvalidCredentials) {
-  // Örnek geçersiz kimlik bilgileri
-  string email = "wrong@example.com";
-  string password = "wrongpassword";
-  // Geçersiz kimlik bilgileri ile giriþ yapma testi
-  User user = auth.login(email, password);
-  // Beklenen sonucun kontrolü
-  EXPECT_EQ(user.email, "");
+TEST_F(LibrarysystemTest, GetInputReturnsCorrectValue) {
+  std::istringstream simulatedInput("42");
+  int result = getInput(simulatedInput);
+  EXPECT_EQ(result, 42);
 }
 
-TEST_F(UserAuthenticationTest, RegisterUser) {
-  // Yeni kullanýcý kaydý için bilgiler
-  string email = "newuser@example.com";
-  string name = "New";
-  string surname = "User";
-  string password = "newpassword";
-  // Kullanýcý kaydý testi
-  bool result = auth.registerUser(email, name, surname, password);
-  // Beklenen sonucun kontrolü
+TEST_F(LibrarysystemTest, GetInputHandlesInvalidInput) {
+  std::istringstream simulatedInput("abc");
+  int result = getInput(simulatedInput);
+  EXPECT_TRUE(simulatedInput.fail());
+}
+
+TEST_F(LibrarysystemTest, PrintGuestMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printGuestMenu(stream);
+  std::string expectedOutput = "\n1. View Catalog\n2. Return to Main Menu\n";
   EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
 }
+
+TEST_F(LibrarysystemTest, PrintMainMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printMainMenu(stream);
+  std::string expectedOutput = "Welcome To Personal Library System\n\n"
+                               "1. Login\n"
+                               "2. Register\n"
+                               "3. Guest Mode\n"
+                               "4. Exit Program\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
+
+TEST_F(LibrarysystemTest, PrintUserMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printUserMenu(stream);
+  std::string expectedOutput = "welcome to User Operations\n\n"
+                               "1. Book Cataloging\n"
+                               "2. Loan Management\n"
+                               "3. WishList Management\n"
+                               "4. Reading Tracker\n"
+                               "5. Return Main Menu\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
+
 
 
 int main(int argc, char **argv) {
