@@ -1,11 +1,19 @@
 #ifndef LIBRARYSYSTEM_H
 #define LIBRARYSYSTEM_H
 
+#include <iostream>
+
+
 using namespace std;
 
-int mainMenu();
+int getInput(istream &in);// gets input from user.
+
+bool handleInputError(istream &in, ostream &out);// This function prevents entering letters instead of numbers.
+
+int mainMenu();//Main Function.
 
 const int maxStringSize = 100;
+
 struct User {
   char email[maxStringSize];
   char name[maxStringSize];
@@ -20,10 +28,17 @@ struct UserAuthentication {
 };
 
 struct operationsFunc {
-  static bool bookCataLoging();
-  static bool loanManagement();
-  static bool wishList();
-  static bool readingTracker();
+  static bool bookCatalogingMenu();
+  static bool loanManagementMenu();
+  static bool wishListMenu();
+  static bool readingTrackerMenu();
+};
+
+struct printMenu {
+  static bool printMainMenu(ostream &out);
+  static bool printGuestMenu(ostream &out);
+  static bool printUserMenu(ostream &out);
+  static bool printBookCatalogingMenu(ostream &out);
 };
 
 struct BookSystem {

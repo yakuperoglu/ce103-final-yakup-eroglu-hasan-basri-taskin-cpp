@@ -5,6 +5,7 @@
 
 #include <fstream>
 #include <stdio.h>
+#include <limits>
 using namespace std;
 
 void clearScreen() {
@@ -13,7 +14,60 @@ void clearScreen() {
 #else
   system("clear");
 #endif
-}
+}// this function clears the console
+
+bool handleInputError(istream &in, ostream &out) {
+  in.clear();
+  in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  out << "Invalid input. Please enter a number.\n";
+  return false;
+}// This function prevents entering letters instead of numbers.
+
+int getInput(istream &in) {
+  int choice;
+  in >> choice;
+  return choice;
+}// this function gets input from user.
+
+bool printMenu::printGuestMenu(ostream &out) {
+  out << "\n";
+  out << "1. View Catalog\n";
+  out << "2. Return to Main Menu\n";
+  return true;
+}// prints screen GuestMenu.
+
+bool printMenu::printMainMenu(ostream &out) {
+  clearScreen();
+  out << "Welcome To Personal Library System\n\n";
+  out << "1. Login\n";
+  out << "2. Register\n";
+  out << "3. Guest Mode\n";
+  out << "4. Exit Program\n";
+  return true;
+}// prints screen MainMenu.
+
+bool printMenu::printUserMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to User Operations\n\n";
+  out << "1. Book Cataloging\n";
+  out << "2. Loan Management\n";
+  out << "3. WishList Management\n";
+  out << "4. Reading Tracker\n";
+  out << "5. Return Main Menu\n";
+  return true;
+}// prints screen UserMenu.
+
+bool printMenu::printBookCatalogingMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to User Operations\n\n";
+  out << "1. Add Book\n";
+  out << "2. Delete Book\n";
+  out << "3. Update Book\n";
+  out << "4. View Catalog\n";
+  out << "5. Return Main Menu\n";
+  return true;
+}// prints screen BookCatalogingMenu.
+
 bool UserAuthentication::writeUser(const User &user) {
   //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
   FILE *file = fopen("users.bin", "ab");
@@ -58,6 +112,7 @@ bool BookSystem::viewCatalog() {
   cout << "hello";
   return 0;
 }
+
 /*
 User UserAuthentication::login(const char* email, const char* password) {
   const char* expectedEmail = "user@example.com";
@@ -81,23 +136,15 @@ bool UserAuthentication::registerUser(const char* email, const char* name, const
 */
 // dear hasan I couldnt do this part so � just send to you :))
 
-bool operationsFunc::bookCataLoging() {
+bool operationsFunc::bookCatalogingMenu() {
   int choice;
 
   while (true) {
-    clearScreen();
-    cout << "welcome to User Operations\n\n";
-    cout << "1. Add Book\n";
-    cout << "2. Delete Book\n";
-    cout << "3. Update Book\n";
-    cout << "4. View Catalog\n";
-    cout << "5. Return Main Menu\n";
-    cin >> choice;
+    printMenu::printBookCatalogingMenu(cout);
+    choice = getInput(cin);
 
     if (cin.fail()) {
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      cout << "Invalid input. Please enter a number.\n";
+      handleInputError(cin, cout);
       continue;
     }
 
@@ -133,15 +180,15 @@ bool operationsFunc::bookCataLoging() {
   return 0;
 }
 
-bool operationsFunc::loanManagement() {
+bool operationsFunc::loanManagementMenu() {
   return 0;
 }
 
-bool operationsFunc::wishList() {
+bool operationsFunc::wishListMenu() {
   return 0;
 }
 
-bool operationsFunc::readingTracker() {
+bool operationsFunc::readingTrackerMenu() {
   return 0;
 }
 
@@ -152,44 +199,38 @@ bool WishList::wishList() {
 bool WishList::removeFromWishList() {
   return 0;
 }
+
 bool userOperations() {
   int choice;
 
   while (true) {
     clearScreen();
-    cout << "welcome to User Operations\n\n";
-    cout << "1. Book Cataloging\n";
-    cout << "2. Loan Management\n";
-    cout << "3. WishList Management\n";
-    cout << "4. Reading Tracker\n";
-    cout << "5. Return Main Menu\n";
-    cin >> choice;
+    printMenu::printUserMenu(cout);
+    choice = getInput(cin);
 
     if (cin.fail()) {
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      cout << "Invalid input. Please enter a number.\n";
+      handleInputError(cin, cout);
       continue;
     }
 
     switch (choice) {
       case 1:
-        operationsFunc::bookCataLoging();
+        operationsFunc::bookCatalogingMenu();
         return 0;
         break;
 
       case 2:
-        operationsFunc::loanManagement();
+        operationsFunc::loanManagementMenu();
         return 0;
         break;
 
       case 3:
-        operationsFunc::wishList();
+        operationsFunc::wishListMenu();
         return 0;
         break;
 
       case 4:
-        operationsFunc::readingTracker();
+        operationsFunc::readingTrackerMenu();
         return 0;
         break;
 
@@ -204,46 +245,77 @@ bool userOperations() {
 
   return 0;
 }
+
 bool guestOperation() {
   int choice;
 
   while (true) {
-    cout << "\n";
-    cout << "1. View Catalog\n";
-    cout << "2. Return MainMenu\n";
-    cin >> choice;
+    printMenu::printGuestMenu(cout);
+    choice = getInput(cin);
 
     if (cin.fail()) {
-      cin.clear();
-      cin.ignore(numeric_limits<streamsize>::max(), '\n');
-      cout << "Invalid input. Please enter a number.\n";
-      clearScreen();
+      handleInputError(cin, cout);
       continue;
     }
 
     switch (choice) {
       case 1:
-        int choice2;
         clearScreen();
         BookSystem::viewCatalog();
-        cout << "\n\n1 To Return MainMenu";
-        cin >> choice2;
-
+        cout << "\nPress any key to return to Main Menu";
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cin.get();
+        return true;
         switch (choice2) {
           case 1:
             return mainMenu();
+      case 2:
+        return false;
+      default:
+        cout << "Invalid choice. Please try again.\n";
+        break;
+    }
+  }
 
-          default:
-            break;
-        }
+  return false;
+}
 
+int mainMenu() {
+  int choice;
+
+  while (true) {
+    printMenu::printMainMenu(cout);
+    choice = getInput(cin);
+
+    if (cin.fail()) {
+      handleInputError(cin, cout);
+      continue;
+    }
+
+    switch (choice) {
+      case 1:
+        clearScreen();
+        // login func
         break;
 
       case 2:
+        clearScreen();
+        // register func
+        break;
+
+      case 3:
+        clearScreen();
+        cout << "Guest Operations\n";
+        guestOperation();
+        break;
+
+      case 4:
+        clearScreen();
+        cout << "ExitProgram\n";
         return 0;
 
       default:
-        cout << "Invalid choice. Please try again.\n";
+        cout << "Invalid choice";
         break;
     }
   }
