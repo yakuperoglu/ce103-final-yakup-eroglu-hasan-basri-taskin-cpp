@@ -14,6 +14,10 @@ int mainMenu();//Main Function.
 
 bool userOperations();
 
+bool registerUser();
+
+bool loginUser();
+
 const int maxStringSize = 100;
 
 struct User {
@@ -22,10 +26,8 @@ struct User {
 };
 
 struct UserAuthentication {
-  User login(const char *email, const char *password);
-  bool registerUser(const char *email, const char *password);
-  static bool writeUser(const User &user);
-  User UserAuthentication::readUser(const char *email, const char *password);
+  bool registerUser(const User &newUser);
+  bool loginUser(const char *email, const char *password);
 };
 
 struct operationsFunc {
