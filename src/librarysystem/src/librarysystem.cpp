@@ -490,10 +490,11 @@ bool guestOperation() {
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
         return true;
-
+        switch (choice2) {
+          case 1:
+            return mainMenu();
       case 2:
         return false;
-
       default:
         cout << "Invalid choice. Please try again.\n";
         break;
@@ -543,5 +544,4 @@ int mainMenu() {
     }
   }
 
-  return true;
-}
+
