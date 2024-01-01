@@ -489,12 +489,11 @@ bool guestOperation() {
         cout << "\nPress any key to return to Main Menu";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
-        return true;
-        switch (choice2) {
-          case 1:
-            return mainMenu();
+        break; // Moved this break here
+
       case 2:
         return false;
+
       default:
         cout << "Invalid choice. Please try again.\n";
         break;
@@ -503,6 +502,7 @@ bool guestOperation() {
 
   return false;
 }
+
 
 int mainMenu() {
   int choice;
@@ -543,5 +543,3 @@ int mainMenu() {
         break;
     }
   }
-
-
