@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "../header/librarysystem.h"
 #include <iostream>
 #include <stdexcept>
@@ -6,6 +7,7 @@
 #include <fstream>
 #include <stdio.h>
 #include <limits>
+
 using namespace std;
 
 void clearScreen() {
@@ -15,70 +17,6 @@ void clearScreen() {
   system("clear");
 #endif
 }// this function clears the console
-
-bool isValidEmail(const string &email) {
-  // Basit bir e-posta formatı doğrulama
-  const regex emailPattern(R"(^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$)");
-  return regex_match(email, emailPattern);
-}
-
-bool isValidPassword(const string &password) {
-  // Şifre için minimum uzunluk kriteri
-  const size_t minPasswordLength = 6;
-  return password.length() >= minPasswordLength;
-}
-
-void registerUser() {
-  string email, password;
-  cout << "Please enter your email: ";
-  cin >> email;
-  cout << "Please enter your password: ";
-  cin >> password;
-  User newUser;
-  strncpy(newUser.email, email.c_str(), sizeof(newUser.email) - 1);
-  newUser.email[sizeof(newUser.email) - 1] = '\0';
-  strncpy(newUser.password, password.c_str(), sizeof(newUser.password) - 1);
-  newUser.password[sizeof(newUser.password) - 1] = '\0';
-  UserAuthentication auth;
-
-  if (auth.writeUser(newUser)) {
-    cout << "Registration successful!" << endl;
-  } else {
-    cout << "Registration failed. Please try again." << endl;
-  }
-} // not ready to use
-
-void login() {
-  string email, password;
-  cout << "Please enter your email: ";
-  cin >> email;
-  cout << "Please enter your password: ";
-  cin >> password;
-
-  // Girdi doğrulama
-  if (!isValidEmail(email)) {
-    cout << "Invalid email format." << endl;
-    return;
-  }
-
-  if (!isValidPassword(password)) {
-    cout << "Password must be at least 6 characters long." << endl;
-    return;
-  }
-
-  UserAuthentication auth;
-  User user = auth.readUser(email.c_str(), password.c_str());
-  // Hata ayıklama için ek bilgileri yazdır
-  cout << "Returned user email: " << user.email << endl;
-  cout << "Returned user password: " << (strlen(user.password) != 0 ? "****" : "(none)") << endl;
-
-  if (strlen(user.email) != 0) {
-    cout << "Login successful!" << endl;
-    userOperations(); // Kullanıcı işlemlerine yönlendir
-  } else {
-    cout << "Login failed. Please check your email and password." << endl;
-  }
-} // not ready to use
 
 bool handleInputError(istream &in, ostream &out) {
   in.clear();
@@ -92,6 +30,43 @@ int getInput(istream &in) {
   in >> choice;
   return choice;
 }// this function gets input from user.
+
+bool registerUser() {
+  UserAuthentication auth;
+  User newUser;
+  cout << "Enter email: ";
+  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  cin.getline(newUser.email, 100);
+  cout << "Enter password: ";
+  cin.getline(newUser.password, 100);
+
+  if (auth.registerUser(newUser)) {
+    cout << "User registered successfully." << endl;
+    return true;
+  } else {
+    cout << "Failed to register user." << endl;
+    return false;
+  }
+}
+
+bool loginUser() {
+  UserAuthentication auth;
+  char email[100];
+  char password[100];
+  cout << "Enter email: ";
+  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  cin.getline(email, 100);
+  cout << "Enter password: ";
+  cin.getline(password, 100);
+
+  if (auth.loginUser(email, password)) {
+    cout << "Login success." << endl;
+    return true;
+  } else {
+    cout << "Login failed: User not found or wrong password." << endl;
+    return false;
+  }
+}
 
 bool operationsFunc::bookCatalogingMenu() {
   int choice;
@@ -315,60 +290,43 @@ bool printMenu::printReadingTrackerMenu(ostream &out) {
   return true;
 }
 
-bool UserAuthentication::writeUser(const User &user) {
-  FILE *file = fopen("users.bin", "ab");
+bool UserAuthentication::registerUser(const User &newUser) {
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "ab");
 
-  if (!file) {
-    perror("File couldn't be opened");
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for writing." << endl;
     return false;
   }
 
-  bool writeSuccess = true;
-
-  // Write email and password followed by a null character, and check for write errors
-  if (fwrite(user.email, sizeof(char), strlen(user.email), file) != strlen(user.email) ||
-      fputc('\0', file) == EOF ||
-      fwrite(user.password, sizeof(char), strlen(user.password), file) != strlen(user.password) ||
-      fputc('\0', file) == EOF) {
-    writeSuccess = false;
-  }
-
-  fclose(file); // Ensure file is always closed
-  return writeSuccess;
+  fwrite(&newUser, sizeof(User), 1, file);
+  fclose(file);
+  return true;
 }
 
-User UserAuthentication::readUser(const char *email, const char *password) {
-  FILE *file = fopen("users.bin", "rb");
+bool UserAuthentication::loginUser(const char *email, const char *password) {
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "rb");
 
-  if (!file) {
-    perror("File couldn't be opened");
-    return User(); // Boş bir User nesnesi döndürür.
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for reading." << endl;
+    return false;
   }
 
   User user;
-  char bufferEmail[maxStringSize];
-  char bufferPassword[maxStringSize];
-  bool userFound = false;
 
-  while (!feof(file)) {
-    // E-posta adresini ve şifreyi oku
-    if (fscanf(file, "%99s\n", bufferEmail) == 1 && fscanf(file, "%99s\n", bufferPassword) == 1) {
-      cout << "Debug - Read email: " << bufferEmail << ", password: [HIDDEN]" << endl;
-
-      if (strcmp(bufferEmail, email) == 0 && strcmp(bufferPassword, password) == 0) {
-        strncpy(user.email, bufferEmail, sizeof(user.email));
-        strncpy(user.password, bufferPassword, sizeof(user.password));
-        userFound = true;
-        break;
-      }
-    } else {
-      cout << "Error reading user data." << endl;
-      break;
+  while (fread(&user, sizeof(User), 1, file)) {
+    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
+      fclose(file);
+      cout << "Login success." << std::endl;
+      userOperations();
+      return true;
     }
   }
 
   fclose(file);
-  return userFound ? user : User(); // Eğer kullanıcı bulunursa döndür, bulunamazsa boş bir User nesnesi döndür.
+  cout << "Login failed: User not found or wrong password." << endl;
+  return false;
 }
 
 bool LoanManagment::borrowBook() {
@@ -503,7 +461,6 @@ bool guestOperation() {
   return false;
 }
 
-
 int mainMenu() {
   int choice;
 
@@ -519,12 +476,12 @@ int mainMenu() {
     switch (choice) {
       case 1:
         clearScreen();
-        userOperations();              // login();
+        loginUser();
         break;
 
       case 2:
         clearScreen();
-        // registerUser();
+        registerUser();
         break;
 
       case 3:
@@ -543,3 +500,4 @@ int mainMenu() {
         break;
     }
   }
+}
