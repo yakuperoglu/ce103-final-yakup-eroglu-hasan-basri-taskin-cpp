@@ -2,9 +2,9 @@
 #include <iostream>
 #include <stdexcept>
 #include "librarysystem.h"
-
 #include <fstream>
 #include <stdio.h>
+#define MAX_STRING_LENGTH 100
 using namespace std;
 
 void clearScreen() {
@@ -14,6 +14,7 @@ void clearScreen() {
   system("clear");
 #endif
 }
+
 bool UserAuthentication::writeUser(const User &user) {
   //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
   FILE *file = fopen("users.bin", "ab");
@@ -34,9 +35,31 @@ bool UserAuthentication::writeUser(const User &user) {
   fputc('\0', file); // Null karakter ekle
   // Write Password and after that add a null character
   fwrite(user.password, sizeof(char), strlen(user.password), file);
-  fputc('\0', file); // Null karakter ekle
+  fputc('\n', file);
   fclose(file);
   return true;
+}
+bool UserAuthentication::login(const char *email, const char *password) {
+  FILE *file = fopen("users.bin", "rb");
+
+  if (!file) {
+    return false;
+  }
+
+  User user;
+
+  // Here is we are reading user datas
+  while (fread(&user, sizeof(User), 1, file)) {
+    // Compares two C-strings and returns 0 if they are identical.
+    // If not, it returns a non-zero value indicating the lexicographical difference between them.
+    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
+      fclose(file);
+      return true; // E-posta ve şifre eşleşti
+    }
+  }
+
+  fclose(file);
+  return false; // Eşleşme bulunamadı
 }
 
 bool BookSystem::addBook() {
@@ -79,7 +102,7 @@ bool UserAuthentication::registerUser(const char* email, const char* name, const
   return false;
 }
 */
-// dear hasan I couldnt do this part so � just send to you :))
+//dear hasan I couldnt do this part so � just send to you :))
 
 bool operationsFunc::bookCataLoging() {
   int choice;
@@ -144,6 +167,32 @@ bool operationsFunc::wishList() {
 bool operationsFunc::readingTracker() {
   return 0;
 }
+
+bool operationsFunc::loginMenu() {
+  while (true) {
+    clearScreen();
+    char email[MAX_STRING_LENGTH] = { };
+    char password[MAX_STRING_LENGTH] = { };
+    cout << "Please enter your email.\n";
+    cin >> email;
+    cout << "Please enter your password.\n";
+    cin >> password;
+    bool result = UserAuthentication::login(email, password);
+
+    if (result) {
+      printf("HELLOOOO GEÇTIN");
+    } else {
+      printf("HELLOOOOO SICTIN");
+    }
+
+    cout << "Press enter to continue...";
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Önceki girişten kalanları temizle
+    cin.get(); // Kullanıcıdan yeni bir giriş bekler (Enter tuşu bekler)
+  }
+
+  return false;
+}
+
 
 bool WishList::wishList() {
   return 0;
@@ -272,6 +321,7 @@ int mainMenu() {
     switch (choice) {
       case 1:
         clearScreen();
+        operationsFunc::loginMenu();
         // login func
         break;
 
