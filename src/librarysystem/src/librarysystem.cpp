@@ -3,13 +3,11 @@
 #include <iostream>
 #include <stdexcept>
 #include "librarysystem.h"
-#include <fstream>
-#include <stdio.h>
-#define MAX_STRING_LENGTH 100
 #include <regex>
 #include <fstream>
 #include <stdio.h>
 #include <limits>
+
 using namespace std;
 
 void clearScreen() {
@@ -272,31 +270,6 @@ bool printMenu::printLoanManagementMenu(ostream &out) {
   return true;
 }// prints screen LoanManagementMenu.
 
-
-bool UserAuthentication::writeUser(const User &user) {
-  //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
-  FILE *file = fopen("users.bin", "ab");
-
-  if (!file) {
-    perror("File couldn't be opened");
-    return false;
-  }
-
-  // Write Email and after that add a null character
-  fwrite(user.email, sizeof(char), strlen(user.email), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write Name and after that add a null character
-  fwrite(user.name, sizeof(char), strlen(user.name), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write SurName and after that add a null character
-  fwrite(user.surname, sizeof(char), strlen(user.surname), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write Password and after that add a null character
-  fwrite(user.password, sizeof(char), strlen(user.password), file);
-  fputc('\n', file);
-  fclose(file);
-  return true;
-}
 bool printMenu::printWishListMenu(ostream &out) {
   clearScreen();
   out << "welcome to WishlistManageMenu\n\n";
@@ -305,28 +278,6 @@ bool printMenu::printWishListMenu(ostream &out) {
   out << "3. Remove From Wishlist\n";
   out << "4. Return User Operations\n";
   return true;
-}
-bool UserAuthentication::login(const char *email, const char *password) {
-  FILE *file = fopen("users.bin", "rb");
-
-  if (!file) {
-    return false;
-  }
-
-  User user;
-
-  // Here is we are reading user datas
-  while (fread(&user, sizeof(User), 1, file)) {
-    // Compares two C-strings and returns 0 if they are identical.
-    // If not, it returns a non-zero value indicating the lexicographical difference between them.
-    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
-      fclose(file);
-      return true; // E-posta ve şifre eşleşti
-    }
-  }
-
-  fclose(file);
-  return false; // Eşleşme bulunamadı
 }
 
 bool printMenu::printReadingTrackerMenu(ostream &out) {
@@ -423,34 +374,6 @@ bool ReadingTracker::logProgress() {
   return true;
 }
 
-bool operationsFunc::loginMenu() {
-  while (true) {
-    clearScreen();
-    char email[MAX_STRING_LENGTH] = { };
-    char password[MAX_STRING_LENGTH] = { };
-    cout << "Please enter your email.\n";
-    cin >> email;
-    cout << "Please enter your password.\n";
-    cin >> password;
-    bool result = UserAuthentication::login(email, password);
-
-    if (result) {
-      printf("HELLOOOO GEÇTIN");
-    } else {
-      printf("HELLOOOOO SICTIN");
-    }
-
-    cout << "Press enter to continue...";
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Önceki girişten kalanları temizle
-    cin.get(); // Kullanıcıdan yeni bir giriş bekler (Enter tuşu bekler)
-  }
-
-  return false;
-}
-
-
-bool WishList::wishList() {
-  return 0;
 bool ReadingTracker::markAsRead() {
   return true;
 }
@@ -524,11 +447,6 @@ bool guestOperation() {
         cout << "\nPress any key to return to Main Menu";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
-        return true;
-
-        switch (choice2) {
-          case 1:
-            return mainMenu();
         break; // Moved this break here
 
       case 2:
@@ -545,110 +463,16 @@ bool guestOperation() {
 
 int mainMenu() {
   int choice;
-          case 2:
-            return false;
 
-          default:
-            cout << "Invalid choice. Please try again.\n";
-            break;
-        }
-    }
-    return false;
-  }
+  while (true) {
+    printMenu::printMainMenu(cout);
+    choice = getInput(cin);
 
-  int mainMenu() {
-    int choice;
-
-    while (true) {
-      printMenu::printMainMenu(cout);
-      choice = getInput(cin);
-
-      if (cin.fail()) {
-        handleInputError(cin, cout);
-        continue;
-      }
-
-      switch (choice) {
-        case 1:
-          clearScreen();
-          // login func
-          break;
-
-        case 2:
-          clearScreen();
-          // register func
-          break;
-
-        case 3:
-          clearScreen();
-          cout << "Guest Operations\n";
-          guestOperation();
-          break;
-
-        case 4:
-          clearScreen();
-          cout << "ExitProgram\n";
-          return 0;
-
-        default:
-          cout << "Invalid choice";
-          break;
-      }
+    if (cin.fail()) {
+      handleInputError(cin, cout);
+      continue;
     }
 
-    return 0;
-  }//guests can only view the catalog
-  int mainMenu() {
-    int choice;
-
-    while (true) {
-      clearScreen();
-      cout << "Welcome To Personal Library System\n\n";
-      cout << "1. Login\n";
-      cout << "2. Register\n";
-      cout << "3. Guest Mode\n";
-      cout << "4. Exit Program\n";
-      cin >> choice;
-
-      if (cin.fail()) {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "Invalid input. Please enter a number.\n";
-        continue;
-      }
-
-      switch (choice) {
-        case 1:
-          clearScreen();
-          operationsFunc::loginMenu();
-          // login func
-          break;
-
-        case 2:
-          clearScreen();
-          // register func
-          break;
-
-        case 3:
-          clearScreen();
-          cout << "Guest Operations\n";
-          guestOperation();
-          break;
-
-        case 4:
-          clearScreen();
-          cout << "ExitProgram\n";
-          return 0;
-          break;
-
-        default:
-          cout << "Invalid choice";
-          break;
-      }
-    }
-
-    return 0;
-  }
     switch (choice) {
       case 1:
         clearScreen();

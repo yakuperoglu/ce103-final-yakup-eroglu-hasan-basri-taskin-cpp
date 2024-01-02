@@ -26,9 +26,6 @@ struct User {
 };
 
 struct UserAuthentication {
-  static bool login(const char *email, const char *password);
-  bool registerUser(const char *email, const char *name, const char *surname, const char *password);
-  static bool writeUser(const User &user);
   bool registerUser(const User &newUser);
   bool loginUser(const char *email, const char *password);
 };
