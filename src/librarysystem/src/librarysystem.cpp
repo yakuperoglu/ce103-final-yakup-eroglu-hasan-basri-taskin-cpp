@@ -1,3 +1,4 @@
+#define _CRT_SECURE_NO_WARNINGS
 #include "../header/librarysystem.h"
 #include <iostream>
 #include <stdexcept>
@@ -5,6 +6,10 @@
 #include <fstream>
 #include <stdio.h>
 #define MAX_STRING_LENGTH 100
+#include <regex>
+#include <fstream>
+#include <stdio.h>
+#include <limits>
 using namespace std;
 
 void clearScreen() {
@@ -28,134 +33,42 @@ int getInput(istream &in) {
   return choice;
 }// this function gets input from user.
 
-bool printMenu::printGuestMenu(ostream &out) {
-  out << "\n";
-  out << "1. View Catalog\n";
-  out << "2. Return to Main Menu\n";
-  return true;
-}// prints screen GuestMenu.
+bool registerUser() {
+  UserAuthentication auth;
+  User newUser;
+  cout << "Enter email: ";
+  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  cin.getline(newUser.email, 100);
+  cout << "Enter password: ";
+  cin.getline(newUser.password, 100);
 
-bool printMenu::printMainMenu(ostream &out) {
-  clearScreen();
-  out << "Welcome To Personal Library System\n\n";
-  out << "1. Login\n";
-  out << "2. Register\n";
-  out << "3. Guest Mode\n";
-  out << "4. Exit Program\n";
-  return true;
-}// prints screen MainMenu.
-
-bool printMenu::printUserMenu(ostream &out) {
-  clearScreen();
-  out << "welcome to User Operations\n\n";
-  out << "1. Book Cataloging\n";
-  out << "2. Loan Management\n";
-  out << "3. WishList Management\n";
-  out << "4. Reading Tracker\n";
-  out << "5. Return Main Menu\n";
-  return true;
-}// prints screen UserMenu.
-
-bool printMenu::printBookCatalogingMenu(ostream &out) {
-  clearScreen();
-  out << "welcome to User Operations\n\n";
-  out << "1. Add Book\n";
-  out << "2. Delete Book\n";
-  out << "3. Update Book\n";
-  out << "4. View Catalog\n";
-  out << "5. Return Main Menu\n";
-  return true;
-}// prints screen BookCatalogingMenu.
-
-bool UserAuthentication::writeUser(const User &user) {
-  //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
-  FILE *file = fopen("users.bin", "ab");
-
-  if (!file) {
-    perror("File couldn't be opened");
+  if (auth.registerUser(newUser)) {
+    cout << "User registered successfully." << endl;
+    return true;
+  } else {
+    cout << "Failed to register user." << endl;
     return false;
   }
-
-  // Write Email and after that add a null character
-  fwrite(user.email, sizeof(char), strlen(user.email), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write Name and after that add a null character
-  fwrite(user.name, sizeof(char), strlen(user.name), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write SurName and after that add a null character
-  fwrite(user.surname, sizeof(char), strlen(user.surname), file);
-  fputc('\0', file); // Null karakter ekle
-  // Write Password and after that add a null character
-  fwrite(user.password, sizeof(char), strlen(user.password), file);
-  fputc('\n', file);
-  fclose(file);
-  return true;
 }
-bool UserAuthentication::login(const char *email, const char *password) {
-  FILE *file = fopen("users.bin", "rb");
 
-  if (!file) {
+bool loginUser() {
+  UserAuthentication auth;
+  char email[100];
+  char password[100];
+  cout << "Enter email: ";
+  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  cin.getline(email, 100);
+  cout << "Enter password: ";
+  cin.getline(password, 100);
+
+  if (auth.loginUser(email, password)) {
+    cout << "Login success." << endl;
+    return true;
+  } else {
+    cout << "Login failed: User not found or wrong password." << endl;
     return false;
   }
-
-  User user;
-
-  // Here is we are reading user datas
-  while (fread(&user, sizeof(User), 1, file)) {
-    // Compares two C-strings and returns 0 if they are identical.
-    // If not, it returns a non-zero value indicating the lexicographical difference between them.
-    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
-      fclose(file);
-      return true; // E-posta ve şifre eşleşti
-    }
-  }
-
-  fclose(file);
-  return false; // Eşleşme bulunamadı
 }
-
-bool BookSystem::addBook() {
-  cout << "hello";
-  return 0;
-}
-
-bool BookSystem::deleteBook() {
-  cout << "hello";
-  return 0;
-}
-
-bool BookSystem::updateBook() {
-  cout << "hello";
-  return 0;
-}
-
-bool BookSystem::viewCatalog() {
-  cout << "hello";
-  return 0;
-}
-
-/*
-User UserAuthentication::login(const char* email, const char* password) {
-  const char* expectedEmail = "user@example.com";
-  const char* expectedPassword = "12345";
-
-  if (strcmp(email, expectedEmail) == 0 && strcmp(password, expectedPassword) == 0) {
-  return ;
-  }
-  return ;
-}
-
-
-bool UserAuthentication::registerUser(const char* email, const char* name, const char* surname, const char* password) {
-
-  if (email != nullptr && name != nullptr && surname != nullptr && password != nullptr) {
-
-  return true;
-  }
-  return false;
-}
-*/
-//dear hasan I couldnt do this part so � just send to you :))
 
 bool operationsFunc::bookCatalogingMenu() {
   int choice;
@@ -190,7 +103,7 @@ bool operationsFunc::bookCatalogingMenu() {
         break;
 
       case 5:
-        return 0;
+        return userOperations();
         break;
 
       default:
@@ -198,19 +111,316 @@ bool operationsFunc::bookCatalogingMenu() {
     }
   }
 
-  return 0;
+  return true;
 }
 
 bool operationsFunc::loanManagementMenu() {
-  return 0;
+  int choice;
+
+  while (true) {
+    printMenu::printLoanManagementMenu(cout);
+    choice = getInput(cin);
+
+    if (cin.fail()) {
+      handleInputError(cin, cout);
+      continue;
+    }
+
+    switch (choice) {
+      case 1:
+        LoanManagment::lendBook();
+        return 0;
+
+      case 2:
+        LoanManagment::borrowBook();
+        return 0;
+
+      case 3:
+        LoanManagment::viewLoans();
+        return 0;
+
+      case 4:
+        return userOperations();
+
+      default:
+        break;
+    }
+  }
+
+  return true;
 }
 
 bool operationsFunc::wishListMenu() {
-  return 0;
+  int choice;
+
+  while (true) {
+    printMenu::printWishListMenu(cout);
+    choice = getInput(cin);
+
+    if (cin.fail()) {
+      handleInputError(cin, cout);
+      continue;
+    }
+
+    switch (choice) {
+      case 1:
+        WishList::wishList();
+        return 0;
+
+      case 2:
+        WishList::addToWishList();
+        return 0;
+
+      case 3:
+        WishList::removeFromWishList();
+        return 0;
+
+      case 4:
+        return userOperations();
+
+      default:
+        break;
+    }
+  }
+
+  return true;
 }
 
 bool operationsFunc::readingTrackerMenu() {
-  return 0;
+  int choice;
+
+  while (true) {
+    printMenu::printReadingTrackerMenu(cout);
+    choice = getInput(cin);
+
+    if (cin.fail()) {
+      handleInputError(cin, cout);
+      continue;
+    }
+
+    switch (choice) {
+      case 1:
+        ReadingTracker::logProgress();
+        return true;
+
+      case 2:
+        ReadingTracker::markAsRead();
+        return true;
+
+      case 3:
+        ReadingTracker::viewHistory();
+        return true;
+
+      case 4:
+        return userOperations();
+
+      default:
+        break;
+    }
+  }
+
+  return true;
+}
+
+bool printMenu::printGuestMenu(ostream &out) {
+  clearScreen();
+  out << "Guest Operations\n\n";
+  out << "1. View Catalog\n";
+  out << "2. Return to Main Menu\n";
+  return true;
+}// prints screen GuestMenu.
+
+bool printMenu::printMainMenu(ostream &out) {
+  clearScreen();
+  out << "Welcome To Personal Library System\n\n";
+  out << "1. Login\n";
+  out << "2. Register\n";
+  out << "3. Guest Mode\n";
+  out << "4. Exit Program\n";
+  return true;
+}// prints screen MainMenu.
+
+bool printMenu::printUserMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to User Operations\n\n";
+  out << "1. Book Cataloging\n";
+  out << "2. Loan Management\n";
+  out << "3. WishList Management\n";
+  out << "4. Reading Tracker\n";
+  out << "5. Return Main Menu\n";
+  return true;
+}// prints screen UserMenu.
+
+bool printMenu::printBookCatalogingMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to User Operations\n\n";
+  out << "1. Add Book\n";
+  out << "2. Delete Book\n";
+  out << "3. Update Book\n";
+  out << "4. View Catalog\n";
+  out << "5. Return User Operations\n";
+  return true;
+}// prints screen BookCatalogingMenu.
+
+bool printMenu::printLoanManagementMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to LoanManagement\n\n";
+  out << "1. Lend Book\n";
+  out << "2. Borrow Book\n";
+  out << "3. View Loans\n";
+  out << "4. Return User Operations\n";
+  return true;
+}// prints screen LoanManagementMenu.
+
+
+bool UserAuthentication::writeUser(const User &user) {
+  //The "ab" mode (append binary) option allows you to append data to the file as binary. If file doesn't exist it will create.
+  FILE *file = fopen("users.bin", "ab");
+
+  if (!file) {
+    perror("File couldn't be opened");
+    return false;
+  }
+
+  // Write Email and after that add a null character
+  fwrite(user.email, sizeof(char), strlen(user.email), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write Name and after that add a null character
+  fwrite(user.name, sizeof(char), strlen(user.name), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write SurName and after that add a null character
+  fwrite(user.surname, sizeof(char), strlen(user.surname), file);
+  fputc('\0', file); // Null karakter ekle
+  // Write Password and after that add a null character
+  fwrite(user.password, sizeof(char), strlen(user.password), file);
+  fputc('\n', file);
+  fclose(file);
+  return true;
+}
+bool printMenu::printWishListMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to WishlistManageMenu\n\n";
+  out << "1. View Wishlist\n";
+  out << "2. Add To Wishlist\n";
+  out << "3. Remove From Wishlist\n";
+  out << "4. Return User Operations\n";
+  return true;
+}
+bool UserAuthentication::login(const char *email, const char *password) {
+  FILE *file = fopen("users.bin", "rb");
+
+  if (!file) {
+    return false;
+  }
+
+  User user;
+
+  // Here is we are reading user datas
+  while (fread(&user, sizeof(User), 1, file)) {
+    // Compares two C-strings and returns 0 if they are identical.
+    // If not, it returns a non-zero value indicating the lexicographical difference between them.
+    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
+      fclose(file);
+      return true; // E-posta ve şifre eşleşti
+    }
+  }
+
+  fclose(file);
+  return false; // Eşleşme bulunamadı
+}
+
+bool printMenu::printReadingTrackerMenu(ostream &out) {
+  clearScreen();
+  out << "welcome to ReadingTrackerMenu\n\n";
+  out << "1. Log Progress\n";
+  out << "2. Mark As Read\n";
+  out << "3. View History\n";
+  out << "4. Return User Operations\n";
+  return true;
+}
+
+bool UserAuthentication::registerUser(const User &newUser) {
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "ab");
+
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for writing." << endl;
+    return false;
+  }
+
+  fwrite(&newUser, sizeof(User), 1, file);
+  fclose(file);
+  return true;
+}
+
+bool UserAuthentication::loginUser(const char *email, const char *password) {
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "rb");
+
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for reading." << endl;
+    return false;
+  }
+
+  User user;
+
+  while (fread(&user, sizeof(User), 1, file)) {
+    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
+      fclose(file);
+      cout << "Login success." << std::endl;
+      userOperations();
+      return true;
+    }
+  }
+
+  fclose(file);
+  cout << "Login failed: User not found or wrong password." << endl;
+  return false;
+}
+
+bool LoanManagment::borrowBook() {
+  return true;
+}
+
+bool LoanManagment::lendBook() {
+  return true;
+}
+
+bool LoanManagment::viewLoans() {
+  return true;
+}
+
+bool BookSystem::addBook() {
+  return true;
+}
+
+bool BookSystem::deleteBook() {
+  return true;
+}
+
+bool BookSystem::updateBook() {
+  return true;
+}
+
+bool BookSystem::viewCatalog() {
+  cout << "empty";
+  return true;
+}
+
+bool WishList::wishList() {
+  return true;
+}
+
+bool WishList::addToWishList() {
+  return true;
+}
+
+bool WishList::removeFromWishList() {
+  return true;
+}
+
+bool ReadingTracker::logProgress() {
+  return true;
 }
 
 bool operationsFunc::loginMenu() {
@@ -241,10 +451,12 @@ bool operationsFunc::loginMenu() {
 
 bool WishList::wishList() {
   return 0;
+bool ReadingTracker::markAsRead() {
+  return true;
 }
 
-bool WishList::removeFromWishList() {
-  return 0;
+bool ReadingTracker::viewHistory() {
+  return true;
 }
 
 bool userOperations() {
@@ -290,7 +502,7 @@ bool userOperations() {
     }
   }
 
-  return 0;
+  return true;
 }
 
 bool guestOperation() {
@@ -317,7 +529,22 @@ bool guestOperation() {
         switch (choice2) {
           case 1:
             return mainMenu();
+        break; // Moved this break here
 
+      case 2:
+        return false;
+
+      default:
+        cout << "Invalid choice. Please try again.\n";
+        break;
+    }
+  }
+
+  return false;
+}
+
+int mainMenu() {
+  int choice;
           case 2:
             return false;
 
@@ -326,7 +553,6 @@ bool guestOperation() {
             break;
         }
     }
-
     return false;
   }
 
@@ -423,3 +649,31 @@ bool guestOperation() {
 
     return 0;
   }
+    switch (choice) {
+      case 1:
+        clearScreen();
+        loginUser();
+        break;
+
+      case 2:
+        clearScreen();
+        registerUser();
+        break;
+
+      case 3:
+        clearScreen();
+        cout << "Guest Operations\n";
+        guestOperation();
+        break;
+
+      case 4:
+        clearScreen();
+        cout << "ExitProgram\n";
+        return 0;
+
+      default:
+        cout << "Invalid choice";
+        break;
+    }
+  }
+}

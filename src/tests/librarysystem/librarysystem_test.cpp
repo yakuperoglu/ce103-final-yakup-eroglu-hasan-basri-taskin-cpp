@@ -73,6 +73,58 @@ TEST_F(LibrarysystemTest, PrintUserMenuOutputsCorrectly) {
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
+TEST_F(LibrarysystemTest, PrintBookCatalogingMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printBookCatalogingMenu(stream);
+  std::string expectedOutput = "welcome to User Operations\n\n"
+                               "1. Add Book\n"
+                               "2. Delete Book\n"
+                               "3. Update Book\n"
+                               "4. View Catalog\n"
+                               "5. Return User Operations\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
+
+TEST_F(LibrarysystemTest, PrintLoanManagementMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printLoanManagementMenu(stream);
+  std::string expectedOutput = "welcome to LoanManagement\n\n"
+                               "1. Lend Book\n"
+                               "2. Borrow Book\n"
+                               "3. View Loans\n"
+                               "4. Return User Operations\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
+
+TEST_F(LibrarysystemTest, PrintWishListMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printWishListMenu(stream);
+  std::string expectedOutput = "welcome to WishlistManageMenu\n\n"
+                               "1. View Wishlist\n"
+                               "2. Add To Wishlist\n"
+                               "3. Remove From Wishlist\n"
+                               "4. Return User Operations\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
+
+TEST_F(LibrarysystemTest, PrintReadingTrackerMenuOutputsCorrectly) {
+  std::ostringstream stream;
+  printMenu menu;
+  bool result = menu.printReadingTrackerMenu(stream);
+  std::string expectedOutput = "welcome to ReadingTrackerMenu\n\n"
+                               "1. Log Progress\n"
+                               "2. Mark As Read\n"
+                               "3. View History\n"
+                               "4. Return User Operations\n";
+  EXPECT_TRUE(result);
+  EXPECT_EQ(stream.str(), expectedOutput);
+}
 
 
 int main(int argc, char **argv) {
