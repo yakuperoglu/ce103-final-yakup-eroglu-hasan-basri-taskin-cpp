@@ -10,9 +10,9 @@ int getInput(istream &in);// gets input from user.
 
 bool handleInputError(istream &in, ostream &out);// This function prevents entering letters instead of numbers.
 
-int mainMenu();//Main Function.
+int mainMenu();// Main Function.
 
-bool userOperations();
+bool userOperations();// holds some operations which user can do.
 
 bool registerUser();
 
@@ -25,12 +25,13 @@ struct User {
   char password[maxStringSize];
 };
 
+struct Book {
+	char bookName[maxStringSize];
+};
+
 struct UserAuthentication {
-  static bool login(const char *email, const char *password);
-  bool registerUser(const char *email, const char *name, const char *surname, const char *password);
-  static bool writeUser(const User &user);
-  bool registerUser(const User &newUser);
-  bool loginUser(const char *email, const char *password);
+  bool writeRegisterUser(const User &newUser);
+  bool readLoginUser(const char *email, const char *password);
 };
 
 struct operationsFunc {
@@ -55,6 +56,7 @@ struct BookSystem {
   static bool updateBook();
   static bool deleteBook();
   static bool viewCatalog();
+  static bool viewCatalogForFunc();
 };
 
 struct LoanManagment {
