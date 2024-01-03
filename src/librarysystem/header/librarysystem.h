@@ -1,81 +1,67 @@
 #ifndef LIBRARYSYSTEM_H
 #define LIBRARYSYSTEM_H
-
+#define MAX_STRINGSIZE 100
 #include <iostream>
-
 
 using namespace std;
 
+typedef struct {
+  int id;
+  char name[MAX_STRINGSIZE];
+} Book;
+
+typedef struct {
+  char email[MAX_STRINGSIZE];
+  char password[MAX_STRINGSIZE];
+} User;
+
 int getInput(istream &in);// gets input from user.
+
+int getNewId();
 
 bool handleInputError(istream &in, ostream &out);// This function prevents entering letters instead of numbers.
 
-int mainMenu();//Main Function.
+int mainMenu(std::istream &in, std::ostream &out);// Main Function.
 
-bool userOperations();
+bool userOperations();// holds some operations which user can do.
 
-bool registerUser();
+bool registerUser(std::istream &in, std::ostream &out);
 
-bool loginUser();
+bool loginUser(std::istream &in, std::ostream &out);
 
-const int maxStringSize = 100;
+bool writeRegisterUser(const User &newUser);
 
-struct User {
-  char email[maxStringSize];
-  char password[maxStringSize];
-};
+bool readLoginUser(const char *email, const char *password);
 
-struct UserAuthentication {
-  bool registerUser(const User &newUser);
-  bool loginUser(const char *email, const char *password);
-};
+bool bookCatalogingMenu();
+bool loanManagementMenu();
+bool wishListMenu();
+bool readingTrackerMenu();
 
-struct operationsFunc {
-  static bool bookCatalogingMenu();
-  static bool loanManagementMenu();
-  static bool wishListMenu();
-  static bool readingTrackerMenu();
-};
+bool printMainMenu(ostream &out);
+bool printGuestMenu(ostream &out);
+bool printUserMenu(ostream &out);
+bool printBookCatalogingMenu(ostream &out);
+bool printLoanManagementMenu(ostream &out);
+bool printWishListMenu(ostream &out);
+bool printReadingTrackerMenu(ostream &out);
 
-struct printMenu {
-  static bool printMainMenu(ostream &out);
-  static bool printGuestMenu(ostream &out);
-  static bool printUserMenu(ostream &out);
-  static bool printBookCatalogingMenu(ostream &out);
-  static bool printLoanManagementMenu(ostream &out);
-  static bool printWishListMenu(ostream &out);
-  static bool printReadingTrackerMenu(ostream &out);
-};
+bool addBook();
+bool updateBook();
+bool deleteBook();
+bool viewCatalog();
+bool viewCatalogForFunc();
 
-struct BookSystem {
-  static bool addBook();
-  static bool updateBook();
-  static bool deleteBook();
-  static bool viewCatalog();
-};
+bool lendBook();
+bool borrowBook();
+bool viewLoans();
 
-struct LoanManagment {
-  static bool lendBook();
-  static bool borrowBook();
-  static bool viewLoans();
-};
+bool wishList();
+bool addToWishList();
+bool removeFromWishList();
 
-struct WishList {
-  static bool wishList();
-  static bool addToWishList();
-  static bool removeFromWishList();
-};
+bool logProgress();
+bool markAsRead();
+bool viewHistory();
 
-struct ReadingTracker {
-  static bool logProgress();
-  static bool markAsRead();
-  static bool viewHistory();
-};
-
-struct FileBinaryOperations {
-  bool WriteFile();
-  bool ReadFile();
-  bool ConvertBinaryToText();
-  bool ConvertTextToBinary();
-};
 #endif

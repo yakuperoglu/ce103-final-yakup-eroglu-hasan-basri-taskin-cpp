@@ -7,14 +7,39 @@
 
 class LibrarysystemTest : public ::testing::Test {
  protected:
+  std::ostringstream out;
+  std::istringstream in;
   void SetUp() override {
-    // Setup test data
+    out.str("");
+    out.clear();
   }
 
   void TearDown() override {
     // Clean up test data
   }
+  void simulateUserInput(const std::string &input) {
+    in.str(input);
+    in.clear();
+  }
 };
+
+TEST_F(LibrarysystemTest, LoginUserTest) {
+  simulateUserInput("erman12\n12");
+  EXPECT_TRUE(loginUser(in, out));
+  std::string expectedOutput = "Enter email: ";
+  expectedOutput += "Enter password: ";
+  expectedOutput += "Login success.";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, RegisterUserTest) {
+  simulateUserInput("erman12\n12");
+  EXPECT_TRUE(registerUser(in, out));
+  std::string expectedOutput = "Enter email: ";
+  expectedOutput += "Enter password: ";
+  expectedOutput += "User registered successfully.\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
 
 TEST_F(LibrarysystemTest, OutputsErrorMessageAndReturnsFalse) {
   std::istringstream simulatedInput("invalid input");
@@ -39,93 +64,91 @@ TEST_F(LibrarysystemTest, GetInputHandlesInvalidInput) {
 
 TEST_F(LibrarysystemTest, PrintGuestMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printGuestMenu(stream);
-  std::string expectedOutput = "\n1. View Catalog\n2. Return to Main Menu\n";
+  bool result = printGuestMenu(stream);
+  std::string expectedOutput = "Guest Operations\n\n1. View Catalog\n2. Return to Main Menu\n please enter a number to select : \n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintMainMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printMainMenu(stream);
+  bool result = printMainMenu(stream);
   std::string expectedOutput = "Welcome To Personal Library System\n\n"
                                "1. Login\n"
                                "2. Register\n"
                                "3. Guest Mode\n"
                                "4. Exit Program\n";
+  "Please enter a number to select : \n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintUserMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printUserMenu(stream);
+  bool result = printUserMenu(stream);
   std::string expectedOutput = "welcome to User Operations\n\n"
                                "1. Book Cataloging\n"
                                "2. Loan Management\n"
                                "3. WishList Management\n"
                                "4. Reading Tracker\n"
                                "5. Return Main Menu\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintBookCatalogingMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printBookCatalogingMenu(stream);
-  std::string expectedOutput = "welcome to User Operations\n\n"
+  bool result = printBookCatalogingMenu(stream);
+  std::string expectedOutput = "welcome to Book Operations\n\n"
                                "1. Add Book\n"
                                "2. Delete Book\n"
                                "3. Update Book\n"
                                "4. View Catalog\n"
                                "5. Return User Operations\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintLoanManagementMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printLoanManagementMenu(stream);
+  bool result = printLoanManagementMenu(stream);
   std::string expectedOutput = "welcome to LoanManagement\n\n"
                                "1. Lend Book\n"
                                "2. Borrow Book\n"
                                "3. View Loans\n"
                                "4. Return User Operations\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintWishListMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printWishListMenu(stream);
+  bool result = printWishListMenu(stream);
   std::string expectedOutput = "welcome to WishlistManageMenu\n\n"
                                "1. View Wishlist\n"
                                "2. Add To Wishlist\n"
                                "3. Remove From Wishlist\n"
                                "4. Return User Operations\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
 
 TEST_F(LibrarysystemTest, PrintReadingTrackerMenuOutputsCorrectly) {
   std::ostringstream stream;
-  printMenu menu;
-  bool result = menu.printReadingTrackerMenu(stream);
+  bool result = printReadingTrackerMenu(stream);
   std::string expectedOutput = "welcome to ReadingTrackerMenu\n\n"
                                "1. Log Progress\n"
                                "2. Mark As Read\n"
                                "3. View History\n"
                                "4. Return User Operations\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
-
 
 int main(int argc, char **argv) {
 #ifdef ENABLE_LIBRARYSYSTEM_TEST

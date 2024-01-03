@@ -20,7 +20,7 @@ void clearScreen() {
 
 bool handleInputError(istream &in, ostream &out) {
   in.clear();
-  in.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+  in.ignore(numeric_limits<streamsize>::max(), '\n');
   out << "Invalid input. Please enter a number.\n";
   return false;
 }// This function prevents entering letters instead of numbers.
@@ -31,48 +31,40 @@ int getInput(istream &in) {
   return choice;
 }// this function gets input from user.
 
-bool registerUser() {
-  UserAuthentication auth;
+bool registerUser(istream &in, ostream &out) {
   User newUser;
-  cout << "Enter email: ";
-  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
-  cin.getline(newUser.email, 100);
-  cout << "Enter password: ";
-  cin.getline(newUser.password, 100);
+  out << "Enter email: ";
+  in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  in.getline(newUser.email, 100);
+  out << "Enter password: ";
+  in.getline(newUser.password, 100);
 
-  if (auth.registerUser(newUser)) {
-    cout << "User registered successfully." << endl;
+  if (writeRegisterUser(newUser)) {
+    out << "User registered successfully." << endl;
     return true;
-  } else {
-    cout << "Failed to register user." << endl;
-    return false;
   }
 }
 
-bool loginUser() {
-  UserAuthentication auth;
+bool loginUser(istream &in, ostream &out) {
   char email[100];
   char password[100];
-  cout << "Enter email: ";
-  cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n'); // Yeni satır karakterini yok say
-  cin.getline(email, 100);
-  cout << "Enter password: ";
-  cin.getline(password, 100);
+  out << "Enter email: ";
+  in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  in.getline(email, 100);
+  out << "Enter password: ";
+  in.getline(password, 100);
 
-  if (auth.loginUser(email, password)) {
-    cout << "Login success." << endl;
+  if (readLoginUser(email, password)) {
+    out << "Login success." << endl;
     return true;
-  } else {
-    cout << "Login failed: User not found or wrong password." << endl;
-    return false;
   }
 }
 
-bool operationsFunc::bookCatalogingMenu() {
+bool bookCatalogingMenu() {
   int choice;
 
   while (true) {
-    printMenu::printBookCatalogingMenu(cout);
+    printBookCatalogingMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -82,26 +74,26 @@ bool operationsFunc::bookCatalogingMenu() {
 
     switch (choice) {
       case 1:
-        BookSystem::addBook();
+        addBook();
         return 0;
         break;
 
       case 2:
-        BookSystem::deleteBook();
+        deleteBook();
         return 0;
         break;
 
       case 3:
-        BookSystem::updateBook();
+        updateBook();
         return 0;
         break;
 
       case 4:
-        BookSystem::viewCatalog();
+        viewCatalog();
         break;
 
       case 5:
-        return userOperations();
+        userOperations();
         break;
 
       default:
@@ -112,11 +104,11 @@ bool operationsFunc::bookCatalogingMenu() {
   return true;
 }
 
-bool operationsFunc::loanManagementMenu() {
+bool loanManagementMenu() {
   int choice;
 
   while (true) {
-    printMenu::printLoanManagementMenu(cout);
+    printLoanManagementMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -126,19 +118,20 @@ bool operationsFunc::loanManagementMenu() {
 
     switch (choice) {
       case 1:
-        LoanManagment::lendBook();
+        lendBook();
         return 0;
 
       case 2:
-        LoanManagment::borrowBook();
+        borrowBook();
         return 0;
 
       case 3:
-        LoanManagment::viewLoans();
+        viewLoans();
         return 0;
 
       case 4:
-        return userOperations();
+        userOperations();
+        return 0;
 
       default:
         break;
@@ -148,11 +141,11 @@ bool operationsFunc::loanManagementMenu() {
   return true;
 }
 
-bool operationsFunc::wishListMenu() {
+bool wishListMenu() {
   int choice;
 
   while (true) {
-    printMenu::printWishListMenu(cout);
+    printWishListMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -162,19 +155,20 @@ bool operationsFunc::wishListMenu() {
 
     switch (choice) {
       case 1:
-        WishList::wishList();
+        wishList();
         return 0;
 
       case 2:
-        WishList::addToWishList();
+        addToWishList();
         return 0;
 
       case 3:
-        WishList::removeFromWishList();
+        removeFromWishList();
         return 0;
 
       case 4:
-        return userOperations();
+        userOperations();
+        return 0;
 
       default:
         break;
@@ -184,11 +178,11 @@ bool operationsFunc::wishListMenu() {
   return true;
 }
 
-bool operationsFunc::readingTrackerMenu() {
+bool readingTrackerMenu() {
   int choice;
 
   while (true) {
-    printMenu::printReadingTrackerMenu(cout);
+    printReadingTrackerMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -198,19 +192,20 @@ bool operationsFunc::readingTrackerMenu() {
 
     switch (choice) {
       case 1:
-        ReadingTracker::logProgress();
+        logProgress();
         return true;
 
       case 2:
-        ReadingTracker::markAsRead();
+        markAsRead();
         return true;
 
       case 3:
-        ReadingTracker::viewHistory();
+        viewHistory();
         return true;
 
       case 4:
-        return userOperations();
+        userOperations();
+        return 0;
 
       default:
         break;
@@ -220,25 +215,27 @@ bool operationsFunc::readingTrackerMenu() {
   return true;
 }
 
-bool printMenu::printGuestMenu(ostream &out) {
+bool printGuestMenu(ostream &out) {
   clearScreen();
   out << "Guest Operations\n\n";
   out << "1. View Catalog\n";
   out << "2. Return to Main Menu\n";
+  out << "Please enter a number to select:\n";
   return true;
 }// prints screen GuestMenu.
 
-bool printMenu::printMainMenu(ostream &out) {
+bool printMainMenu(ostream &out) {
   clearScreen();
   out << "Welcome To Personal Library System\n\n";
   out << "1. Login\n";
   out << "2. Register\n";
   out << "3. Guest Mode\n";
   out << "4. Exit Program\n";
+  out << "Please enter a number to select:\n";
   return true;
 }// prints screen MainMenu.
 
-bool printMenu::printUserMenu(ostream &out) {
+bool printUserMenu(ostream &out) {
   clearScreen();
   out << "welcome to User Operations\n\n";
   out << "1. Book Cataloging\n";
@@ -246,51 +243,56 @@ bool printMenu::printUserMenu(ostream &out) {
   out << "3. WishList Management\n";
   out << "4. Reading Tracker\n";
   out << "5. Return Main Menu\n";
+  out << "Please enter a number to select:\n";
   return true;
 }// prints screen UserMenu.
 
-bool printMenu::printBookCatalogingMenu(ostream &out) {
+bool printBookCatalogingMenu(ostream &out) {
   clearScreen();
-  out << "welcome to User Operations\n\n";
+  out << "welcome to Book Operations\n\n";
   out << "1. Add Book\n";
   out << "2. Delete Book\n";
   out << "3. Update Book\n";
   out << "4. View Catalog\n";
   out << "5. Return User Operations\n";
+  out << "Please enter a number to select:\n";
   return true;
 }// prints screen BookCatalogingMenu.
 
-bool printMenu::printLoanManagementMenu(ostream &out) {
+bool printLoanManagementMenu(ostream &out) {
   clearScreen();
   out << "welcome to LoanManagement\n\n";
   out << "1. Lend Book\n";
   out << "2. Borrow Book\n";
   out << "3. View Loans\n";
   out << "4. Return User Operations\n";
+  out << "Please enter a number to select:\n";
   return true;
 }// prints screen LoanManagementMenu.
 
-bool printMenu::printWishListMenu(ostream &out) {
+bool printWishListMenu(ostream &out) {
   clearScreen();
   out << "welcome to WishlistManageMenu\n\n";
   out << "1. View Wishlist\n";
   out << "2. Add To Wishlist\n";
   out << "3. Remove From Wishlist\n";
   out << "4. Return User Operations\n";
+  out << "Please enter a number to select:\n";
   return true;
 }
 
-bool printMenu::printReadingTrackerMenu(ostream &out) {
+bool printReadingTrackerMenu(ostream &out) {
   clearScreen();
   out << "welcome to ReadingTrackerMenu\n\n";
   out << "1. Log Progress\n";
   out << "2. Mark As Read\n";
   out << "3. View History\n";
   out << "4. Return User Operations\n";
+  out << "Please enter a number to select:\n";
   return true;
 }
 
-bool UserAuthentication::registerUser(const User &newUser) {
+bool writeRegisterUser(const User &newUser) {
   FILE *file;
   errno_t err = fopen_s(&file, "users.bin", "ab");
 
@@ -304,7 +306,7 @@ bool UserAuthentication::registerUser(const User &newUser) {
   return true;
 }
 
-bool UserAuthentication::loginUser(const char *email, const char *password) {
+bool readLoginUser(const char *email, const char *password) {
   FILE *file;
   errno_t err = fopen_s(&file, "users.bin", "rb");
 
@@ -318,7 +320,7 @@ bool UserAuthentication::loginUser(const char *email, const char *password) {
   while (fread(&user, sizeof(User), 1, file)) {
     if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
       fclose(file);
-      cout << "Login success." << std::endl;
+      cout << "Login success." << endl;
       userOperations();
       return true;
     }
@@ -329,56 +331,156 @@ bool UserAuthentication::loginUser(const char *email, const char *password) {
   return false;
 }
 
-bool LoanManagment::borrowBook() {
+bool borrowBook() {
   return true;
 }
 
-bool LoanManagment::lendBook() {
+bool lendBook() {
   return true;
 }
 
-bool LoanManagment::viewLoans() {
+bool viewLoans() {
   return true;
 }
 
-bool BookSystem::addBook() {
+int getNewId() {
+  int lastId = 0;
+  FILE *file = fopen("Books.bin", "rb");
+  Book book;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id > lastId) lastId = book.id;
+  }
+
+  fclose(file);
+  return lastId + 1;
+}
+
+bool addBook() {
+  clearScreen();
+  Book book;
+  printf("Please enter the name of the book you want to add: ");
+  scanf(" %[^\n]", book.name);
+  book.id = getNewId(); // Function to generate a new ID (defined below)
+  FILE *file = fopen("Books.bin", "ab");
+  fwrite(&book, sizeof(Book), 1, file);
+  fclose(file);
+  bookCatalogingMenu();
   return true;
 }
 
-bool BookSystem::deleteBook() {
+bool deleteBook() {
+  clearScreen();
+  viewCatalogForFunc();
+  int id;
+  printf("Please enter the number of the book you want to delete: ");
+  scanf("%d", &id);
+  // Reading the file and writing non-deleted items to a temporary file for deletion process.
+  FILE *file = fopen("Books.bin", "rb");
+  FILE *tempFile = fopen("temp.bin", "wb");
+  Book book;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id != id) {
+      fwrite(&book, sizeof(Book), 1, tempFile);
+    }
+  }
+
+  fclose(file);
+  fclose(tempFile);
+  remove("Books.bin");
+  rename("temp.bin", "Books.bin");
+  bookCatalogingMenu();
   return true;
 }
 
-bool BookSystem::updateBook() {
+bool updateBook() {
+  clearScreen();
+  viewCatalogForFunc();
+  int id;
+  printf("Please enter the number of the book you want to update: ");
+  scanf("%d", &id);
+  FILE *file = fopen("Books.bin", "rb+");
+
+  if (file == NULL) {
+    perror("Cannot open file");
+    return 0;
+  }
+
+  Book book;
+  int found = 0;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id == id) {
+      printf("Please enter the new name of the book: ");
+      scanf(" %[^\n]", book.name);
+      fseek(file, -sizeof(Book), SEEK_CUR);
+      fwrite(&book, sizeof(Book), 1, file);
+      found = 1;
+      break;
+    }
+  }
+
+  fclose(file);
+
+  if (!found) {
+    printf("Book not found.\n");
+    return false;
+  }
+
+  bookCatalogingMenu();
   return true;
 }
 
-bool BookSystem::viewCatalog() {
-  cout << "empty";
+bool viewCatalog() {
+  clearScreen();
+  FILE *file = fopen("Books.bin", "rb");
+  Book book;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    printf("%d. %s\n", book.id, book.name);
+  }
+
+  fclose(file);
+  cout << "\nPress any key to return to Main Menu";
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.get();
   return true;
 }
 
-bool WishList::wishList() {
+bool viewCatalogForFunc() {
+  FILE *file = fopen("Books.bin", "rb");
+  Book book;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    printf("%d. %s\n", book.id, book.name);
+  }
+
+  fclose(file);
   return true;
 }
 
-bool WishList::addToWishList() {
+bool wishList() {
   return true;
 }
 
-bool WishList::removeFromWishList() {
+bool addToWishList() {
   return true;
 }
 
-bool ReadingTracker::logProgress() {
+bool removeFromWishList() {
   return true;
 }
 
-bool ReadingTracker::markAsRead() {
+bool logProgress() {
   return true;
 }
 
-bool ReadingTracker::viewHistory() {
+bool markAsRead() {
+  return true;
+}
+
+bool viewHistory() {
   return true;
 }
 
@@ -387,7 +489,7 @@ bool userOperations() {
 
   while (true) {
     clearScreen();
-    printMenu::printUserMenu(cout);
+    printUserMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -397,22 +499,22 @@ bool userOperations() {
 
     switch (choice) {
       case 1:
-        operationsFunc::bookCatalogingMenu();
+        bookCatalogingMenu();
         return 0;
         break;
 
       case 2:
-        operationsFunc::loanManagementMenu();
+        loanManagementMenu();
         return 0;
         break;
 
       case 3:
-        operationsFunc::wishListMenu();
+        wishListMenu();
         return 0;
         break;
 
       case 4:
-        operationsFunc::readingTrackerMenu();
+        readingTrackerMenu();
         return 0;
         break;
 
@@ -432,7 +534,7 @@ bool guestOperation() {
   int choice;
 
   while (true) {
-    printMenu::printGuestMenu(cout);
+    printGuestMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -443,7 +545,7 @@ bool guestOperation() {
     switch (choice) {
       case 1:
         clearScreen();
-        BookSystem::viewCatalog();
+        viewCatalog();
         cout << "\nPress any key to return to Main Menu";
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
         cin.get();
@@ -461,11 +563,11 @@ bool guestOperation() {
   return false;
 }
 
-int mainMenu() {
+int mainMenu(istream &in, ostream &out) {
   int choice;
 
   while (true) {
-    printMenu::printMainMenu(cout);
+    printMainMenu(cout);
     choice = getInput(cin);
 
     if (cin.fail()) {
@@ -476,12 +578,12 @@ int mainMenu() {
     switch (choice) {
       case 1:
         clearScreen();
-        loginUser();
+        loginUser(in, out);
         break;
 
       case 2:
         clearScreen();
-        registerUser();
+        registerUser(in, out);
         break;
 
       case 3:
