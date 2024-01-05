@@ -409,7 +409,14 @@ bool updateBook() {
 
 bool viewCatalog() {
   clearScreen();
-  FILE *file = fopen("Books.bin", "rb");
+  FILE *file;
+  errno_t err = fopen_s(&file, "Books.bin", "rb");
+
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for writing." << endl;
+    return false;
+  }
+
   Book book;
 
   while (fread(&book, sizeof(Book), 1, file)) {
@@ -631,9 +638,6 @@ bool guestOperation() {
       case 1:
         clearScreen();
         viewCatalog();
-        cout << "\nPress any key to return to Main Menu";
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cin.get();
         break; // Moved this break here
 
       case 2:
