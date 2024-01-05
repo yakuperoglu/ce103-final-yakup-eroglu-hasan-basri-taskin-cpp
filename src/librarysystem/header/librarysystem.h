@@ -56,7 +56,8 @@ bool lendBook();
 bool borrowBook();
 bool viewLoans();
 
-bool wishList();
+bool listWishList();
+bool listWishListForFunc();
 bool addToWishList();
 bool removeFromWishList();
 

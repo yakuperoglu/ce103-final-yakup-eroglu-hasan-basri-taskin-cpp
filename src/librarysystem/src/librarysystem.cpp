@@ -33,10 +33,10 @@ int getInput(istream &in) {
 
 bool registerUser(istream &in, ostream &out) {
   User newUser;
-  out << "Enter email: ";
+  out << "Enter email:";
   in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
   in.getline(newUser.email, 100);
-  out << "Enter password: ";
+  out << "Enter password:";
   in.getline(newUser.password, 100);
 
   if (writeRegisterUser(newUser)) {
@@ -48,15 +48,19 @@ bool registerUser(istream &in, ostream &out) {
 bool loginUser(istream &in, ostream &out) {
   char email[100];
   char password[100];
-  out << "Enter email: ";
+  out << "Enter email:";
   in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
   in.getline(email, 100);
-  out << "Enter password: ";
+  out << "Enter password:";
   in.getline(password, 100);
 
   if (readLoginUser(email, password)) {
     out << "Login success." << endl;
+    userOperations();
     return true;
+  } else {
+    out << "Login Failed.";
+    return false;
   }
 }
 
@@ -155,7 +159,7 @@ bool wishListMenu() {
 
     switch (choice) {
       case 1:
-        wishList();
+        listWishList();
         return 0;
 
       case 2:
@@ -321,7 +325,6 @@ bool readLoginUser(const char *email, const char *password) {
     if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
       fclose(file);
       cout << "Login success." << endl;
-      userOperations();
       return true;
     }
   }
@@ -329,18 +332,6 @@ bool readLoginUser(const char *email, const char *password) {
   fclose(file);
   cout << "Login failed: User not found or wrong password." << endl;
   return false;
-}
-
-bool borrowBook() {
-  return true;
-}
-
-bool lendBook() {
-  return true;
-}
-
-bool viewLoans() {
-  return true;
 }
 
 int getNewId() {
@@ -460,15 +451,124 @@ bool viewCatalogForFunc() {
   return true;
 }
 
-bool wishList() {
+bool listWishList() {
+  clearScreen();
+  FILE *file = fopen("wishlist.bin", "rb");
+
+  if (!file) {
+    cout << "Wishlist file not found.\n";
+    return false;
+  }
+
+  Book book;
+  cout << "Wishlist:\n";
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    cout << book.id << " " << book.name << endl;
+  }
+
+  fclose(file);
+  cout << "\nPress Enter to exit.\n";
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.get();
+  wishListMenu();
+  return true;
+}
+
+bool listWishListForFunc() {
+  FILE *file = fopen("wishlist.bin", "rb");
+
+  if (!file) {
+    cout << "Wishlist file not found.\n";
+    return false;
+  }
+
+  Book book;
+  cout << "Wishlist:\n";
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    cout << book.id << " " << book.name << endl;
+  }
+
+  fclose(file);
   return true;
 }
 
 bool addToWishList() {
-  return true;
+  clearScreen();
+  viewCatalogForFunc();
+  int id;
+  cout << "Enter the ID of the book to add to the wishlist: ";
+  cin >> id;
+  FILE *file = fopen("Books.bin", "rb");
+  FILE *wishlistFile = fopen("wishlist.bin", "ab");
+  Book book;
+  bool found = false;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id == id) {
+      fwrite(&book, sizeof(Book), 1, wishlistFile);
+      found = true;
+      break;
+    }
+  }
+
+  fclose(file);
+  fclose(wishlistFile);
+
+  if (found) {
+    cout << "Book added to the wishlist.\n";
+  } else {
+    cout << "Book not found.\n";
+  }
+
+  wishListMenu();
+  return found;
 }
 
 bool removeFromWishList() {
+  clearScreen();
+  listWishListForFunc();
+  int id;
+  cout << "Enter the ID of the book to remove from the wishlist: ";
+  cin >> id;
+  FILE *file = fopen("wishlist.bin", "rb");
+  FILE *tempFile = fopen("temp.bin", "wb");
+  Book book;
+  bool found = false;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id != id) {
+      fwrite(&book, sizeof(Book), 1, tempFile);
+    } else {
+      found = true;
+    }
+  }
+
+  fclose(file);
+  fclose(tempFile);
+  remove("wishlist.bin");
+  rename("temp.bin", "wishlist.bin");
+
+  if (found) {
+    cout << "Book removed from the wishlist.\n";
+  } else {
+    cout << "Book not found.\n";
+  }
+
+  wishListMenu();
+  return found;
+}
+
+bool borrowBook() {
+  return true;
+}
+
+bool lendBook() {
+  return true;
+}
+
+bool viewLoans() {
   return true;
 }
 
@@ -519,6 +619,7 @@ bool userOperations() {
         break;
 
       case 5:
+        mainMenu(cin, cout);
         return 0;
         break;
 
