@@ -29,10 +29,6 @@ bool registerUser(std::istream &in, std::ostream &out);
 
 bool loginUser(std::istream &in, std::ostream &out);
 
-bool writeRegisterUser(const User &newUser);
-
-bool readLoginUser(const char *email, const char *password);
-
 bool bookCatalogingMenu();
 bool loanManagementMenu();
 bool wishListMenu();
@@ -55,8 +51,10 @@ bool viewCatalogForFunc();
 bool lendBook();
 bool borrowBook();
 bool viewLoans();
+bool viewLoansForFunc();
 
-bool wishList();
+bool listWishList();
+bool listWishListForFunc();
 bool addToWishList();
 bool removeFromWishList();
 
