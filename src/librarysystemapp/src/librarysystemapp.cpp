@@ -8,6 +8,6 @@
 using namespace std;
 
 int main() {
-  mainMenu();
+  mainMenu(std::cin, std::cout);
   return 0;
 }
