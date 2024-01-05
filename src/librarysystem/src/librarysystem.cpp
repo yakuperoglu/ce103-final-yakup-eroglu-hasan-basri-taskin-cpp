@@ -38,11 +38,18 @@ bool registerUser(istream &in, ostream &out) {
   in.getline(newUser.email, 100);
   out << "Enter password:";
   in.getline(newUser.password, 100);
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "ab");
 
-  if (writeRegisterUser(newUser)) {
-    out << "User registered successfully." << endl;
-    return true;
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for writing." << endl;
+    return false;
   }
+
+  fwrite(&newUser, sizeof(User), 1, file);
+  fclose(file);
+  out << "User registered successfully." << endl;
+  return true;
 }
 
 bool loginUser(istream &in, ostream &out) {
@@ -53,15 +60,29 @@ bool loginUser(istream &in, ostream &out) {
   in.getline(email, 100);
   out << "Enter password:";
   in.getline(password, 100);
+  FILE *file;
+  errno_t err = fopen_s(&file, "users.bin", "rb");
 
-  if (readLoginUser(email, password)) {
-    out << "Login success." << endl;
-    userOperations();
-    return true;
-  } else {
+  if (err != 0 || file == NULL) {
+    cerr << "File couldn't be opened for reading." << endl;
     out << "Login Failed.";
     return false;
   }
+
+  User user;
+
+  while (fread(&user, sizeof(User), 1, file)) {
+    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
+      fclose(file);
+      out << "Login success." << endl;
+      userOperations();
+      return true;
+    }
+  }
+
+  fclose(file);
+  cout << "Login failed: User not found or wrong password." << endl;
+  return false;
 }
 
 bool bookCatalogingMenu() {
@@ -296,43 +317,6 @@ bool printReadingTrackerMenu(ostream &out) {
   return true;
 }
 
-bool writeRegisterUser(const User &newUser) {
-  FILE *file;
-  errno_t err = fopen_s(&file, "users.bin", "ab");
-
-  if (err != 0 || file == NULL) {
-    cerr << "File couldn't be opened for writing." << endl;
-    return false;
-  }
-
-  fwrite(&newUser, sizeof(User), 1, file);
-  fclose(file);
-  return true;
-}
-
-bool readLoginUser(const char *email, const char *password) {
-  FILE *file;
-  errno_t err = fopen_s(&file, "users.bin", "rb");
-
-  if (err != 0 || file == NULL) {
-    cerr << "File couldn't be opened for reading." << endl;
-    return false;
-  }
-
-  User user;
-
-  while (fread(&user, sizeof(User), 1, file)) {
-    if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
-      fclose(file);
-      cout << "Login success." << endl;
-      return true;
-    }
-  }
-
-  fclose(file);
-  cout << "Login failed: User not found or wrong password." << endl;
-  return false;
-}
 
 int getNewId() {
   int lastId = 0;
