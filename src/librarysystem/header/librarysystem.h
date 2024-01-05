@@ -51,6 +51,7 @@ bool viewCatalogForFunc();
 bool lendBook();
 bool borrowBook();
 bool viewLoans();
+bool viewLoansForFunc();
 
 bool listWishList();
 bool listWishListForFunc();

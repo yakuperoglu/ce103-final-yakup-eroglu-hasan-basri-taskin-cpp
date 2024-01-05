@@ -556,10 +556,78 @@ bool borrowBook() {
 }
 
 bool lendBook() {
+  clearScreen();
+  viewLoansForFunc();
+  int id;
+  printf("Please enter the ID of the book you want to return: ");
+  scanf("%d", &id);
+  FILE *loansFile = fopen("Loans.bin", "rb");
+  FILE *tempFile = fopen("temp.bin", "wb");
+  Book book;
+  bool found = false;
+
+  while (fread(&book, sizeof(Book), 1, loansFile)) {
+    if (book.id != id) {
+      fwrite(&book, sizeof(Book), 1, tempFile);
+    } else {
+      found = true;
+    }
+  }
+
+  fclose(loansFile);
+  fclose(tempFile);
+  remove("Loans.bin");
+  rename("temp.bin", "Loans.bin");
+
+  if (!found) {
+    printf("Book not found.\n");
+    return false;
+  }
+
+  loanManagementMenu();
   return true;
 }
 
 bool viewLoans() {
+  clearScreen();
+  FILE *file = fopen("Loans.bin", "rb");
+  Book book;
+
+  if (!file) {
+    printf("Loans file not found.\n");
+    return false;
+  }
+
+  printf("Loaned Books:\n");
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    printf("%d. %s\n", book.id, book.name);
+  }
+
+  fclose(file);
+  printf("\nPress any key to return to Main Menu");
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.get();
+  loanManagementMenu();
+  return true;
+}
+
+bool viewLoansForFunc() {
+  FILE *file = fopen("Loans.bin", "rb");
+  Book book;
+
+  if (!file) {
+    printf("Loans file not found.\n");
+    return false;
+  }
+
+  printf("Loaned Books:\n");
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    printf("%d. %s\n", book.id, book.name);
+  }
+
+  fclose(file);
   return true;
 }
 
