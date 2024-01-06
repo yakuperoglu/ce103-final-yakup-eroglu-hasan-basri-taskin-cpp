@@ -34,14 +34,13 @@ int getInput(istream &in) {
 bool registerUser(istream &in, ostream &out) {
   User newUser;
   out << "Enter email:";
-  in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  in.ignore(numeric_limits<streamsize>::max(), '\n');
   in.getline(newUser.email, 100);
   out << "Enter password:";
   in.getline(newUser.password, 100);
-  FILE *file;
-  errno_t err = fopen_s(&file, "users.bin", "ab");
+  FILE *file = fopen("users.bin", "ab");
 
-  if (err != 0 || file == NULL) {
+  if (file == NULL) {
     cerr << "File couldn't be opened for writing." << endl;
     return false;
   }
@@ -56,14 +55,13 @@ bool loginUser(istream &in, ostream &out) {
   char email[100];
   char password[100];
   out << "Enter email:";
-  in.ignore(numeric_limits<streamsize>::max(), '\n'); // Yeni satır karakterini yok say
+  in.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore new line character
   in.getline(email, 100);
   out << "Enter password:";
   in.getline(password, 100);
-  FILE *file;
-  errno_t err = fopen_s(&file, "users.bin", "rb");
+  FILE *file = fopen("users.bin", "rb");
 
-  if (err != 0 || file == NULL) {
+  if (file == NULL) {
     cerr << "File couldn't be opened for reading." << endl;
     out << "Login Failed.";
     return false;
@@ -81,7 +79,7 @@ bool loginUser(istream &in, ostream &out) {
   }
 
   fclose(file);
-  cout << "Login failed: User not found or wrong password." << endl;
+  out << "Login failed: User not found or wrong password." << endl;
   return false;
 }
 
@@ -100,17 +98,14 @@ bool bookCatalogingMenu() {
     switch (choice) {
       case 1:
         addBook();
-        return 0;
         break;
 
       case 2:
         deleteBook();
-        return 0;
         break;
 
       case 3:
         updateBook();
-        return 0;
         break;
 
       case 4:
@@ -118,7 +113,7 @@ bool bookCatalogingMenu() {
         break;
 
       case 5:
-        userOperations();
+        return 0;
         break;
 
       default:
@@ -144,18 +139,17 @@ bool loanManagementMenu() {
     switch (choice) {
       case 1:
         lendBook();
-        return 0;
+        break;
 
       case 2:
         borrowBook();
-        return 0;
+        break;
 
       case 3:
         viewLoans();
-        return 0;
+        break;
 
       case 4:
-        userOperations();
         return 0;
 
       default:
@@ -181,18 +175,17 @@ bool wishListMenu() {
     switch (choice) {
       case 1:
         listWishList();
-        return 0;
+        break;
 
       case 2:
         addToWishList();
-        return 0;
+        break;
 
       case 3:
         removeFromWishList();
-        return 0;
+        break;
 
       case 4:
-        userOperations();
         return 0;
 
       default:
@@ -218,18 +211,17 @@ bool readingTrackerMenu() {
     switch (choice) {
       case 1:
         logProgress();
-        return true;
+        break;
 
       case 2:
         markAsRead();
-        return true;
+        break;
 
       case 3:
         viewHistory();
-        return true;
+        break;
 
       case 4:
-        userOperations();
         return 0;
 
       default:
@@ -317,14 +309,20 @@ bool printReadingTrackerMenu(ostream &out) {
   return true;
 }
 
-
 int getNewId() {
   int lastId = 0;
   FILE *file = fopen("Books.bin", "rb");
+
+  if (file == nullptr) {
+    return 1;
+  }
+
   Book book;
 
-  while (fread(&book, sizeof(Book), 1, file)) {
-    if (book.id > lastId) lastId = book.id;
+  while (fread(&book, sizeof(Book), 1, file) == 1) {
+    if (book.id > lastId) {
+      lastId = book.id;
+    }
   }
 
   fclose(file);
@@ -334,13 +332,27 @@ int getNewId() {
 bool addBook() {
   clearScreen();
   Book book;
-  printf("Please enter the name of the book you want to add: ");
-  scanf(" %[^\n]", book.name);
-  book.id = getNewId(); // Function to generate a new ID (defined below)
+  cout << "Please enter the name of the book you want to add: ";
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.getline(book.name, sizeof(book.name));
+  book.id = getNewId();
   FILE *file = fopen("Books.bin", "ab");
+
+  if (!file) {
+    cerr << "Unable to open or create the file 'Books.bin'." << endl;
+    return false;
+  }
+
   fwrite(&book, sizeof(Book), 1, file);
+
+  if (ferror(file)) {
+    perror("Failed to write to 'Books.bin'");
+    fclose(file);
+    return false;
+  }
+
   fclose(file);
-  bookCatalogingMenu();
+  cout << "Book added successfully." << endl;
   return true;
 }
 
@@ -348,25 +360,48 @@ bool deleteBook() {
   clearScreen();
   viewCatalogForFunc();
   int id;
-  printf("Please enter the number of the book you want to delete: ");
-  scanf("%d", &id);
-  // Reading the file and writing non-deleted items to a temporary file for deletion process.
+  cout << "Please enter the number of the book you want to delete: ";
+  cin >> id;
+
+  if (cin.fail()) {
+    cin.clear(); // Clear the error flags
+    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard the rest of the line
+    cerr << "You must enter a numeric ID." << endl;
+    return false;
+  }
+
   FILE *file = fopen("Books.bin", "rb");
   FILE *tempFile = fopen("temp.bin", "wb");
+
+  if (!file || !tempFile) {
+    cerr << "Error opening files." << endl;
+    return false;
+  }
+
   Book book;
+  bool found = false;
 
   while (fread(&book, sizeof(Book), 1, file)) {
     if (book.id != id) {
       fwrite(&book, sizeof(Book), 1, tempFile);
+    } else {
+      found = true;
     }
   }
 
   fclose(file);
   fclose(tempFile);
-  remove("Books.bin");
-  rename("temp.bin", "Books.bin");
-  bookCatalogingMenu();
-  return true;
+
+  if (found) {
+    remove("Books.bin");
+    rename("temp.bin", "Books.bin");
+    cout << "Book deleted successfully." << endl;
+  } else {
+    cerr << "Book with ID " << id << " not found." << endl;
+    remove("temp.bin"); // Clean up the temporary file as it's not needed
+  }
+
+  return found;
 }
 
 bool updateBook() {
@@ -403,17 +438,15 @@ bool updateBook() {
     return false;
   }
 
-  bookCatalogingMenu();
   return true;
 }
 
 bool viewCatalog() {
   clearScreen();
-  FILE *file;
-  errno_t err = fopen_s(&file, "Books.bin", "rb");
+  FILE *file = fopen("Books.bin", "rb");
 
-  if (err != 0 || file == NULL) {
-    cerr << "File couldn't be opened for writing." << endl;
+  if (file == NULL) {
+    cerr << "File couldn't be opened for reading." << endl;
     return false;
   }
 
@@ -462,7 +495,6 @@ bool listWishList() {
   cout << "\nPress Enter to exit.\n";
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
-  wishListMenu();
   return true;
 }
 
@@ -513,7 +545,6 @@ bool addToWishList() {
     cout << "Book not found.\n";
   }
 
-  wishListMenu();
   return found;
 }
 
@@ -547,11 +578,41 @@ bool removeFromWishList() {
     cout << "Book not found.\n";
   }
 
-  wishListMenu();
   return found;
 }
 
 bool borrowBook() {
+  clearScreen();
+  viewCatalogForFunc();
+  int id;
+  printf("\nPlease enter the ID of the book you want to borrow: ");
+  scanf("%d", &id);
+  FILE *booksFile = fopen("Books.bin", "rb");
+  FILE *loansFile = fopen("Loans.bin", "ab");
+  FILE *tempFile = fopen("temp.bin", "wb");
+  Book book;
+  bool found = false;
+
+  while (fread(&book, sizeof(Book), 1, booksFile)) {
+    if (book.id == id) {
+      fwrite(&book, sizeof(Book), 1, loansFile);
+      found = true;
+    } else {
+      fwrite(&book, sizeof(Book), 1, tempFile);
+    }
+  }
+
+  fclose(booksFile);
+  fclose(loansFile);
+  fclose(tempFile);
+  remove("Books.bin");
+  rename("temp.bin", "Books.bin");
+
+  if (!found) {
+    printf("Book not found.\n");
+    return false;
+  }
+
   return true;
 }
 
@@ -559,10 +620,17 @@ bool lendBook() {
   clearScreen();
   viewLoansForFunc();
   int id;
-  printf("Please enter the ID of the book you want to return: ");
+  printf("\nPlease enter the ID of the book you want to return: ");
   scanf("%d", &id);
   FILE *loansFile = fopen("Loans.bin", "rb");
   FILE *tempFile = fopen("temp.bin", "wb");
+  FILE *booksFile = fopen("Books.bin", "ab");
+
+  if (!loansFile || !tempFile || !booksFile) {
+    printf("Error opening files.\n");
+    return false;
+  }
+
   Book book;
   bool found = false;
 
@@ -570,12 +638,14 @@ bool lendBook() {
     if (book.id != id) {
       fwrite(&book, sizeof(Book), 1, tempFile);
     } else {
+      fwrite(&book, sizeof(Book), 1, booksFile);
       found = true;
     }
   }
 
   fclose(loansFile);
   fclose(tempFile);
+  fclose(booksFile);
   remove("Loans.bin");
   rename("temp.bin", "Loans.bin");
 
@@ -584,7 +654,7 @@ bool lendBook() {
     return false;
   }
 
-  loanManagementMenu();
+  printf("Book returned successfully.\n");
   return true;
 }
 
@@ -608,7 +678,6 @@ bool viewLoans() {
   printf("\nPress any key to return to Main Menu");
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
-  loanManagementMenu();
   return true;
 }
 
@@ -659,26 +728,21 @@ bool userOperations() {
     switch (choice) {
       case 1:
         bookCatalogingMenu();
-        return 0;
         break;
 
       case 2:
         loanManagementMenu();
-        return 0;
         break;
 
       case 3:
         wishListMenu();
-        return 0;
         break;
 
       case 4:
         readingTrackerMenu();
-        return 0;
         break;
 
       case 5:
-        mainMenu(cin, cout);
         return 0;
         break;
 
@@ -709,7 +773,7 @@ bool guestOperation() {
         break; // Moved this break here
 
       case 2:
-        return false;
+        return 0;
 
       default:
         cout << "Invalid choice. Please try again.\n";

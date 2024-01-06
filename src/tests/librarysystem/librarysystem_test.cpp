@@ -35,8 +35,8 @@ TEST_F(LibrarysystemTest, LoginUserTest) {
 TEST_F(LibrarysystemTest, RegisterUserTest) {
   simulateUserInput("erman12\n12");
   EXPECT_TRUE(registerUser(in, out));
-  std::string expectedOutput = "Enter email: ";
-  expectedOutput += "Enter password: ";
+  std::string expectedOutput = "Enter email:";
+  expectedOutput += "Enter password:";
   expectedOutput += "User registered successfully.\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
@@ -65,7 +65,10 @@ TEST_F(LibrarysystemTest, GetInputHandlesInvalidInput) {
 TEST_F(LibrarysystemTest, PrintGuestMenuOutputsCorrectly) {
   std::ostringstream stream;
   bool result = printGuestMenu(stream);
-  std::string expectedOutput = "Guest Operations\n\n1. View Catalog\n2. Return to Main Menu\n please enter a number to select : \n";
+  std::string expectedOutput = "Guest Operations\n\n";
+  "1. View Catalog\n";
+  "2. Return to Main Menu\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
