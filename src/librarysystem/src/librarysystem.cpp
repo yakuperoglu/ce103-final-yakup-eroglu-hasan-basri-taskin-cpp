@@ -339,7 +339,6 @@ bool addBook() {
   FILE *file = fopen("Books.bin", "ab");
 
   if (!file) {
-    cerr << "Unable to open or create the file 'Books.bin'." << endl;
     return false;
   }
 
@@ -359,6 +358,11 @@ bool addBook() {
 bool deleteBook() {
   clearScreen();
   viewCatalogForFunc();
+
+  if (viewCatalogForFunc() == false) {
+    return false;
+  }
+
   int id;
   cout << "Please enter the number of the book you want to delete: ";
   cin >> id;
@@ -407,6 +411,11 @@ bool deleteBook() {
 bool updateBook() {
   clearScreen();
   viewCatalogForFunc();
+
+  if (viewCatalogForFunc() == false) {
+    return false;
+  }
+
   int id;
   printf("Please enter the number of the book you want to update: ");
   scanf("%d", &id);
@@ -446,7 +455,6 @@ bool viewCatalog() {
   FILE *file = fopen("Books.bin", "rb");
 
   if (file == NULL) {
-    cerr << "File couldn't be opened for reading." << endl;
     return false;
   }
 
@@ -467,6 +475,10 @@ bool viewCatalogForFunc() {
   FILE *file = fopen("Books.bin", "rb");
   Book book;
 
+  if (!file) {
+    return false;
+  }
+
   while (fread(&book, sizeof(Book), 1, file)) {
     printf("%d. %s\n", book.id, book.name);
   }
@@ -480,7 +492,6 @@ bool listWishList() {
   FILE *file = fopen("wishlist.bin", "rb");
 
   if (!file) {
-    cout << "Wishlist file not found.\n";
     return false;
   }
 
@@ -502,7 +513,6 @@ bool listWishListForFunc() {
   FILE *file = fopen("wishlist.bin", "rb");
 
   if (!file) {
-    cout << "Wishlist file not found.\n";
     return false;
   }
 
@@ -520,6 +530,11 @@ bool listWishListForFunc() {
 bool addToWishList() {
   clearScreen();
   viewCatalogForFunc();
+
+  if (viewCatalogForFunc() == false) {
+    return false;
+  }
+
   int id;
   cout << "Enter the ID of the book to add to the wishlist: ";
   cin >> id;
@@ -551,6 +566,11 @@ bool addToWishList() {
 bool removeFromWishList() {
   clearScreen();
   listWishListForFunc();
+
+  if (listWishListForFunc() == false) {
+    return false;
+  }
+
   int id;
   cout << "Enter the ID of the book to remove from the wishlist: ";
   cin >> id;
@@ -584,6 +604,11 @@ bool removeFromWishList() {
 bool borrowBook() {
   clearScreen();
   viewCatalogForFunc();
+
+  if (viewCatalogForFunc() == false) {
+    return false;
+  }
+
   int id;
   printf("\nPlease enter the ID of the book you want to borrow: ");
   scanf("%d", &id);
@@ -619,6 +644,11 @@ bool borrowBook() {
 bool lendBook() {
   clearScreen();
   viewLoansForFunc();
+
+  if (viewLoansForFunc() == false) {
+    return false;
+  }
+
   int id;
   printf("\nPlease enter the ID of the book you want to return: ");
   scanf("%d", &id);
@@ -664,7 +694,6 @@ bool viewLoans() {
   Book book;
 
   if (!file) {
-    printf("Loans file not found.\n");
     return false;
   }
 
@@ -686,7 +715,6 @@ bool viewLoansForFunc() {
   Book book;
 
   if (!file) {
-    printf("Loans file not found.\n");
     return false;
   }
 
