@@ -49,7 +49,7 @@ bool registerUser(istream &in, ostream &out) {
   fclose(file);
   out << "User registered successfully." << endl;
   return true;
-}
+}// menu which is RegisterUser
 
 bool loginUser(istream &in, ostream &out) {
   char email[100];
@@ -81,7 +81,7 @@ bool loginUser(istream &in, ostream &out) {
   fclose(file);
   out << "Login failed: User not found or wrong password." << endl;
   return false;
-}
+}// menu which is LoginUser.
 
 bool bookCatalogingMenu() {
   int choice;
@@ -122,7 +122,7 @@ bool bookCatalogingMenu() {
   }
 
   return true;
-}
+}// menu which is BookCataloging.
 
 bool loanManagementMenu() {
   int choice;
@@ -158,7 +158,7 @@ bool loanManagementMenu() {
   }
 
   return true;
-}
+}// menu which is LoanManagement.
 
 bool wishListMenu() {
   int choice;
@@ -194,7 +194,7 @@ bool wishListMenu() {
   }
 
   return true;
-}
+}// menu which is WishList.
 
 bool readingTrackerMenu() {
   int choice;
@@ -230,7 +230,7 @@ bool readingTrackerMenu() {
   }
 
   return true;
-}
+}// menu which is ReadingTracker.
 
 bool printGuestMenu(ostream &out) {
   clearScreen();
@@ -296,7 +296,7 @@ bool printWishListMenu(ostream &out) {
   out << "4. Return User Operations\n";
   out << "Please enter a number to select:\n";
   return true;
-}
+}// prints screen WishListMenu.
 
 bool printReadingTrackerMenu(ostream &out) {
   clearScreen();
@@ -307,7 +307,7 @@ bool printReadingTrackerMenu(ostream &out) {
   out << "4. Return User Operations\n";
   out << "Please enter a number to select:\n";
   return true;
-}
+}// prints screen ReadingTrackerMenu.
 
 int getNewId() {
   int lastId = 0;
@@ -327,7 +327,7 @@ int getNewId() {
 
   fclose(file);
   return lastId + 1;
-}
+}// fucntion that gets new id for books.
 
 bool addBook() {
   clearScreen();
@@ -353,11 +353,10 @@ bool addBook() {
   fclose(file);
   cout << "Book added successfully." << endl;
   return true;
-}
+}// Function that allows us to add books to Books.bin.
 
 bool deleteBook() {
   clearScreen();
-  viewCatalogForFunc();
 
   if (viewCatalogForFunc() == false) {
     return false;
@@ -368,8 +367,8 @@ bool deleteBook() {
   cin >> id;
 
   if (cin.fail()) {
-    cin.clear(); // Clear the error flags
-    cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Discard the rest of the line
+    cin.clear();
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     cerr << "You must enter a numeric ID." << endl;
     return false;
   }
@@ -406,11 +405,10 @@ bool deleteBook() {
   }
 
   return found;
-}
+}// Function that allows us to delete books from Books.bin
 
 bool updateBook() {
   clearScreen();
-  viewCatalogForFunc();
 
   if (viewCatalogForFunc() == false) {
     return false;
@@ -448,7 +446,7 @@ bool updateBook() {
   }
 
   return true;
-}
+}// Function that allows us to change the books in Books.bin.
 
 bool viewCatalog() {
   clearScreen();
@@ -469,7 +467,7 @@ bool viewCatalog() {
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return true;
-}
+}// function that show us all books in Books.bin.
 
 bool viewCatalogForFunc() {
   FILE *file = fopen("Books.bin", "rb");
@@ -485,7 +483,7 @@ bool viewCatalogForFunc() {
 
   fclose(file);
   return true;
-}
+}// this function is actualy same as viewCatalog but its for function.
 
 bool listWishList() {
   clearScreen();
@@ -507,7 +505,7 @@ bool listWishList() {
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return true;
-}
+}// function that show us all books in Wishlist.bin.
 
 bool listWishListForFunc() {
   FILE *file = fopen("wishlist.bin", "rb");
@@ -525,11 +523,10 @@ bool listWishListForFunc() {
 
   fclose(file);
   return true;
-}
+}// this function is actualy same as viewWishList but its for function.
 
 bool addToWishList() {
   clearScreen();
-  viewCatalogForFunc();
 
   if (viewCatalogForFunc() == false) {
     return false;
@@ -561,11 +558,10 @@ bool addToWishList() {
   }
 
   return found;
-}
+}// This function shows the books in Books.bin and allows the book with the selected id to be added to the wishlist.
 
 bool removeFromWishList() {
   clearScreen();
-  listWishListForFunc();
 
   if (listWishListForFunc() == false) {
     return false;
@@ -599,11 +595,10 @@ bool removeFromWishList() {
   }
 
   return found;
-}
+}// This function shows the books in Wishlist.bin and allows the book with the selected id to be deleted to the wishlist.
 
 bool borrowBook() {
   clearScreen();
-  viewCatalogForFunc();
 
   if (viewCatalogForFunc() == false) {
     return false;
@@ -639,11 +634,10 @@ bool borrowBook() {
   }
 
   return true;
-}
+}// this function allows us to retrieve books from Books.bin and the purchased book is deleted from Books.bin until it is returned.
 
 bool lendBook() {
   clearScreen();
-  viewLoansForFunc();
 
   if (viewLoansForFunc() == false) {
     return false;
@@ -686,7 +680,7 @@ bool lendBook() {
 
   printf("Book returned successfully.\n");
   return true;
-}
+}//This function returns the borrowed book.
 
 bool viewLoans() {
   clearScreen();
@@ -708,7 +702,7 @@ bool viewLoans() {
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return true;
-}
+}// this function shows borrowed books.
 
 bool viewLoansForFunc() {
   FILE *file = fopen("Loans.bin", "rb");
@@ -718,15 +712,13 @@ bool viewLoansForFunc() {
     return false;
   }
 
-  printf("Loaned Books:\n");
-
   while (fread(&book, sizeof(Book), 1, file)) {
     printf("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
   return true;
-}
+}// this func is same as viewLoans but its for func.
 
 bool logProgress() {
   return true;
@@ -780,7 +772,7 @@ bool userOperations() {
   }
 
   return true;
-}
+}// this function provides redirects in user operations.
 
 bool guestOperation() {
   int choice;
@@ -810,7 +802,7 @@ bool guestOperation() {
   }
 
   return false;
-}
+}// this function provides redirects in guest operations.
 
 int mainMenu(istream &in, ostream &out) {
   int choice;
@@ -851,4 +843,4 @@ int mainMenu(istream &in, ostream &out) {
         break;
     }
   }
-}
+}// this function provides redirects in MainMenu.
