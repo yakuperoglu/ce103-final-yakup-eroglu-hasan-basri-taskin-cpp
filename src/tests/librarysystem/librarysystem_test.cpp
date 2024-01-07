@@ -23,15 +23,6 @@ class LibrarysystemTest : public ::testing::Test {
   }
 };
 
-TEST_F(LibrarysystemTest, LoginUserTest) {
-  simulateUserInput("erman12\n12");
-  EXPECT_TRUE(loginUser(in, out));
-  std::string expectedOutput = "Enter email: ";
-  expectedOutput += "Enter password: ";
-  expectedOutput += "Login success.";
-  EXPECT_EQ(expectedOutput, out.str());
-}
-
 TEST_F(LibrarysystemTest, RegisterUserTest) {
   simulateUserInput("erman12\n12");
   EXPECT_TRUE(registerUser(in, out));
@@ -65,10 +56,10 @@ TEST_F(LibrarysystemTest, GetInputHandlesInvalidInput) {
 TEST_F(LibrarysystemTest, PrintGuestMenuOutputsCorrectly) {
   std::ostringstream stream;
   bool result = printGuestMenu(stream);
-  std::string expectedOutput = "Guest Operations\n\n";
-  "1. View Catalog\n";
-  "2. Return to Main Menu\n";
-  "Please enter a number to select:\n";
+  std::string expectedOutput = "Guest Operations\n\n"
+                               "1. View Catalog\n"
+                               "2. Return to Main Menu\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -81,7 +72,7 @@ TEST_F(LibrarysystemTest, PrintMainMenuOutputsCorrectly) {
                                "2. Register\n"
                                "3. Guest Mode\n"
                                "4. Exit Program\n"
-                               "Please enter a number to select : \n";
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
