@@ -35,8 +35,8 @@ TEST_F(LibrarysystemTest, LoginUserTest) {
 TEST_F(LibrarysystemTest, RegisterUserTest) {
   simulateUserInput("erman12\n12");
   EXPECT_TRUE(registerUser(in, out));
-  std::string expectedOutput = "Enter email: ";
-  expectedOutput += "Enter password: ";
+  std::string expectedOutput = "Enter email:";
+  expectedOutput += "Enter password:";
   expectedOutput += "User registered successfully.\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
@@ -65,7 +65,10 @@ TEST_F(LibrarysystemTest, GetInputHandlesInvalidInput) {
 TEST_F(LibrarysystemTest, PrintGuestMenuOutputsCorrectly) {
   std::ostringstream stream;
   bool result = printGuestMenu(stream);
-  std::string expectedOutput = "Guest Operations\n\n1. View Catalog\n2. Return to Main Menu\n please enter a number to select : \n";
+  std::string expectedOutput = "Guest Operations\n\n";
+  "1. View Catalog\n";
+  "2. Return to Main Menu\n";
+  "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -77,8 +80,8 @@ TEST_F(LibrarysystemTest, PrintMainMenuOutputsCorrectly) {
                                "1. Login\n"
                                "2. Register\n"
                                "3. Guest Mode\n"
-                               "4. Exit Program\n";
-  "Please enter a number to select : \n";
+                               "4. Exit Program\n"
+                               "Please enter a number to select : \n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -91,8 +94,8 @@ TEST_F(LibrarysystemTest, PrintUserMenuOutputsCorrectly) {
                                "2. Loan Management\n"
                                "3. WishList Management\n"
                                "4. Reading Tracker\n"
-                               "5. Return Main Menu\n";
-  "Please enter a number to select:\n";
+                               "5. Return Main Menu\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -105,8 +108,8 @@ TEST_F(LibrarysystemTest, PrintBookCatalogingMenuOutputsCorrectly) {
                                "2. Delete Book\n"
                                "3. Update Book\n"
                                "4. View Catalog\n"
-                               "5. Return User Operations\n";
-  "Please enter a number to select:\n";
+                               "5. Return User Operations\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -118,8 +121,8 @@ TEST_F(LibrarysystemTest, PrintLoanManagementMenuOutputsCorrectly) {
                                "1. Lend Book\n"
                                "2. Borrow Book\n"
                                "3. View Loans\n"
-                               "4. Return User Operations\n";
-  "Please enter a number to select:\n";
+                               "4. Return User Operations\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -131,8 +134,8 @@ TEST_F(LibrarysystemTest, PrintWishListMenuOutputsCorrectly) {
                                "1. View Wishlist\n"
                                "2. Add To Wishlist\n"
                                "3. Remove From Wishlist\n"
-                               "4. Return User Operations\n";
-  "Please enter a number to select:\n";
+                               "4. Return User Operations\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
@@ -144,8 +147,8 @@ TEST_F(LibrarysystemTest, PrintReadingTrackerMenuOutputsCorrectly) {
                                "1. Log Progress\n"
                                "2. Mark As Read\n"
                                "3. View History\n"
-                               "4. Return User Operations\n";
-  "Please enter a number to select:\n";
+                               "4. Return User Operations\n"
+                               "Please enter a number to select:\n";
   EXPECT_TRUE(result);
   EXPECT_EQ(stream.str(), expectedOutput);
 }
