@@ -440,7 +440,7 @@ bool updateBook() {
   }
 
   int id;
-  cout <<("Please enter the number of the book you want to update: ");
+  cout << ("Please enter the number of the book you want to update: ");
   cin >> id;
   FILE *file = fopen("Books.bin", "rb+");
 
@@ -454,7 +454,7 @@ bool updateBook() {
 
   while (fread(&book, sizeof(Book), 1, file)) {
     if (book.id == id) {
-      cout <<("Please enter the new name of the book: ");
+      cout << ("Please enter the new name of the book: ");
       cin.getline(book.name, sizeof(book.name));
       fseek(file, -sizeof(Book), SEEK_CUR);
       fwrite(&book, sizeof(Book), 1, file);
@@ -466,7 +466,7 @@ bool updateBook() {
   fclose(file);
 
   if (!found) {
-    cout <<("Book not found.\n");
+    cout << ("Book not found.\n");
     return false;
   }
 
@@ -484,7 +484,7 @@ bool viewCatalog() {
   Book book;
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    cout <<("%d. %s\n", book.id, book.name);
+    cout << ("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
@@ -503,7 +503,7 @@ bool viewCatalogForFunc() {
   }
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    cout <<("%d. %s\n", book.id, book.name);
+    cout << ("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
@@ -630,7 +630,7 @@ bool borrowBook() {
   }
 
   int id;
-  cout <<("\nPlease enter the ID of the book you want to borrow: ");
+  cout << ("\nPlease enter the ID of the book you want to borrow: ");
   cin >> id;
   FILE *booksFile = fopen("Books.bin", "rb");
   FILE *loansFile = fopen("Loans.bin", "ab");
@@ -654,7 +654,7 @@ bool borrowBook() {
   rename("temp.bin", "Books.bin");
 
   if (!found) {
-    cout <<("Book not found.\n");
+    cout << ("Book not found.\n");
     return false;
   }
 
@@ -669,14 +669,14 @@ bool lendBook() {
   }
 
   int id;
-  cout <<("\nPlease enter the ID of the book you want to return: ");
+  cout << ("\nPlease enter the ID of the book you want to return: ");
   cin >> id;
   FILE *loansFile = fopen("Loans.bin", "rb");
   FILE *tempFile = fopen("temp.bin", "wb");
   FILE *booksFile = fopen("Books.bin", "ab");
 
   if (!loansFile || !tempFile || !booksFile) {
-    cout <<("Error opening files.\n");
+    cout << ("Error opening files.\n");
     return false;
   }
 
@@ -699,11 +699,11 @@ bool lendBook() {
   rename("temp.bin", "Loans.bin");
 
   if (!found) {
-    cout <<("Book not found.\n");
+    cout << ("Book not found.\n");
     return false;
   }
 
-  cout <<("Book returned successfully.\n");
+  cout << ("Book returned successfully.\n");
   return true;
 }//This function returns the borrowed book.
 
@@ -716,14 +716,14 @@ bool viewLoans() {
     return false;
   }
 
-  cout <<("Loaned Books:\n");
+  cout << ("Loaned Books:\n");
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    cout <<("%d. %s\n", book.id, book.name);
+    cout << ("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
-  cout <<("\nPress any key to return to Main Menu");
+  cout << ("\nPress any key to return to Main Menu");
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return true;
@@ -738,7 +738,7 @@ bool viewLoansForFunc() {
   }
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    cout <<("%d. %s\n", book.id, book.name);
+    cout << ("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
@@ -746,6 +746,38 @@ bool viewLoansForFunc() {
 }// this func is same as viewLoans but its for func.
 
 bool logProgress() {
+  clearScreen();
+  FILE *file = fopen("Books.bin", "rb");
+
+  if (!file) {
+    cerr << "There are no books or could not open the books file.\n";
+    enterToContunie();
+    return false;
+  }
+
+  Book book;
+  int bookCount = 0;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    bookCount++;
+    cout << book.id << ". " << book.name << " (";
+
+    if (book.isMarked) {
+      cout << "Read";
+    } else {
+      cout << "Unread";
+    }
+
+    cout << ")\n";
+  }
+
+  fclose(file);
+
+  if (bookCount == 0) {
+    cout << "There are no books.\n";
+  }
+
+  enterToContunie();
   return true;
 }
 
@@ -810,7 +842,29 @@ bool markAsRead() {
 }
 
 bool viewHistory() {
-  return true;
+  clearScreen();
+  FILE *file = fopen("Books.bin", "rb");
+
+  if (!file) {
+    cerr << "There are no books or could not open the books file.\n";
+    enterToContunie();
+    return false;
+  }
+
+  Book book;
+  bool hasMarkedBooks = false;
+  cout << "Marked Books:\n";
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.isMarked) {
+      hasMarkedBooks = true;
+      cout << "ID: " << book.id << "\tName: " << book.name << endl;
+    }
+  }
+
+  fclose(file);
+  enterToContunie();
+  return hasMarkedBooks;
 }
 
 bool userOperations() {
