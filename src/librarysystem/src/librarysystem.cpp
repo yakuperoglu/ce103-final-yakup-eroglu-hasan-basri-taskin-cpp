@@ -729,8 +729,39 @@ bool viewLoansForFunc(istream &in, ostream &out) {
 }// this func is same as viewLoans but its for func.
 
 bool logProgress(istream &in, ostream &out) {
+  clearScreen();
+  FILE *file = fopen("Books.bin", "rb");
+
+  if (!file) {
+    cerr << "There are no books or could not open the books file.\n";
+    enterToContunie(out);
+    return false;
+  }
+
+  Book book;
+  int bookCount = 0;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    bookCount++;
+    cout << book.id << ". " << book.name << " (";
+
+    if (book.isMarked) {
+      cout << "Read";
+    } else {
+      cout << "Unread";
+    }
+
+    cout << ")\n";
+  }
+
+  fclose(file);
+
+  if (bookCount == 0) {
+    cout << "There are no books.\n";
+  }
+
+  enterToContunie(out);
   return true;
-  viewLoans(in, out);
 }
 
 bool markAsRead(istream &in, ostream &out) {
@@ -794,7 +825,29 @@ bool listUnMarkedBooks(istream &in, ostream &out) {
 }
 
 bool viewHistory(istream &in, ostream &out) {
-  return true;
+  clearScreen();
+  FILE *file = fopen("Books.bin", "rb");
+
+  if (!file) {
+    cerr << "There are no books or could not open the books file.\n";
+    enterToContunie(out);
+    return false;
+  }
+
+  Book book;
+  bool hasMarkedBooks = false;
+  cout << "Marked Books:\n";
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.isMarked) {
+      hasMarkedBooks = true;
+      cout << "ID: " << book.id << "\tName: " << book.name << endl;
+    }
+  }
+
+  fclose(file);
+  enterToContunie(out);
+  return hasMarkedBooks;
 }
 
 bool userOperations(istream &in, ostream &out) {
