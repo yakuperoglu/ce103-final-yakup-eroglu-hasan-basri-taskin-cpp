@@ -17,6 +17,27 @@ void clearScreen() {
   system("clear");
 #endif
 }// this function clears the console
+bool clearPreviousValue(istream &in, ostream &out) {
+  in.ignore(numeric_limits<streamsize>::max(), '\n');
+  in.get();
+  return true;
+}
+bool clearPreviousValue() {
+  cin.ignore(numeric_limits<streamsize>::max(), '\n');
+  cin.get();
+  return true;
+}
+
+bool enterToContunie(istream &in, ostream &out) {
+  out << "\nPress any key to continue";
+  clearPreviousValue();
+  return true;
+}
+bool enterToContunie() {
+  cout << "\nPress any key to continue";
+  clearPreviousValue();
+  return true;
+}
 
 bool handleInputError(istream &in, ostream &out) {
   in.clear();
@@ -336,6 +357,7 @@ bool addBook() {
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.getline(book.name, sizeof(book.name));
   book.id = getNewId();
+  book.isMarked = false;
   FILE *file = fopen("Books.bin", "ab");
 
   if (!file) {
@@ -724,8 +746,64 @@ bool logProgress() {
   return true;
 }
 
+bool listUnMarkedBooks() {
+  FILE *file = fopen("Books.bin", "rb");
+
+  if (!file) {
+    cerr << "Could not open the books file.\n";
+    return false;
+  }
+
+  Book book;
+  bool hasUnMarkedBooks = false;
+  cout << "Unmarked Books:\n";
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (!book.isMarked) {
+      hasUnMarkedBooks = true;
+      cout << "ID: " << book.id << "\tName: " << book.name << endl;
+    }
+  }
+
+  fclose(file);
+  return hasUnMarkedBooks;
+}
+
 bool markAsRead() {
-  return true;
+  clearScreen();
+
+  if (!listUnMarkedBooks()) {
+    cout << "There are no unmarked books.\n";
+    enterToContunie();
+    return false;
+  }
+
+  int bookId;
+  cout << "\nEnter the ID of the book to mark as read: ";
+  cin >> bookId;
+  FILE *file = fopen("Books.bin", "r+b"); // Open file as read and write permission
+
+  if (!file) {
+    cerr << "Could not open the books file.\n";
+    enterToContunie();
+    return false;
+  }
+
+  Book book;
+
+  while (fread(&book, sizeof(Book), 1, file)) {
+    if (book.id == bookId && book.isMarked == false) {
+      book.isMarked = true; // Set the isMarked parameter
+      // If we want to write changes, we have to go back and write
+      fseek(file, -static_cast<long>(sizeof(Book)), SEEK_CUR);
+      fwrite(&book, sizeof(Book), 1, file);
+      fclose(file);
+      return true;
+    }
+  }
+
+  fclose(file);
+  return false;
 }
 
 bool viewHistory() {
