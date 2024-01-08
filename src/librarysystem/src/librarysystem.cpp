@@ -53,7 +53,7 @@ bool registerUser(istream &in, ostream &out) {
   FILE *file = fopen("users.bin", "ab");
 
   if (file == NULL) {
-    cerr << "File couldn't be opened for writing." << endl;
+    cout << "File couldn't be opened for writing." << endl;
     return false;
   }
 
@@ -74,7 +74,7 @@ bool loginUser(istream &in, ostream &out) {
   FILE *file = fopen("users.bin", "rb");
 
   if (file == NULL) {
-    cerr << "File couldn't be opened for reading." << endl;
+    cout << "File couldn't be opened for reading." << endl;
     out << "Login Failed.";
     return false;
   }
@@ -353,7 +353,7 @@ bool addBook(istream &in, ostream &out) {
   fwrite(&book, sizeof(Book), 1, file);
 
   if (ferror(file)) {
-    perror("Failed to write to 'Books.bin'");
+    cout << ("Failed to write to 'Books.bin'");
     fclose(file);
     return false;
   }
@@ -377,7 +377,7 @@ bool deleteBook(istream &in, ostream &out) {
   if (in.fail()) {
     in.clear();
     in.ignore(numeric_limits<streamsize>::max(), '\n');
-    cerr << "You must enter a numeric ID." << endl;
+    cout << "You must enter a numeric ID." << endl;
     return false;
   }
 
@@ -385,7 +385,7 @@ bool deleteBook(istream &in, ostream &out) {
   FILE *tempFile = fopen("temp.bin", "wb");
 
   if (!file || !tempFile) {
-    cerr << "Error opening files." << endl;
+    cout << "Error opening files." << endl;
     return false;
   }
 
@@ -408,7 +408,7 @@ bool deleteBook(istream &in, ostream &out) {
     rename("temp.bin", "Books.bin");
     out << "Book deleted successfully." << endl;
   } else {
-    cerr << "Book with ID " << id << " not found." << endl;
+    cout << "Book with ID " << id << " not found." << endl;
     remove("temp.bin"); // Clean up the temporary file as it's not needed
   }
 
@@ -428,7 +428,7 @@ bool updateBook(istream &in, ostream &out) {
   FILE *file = fopen("Books.bin", "rb+");
 
   if (file == NULL) {
-    perror("Cannot open file");
+    cout << ("Cannot open file");
     return 0;
   }
 
@@ -733,7 +733,7 @@ bool logProgress(istream &in, ostream &out) {
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cerr << "There are no books or could not open the books file.\n";
+    cout << "There are no books or could not open the books file.\n";
     enterToContunie(out);
     return false;
   }
@@ -779,7 +779,7 @@ bool markAsRead(istream &in, ostream &out) {
   FILE *file = fopen("Books.bin", "r+b"); // Open file as read and write permission
 
   if (!file) {
-    cerr << "Could not open the books file.\n";
+    cout << "Could not open the books file.\n";
     enterToContunie(out);
     return false;
   }
@@ -805,7 +805,7 @@ bool listUnMarkedBooks(istream &in, ostream &out) {
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cerr << "Could not open the books file.\n";
+    cout << "Could not open the books file.\n";
     return false;
   }
 
@@ -829,7 +829,7 @@ bool viewHistory(istream &in, ostream &out) {
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cerr << "There are no books or could not open the books file.\n";
+    cout << "There are no books or could not open the books file.\n";
     enterToContunie(out);
     return false;
   }
