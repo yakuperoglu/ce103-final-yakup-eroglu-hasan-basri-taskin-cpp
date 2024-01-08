@@ -85,6 +85,7 @@ bool loginUser(istream &in, ostream &out) {
   if (file == NULL) {
     cerr << "File couldn't be opened for reading." << endl;
     out << "Login Failed.";
+    enterToContunie();
     return false;
   }
 
@@ -94,6 +95,7 @@ bool loginUser(istream &in, ostream &out) {
     if (strcmp(user.email, email) == 0 && strcmp(user.password, password) == 0) {
       fclose(file);
       out << "Login success." << endl;
+      enterToContunie();
       userOperations();
       return true;
     }
@@ -101,6 +103,7 @@ bool loginUser(istream &in, ostream &out) {
 
   fclose(file);
   out << "Login failed: User not found or wrong password." << endl;
+  enterToContunie();
   return false;
 }// menu which is LoginUser.
 
@@ -437,8 +440,8 @@ bool updateBook() {
   }
 
   int id;
-  printf("Please enter the number of the book you want to update: ");
-  scanf("%d", &id);
+  cout <<("Please enter the number of the book you want to update: ");
+  cin >> id;
   FILE *file = fopen("Books.bin", "rb+");
 
   if (file == NULL) {
@@ -451,8 +454,8 @@ bool updateBook() {
 
   while (fread(&book, sizeof(Book), 1, file)) {
     if (book.id == id) {
-      printf("Please enter the new name of the book: ");
-      scanf(" %[^\n]", book.name);
+      cout <<("Please enter the new name of the book: ");
+      cin.getline(book.name, sizeof(book.name));
       fseek(file, -sizeof(Book), SEEK_CUR);
       fwrite(&book, sizeof(Book), 1, file);
       found = 1;
@@ -463,7 +466,7 @@ bool updateBook() {
   fclose(file);
 
   if (!found) {
-    printf("Book not found.\n");
+    cout <<("Book not found.\n");
     return false;
   }
 
@@ -481,7 +484,7 @@ bool viewCatalog() {
   Book book;
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    printf("%d. %s\n", book.id, book.name);
+    cout <<("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
@@ -500,7 +503,7 @@ bool viewCatalogForFunc() {
   }
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    printf("%d. %s\n", book.id, book.name);
+    cout <<("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
@@ -627,8 +630,8 @@ bool borrowBook() {
   }
 
   int id;
-  printf("\nPlease enter the ID of the book you want to borrow: ");
-  scanf("%d", &id);
+  cout <<("\nPlease enter the ID of the book you want to borrow: ");
+  cin >> id;
   FILE *booksFile = fopen("Books.bin", "rb");
   FILE *loansFile = fopen("Loans.bin", "ab");
   FILE *tempFile = fopen("temp.bin", "wb");
@@ -651,7 +654,7 @@ bool borrowBook() {
   rename("temp.bin", "Books.bin");
 
   if (!found) {
-    printf("Book not found.\n");
+    cout <<("Book not found.\n");
     return false;
   }
 
@@ -666,14 +669,14 @@ bool lendBook() {
   }
 
   int id;
-  printf("\nPlease enter the ID of the book you want to return: ");
-  scanf("%d", &id);
+  cout <<("\nPlease enter the ID of the book you want to return: ");
+  cin >> id;
   FILE *loansFile = fopen("Loans.bin", "rb");
   FILE *tempFile = fopen("temp.bin", "wb");
   FILE *booksFile = fopen("Books.bin", "ab");
 
   if (!loansFile || !tempFile || !booksFile) {
-    printf("Error opening files.\n");
+    cout <<("Error opening files.\n");
     return false;
   }
 
@@ -696,11 +699,11 @@ bool lendBook() {
   rename("temp.bin", "Loans.bin");
 
   if (!found) {
-    printf("Book not found.\n");
+    cout <<("Book not found.\n");
     return false;
   }
 
-  printf("Book returned successfully.\n");
+  cout <<("Book returned successfully.\n");
   return true;
 }//This function returns the borrowed book.
 
@@ -713,14 +716,14 @@ bool viewLoans() {
     return false;
   }
 
-  printf("Loaned Books:\n");
+  cout <<("Loaned Books:\n");
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    printf("%d. %s\n", book.id, book.name);
+    cout <<("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
-  printf("\nPress any key to return to Main Menu");
+  cout <<("\nPress any key to return to Main Menu");
   cin.ignore(numeric_limits<streamsize>::max(), '\n');
   cin.get();
   return true;
@@ -735,7 +738,7 @@ bool viewLoansForFunc() {
   }
 
   while (fread(&book, sizeof(Book), 1, file)) {
-    printf("%d. %s\n", book.id, book.name);
+    cout <<("%d. %s\n", book.id, book.name);
   }
 
   fclose(file);
