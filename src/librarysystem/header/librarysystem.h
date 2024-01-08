@@ -8,6 +8,7 @@ using namespace std;
 typedef struct {
   int id;
   char name[MAX_STRINGSIZE];
+  bool isMarked;
 } Book;
 
 typedef struct {
