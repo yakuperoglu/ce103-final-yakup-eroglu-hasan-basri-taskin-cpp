@@ -438,7 +438,7 @@ bool updateBook(istream &in, ostream &out) {
   while (fread(&book, sizeof(Book), 1, file)) {
     if (book.id == id) {
       out << ("Please enter the new name of the book: ");
-      scanf(" %[^\n]", book.name);
+      in.getline(book.name, sizeof(book.name));
       fseek(file, -sizeof(Book), SEEK_CUR);
       fwrite(&book, sizeof(Book), 1, file);
       found = 1;
