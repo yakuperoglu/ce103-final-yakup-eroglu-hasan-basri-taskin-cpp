@@ -790,13 +790,27 @@ bool viewCatalog(istream &in, ostream &out) {
   return true;
 }// function that show us all books in Books.bin.
 
-bool viewCatalogForFunc(istream &in, ostream &out) {
+/**
+ * @brief Displays the catalog of books for internal function use.
+ *
+ * @param out Output stream object.
+ * @return Returns true if the catalog is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each book in the "Books.bin" file.
+ * It is designed for internal function use and does not require an input stream parameter.
+ * @code
+ * if (viewCatalogForFunc(cout)) {
+ *     // Catalog displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
+bool viewCatalogForFunc(ostream &out) {
   FILE *file = fopen("Books.bin", "rb");
   Book book;
 
-  if (!file) {
-    return false;
-  }
+  if (!file) return false;
 
   while (fread(&book, sizeof(Book), 1, file)) {
     out << book.id << "." << book.name << "\n";
@@ -806,13 +820,28 @@ bool viewCatalogForFunc(istream &in, ostream &out) {
   return true;
 }// this function is actualy same as viewCatalog but its for function.
 
+/**
+ * @brief Displays the wishlist of books from the "wishlist.bin" file.
+ *
+ * @param in Input stream object (unused).
+ * @param out Output stream object.
+ * @return Returns true if the wishlist is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each book in the "wishlist.bin" file,
+ * presenting them as a wishlist. It prompts the user to press enter to exit after displaying the wishlist.
+ * @code
+ * if (listWishList(cin, cout)) {
+ *     // Wishlist displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool listWishList(istream &in, ostream &out) {
   clearScreen();
   FILE *file = fopen("wishlist.bin", "rb");
 
-  if (!file) {
-    return false;
-  }
+  if (!file) return false;
 
   Book book;
   out << "Wishlist:\n";
@@ -828,12 +857,26 @@ bool listWishList(istream &in, ostream &out) {
   return true;
 }// function that show us all books in Wishlist.bin.
 
-bool listWishListForFunc(istream &in, ostream &out) {
+/**
+ * @brief Displays the wishlist of books for internal function use.
+ *
+ * @param out Output stream object.
+ * @return Returns true if the wishlist is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each book in the "wishlist.bin" file,
+ * presenting them as a wishlist. It is designed for internal function use and does not require an input stream parameter.
+ * @code
+ * if (listWishListForFunc(cout)) {
+ *     // Wishlist displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
+bool listWishListForFunc(ostream &out) {
   FILE *file = fopen("wishlist.bin", "rb");
 
-  if (!file) {
-    return false;
-  }
+  if (!file) return false;
 
   Book book;
   out << "Wishlist:\n";
@@ -846,12 +889,27 @@ bool listWishListForFunc(istream &in, ostream &out) {
   return true;
 }// this function is actualy same as viewWishList but its for function.
 
+/**
+ * @brief Adds a book to the wishlist based on the provided ID.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the book is successfully added to the wishlist, false otherwise.
+ *
+ * This function displays the catalog, prompts the user to enter the ID of the book to add to the wishlist,
+ * and adds the selected book to the "wishlist.bin" file. It returns true on success and false on failure.
+ * @code
+ * if (addToWishList(cin, cout)) {
+ *     // Book added to the wishlist successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool addToWishList(istream &in, ostream &out) {
   clearScreen();
 
-  if (viewCatalogForFunc(in, out) == false) {
-    return false;
-  }
+  if (viewCatalogForFunc(out) == false) return false;
 
   int id;
   out << "Enter the ID of the book to add to the wishlist: ";
@@ -872,21 +930,35 @@ bool addToWishList(istream &in, ostream &out) {
   fclose(file);
   fclose(wishlistFile);
 
-  if (found) {
-    out << "Book added to the wishlist.\n";
-  } else {
+  if (found) out << "Book added to the wishlist.\n";
+  else {
     out << "Book not found.\n";
   }
 
   return found;
 }// This function shows the books in Books.bin and allows the book with the selected id to be added to the wishlist.
 
+/**
+ * @brief Removes a book from the wishlist based on the provided ID.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the book is successfully removed from the wishlist, false otherwise.
+ *
+ * This function displays the wishlist, prompts the user to enter the ID of the book to remove from the wishlist,
+ * and removes the selected book from the "wishlist.bin" file. It returns true on success and false on failure.
+ * @code
+ * if (removeFromWishList(cin, cout)) {
+ *     // Book removed from the wishlist successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool removeFromWishList(istream &in, ostream &out) {
   clearScreen();
 
-  if (listWishListForFunc(in, out) == false) {
-    return false;
-  }
+  if (listWishListForFunc(out) == false) return false;
 
   int id;
   out << "Enter the ID of the book to remove from the wishlist: ";
@@ -918,12 +990,28 @@ bool removeFromWishList(istream &in, ostream &out) {
   return found;
 }// This function shows the books in Wishlist.bin and allows the book with the selected id to be deleted to the wishlist.
 
+/**
+ * @brief Borrows a book from the catalog based on the provided ID.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the book is successfully borrowed, false otherwise.
+ *
+ * This function displays the catalog, prompts the user to enter the ID of the book to borrow,
+ * and moves the selected book from "Books.bin" to "Loans.bin". The book is temporarily removed
+ * from the catalog until it is returned. It returns true on success and false on failure.
+ * @code
+ * if (borrowBook(cin, cout)) {
+ *     // Book borrowed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool borrowBook(istream &in, ostream &out) {
   clearScreen();
 
-  if (viewCatalogForFunc(in, out) == false) {
-    return false;
-  }
+  if (viewCatalogForFunc(out) == false) return false;
 
   int id;
   out << ("\nPlease enter the ID of the book you want to borrow: ");
@@ -949,21 +1037,36 @@ bool borrowBook(istream &in, ostream &out) {
   remove("Books.bin");
   rename("temp.bin", "Books.bin");
 
-  if (!found) {
-    out << ("Book not found.\n");
-    return false;
-  }
+  if (!found) return false;
 
   return true;
 }// this function allows us to retrieve books from Books.bin and the purchased book is deleted from Books.bin until it is returned.
 
+/**
+ * @brief Returns a borrowed book to the catalog based on the provided ID.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the book is successfully returned, false otherwise.
+ *
+ * This function displays the loans, prompts the user to enter the ID of the book to return,
+ * and moves the selected book from "Loans.bin" back to "Books.bin". The book is returned to the catalog.
+ * It returns true on success and false on failure.
+ * @code
+ * if (lendBook(cin, cout)) {
+ *     // Book returned successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool lendBook(istream &in, ostream &out) {
   clearScreen();
+  FILE *file = fopen("Loans.bin", "ab");
 
-  if (viewLoansForFunc(in, out) == false) {
-    return false;
-  }
+  if (viewLoansForFunc(out) == false) return false;
 
+  fclose(file);
   int id;
   out << ("\nPlease enter the ID of the book you want to return: ");
   in >> id;
@@ -971,10 +1074,7 @@ bool lendBook(istream &in, ostream &out) {
   FILE *tempFile = fopen("temp.bin", "wb");
   FILE *booksFile = fopen("Books.bin", "ab");
 
-  if (!loansFile || !tempFile || !booksFile) {
-    out << ("Error opening files.\n");
-    return false;
-  }
+  if (!loansFile || !tempFile || !booksFile) return false;
 
   Book book;
   bool found = false;
@@ -994,23 +1094,35 @@ bool lendBook(istream &in, ostream &out) {
   remove("Loans.bin");
   rename("temp.bin", "Loans.bin");
 
-  if (!found) {
-    out << ("Book not found.\n");
-    return false;
-  }
+  if (!found) return false;
 
   out << ("Book returned successfully.\n");
   return true;
 }//This function returns the borrowed book.
 
+/**
+ * @brief Displays the list of borrowed books from the "Loans.bin" file.
+ *
+ * @param in Input stream object (unused).
+ * @param out Output stream object.
+ * @return Returns true if the list of borrowed books is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each borrowed book in the "Loans.bin" file.
+ * It prompts the user to press any key to return to the main menu after displaying the list of loans.
+ * @code
+ * if (viewLoans(cin, cout)) {
+ *     // List of loans displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool viewLoans(istream &in, ostream &out) {
   clearScreen();
   FILE *file = fopen("Loans.bin", "rb");
   Book book;
 
-  if (!file) {
-    return false;
-  }
+  if (!file) return false;
 
   out << ("Loaned Books:\n");
 
@@ -1025,13 +1137,27 @@ bool viewLoans(istream &in, ostream &out) {
   return true;
 }// this function shows borrowed books.
 
-bool viewLoansForFunc(istream &in, ostream &out) {
+/**
+ * @brief Displays the list of borrowed books for internal function use.
+ *
+ * @param out Output stream object.
+ * @return Returns true if the list of borrowed books is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each borrowed book in the "Loans.bin" file.
+ * It is designed for internal function use and does not require an input stream parameter.
+ * @code
+ * if (viewLoansForFunc(cout)) {
+ *     // List of loans displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
+bool viewLoansForFunc(ostream &out) {
   FILE *file = fopen("Loans.bin", "rb");
   Book book;
 
-  if (!file) {
-    return false;
-  }
+  if (!file) return false;
 
   while (fread(&book, sizeof(Book), 1, file)) {
     out << book.id << "." << book.name << "\n";
@@ -1041,13 +1167,30 @@ bool viewLoansForFunc(istream &in, ostream &out) {
   return true;
 }// this func is same as viewLoans but its for func.
 
+/**
+ * @brief Displays the progress and status of each book in the catalog.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the progress is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID, name, and status (read or unread) of each book in the "Books.bin" file.
+ * It prompts the user to press any key to continue after displaying the progress.
+ * @code
+ * if (logProgress(cin, cout)) {
+ *     // Progress displayed successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool logProgress(istream &in, ostream &out) {
   clearScreen();
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cout << "There are no books or could not open the books file.\n";
-    enterToContunie(out);
+    out << "There are no books or could not open the books file.\n";
+    enterToContunie(in, out);
     return false;
   }
 
@@ -1056,44 +1199,62 @@ bool logProgress(istream &in, ostream &out) {
 
   while (fread(&book, sizeof(Book), 1, file)) {
     bookCount++;
-    cout << book.id << ". " << book.name << " (";
+    out << book.id << ". " << book.name << " (";
 
     if (book.isMarked) {
-      cout << "Read";
+      out << "Read";
     } else {
-      cout << "Unread";
+      out << "Unread";
     }
 
-    cout << ")\n";
+    out << ")\n";
   }
 
   fclose(file);
 
   if (bookCount == 0) {
-    cout << "There are no books.\n";
+    out << "There are no books.\n";
   }
 
-  enterToContunie(out);
+  enterToContunie(in, out);
   return true;
 }
 
+/**
+ * @brief Marks a book as read in the catalog based on the provided ID.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if the book is successfully marked as read, false otherwise.
+ *
+ * This function displays the list of unmarked books, prompts the user to enter the ID of the book to mark as read,
+ * and updates the status of the selected book to "read" in the "Books.bin" file.
+ * It returns true on success and false on failure.
+ * @code
+ * if (markAsRead(cin, cout)) {
+ *     // Book marked as read successfully
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool markAsRead(istream &in, ostream &out) {
   clearScreen();
 
-  if (!listUnMarkedBooks(in, out)) {
-    cout << "There are no unmarked books.\n";
-    enterToContunie(out);
+  if (!listUnMarkedBooks(out)) {
+    out << "There are no unmarked books.\n";
+    enterToContunie(in, out);
     return false;
   }
 
   int bookId;
-  cout << "\nEnter the ID of the book to mark as read: ";
-  cin >> bookId;
+  out << "\nEnter the ID of the book to mark as read: ";
+  in >> bookId;
   FILE *file = fopen("Books.bin", "r+b"); // Open file as read and write permission
 
   if (!file) {
-    cout << "Could not open the books file.\n";
-    enterToContunie(out);
+    out << "Could not open the books file.\n";
+    enterToContunie(in, out);
     return false;
   }
 
@@ -1114,22 +1275,38 @@ bool markAsRead(istream &in, ostream &out) {
   return false;
 }
 
-bool listUnMarkedBooks(istream &in, ostream &out) {
+/**
+ * @brief Lists unmarked books from the catalog.
+ *
+ * @param out Output stream object.
+ * @return Returns true if there are unmarked books and they are listed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each unmarked book in the "Books.bin" file.
+ * It returns true if there are unmarked books and false if either there are no unmarked books or an error occurs.
+ * @code
+ * if (listUnMarkedBooks(cout)) {
+ *     // Unmarked books listed successfully
+ * } else {
+ *     // No unmarked books or an error occurred
+ * }
+ * @endcode
+ */
+bool listUnMarkedBooks(ostream &out) {
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cout << "Could not open the books file.\n";
+    out << "Could not open the books file.\n";
     return false;
   }
 
   Book book;
   bool hasUnMarkedBooks = false;
-  cout << "Unmarked Books:\n";
+  out << "Unmarked Books:\n";
 
   while (fread(&book, sizeof(Book), 1, file)) {
     if (!book.isMarked) {
       hasUnMarkedBooks = true;
-      cout << "ID: " << book.id << "\tName: " << book.name << endl;
+      out << "ID: " << book.id << "\tName: " << book.name << endl;
     }
   }
 
@@ -1137,32 +1314,67 @@ bool listUnMarkedBooks(istream &in, ostream &out) {
   return hasUnMarkedBooks;
 }
 
+/**
+ * @brief Displays the history of marked books from the catalog.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns true if there are marked books and their history is displayed successfully, false otherwise.
+ *
+ * This function reads and prints the ID and name of each marked book in the "Books.bin" file.
+ * It prompts the user to press any key to continue after displaying the history.
+ * @code
+ * if (viewHistory(cin, cout)) {
+ *     // History of marked books displayed successfully
+ * } else {
+ *     // No marked books or an error occurred
+ * }
+ * @endcode
+ */
 bool viewHistory(istream &in, ostream &out) {
   clearScreen();
   FILE *file = fopen("Books.bin", "rb");
 
   if (!file) {
-    cout << "There are no books or could not open the books file.\n";
-    enterToContunie(out);
+    out << "There are no books or could not open the books file.\n";
+    enterToContunie(in, out);
     return false;
   }
 
   Book book;
   bool hasMarkedBooks = false;
-  cout << "Marked Books:\n";
+  out << "Marked Books:\n";
 
   while (fread(&book, sizeof(Book), 1, file)) {
     if (book.isMarked) {
       hasMarkedBooks = true;
-      cout << "ID: " << book.id << "\tName: " << book.name << endl;
+      out << "ID: " << book.id << "\tName: " << book.name << endl;
     }
   }
 
   fclose(file);
-  enterToContunie(out);
+  enterToContunie(in, out);
   return hasMarkedBooks;
 }
 
+/**
+ * @brief Redirects user to specific operations based on their choice in the user menu.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns 0 when the user chooses to return to the main menu.
+ *
+ * This function presents a user menu and redirects the user to specific operations
+ * (book cataloging, loan management, wishlist management, reading tracker) based on their choice.
+ * It returns 0 when the user chooses to return to the main menu.
+ * @code
+ * if (userOperations(cin, cout) == 0) {
+ *     // User returned to the main menu
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool userOperations(istream &in, ostream &out) {
   int choice;
 
@@ -1201,10 +1413,25 @@ bool userOperations(istream &in, ostream &out) {
         break;
     }
   }
-
-  return true;
 }// this function provides redirects in user operations.
 
+/**
+ * @brief Redirects guest to specific operations based on their choice in the guest menu.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns false when the guest chooses to exit.
+ *
+ * This function presents a guest menu and redirects the guest to specific operations
+ * (viewing catalog). It returns false when the guest chooses to exit.
+ * @code
+ * if (guestOperation(cin, cout) == false) {
+ *     // Guest exited the system
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 bool guestOperation(istream &in, ostream &out) {
   int choice;
 
@@ -1235,6 +1462,24 @@ bool guestOperation(istream &in, ostream &out) {
   return false;
 }// this function provides redirects in guest operations.
 
+/**
+ * @brief Redirects the user to specific actions based on their choice in the main menu.
+ *
+ * @param in Input stream object.
+ * @param out Output stream object.
+ * @return Returns 0 when the user chooses to exit the program.
+ *
+ * This function presents the main menu and redirects the user to specific actions
+ * (login, register, guest operations, exit program) based on their choice.
+ * It returns 0 when the user chooses to exit the program.
+ * @code
+ * if (mainMenu(cin, cout) == 0) {
+ *     // User exited the program
+ * } else {
+ *     // Error handling or additional logic
+ * }
+ * @endcode
+ */
 int mainMenu(istream &in, ostream &out) {
   int choice;
 

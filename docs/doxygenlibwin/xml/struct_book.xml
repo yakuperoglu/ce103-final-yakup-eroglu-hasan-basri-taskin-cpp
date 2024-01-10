@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="struct_book" kind="struct" language="C++" prot="public">
+    <compoundname>Book</compoundname>
+    <includes refid="librarysystem_8h" local="no">librarysystem.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_book_1a11f9b412838b3bf70af317313e020420" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Book::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>Book::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Unique identifier for the book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="24" column="5" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_book_1ade1aac8a3f7112df7253ad91fee2778f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Book::name[MAX_STRINGSIZE]</definition>
+        <argsstring>[MAX_STRINGSIZE]</argsstring>
+        <name>name</name>
+        <qualifiedname>Book::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Name of the book. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="25" column="6" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_book_1abfb77437720af14838bda0d082de13d0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Book::isMarked</definition>
+        <argsstring></argsstring>
+        <name>isMarked</name>
+        <qualifiedname>Book::isMarked</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Flag indicating whether the book is marked (read) or not. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="26" column="6" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure representing a book in the library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Book</label>
+        <link refid="struct_book"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/librarysystem/header/librarysystem.h" line="23" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="23" bodyend="27"/>
+    <listofallmembers>
+      <member refid="struct_book_1a11f9b412838b3bf70af317313e020420" prot="public" virt="non-virtual"><scope>Book</scope><name>id</name></member>
+      <member refid="struct_book_1abfb77437720af14838bda0d082de13d0" prot="public" virt="non-virtual"><scope>Book</scope><name>isMarked</name></member>
+      <member refid="struct_book_1ade1aac8a3f7112df7253ad91fee2778f" prot="public" virt="non-virtual"><scope>Book</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

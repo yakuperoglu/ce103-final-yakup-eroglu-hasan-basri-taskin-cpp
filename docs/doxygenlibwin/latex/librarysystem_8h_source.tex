@@ -1,57 +1,101 @@
 \doxysection{librarysystem.\+h}
-\hypertarget{librarysystem_8h_source}{}\label{librarysystem_8h_source}\index{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/header/librarysystem.h@{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/header/librarysystem.h}}
+\hypertarget{librarysystem_8h_source}{}\label{librarysystem_8h_source}\index{src/librarysystem/header/librarysystem.h@{src/librarysystem/header/librarysystem.h}}
 \mbox{\hyperlink{librarysystem_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LIBRARYSYSTEM\_H}}
-\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LIBRARYSYSTEM\_H}}
-\DoxyCodeLine{00003\ }
-\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
-\DoxyCodeLine{00005\ }
-\DoxyCodeLine{00006\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{librarysystem_8h_a8396c50bf544009fb2fc4907b00cbad3}{mainMenu}}();}
-\DoxyCodeLine{00007\ }
-\DoxyCodeLine{00008\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_adc53ae8c72d75f7fd7054169f0808f69}{userOperations}}();}
-\DoxyCodeLine{00009\ }
-\DoxyCodeLine{00010\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_user}{User}}\ \{}
-\DoxyCodeLine{00011\ \ \ std::string\ \mbox{\hyperlink{struct_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}};}
-\DoxyCodeLine{00012\ \ \ std::string\ \mbox{\hyperlink{struct_user_a085d8d69282b6298964eab8351584536}{name}};}
-\DoxyCodeLine{00013\ \ \ std::string\ \mbox{\hyperlink{struct_user_a2ed359f3148bd0b95ec8d964c278dbbd}{surname}};}
-\DoxyCodeLine{00014\ \};}
-\DoxyCodeLine{00015\ }
-\DoxyCodeLine{00016\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_user_authentication}{UserAuthentication}}\ \{}
-\DoxyCodeLine{00017\ \ \ \mbox{\hyperlink{struct_user}{User}}\ \mbox{\hyperlink{struct_user_authentication_ac5bef1a83850ed6f8334deae93a08d1c}{login}}(\textcolor{keyword}{const}\ std::string\ \&email,\ \textcolor{keyword}{const}\ std::string\ \&password);}
-\DoxyCodeLine{00018\ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_user_authentication_a9623b520488ec81fa0729ca41e498c87}{registerUser}}(\textcolor{keyword}{const}\ std::string\ \&email,\ \textcolor{keyword}{const}\ std::string\ \&name,\ \textcolor{keyword}{const}\ std::string\ \&surname,\ \textcolor{keyword}{const}\ std::string\ \&password);}
-\DoxyCodeLine{00019\ \};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_book_system}{BookSystem}}\ \{}
-\DoxyCodeLine{00022\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_book_system_ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e}{addBook}}();}
-\DoxyCodeLine{00023\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_book_system_afd5d16e30133f994e7848bad853b997f}{updateBook}}();}
-\DoxyCodeLine{00024\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_book_system_abd98df330ab4a2a2b65912e70d78baee}{deleteBook}}();}
-\DoxyCodeLine{00025\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_book_system_afafdcd45359538d7c1855b719b2e650d}{viewCatalog}}();}
-\DoxyCodeLine{00026\ \};}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_loan_managment}{LoanManagment}}\ \{}
-\DoxyCodeLine{00029\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_loan_managment_ad9a36d89e70979014d3e85cc1ffbd1eb}{lendBook}}();}
-\DoxyCodeLine{00030\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_loan_managment_a808715edaaa5db8fbdb5ed6f78aabd13}{borrowBook}}();}
-\DoxyCodeLine{00031\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_loan_managment_a8e0a2e2503a3a5704be5888828bc9394}{viewLoans}}();}
-\DoxyCodeLine{00032\ \};}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_wish_list}{WishList}}\ \{}
-\DoxyCodeLine{00035\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_wish_list_a4788c1d8dcddef223d1450e7d1eb14b0}{wishList}}();}
-\DoxyCodeLine{00036\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_wish_list_a5233f14d72d13fbb88d69df73cb186b0}{addToWishList}}();}
-\DoxyCodeLine{00037\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_wish_list_a8e4435e8d04722927cb497ae8b66e9e1}{removeFromWishList}}();}
-\DoxyCodeLine{00038\ \};}
-\DoxyCodeLine{00039\ }
-\DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_reading_tracker}{ReadingTracker}}\ \{}
-\DoxyCodeLine{00042\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_reading_tracker_a1c1698fca142233064e19922f35467e2}{logProgress}}();}
-\DoxyCodeLine{00043\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_reading_tracker_a65ea3781c96721b6c99b56dd7e1afe2d}{markAsRead}}();}
-\DoxyCodeLine{00044\ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_reading_tracker_a4e88992e2bb701c52619bb63a92e1189}{viewHistory}}();}
-\DoxyCodeLine{00045\ \};}
-\DoxyCodeLine{00046\ }
-\DoxyCodeLine{00047\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structdata_base}{dataBase}}\ \{}
-\DoxyCodeLine{00048\ }
-\DoxyCodeLine{00049\ \};}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#ifndef\ LIBRARYSYSTEM\_H}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#define\ LIBRARYSYSTEM\_H}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ MAX\_STRINGSIZE\ 100\ }}
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{using\ namespace\ }std;\ }
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00023\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{struct_book_a11f9b412838b3bf70af317313e020420}{id}};\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{char}\ name[\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\_STRINGSIZE}}];\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{struct_book_abfb77437720af14838bda0d082de13d0}{isMarked}};\ }
+\DoxyCodeLine{00027\ \}\ \mbox{\hyperlink{struct_book}{Book}};}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00032\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\{}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{char}\ email[\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\_STRINGSIZE}}];\ }
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{char}\ password[\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\_STRINGSIZE}}];\ }
+\DoxyCodeLine{00035\ \}\ \mbox{\hyperlink{struct_user}{User}};}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{librarysystem_8h_acc0b8aeaed79ae44252c3d43fbbf07e3}{getInput}}(istream\&\ in);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00052\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_acf1f3c3851eba9e703d2b470da6a1501}{enterToContunie}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00059\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{librarysystem_8h_abee7de3388d76c9b3ce4dddf3b854607}{getNewId}}();}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00068\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a3761b895725dc51420e51cc07ef81431}{handleInputError}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00069\ }
+\DoxyCodeLine{00077\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{librarysystem_8h_ab5206f1ba964127d1f7a2491c4254813}{mainMenu}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00086\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a6ed82a2b108b314b4d0eefe0f0329ebe}{userOperations}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00087\ }
+\DoxyCodeLine{00095\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ad696b86625f9e1d9e694fec67aa1857f}{guestOperation}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00104\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a563a42979a8555ac3757d491125917d5}{registerUser}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00105\ }
+\DoxyCodeLine{00113\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_aca21e3deeeed6f2f5d9dbf335834d9b5}{loginUser}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00114\ }
+\DoxyCodeLine{00122\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_af6804503860b8380610b0c8872a74ec8}{bookCatalogingMenu}}(istream\&\ input,\ ostream\&\ output);}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00131\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a9b2e17d0aed5b004ccd8bab3070a707d}{loanManagementMenu}}(istream\&\ input,\ ostream\&\ output);}
+\DoxyCodeLine{00132\ }
+\DoxyCodeLine{00140\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a19a9109a09b42cf017e6ee2ea99d5fab}{wishListMenu}}(istream\&\ input,\ ostream\&\ output);}
+\DoxyCodeLine{00141\ }
+\DoxyCodeLine{00149\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a93cf8c988c604099e5fe00934fe6cb81}{readingTrackerMenu}}(istream\&\ input,\ ostream\&\ output);}
+\DoxyCodeLine{00150\ }
+\DoxyCodeLine{00157\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a7c2b1e66f7bef37d709532e26a033c85}{printMainMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00158\ }
+\DoxyCodeLine{00165\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ae5d187389456e7918630eae659fdfce1}{printGuestMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00166\ }
+\DoxyCodeLine{00173\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_aaa17afd03df57397f4b2d2de77084c98}{printUserMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00174\ }
+\DoxyCodeLine{00181\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a9a39b32432895f6c60d85f6874c30927}{printBookCatalogingMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00182\ }
+\DoxyCodeLine{00189\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_acdd388e4094195b3d7cc608202f27d51}{printLoanManagementMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00197\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}{printWishListMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00205\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a5bf1f1645a2041b24a591d55cbbf698a}{printReadingTrackerMenu}}(ostream\&\ out);}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00214\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_aa92a85119b2dd5eb202ac038b0c7ea0d}{addBook}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00215\ }
+\DoxyCodeLine{00223\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_aecefdc778d8382b3426dfc141bffe5a4}{updateBook}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00232\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ace4cde8d98cd38ced47ffb6e88fd57bd}{deleteBook}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00233\ }
+\DoxyCodeLine{00241\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a7490eebe775301b73f9bbf392a17135c}{viewCatalog}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00242\ }
+\DoxyCodeLine{00249\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a21614414231293fad16e4be048d4d070}{viewCatalogForFunc}}(ostream\&\ out);}
+\DoxyCodeLine{00250\ }
+\DoxyCodeLine{00258\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ae95926f6243b21d6a263a4811e4851d6}{lendBook}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00259\ }
+\DoxyCodeLine{00267\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a3321e215f888db53bbdef761f48df758}{borrowBook}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00276\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a9e9da7fdede214d4a689a982e7aa019f}{viewLoans}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00277\ }
+\DoxyCodeLine{00284\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ad1580de9038b83a11f94a376802c25c5}{viewLoansForFunc}}(ostream\&\ out);}
+\DoxyCodeLine{00285\ }
+\DoxyCodeLine{00293\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ad231f70192ef9dc871dabfd19a91b004}{listWishList}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00294\ }
+\DoxyCodeLine{00301\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_abbffaaeb8efb5e50fcb48936ea8c0038}{listWishListForFunc}}(ostream\&\ out);}
+\DoxyCodeLine{00302\ }
+\DoxyCodeLine{00310\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a3f1f433eb1f95891d8964b582c5ad20c}{addToWishList}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00311\ }
+\DoxyCodeLine{00319\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a2bcdc5888afb3c04978aab087f4b0d49}{removeFromWishList}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00320\ }
+\DoxyCodeLine{00327\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_afc7cf16b78fadf9f4f7a7e17b1fd71ce}{listUnMarkedBooks}}(ostream\&\ out);}
+\DoxyCodeLine{00328\ }
+\DoxyCodeLine{00336\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a58e3aaac795f12c90c7eb2dba8392adc}{logProgress}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00345\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_ab85fd7297091d985dab837b02fb52e65}{markAsRead}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00346\ }
+\DoxyCodeLine{00354\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{librarysystem_8h_a6bbc6ef7b3ec4012ccf75a74721a09dd}{viewHistory}}(istream\&\ in,\ ostream\&\ out);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

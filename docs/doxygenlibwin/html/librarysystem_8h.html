@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Librarysystem Windows Library API Documentation:  Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header/librarysystem.h File Reference</title>
+<title>Librarysystem Windows Library API Documentation: src/librarysystem/header/librarysystem.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,57 +71,1013 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8a3860dd5935e8fee55e35104af27de6.html">For Final</a></li><li class="navelem"><a class="el" href="dir_1776cbf63099dab01b27e516fa70f9e5.html">ce103-final-yakup-eroglu-hasan-basri-taskin-cpp</a></li><li class="navelem"><a class="el" href="dir_bbee96ab8f6c5d72a0ac118276c914df.html">src</a></li><li class="navelem"><a class="el" href="dir_cea9b98edad957c4f2e41ef4983e1ed3.html">librarysystem</a></li><li class="navelem"><a class="el" href="dir_14c308945840d299965a51464014f066.html">header</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_39e7d2ef6941a890097e9a67e73b43a0.html">librarysystem</a></li><li class="navelem"><a class="el" href="dir_4e76df52fa7f72328277230951da1767.html">header</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">librarysystem.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;string&gt;</code><br />
+
+<p>Header file for the Personal Library System.  
+<a href="#details">More...</a></p>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for librarysystem.h:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem_8h__incl.svg" width="158" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem_8h__incl.svg" width="175" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem_8h__dep__incl.svg" width="416" height="240"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem_8h__dep__incl.svg" width="350" height="144"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="librarysystem_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_book.html">Book</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure representing a book in the library.  <a href="struct_book.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user.html">User</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure representing a user in the library system.  <a href="struct_user.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_user_authentication.html">UserAuthentication</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_book_system.html">BookSystem</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_loan_managment.html">LoanManagment</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_wish_list.html">WishList</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_reading_tracker.html">ReadingTracker</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structdata_base.html">dataBase</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:a81e98630adbd3ec882814bc99dbf0465"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a81e98630adbd3ec882814bc99dbf0465">MAX_STRINGSIZE</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a81e98630adbd3ec882814bc99dbf0465"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8396c50bf544009fb2fc4907b00cbad3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a8396c50bf544009fb2fc4907b00cbad3">mainMenu</a> ()</td></tr>
-<tr class="separator:a8396c50bf544009fb2fc4907b00cbad3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc53ae8c72d75f7fd7054169f0808f69"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#adc53ae8c72d75f7fd7054169f0808f69">userOperations</a> ()</td></tr>
-<tr class="separator:adc53ae8c72d75f7fd7054169f0808f69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc0b8aeaed79ae44252c3d43fbbf07e3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#acc0b8aeaed79ae44252c3d43fbbf07e3">getInput</a> (istream &amp;in)</td></tr>
+<tr class="memdesc:acc0b8aeaed79ae44252c3d43fbbf07e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets input from the user.  <br /></td></tr>
+<tr class="separator:acc0b8aeaed79ae44252c3d43fbbf07e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1f3c3851eba9e703d2b470da6a1501"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#acf1f3c3851eba9e703d2b470da6a1501">enterToContunie</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:acf1f3c3851eba9e703d2b470da6a1501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pauses execution and waits for the user to press any key to continue.  <br /></td></tr>
+<tr class="separator:acf1f3c3851eba9e703d2b470da6a1501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abee7de3388d76c9b3ce4dddf3b854607"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#abee7de3388d76c9b3ce4dddf3b854607">getNewId</a> ()</td></tr>
+<tr class="memdesc:abee7de3388d76c9b3ce4dddf3b854607"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a new unique ID for books based on existing IDs.  <br /></td></tr>
+<tr class="separator:abee7de3388d76c9b3ce4dddf3b854607"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3761b895725dc51420e51cc07ef81431"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a3761b895725dc51420e51cc07ef81431">handleInputError</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a3761b895725dc51420e51cc07ef81431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles input errors by clearing the input stream and displaying an error message.  <br /></td></tr>
+<tr class="separator:a3761b895725dc51420e51cc07ef81431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5206f1ba964127d1f7a2491c4254813"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ab5206f1ba964127d1f7a2491c4254813">mainMenu</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ab5206f1ba964127d1f7a2491c4254813"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the main menu and redirects the user based on their choice.  <br /></td></tr>
+<tr class="separator:ab5206f1ba964127d1f7a2491c4254813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6ed82a2b108b314b4d0eefe0f0329ebe"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a6ed82a2b108b314b4d0eefe0f0329ebe">userOperations</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a6ed82a2b108b314b4d0eefe0f0329ebe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects the user to specific operations based on their choice in the user menu.  <br /></td></tr>
+<tr class="separator:a6ed82a2b108b314b4d0eefe0f0329ebe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad696b86625f9e1d9e694fec67aa1857f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ad696b86625f9e1d9e694fec67aa1857f">guestOperation</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ad696b86625f9e1d9e694fec67aa1857f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Redirects a guest user to specific operations based on their choice in the guest menu.  <br /></td></tr>
+<tr class="separator:ad696b86625f9e1d9e694fec67aa1857f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a563a42979a8555ac3757d491125917d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a563a42979a8555ac3757d491125917d5">registerUser</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a563a42979a8555ac3757d491125917d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Registers a new user in the library system.  <br /></td></tr>
+<tr class="separator:a563a42979a8555ac3757d491125917d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca21e3deeeed6f2f5d9dbf335834d9b5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#aca21e3deeeed6f2f5d9dbf335834d9b5">loginUser</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:aca21e3deeeed6f2f5d9dbf335834d9b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logs in a user to the library system.  <br /></td></tr>
+<tr class="separator:aca21e3deeeed6f2f5d9dbf335834d9b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af6804503860b8380610b0c8872a74ec8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#af6804503860b8380610b0c8872a74ec8">bookCatalogingMenu</a> (istream &amp;input, ostream &amp;output)</td></tr>
+<tr class="memdesc:af6804503860b8380610b0c8872a74ec8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the book cataloging menu, allowing users to perform operations on books.  <br /></td></tr>
+<tr class="separator:af6804503860b8380610b0c8872a74ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b2e17d0aed5b004ccd8bab3070a707d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a9b2e17d0aed5b004ccd8bab3070a707d">loanManagementMenu</a> (istream &amp;input, ostream &amp;output)</td></tr>
+<tr class="memdesc:a9b2e17d0aed5b004ccd8bab3070a707d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the loan management menu, allowing users to lend and borrow books.  <br /></td></tr>
+<tr class="separator:a9b2e17d0aed5b004ccd8bab3070a707d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19a9109a09b42cf017e6ee2ea99d5fab"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a19a9109a09b42cf017e6ee2ea99d5fab">wishListMenu</a> (istream &amp;input, ostream &amp;output)</td></tr>
+<tr class="memdesc:a19a9109a09b42cf017e6ee2ea99d5fab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the wishlist menu, allowing users to manage their book wishlists.  <br /></td></tr>
+<tr class="separator:a19a9109a09b42cf017e6ee2ea99d5fab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93cf8c988c604099e5fe00934fe6cb81"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a93cf8c988c604099e5fe00934fe6cb81">readingTrackerMenu</a> (istream &amp;input, ostream &amp;output)</td></tr>
+<tr class="memdesc:a93cf8c988c604099e5fe00934fe6cb81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the reading tracker menu, allowing users to track their reading progress.  <br /></td></tr>
+<tr class="separator:a93cf8c988c604099e5fe00934fe6cb81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c2b1e66f7bef37d709532e26a033c85"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a7c2b1e66f7bef37d709532e26a033c85">printMainMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a7c2b1e66f7bef37d709532e26a033c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the main menu screen.  <br /></td></tr>
+<tr class="separator:a7c2b1e66f7bef37d709532e26a033c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5d187389456e7918630eae659fdfce1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ae5d187389456e7918630eae659fdfce1">printGuestMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:ae5d187389456e7918630eae659fdfce1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the guest menu screen.  <br /></td></tr>
+<tr class="separator:ae5d187389456e7918630eae659fdfce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa17afd03df57397f4b2d2de77084c98"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#aaa17afd03df57397f4b2d2de77084c98">printUserMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:aaa17afd03df57397f4b2d2de77084c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the user menu screen.  <br /></td></tr>
+<tr class="separator:aaa17afd03df57397f4b2d2de77084c98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a39b32432895f6c60d85f6874c30927"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a9a39b32432895f6c60d85f6874c30927">printBookCatalogingMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a9a39b32432895f6c60d85f6874c30927"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the book cataloging menu screen.  <br /></td></tr>
+<tr class="separator:a9a39b32432895f6c60d85f6874c30927"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdd388e4094195b3d7cc608202f27d51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#acdd388e4094195b3d7cc608202f27d51">printLoanManagementMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:acdd388e4094195b3d7cc608202f27d51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the loan management menu screen.  <br /></td></tr>
+<tr class="separator:acdd388e4094195b3d7cc608202f27d51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77dcba8c2ea0a6fe0cb3a0753a89f8d4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a77dcba8c2ea0a6fe0cb3a0753a89f8d4">printWishListMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a77dcba8c2ea0a6fe0cb3a0753a89f8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the wishlist menu screen.  <br /></td></tr>
+<tr class="separator:a77dcba8c2ea0a6fe0cb3a0753a89f8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5bf1f1645a2041b24a591d55cbbf698a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a5bf1f1645a2041b24a591d55cbbf698a">printReadingTrackerMenu</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a5bf1f1645a2041b24a591d55cbbf698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the reading tracker menu screen.  <br /></td></tr>
+<tr class="separator:a5bf1f1645a2041b24a591d55cbbf698a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa92a85119b2dd5eb202ac038b0c7ea0d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#aa92a85119b2dd5eb202ac038b0c7ea0d">addBook</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:aa92a85119b2dd5eb202ac038b0c7ea0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a new book to the library catalog.  <br /></td></tr>
+<tr class="separator:aa92a85119b2dd5eb202ac038b0c7ea0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aecefdc778d8382b3426dfc141bffe5a4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#aecefdc778d8382b3426dfc141bffe5a4">updateBook</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:aecefdc778d8382b3426dfc141bffe5a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the information of an existing book in the library catalog.  <br /></td></tr>
+<tr class="separator:aecefdc778d8382b3426dfc141bffe5a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace4cde8d98cd38ced47ffb6e88fd57bd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ace4cde8d98cd38ced47ffb6e88fd57bd">deleteBook</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ace4cde8d98cd38ced47ffb6e88fd57bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deletes a book from the library catalog.  <br /></td></tr>
+<tr class="separator:ace4cde8d98cd38ced47ffb6e88fd57bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7490eebe775301b73f9bbf392a17135c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a7490eebe775301b73f9bbf392a17135c">viewCatalog</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a7490eebe775301b73f9bbf392a17135c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the entire catalog of books in the library.  <br /></td></tr>
+<tr class="separator:a7490eebe775301b73f9bbf392a17135c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21614414231293fad16e4be048d4d070"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a21614414231293fad16e4be048d4d070">viewCatalogForFunc</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:a21614414231293fad16e4be048d4d070"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the entire catalog of books in the library (for function use).  <br /></td></tr>
+<tr class="separator:a21614414231293fad16e4be048d4d070"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae95926f6243b21d6a263a4811e4851d6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ae95926f6243b21d6a263a4811e4851d6">lendBook</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ae95926f6243b21d6a263a4811e4851d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lends a book from the library catalog to a user.  <br /></td></tr>
+<tr class="separator:ae95926f6243b21d6a263a4811e4851d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3321e215f888db53bbdef761f48df758"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a3321e215f888db53bbdef761f48df758">borrowBook</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a3321e215f888db53bbdef761f48df758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Borrows a book from the library catalog by a user.  <br /></td></tr>
+<tr class="separator:a3321e215f888db53bbdef761f48df758"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e9da7fdede214d4a689a982e7aa019f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a9e9da7fdede214d4a689a982e7aa019f">viewLoans</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a9e9da7fdede214d4a689a982e7aa019f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the list of books that are currently on loan.  <br /></td></tr>
+<tr class="separator:a9e9da7fdede214d4a689a982e7aa019f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1580de9038b83a11f94a376802c25c5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ad1580de9038b83a11f94a376802c25c5">viewLoansForFunc</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:ad1580de9038b83a11f94a376802c25c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the list of books that are currently on loan (for function use).  <br /></td></tr>
+<tr class="separator:ad1580de9038b83a11f94a376802c25c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad231f70192ef9dc871dabfd19a91b004"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ad231f70192ef9dc871dabfd19a91b004">listWishList</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ad231f70192ef9dc871dabfd19a91b004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the user's wishlist of books.  <br /></td></tr>
+<tr class="separator:ad231f70192ef9dc871dabfd19a91b004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbffaaeb8efb5e50fcb48936ea8c0038"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#abbffaaeb8efb5e50fcb48936ea8c0038">listWishListForFunc</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:abbffaaeb8efb5e50fcb48936ea8c0038"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the user's wishlist of books (for function use).  <br /></td></tr>
+<tr class="separator:abbffaaeb8efb5e50fcb48936ea8c0038"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f1f433eb1f95891d8964b582c5ad20c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a3f1f433eb1f95891d8964b582c5ad20c">addToWishList</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a3f1f433eb1f95891d8964b582c5ad20c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a book to the user's wishlist.  <br /></td></tr>
+<tr class="separator:a3f1f433eb1f95891d8964b582c5ad20c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2bcdc5888afb3c04978aab087f4b0d49"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a2bcdc5888afb3c04978aab087f4b0d49">removeFromWishList</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a2bcdc5888afb3c04978aab087f4b0d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a book from the user's wishlist.  <br /></td></tr>
+<tr class="separator:a2bcdc5888afb3c04978aab087f4b0d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc7cf16b78fadf9f4f7a7e17b1fd71ce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#afc7cf16b78fadf9f4f7a7e17b1fd71ce">listUnMarkedBooks</a> (ostream &amp;out)</td></tr>
+<tr class="memdesc:afc7cf16b78fadf9f4f7a7e17b1fd71ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the list of books that have not been marked as read.  <br /></td></tr>
+<tr class="separator:afc7cf16b78fadf9f4f7a7e17b1fd71ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58e3aaac795f12c90c7eb2dba8392adc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a58e3aaac795f12c90c7eb2dba8392adc">logProgress</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a58e3aaac795f12c90c7eb2dba8392adc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the user's reading progress and marked books.  <br /></td></tr>
+<tr class="separator:a58e3aaac795f12c90c7eb2dba8392adc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab85fd7297091d985dab837b02fb52e65"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#ab85fd7297091d985dab837b02fb52e65">markAsRead</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:ab85fd7297091d985dab837b02fb52e65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Marks a book as read in the user's reading history.  <br /></td></tr>
+<tr class="separator:ab85fd7297091d985dab837b02fb52e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6bbc6ef7b3ec4012ccf75a74721a09dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem_8h.html#a6bbc6ef7b3ec4012ccf75a74721a09dd">viewHistory</a> (istream &amp;in, ostream &amp;out)</td></tr>
+<tr class="memdesc:a6bbc6ef7b3ec4012ccf75a74721a09dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the user's reading history of marked books.  <br /></td></tr>
+<tr class="separator:a6bbc6ef7b3ec4012ccf75a74721a09dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Header file for the Personal Library System. </p>
+<p>This file defines constants and includes necessary headers for the implementation of the Personal Library System. It also sets a maximum size for character arrays used in the structures. </p>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="a81e98630adbd3ec882814bc99dbf0465" name="a81e98630adbd3ec882814bc99dbf0465"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81e98630adbd3ec882814bc99dbf0465">&#9670;&#160;</a></span>MAX_STRINGSIZE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAX_STRINGSIZE&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Maximum size for character arrays in the structures. Using the std namespace for convenience. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8396c50bf544009fb2fc4907b00cbad3" name="a8396c50bf544009fb2fc4907b00cbad3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8396c50bf544009fb2fc4907b00cbad3">&#9670;&#160;</a></span>mainMenu()</h2>
+<a id="aa92a85119b2dd5eb202ac038b0c7ea0d" name="aa92a85119b2dd5eb202ac038b0c7ea0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa92a85119b2dd5eb202ac038b0c7ea0d">&#9670;&#160;</a></span>addBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool addBook </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a new book to the library catalog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is added successfully.</dd></dl>
+<p>Adds a new book to the library catalog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is added successfully, false otherwise.</dd></dl>
+<p>This function prompts the user to enter the name of the book, assigns a new unique ID to the book, and adds the book to the "Books.bin" file. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#aa92a85119b2dd5eb202ac038b0c7ea0d">addBook</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book added successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_aa92a85119b2dd5eb202ac038b0c7ea0d"><div class="ttname"><a href="librarysystem_8h.html#aa92a85119b2dd5eb202ac038b0c7ea0d">addBook</a></div><div class="ttdeci">bool addBook(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Adds a new book to the library catalog.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:622</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3f1f433eb1f95891d8964b582c5ad20c" name="a3f1f433eb1f95891d8964b582c5ad20c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f1f433eb1f95891d8964b582c5ad20c">&#9670;&#160;</a></span>addToWishList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool addToWishList </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adds a book to the user's wishlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully added to the wishlist.</dd></dl>
+<p>Adds a book to the user's wishlist.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully added to the wishlist, false otherwise.</dd></dl>
+<p>This function displays the catalog, prompts the user to enter the ID of the book to add to the wishlist, and adds the selected book to the "wishlist.bin" file. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a3f1f433eb1f95891d8964b582c5ad20c">addToWishList</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book added to the wishlist successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a3f1f433eb1f95891d8964b582c5ad20c"><div class="ttname"><a href="librarysystem_8h.html#a3f1f433eb1f95891d8964b582c5ad20c">addToWishList</a></div><div class="ttdeci">bool addToWishList(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Adds a book to the user's wishlist.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:910</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="af6804503860b8380610b0c8872a74ec8" name="af6804503860b8380610b0c8872a74ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6804503860b8380610b0c8872a74ec8">&#9670;&#160;</a></span>bookCatalogingMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bookCatalogingMenu </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the book cataloging menu, allowing users to perform operations on books. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">output</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true when the user chooses to return to the main menu.</dd></dl>
+<p>Handles the book cataloging menu, allowing users to perform operations on books.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true when the user chooses to exit the book cataloging menu.</dd></dl>
+<p>This function continuously displays a menu for book cataloging operations, reads the user's choice, and performs the corresponding action. The menu includes options to add, delete, update, or view the catalog. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#af6804503860b8380610b0c8872a74ec8">bookCatalogingMenu</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// User chose to exit the book cataloging menu</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Additional logic or error handling</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_af6804503860b8380610b0c8872a74ec8"><div class="ttname"><a href="librarysystem_8h.html#af6804503860b8380610b0c8872a74ec8">bookCatalogingMenu</a></div><div class="ttdeci">bool bookCatalogingMenu(istream &amp;input, ostream &amp;output)</div><div class="ttdoc">Handles the book cataloging menu, allowing users to perform operations on books.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:195</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3321e215f888db53bbdef761f48df758" name="a3321e215f888db53bbdef761f48df758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3321e215f888db53bbdef761f48df758">&#9670;&#160;</a></span>borrowBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool borrowBook </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Borrows a book from the library catalog by a user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully borrowed.</dd></dl>
+<p>Borrows a book from the library catalog by a user.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully borrowed, false otherwise.</dd></dl>
+<p>This function displays the catalog, prompts the user to enter the ID of the book to borrow, and moves the selected book from "Books.bin" to "Loans.bin". The book is temporarily removed from the catalog until it is returned. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a3321e215f888db53bbdef761f48df758">borrowBook</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book borrowed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a3321e215f888db53bbdef761f48df758"><div class="ttname"><a href="librarysystem_8h.html#a3321e215f888db53bbdef761f48df758">borrowBook</a></div><div class="ttdeci">bool borrowBook(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Borrows a book from the library catalog by a user.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1014</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ace4cde8d98cd38ced47ffb6e88fd57bd" name="ace4cde8d98cd38ced47ffb6e88fd57bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace4cde8d98cd38ced47ffb6e88fd57bd">&#9670;&#160;</a></span>deleteBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool deleteBook </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deletes a book from the library catalog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is deleted successfully.</dd></dl>
+<p>Deletes a book from the library catalog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is deleted successfully, false otherwise.</dd></dl>
+<p>This function displays the catalog, prompts the user to enter the ID of the book to delete, and removes the specified book from the "Books.bin" file. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ace4cde8d98cd38ced47ffb6e88fd57bd">deleteBook</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book deleted successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ace4cde8d98cd38ced47ffb6e88fd57bd"><div class="ttname"><a href="librarysystem_8h.html#ace4cde8d98cd38ced47ffb6e88fd57bd">deleteBook</a></div><div class="ttdeci">bool deleteBook(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Deletes a book from the library catalog.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:661</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="acf1f3c3851eba9e703d2b470da6a1501" name="acf1f3c3851eba9e703d2b470da6a1501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1f3c3851eba9e703d2b470da6a1501">&#9670;&#160;</a></span>enterToContunie()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool enterToContunie </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pauses execution and waits for the user to press any key to continue. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after the user presses a key.</dd></dl>
+<p>Pauses execution and waits for the user to press any key to continue.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true when the user presses any key, otherwise returns false.</dd></dl>
+<p>This function waits for a key press from the user, allowing the program to pause. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#acf1f3c3851eba9e703d2b470da6a1501">enterToContunie</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Continue with the program logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_acf1f3c3851eba9e703d2b470da6a1501"><div class="ttname"><a href="librarysystem_8h.html#acf1f3c3851eba9e703d2b470da6a1501">enterToContunie</a></div><div class="ttdeci">bool enterToContunie(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Pauses execution and waits for the user to press any key to continue.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:48</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="acc0b8aeaed79ae44252c3d43fbbf07e3" name="acc0b8aeaed79ae44252c3d43fbbf07e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc0b8aeaed79ae44252c3d43fbbf07e3">&#9670;&#160;</a></span>getInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getInput </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets input from the user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Integer input obtained from the user.</dd></dl>
+<p>Gets input from the user.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The integer input obtained from the user.</dd></dl>
+<p>This function prompts the user to enter an integer through the specified input stream. It retrieves the user's input and returns the entered integer. </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> userChoice = <a class="code hl_function" href="librarysystem_8h.html#acc0b8aeaed79ae44252c3d43fbbf07e3">getInput</a>(cin);</div>
+<div class="line"><span class="comment">// Now &#39;userChoice&#39; contains the integer entered by the user</span></div>
+<div class="ttc" id="alibrarysystem_8h_html_acc0b8aeaed79ae44252c3d43fbbf07e3"><div class="ttname"><a href="librarysystem_8h.html#acc0b8aeaed79ae44252c3d43fbbf07e3">getInput</a></div><div class="ttdeci">int getInput(istream &amp;in)</div><div class="ttdoc">Gets input from the user.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:91</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="abee7de3388d76c9b3ce4dddf3b854607" name="abee7de3388d76c9b3ce4dddf3b854607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abee7de3388d76c9b3ce4dddf3b854607">&#9670;&#160;</a></span>getNewId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getNewId </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a new unique ID for books based on existing IDs. </p>
+<dl class="section return"><dt>Returns</dt><dd>New unique ID for books.</dd></dl>
+<p>Generates a new unique ID for books based on existing IDs.</p>
+<dl class="section return"><dt>Returns</dt><dd>Returns an integer representing a new unique identifier for books.</dd></dl>
+<p>This function reads the existing book IDs from the "Books.bin" file, finds the highest ID, and returns a new unique ID for a book by incrementing the highest existing ID. If the file does not exist, it returns 1 as the starting ID. </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> newBookId = <a class="code hl_function" href="librarysystem_8h.html#abee7de3388d76c9b3ce4dddf3b854607">getNewId</a>();</div>
+<div class="line"><span class="comment">// Use &#39;newBookId&#39; as the ID for a new book</span></div>
+<div class="ttc" id="alibrarysystem_8h_html_abee7de3388d76c9b3ce4dddf3b854607"><div class="ttname"><a href="librarysystem_8h.html#abee7de3388d76c9b3ce4dddf3b854607">getNewId</a></div><div class="ttdeci">int getNewId()</div><div class="ttdoc">Generates a new unique ID for books based on existing IDs.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:592</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad696b86625f9e1d9e694fec67aa1857f" name="ad696b86625f9e1d9e694fec67aa1857f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad696b86625f9e1d9e694fec67aa1857f">&#9670;&#160;</a></span>guestOperation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool guestOperation </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects a guest user to specific operations based on their choice in the guest menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false when the guest chooses to exit.</dd></dl>
+<p>Redirects a guest user to specific operations based on their choice in the guest menu.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false when the guest chooses to exit.</dd></dl>
+<p>This function presents a guest menu and redirects the guest to specific operations (viewing catalog). It returns false when the guest chooses to exit. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ad696b86625f9e1d9e694fec67aa1857f">guestOperation</a>(cin, cout) == <span class="keyword">false</span>) {</div>
+<div class="line">    <span class="comment">// Guest exited the system</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ad696b86625f9e1d9e694fec67aa1857f"><div class="ttname"><a href="librarysystem_8h.html#ad696b86625f9e1d9e694fec67aa1857f">guestOperation</a></div><div class="ttdeci">bool guestOperation(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Redirects a guest user to specific operations based on their choice in the guest menu.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1440</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a3761b895725dc51420e51cc07ef81431" name="a3761b895725dc51420e51cc07ef81431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3761b895725dc51420e51cc07ef81431">&#9670;&#160;</a></span>handleInputError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool handleInputError </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles input errors by clearing the input stream and displaying an error message. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false to indicate an input error.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false after clearing input and displaying an error message.</dd></dl>
+<p>This function is designed to handle input errors, specifically when the user enters letters instead of numbers. It clears the input stream, ignores any remaining characters up to the newline, and prints an error message to the output stream. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="librarysystem_8h.html#a3761b895725dc51420e51cc07ef81431">handleInputError</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Handle the error or prompt the user for input again</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a3761b895725dc51420e51cc07ef81431"><div class="ttname"><a href="librarysystem_8h.html#a3761b895725dc51420e51cc07ef81431">handleInputError</a></div><div class="ttdeci">bool handleInputError(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Handles input errors by clearing the input stream and displaying an error message.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:71</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ae95926f6243b21d6a263a4811e4851d6" name="ae95926f6243b21d6a263a4811e4851d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae95926f6243b21d6a263a4811e4851d6">&#9670;&#160;</a></span>lendBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool lendBook </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Lends a book from the library catalog to a user. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully lent.</dd></dl>
+<p>Lends a book from the library catalog to a user.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully returned, false otherwise.</dd></dl>
+<p>This function displays the loans, prompts the user to enter the ID of the book to return, and moves the selected book from "Loans.bin" back to "Books.bin". The book is returned to the catalog. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ae95926f6243b21d6a263a4811e4851d6">lendBook</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book returned successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ae95926f6243b21d6a263a4811e4851d6"><div class="ttname"><a href="librarysystem_8h.html#ae95926f6243b21d6a263a4811e4851d6">lendBook</a></div><div class="ttdeci">bool lendBook(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Lends a book from the library catalog to a user.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1067</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="afc7cf16b78fadf9f4f7a7e17b1fd71ce" name="afc7cf16b78fadf9f4f7a7e17b1fd71ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc7cf16b78fadf9f4f7a7e17b1fd71ce">&#9670;&#160;</a></span>listUnMarkedBooks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool listUnMarkedBooks </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the list of books that have not been marked as read. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the list of unmarked books is displayed successfully.</dd></dl>
+<p>Displays the list of books that have not been marked as read.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if there are unmarked books and they are listed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each unmarked book in the "Books.bin" file. It returns true if there are unmarked books and false if either there are no unmarked books or an error occurs. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#afc7cf16b78fadf9f4f7a7e17b1fd71ce">listUnMarkedBooks</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Unmarked books listed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// No unmarked books or an error occurred</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_afc7cf16b78fadf9f4f7a7e17b1fd71ce"><div class="ttname"><a href="librarysystem_8h.html#afc7cf16b78fadf9f4f7a7e17b1fd71ce">listUnMarkedBooks</a></div><div class="ttdeci">bool listUnMarkedBooks(ostream &amp;out)</div><div class="ttdoc">Displays the list of books that have not been marked as read.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1299</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad231f70192ef9dc871dabfd19a91b004" name="ad231f70192ef9dc871dabfd19a91b004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad231f70192ef9dc871dabfd19a91b004">&#9670;&#160;</a></span>listWishList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool listWishList </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the user's wishlist of books. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the wishlist is displayed successfully.</dd></dl>
+<p>Displays the user's wishlist of books.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object (unused). </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the wishlist is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each book in the "wishlist.bin" file, presenting them as a wishlist. It prompts the user to press enter to exit after displaying the wishlist. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ad231f70192ef9dc871dabfd19a91b004">listWishList</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Wishlist displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ad231f70192ef9dc871dabfd19a91b004"><div class="ttname"><a href="librarysystem_8h.html#ad231f70192ef9dc871dabfd19a91b004">listWishList</a></div><div class="ttdeci">bool listWishList(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the user's wishlist of books.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:841</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="abbffaaeb8efb5e50fcb48936ea8c0038" name="abbffaaeb8efb5e50fcb48936ea8c0038"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbffaaeb8efb5e50fcb48936ea8c0038">&#9670;&#160;</a></span>listWishListForFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool listWishListForFunc </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the user's wishlist of books (for function use). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the wishlist is displayed successfully.</dd></dl>
+<p>Displays the user's wishlist of books (for function use).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the wishlist is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each book in the "wishlist.bin" file, presenting them as a wishlist. It is designed for internal function use and does not require an input stream parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#abbffaaeb8efb5e50fcb48936ea8c0038">listWishListForFunc</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Wishlist displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_abbffaaeb8efb5e50fcb48936ea8c0038"><div class="ttname"><a href="librarysystem_8h.html#abbffaaeb8efb5e50fcb48936ea8c0038">listWishListForFunc</a></div><div class="ttdeci">bool listWishListForFunc(ostream &amp;out)</div><div class="ttdoc">Displays the user's wishlist of books (for function use).</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:877</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9b2e17d0aed5b004ccd8bab3070a707d" name="a9b2e17d0aed5b004ccd8bab3070a707d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b2e17d0aed5b004ccd8bab3070a707d">&#9670;&#160;</a></span>loanManagementMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loanManagementMenu </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the loan management menu, allowing users to lend and borrow books. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">output</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true when the user chooses to return to the main menu.</dd></dl>
+<p>Handles the loan management menu, allowing users to lend and borrow books.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true when the user chooses to exit the loan management menu.</dd></dl>
+<p>This function continuously displays a menu for loan management operations, reads the user's choice, and performs the corresponding action. The menu includes options to lend, borrow, or view loans. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a9b2e17d0aed5b004ccd8bab3070a707d">loanManagementMenu</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// User chose to exit the loan management menu</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Additional logic or error handling</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a9b2e17d0aed5b004ccd8bab3070a707d"><div class="ttname"><a href="librarysystem_8h.html#a9b2e17d0aed5b004ccd8bab3070a707d">loanManagementMenu</a></div><div class="ttdeci">bool loanManagementMenu(istream &amp;input, ostream &amp;output)</div><div class="ttdoc">Handles the loan management menu, allowing users to lend and borrow books.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:251</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aca21e3deeeed6f2f5d9dbf335834d9b5" name="aca21e3deeeed6f2f5d9dbf335834d9b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca21e3deeeed6f2f5d9dbf335834d9b5">&#9670;&#160;</a></span>loginUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool loginUser </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Logs in a user to the library system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if login is successful.</dd></dl>
+<p>Logs in a user to the library system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the login is successful, false otherwise.</dd></dl>
+<p>This function prompts the user to enter their email and password, reads user information from a binary file named "users.bin," and checks if the provided credentials match any registered user. If a match is found, the user is logged in, and user operations are performed. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#aca21e3deeeed6f2f5d9dbf335834d9b5">loginUser</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// User logged in successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling for login failure</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_aca21e3deeeed6f2f5d9dbf335834d9b5"><div class="ttname"><a href="librarysystem_8h.html#aca21e3deeeed6f2f5d9dbf335834d9b5">loginUser</a></div><div class="ttdeci">bool loginUser(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Logs in a user to the library system.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:150</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a58e3aaac795f12c90c7eb2dba8392adc" name="a58e3aaac795f12c90c7eb2dba8392adc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a58e3aaac795f12c90c7eb2dba8392adc">&#9670;&#160;</a></span>logProgress()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool logProgress </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the user's reading progress and marked books. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the progress is displayed successfully.</dd></dl>
+<p>Displays the user's reading progress and marked books.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the progress is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID, name, and status (read or unread) of each book in the "Books.bin" file. It prompts the user to press any key to continue after displaying the progress. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a58e3aaac795f12c90c7eb2dba8392adc">logProgress</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Progress displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a58e3aaac795f12c90c7eb2dba8392adc"><div class="ttname"><a href="librarysystem_8h.html#a58e3aaac795f12c90c7eb2dba8392adc">logProgress</a></div><div class="ttdeci">bool logProgress(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the user's reading progress and marked books.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1190</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ab5206f1ba964127d1f7a2491c4254813" name="ab5206f1ba964127d1f7a2491c4254813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5206f1ba964127d1f7a2491c4254813">&#9670;&#160;</a></span>mainMenu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -129,16 +1085,604 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">int mainMenu </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the main menu and redirects the user based on their choice. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to exit the program.</dd></dl>
+<p>Displays the main menu and redirects the user based on their choice.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to exit the program.</dd></dl>
+<p>This function presents the main menu and redirects the user to specific actions (login, register, guest operations, exit program) based on their choice. It returns 0 when the user chooses to exit the program. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ab5206f1ba964127d1f7a2491c4254813">mainMenu</a>(cin, cout) == 0) {</div>
+<div class="line">    <span class="comment">// User exited the program</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ab5206f1ba964127d1f7a2491c4254813"><div class="ttname"><a href="librarysystem_8h.html#ab5206f1ba964127d1f7a2491c4254813">mainMenu</a></div><div class="ttdeci">int mainMenu(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the main menu and redirects the user based on their choice.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1488</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ab85fd7297091d985dab837b02fb52e65" name="ab85fd7297091d985dab837b02fb52e65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab85fd7297091d985dab837b02fb52e65">&#9670;&#160;</a></span>markAsRead()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool markAsRead </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Marks a book as read in the user's reading history. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully marked as read.</dd></dl>
+<p>Marks a book as read in the user's reading history.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully marked as read, false otherwise.</dd></dl>
+<p>This function displays the list of unmarked books, prompts the user to enter the ID of the book to mark as read, and updates the status of the selected book to "read" in the "Books.bin" file. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ab85fd7297091d985dab837b02fb52e65">markAsRead</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book marked as read successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ab85fd7297091d985dab837b02fb52e65"><div class="ttname"><a href="librarysystem_8h.html#ab85fd7297091d985dab837b02fb52e65">markAsRead</a></div><div class="ttdeci">bool markAsRead(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Marks a book as read in the user's reading history.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1246</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9a39b32432895f6c60d85f6874c30927" name="a9a39b32432895f6c60d85f6874c30927"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a39b32432895f6c60d85f6874c30927">&#9670;&#160;</a></span>printBookCatalogingMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printBookCatalogingMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Prints the book cataloging menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the book cataloging menu.</dd></dl>
+<p>Prints the book cataloging menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the book cataloging menu.</dd></dl>
+<p>This function clears the screen and displays options for book cataloging operations, such as adding a book, deleting a book, updating a book, viewing the catalog, and returning to user operations. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a9a39b32432895f6c60d85f6874c30927">printBookCatalogingMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Book cataloging menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a9a39b32432895f6c60d85f6874c30927"><div class="ttname"><a href="librarysystem_8h.html#a9a39b32432895f6c60d85f6874c30927">printBookCatalogingMenu</a></div><div class="ttdeci">bool printBookCatalogingMenu(ostream &amp;out)</div><div class="ttdoc">Prints the book cataloging menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:486</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="adc53ae8c72d75f7fd7054169f0808f69" name="adc53ae8c72d75f7fd7054169f0808f69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adc53ae8c72d75f7fd7054169f0808f69">&#9670;&#160;</a></span>userOperations()</h2>
+<a id="ae5d187389456e7918630eae659fdfce1" name="ae5d187389456e7918630eae659fdfce1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5d187389456e7918630eae659fdfce1">&#9670;&#160;</a></span>printGuestMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printGuestMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the guest menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the guest menu.</dd></dl>
+<p>Prints the guest menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the menu.</dd></dl>
+<p>This function clears the screen and prints the guest menu options, prompting the user to select an operation (view catalog or return to the main menu). It returns true after printing the menu. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ae5d187389456e7918630eae659fdfce1">printGuestMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Guest menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ae5d187389456e7918630eae659fdfce1"><div class="ttname"><a href="librarysystem_8h.html#ae5d187389456e7918630eae659fdfce1">printGuestMenu</a></div><div class="ttdeci">bool printGuestMenu(ostream &amp;out)</div><div class="ttdoc">Prints the guest menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:406</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="acdd388e4094195b3d7cc608202f27d51" name="acdd388e4094195b3d7cc608202f27d51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acdd388e4094195b3d7cc608202f27d51">&#9670;&#160;</a></span>printLoanManagementMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printLoanManagementMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the loan management menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the loan management menu.</dd></dl>
+<p>Prints the loan management menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the loan management menu.</dd></dl>
+<p>This function clears the screen and displays options for loan management operations, such as lending a book, borrowing a book, viewing loans, and returning to user operations. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#acdd388e4094195b3d7cc608202f27d51">printLoanManagementMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Loan management menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_acdd388e4094195b3d7cc608202f27d51"><div class="ttname"><a href="librarysystem_8h.html#acdd388e4094195b3d7cc608202f27d51">printLoanManagementMenu</a></div><div class="ttdeci">bool printLoanManagementMenu(ostream &amp;out)</div><div class="ttdoc">Prints the loan management menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:514</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a7c2b1e66f7bef37d709532e26a033c85" name="a7c2b1e66f7bef37d709532e26a033c85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2b1e66f7bef37d709532e26a033c85">&#9670;&#160;</a></span>printMainMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printMainMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the main menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the main menu.</dd></dl>
+<p>Prints the main menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the main menu.</dd></dl>
+<p>This function clears the screen and displays the main menu options, prompting the user to select an option by entering a number. The options include login, register, guest mode, and exit. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a7c2b1e66f7bef37d709532e26a033c85">printMainMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Main menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a7c2b1e66f7bef37d709532e26a033c85"><div class="ttname"><a href="librarysystem_8h.html#a7c2b1e66f7bef37d709532e26a033c85">printMainMenu</a></div><div class="ttdeci">bool printMainMenu(ostream &amp;out)</div><div class="ttdoc">Prints the main menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:431</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a5bf1f1645a2041b24a591d55cbbf698a" name="a5bf1f1645a2041b24a591d55cbbf698a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5bf1f1645a2041b24a591d55cbbf698a">&#9670;&#160;</a></span>printReadingTrackerMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printReadingTrackerMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the reading tracker menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the reading tracker menu.</dd></dl>
+<p>Prints the reading tracker menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the reading tracker menu.</dd></dl>
+<p>This function clears the screen and displays options for reading tracker operations, such as logging progress, marking as read, viewing history, and returning to user operations. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a5bf1f1645a2041b24a591d55cbbf698a">printReadingTrackerMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Reading tracker menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a5bf1f1645a2041b24a591d55cbbf698a"><div class="ttname"><a href="librarysystem_8h.html#a5bf1f1645a2041b24a591d55cbbf698a">printReadingTrackerMenu</a></div><div class="ttdeci">bool printReadingTrackerMenu(ostream &amp;out)</div><div class="ttdoc">Prints the reading tracker menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:568</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aaa17afd03df57397f4b2d2de77084c98" name="aaa17afd03df57397f4b2d2de77084c98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa17afd03df57397f4b2d2de77084c98">&#9670;&#160;</a></span>printUserMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printUserMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the user menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the user menu.</dd></dl>
+<p>Prints the user menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the user operations menu.</dd></dl>
+<p>This function clears the screen and displays options for user operations, such as book cataloging, loan management, wishlist management, reading tracker, and returning to the main menu. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#aaa17afd03df57397f4b2d2de77084c98">printUserMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// User operations menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_aaa17afd03df57397f4b2d2de77084c98"><div class="ttname"><a href="librarysystem_8h.html#aaa17afd03df57397f4b2d2de77084c98">printUserMenu</a></div><div class="ttdeci">bool printUserMenu(ostream &amp;out)</div><div class="ttdoc">Prints the user menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:458</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a77dcba8c2ea0a6fe0cb3a0753a89f8d4" name="a77dcba8c2ea0a6fe0cb3a0753a89f8d4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77dcba8c2ea0a6fe0cb3a0753a89f8d4">&#9670;&#160;</a></span>printWishListMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool printWishListMenu </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints the wishlist menu screen. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true after printing the wishlist menu.</dd></dl>
+<p>Prints the wishlist menu screen.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Always returns true after printing the wishlist management menu.</dd></dl>
+<p>This function clears the screen and displays options for wishlist management operations, such as viewing the wishlist, adding to the wishlist, removing from the wishlist, and returning to user operations. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a77dcba8c2ea0a6fe0cb3a0753a89f8d4">printWishListMenu</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Wishlist management menu printed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a77dcba8c2ea0a6fe0cb3a0753a89f8d4"><div class="ttname"><a href="librarysystem_8h.html#a77dcba8c2ea0a6fe0cb3a0753a89f8d4">printWishListMenu</a></div><div class="ttdeci">bool printWishListMenu(ostream &amp;out)</div><div class="ttdoc">Prints the wishlist menu screen.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:541</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a93cf8c988c604099e5fe00934fe6cb81" name="a93cf8c988c604099e5fe00934fe6cb81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93cf8c988c604099e5fe00934fe6cb81">&#9670;&#160;</a></span>readingTrackerMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool readingTrackerMenu </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the reading tracker menu, allowing users to track their reading progress. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">output</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to return to the main menu.</dd></dl>
+<p>Handles the reading tracker menu, allowing users to track their reading progress.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to exit the reading tracker menu.</dd></dl>
+<p>This function continuously displays a menu for reading tracker operations, reads the user's choice, and performs the corresponding action. The menu includes options to log progress, mark as read, or view reading history. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a93cf8c988c604099e5fe00934fe6cb81">readingTrackerMenu</a>(cin, cout) == 0) {</div>
+<div class="line">    <span class="comment">// User chose to exit the reading tracker menu</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Additional logic or error handling</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a93cf8c988c604099e5fe00934fe6cb81"><div class="ttname"><a href="librarysystem_8h.html#a93cf8c988c604099e5fe00934fe6cb81">readingTrackerMenu</a></div><div class="ttdeci">bool readingTrackerMenu(istream &amp;input, ostream &amp;output)</div><div class="ttdoc">Handles the reading tracker menu, allowing users to track their reading progress.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:355</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a563a42979a8555ac3757d491125917d5" name="a563a42979a8555ac3757d491125917d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a563a42979a8555ac3757d491125917d5">&#9670;&#160;</a></span>registerUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool registerUser </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Registers a new user in the library system. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if user registration is successful.</dd></dl>
+<p>Registers a new user in the library system.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the user registration is successful, false otherwise.</dd></dl>
+<p>This function prompts the user to enter their email and password, creates a new <a class="el" href="struct_user.html" title="Structure representing a user in the library system.">User</a> object, and stores the user information in a binary file named "users.bin". </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a563a42979a8555ac3757d491125917d5">registerUser</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// User registered successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling for user registration failure</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a563a42979a8555ac3757d491125917d5"><div class="ttname"><a href="librarysystem_8h.html#a563a42979a8555ac3757d491125917d5">registerUser</a></div><div class="ttdeci">bool registerUser(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Registers a new user in the library system.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:114</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a2bcdc5888afb3c04978aab087f4b0d49" name="a2bcdc5888afb3c04978aab087f4b0d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bcdc5888afb3c04978aab087f4b0d49">&#9670;&#160;</a></span>removeFromWishList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool removeFromWishList </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Removes a book from the user's wishlist. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully removed from the wishlist.</dd></dl>
+<p>Removes a book from the user's wishlist.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is successfully removed from the wishlist, false otherwise.</dd></dl>
+<p>This function displays the wishlist, prompts the user to enter the ID of the book to remove from the wishlist, and removes the selected book from the "wishlist.bin" file. It returns true on success and false on failure. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a2bcdc5888afb3c04978aab087f4b0d49">removeFromWishList</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book removed from the wishlist successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a2bcdc5888afb3c04978aab087f4b0d49"><div class="ttname"><a href="librarysystem_8h.html#a2bcdc5888afb3c04978aab087f4b0d49">removeFromWishList</a></div><div class="ttdeci">bool removeFromWishList(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Removes a book from the user's wishlist.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:959</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aecefdc778d8382b3426dfc141bffe5a4" name="aecefdc778d8382b3426dfc141bffe5a4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aecefdc778d8382b3426dfc141bffe5a4">&#9670;&#160;</a></span>updateBook()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool updateBook </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Updates the information of an existing book in the library catalog. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is updated successfully.</dd></dl>
+<p>Updates the information of an existing book in the library catalog.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the book is updated successfully, false otherwise.</dd></dl>
+<p>This function displays the catalog, prompts the user to enter the ID of the book to update, and allows the user to input a new name for the book. It updates the book's name in the "Books.bin" file. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#aecefdc778d8382b3426dfc141bffe5a4">updateBook</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Book updated successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_aecefdc778d8382b3426dfc141bffe5a4"><div class="ttname"><a href="librarysystem_8h.html#aecefdc778d8382b3426dfc141bffe5a4">updateBook</a></div><div class="ttdeci">bool updateBook(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Updates the information of an existing book in the library catalog.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:725</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6ed82a2b108b314b4d0eefe0f0329ebe" name="a6ed82a2b108b314b4d0eefe0f0329ebe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ed82a2b108b314b4d0eefe0f0329ebe">&#9670;&#160;</a></span>userOperations()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -146,12 +1690,342 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">bool userOperations </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Redirects the user to specific operations based on their choice in the user menu. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to return to the main menu.</dd></dl>
+<p>Redirects the user to specific operations based on their choice in the user menu.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns 0 when the user chooses to return to the main menu.</dd></dl>
+<p>This function presents a user menu and redirects the user to specific operations (book cataloging, loan management, wishlist management, reading tracker) based on their choice. It returns 0 when the user chooses to return to the main menu. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a6ed82a2b108b314b4d0eefe0f0329ebe">userOperations</a>(cin, cout) == 0) {</div>
+<div class="line">    <span class="comment">// User returned to the main menu</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a6ed82a2b108b314b4d0eefe0f0329ebe"><div class="ttname"><a href="librarysystem_8h.html#a6ed82a2b108b314b4d0eefe0f0329ebe">userOperations</a></div><div class="ttdeci">bool userOperations(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Redirects the user to specific operations based on their choice in the user menu.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1383</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a7490eebe775301b73f9bbf392a17135c" name="a7490eebe775301b73f9bbf392a17135c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7490eebe775301b73f9bbf392a17135c">&#9670;&#160;</a></span>viewCatalog()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool viewCatalog </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the entire catalog of books in the library. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the catalog is displayed successfully.</dd></dl>
+<p>Displays the entire catalog of books in the library.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object (unused). </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the catalog is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each book in the "Books.bin" file. It prompts the user to press enter to return to the main menu after displaying the catalog. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a7490eebe775301b73f9bbf392a17135c">viewCatalog</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// Catalog displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a7490eebe775301b73f9bbf392a17135c"><div class="ttname"><a href="librarysystem_8h.html#a7490eebe775301b73f9bbf392a17135c">viewCatalog</a></div><div class="ttdeci">bool viewCatalog(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the entire catalog of books in the library.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:774</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a21614414231293fad16e4be048d4d070" name="a21614414231293fad16e4be048d4d070"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21614414231293fad16e4be048d4d070">&#9670;&#160;</a></span>viewCatalogForFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool viewCatalogForFunc </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
+<p>Displays the entire catalog of books in the library (for function use). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the catalog is displayed successfully.</dd></dl>
+<p>Displays the entire catalog of books in the library (for function use).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the catalog is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each book in the "Books.bin" file. It is designed for internal function use and does not require an input stream parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a21614414231293fad16e4be048d4d070">viewCatalogForFunc</a>(cout)) {</div>
+<div class="line">    <span class="comment">// Catalog displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a21614414231293fad16e4be048d4d070"><div class="ttname"><a href="librarysystem_8h.html#a21614414231293fad16e4be048d4d070">viewCatalogForFunc</a></div><div class="ttdeci">bool viewCatalogForFunc(ostream &amp;out)</div><div class="ttdoc">Displays the entire catalog of books in the library (for function use).</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:810</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6bbc6ef7b3ec4012ccf75a74721a09dd" name="a6bbc6ef7b3ec4012ccf75a74721a09dd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bbc6ef7b3ec4012ccf75a74721a09dd">&#9670;&#160;</a></span>viewHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool viewHistory </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the user's reading history of marked books. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the reading history is displayed successfully.</dd></dl>
+<p>Displays the user's reading history of marked books.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if there are marked books and their history is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each marked book in the "Books.bin" file. It prompts the user to press any key to continue after displaying the history. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a6bbc6ef7b3ec4012ccf75a74721a09dd">viewHistory</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// History of marked books displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// No marked books or an error occurred</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a6bbc6ef7b3ec4012ccf75a74721a09dd"><div class="ttname"><a href="librarysystem_8h.html#a6bbc6ef7b3ec4012ccf75a74721a09dd">viewHistory</a></div><div class="ttdeci">bool viewHistory(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the user's reading history of marked books.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1339</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9e9da7fdede214d4a689a982e7aa019f" name="a9e9da7fdede214d4a689a982e7aa019f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e9da7fdede214d4a689a982e7aa019f">&#9670;&#160;</a></span>viewLoans()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool viewLoans </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the list of books that are currently on loan. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the list of loans is displayed successfully.</dd></dl>
+<p>Displays the list of books that are currently on loan.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object (unused). </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the list of borrowed books is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each borrowed book in the "Loans.bin" file. It prompts the user to press any key to return to the main menu after displaying the list of loans. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#a9e9da7fdede214d4a689a982e7aa019f">viewLoans</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// List of loans displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a9e9da7fdede214d4a689a982e7aa019f"><div class="ttname"><a href="librarysystem_8h.html#a9e9da7fdede214d4a689a982e7aa019f">viewLoans</a></div><div class="ttdeci">bool viewLoans(istream &amp;in, ostream &amp;out)</div><div class="ttdoc">Displays the list of books that are currently on loan.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1123</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad1580de9038b83a11f94a376802c25c5" name="ad1580de9038b83a11f94a376802c25c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1580de9038b83a11f94a376802c25c5">&#9670;&#160;</a></span>viewLoansForFunc()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool viewLoansForFunc </td>
+          <td>(</td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Displays the list of books that are currently on loan (for function use). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the list of loans is displayed successfully.</dd></dl>
+<p>Displays the list of books that are currently on loan (for function use).</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns true if the list of borrowed books is displayed successfully, false otherwise.</dd></dl>
+<p>This function reads and prints the ID and name of each borrowed book in the "Loans.bin" file. It is designed for internal function use and does not require an input stream parameter. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (<a class="code hl_function" href="librarysystem_8h.html#ad1580de9038b83a11f94a376802c25c5">viewLoansForFunc</a>(cout)) {</div>
+<div class="line">    <span class="comment">// List of loans displayed successfully</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Error handling or additional logic</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_ad1580de9038b83a11f94a376802c25c5"><div class="ttname"><a href="librarysystem_8h.html#ad1580de9038b83a11f94a376802c25c5">viewLoansForFunc</a></div><div class="ttdeci">bool viewLoansForFunc(ostream &amp;out)</div><div class="ttdoc">Displays the list of books that are currently on loan (for function use).</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:1159</div></div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a19a9109a09b42cf017e6ee2ea99d5fab" name="a19a9109a09b42cf017e6ee2ea99d5fab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19a9109a09b42cf017e6ee2ea99d5fab">&#9670;&#160;</a></span>wishListMenu()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool wishListMenu </td>
+          <td>(</td>
+          <td class="paramtype">istream &amp;&#160;</td>
+          <td class="paramname"><em>in</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ostream &amp;&#160;</td>
+          <td class="paramname"><em>out</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Handles the wishlist menu, allowing users to manage their book wishlists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">output</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false when the user chooses to exit the wishlist menu.</dd></dl>
+<p>Handles the wishlist menu, allowing users to manage their book wishlists.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in</td><td>Input stream object. </td></tr>
+    <tr><td class="paramname">out</td><td>Output stream object. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns false when the user chooses to exit the wishlist menu.</dd></dl>
+<p>This function continuously displays a menu for wishlist operations, reads the user's choice, and performs the corresponding action. The menu includes options to list, add to, or remove from the wishlist. </p><div class="fragment"><div class="line"><span class="keywordflow">if</span> (!<a class="code hl_function" href="librarysystem_8h.html#a19a9109a09b42cf017e6ee2ea99d5fab">wishListMenu</a>(cin, cout)) {</div>
+<div class="line">    <span class="comment">// User chose to exit the wishlist menu</span></div>
+<div class="line">} <span class="keywordflow">else</span> {</div>
+<div class="line">    <span class="comment">// Additional logic or error handling</span></div>
+<div class="line">}</div>
+<div class="ttc" id="alibrarysystem_8h_html_a19a9109a09b42cf017e6ee2ea99d5fab"><div class="ttname"><a href="librarysystem_8h.html#a19a9109a09b42cf017e6ee2ea99d5fab">wishListMenu</a></div><div class="ttdeci">bool wishListMenu(istream &amp;input, ostream &amp;output)</div><div class="ttdoc">Handles the wishlist menu, allowing users to manage their book wishlists.</div><div class="ttdef"><b>Definition</b> librarysystem.cpp:302</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

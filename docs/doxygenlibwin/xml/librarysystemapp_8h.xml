@@ -15,6 +15,6 @@
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>LIBRARYSYSTEM_APP_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/header/librarysystemapp.h"/>
+    <location file="src/librarysystemapp/header/librarysystemapp.h"/>
   </compounddef>
 </doxygen>

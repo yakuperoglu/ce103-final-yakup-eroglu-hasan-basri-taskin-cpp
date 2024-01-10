@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['deletebook_0',['deleteBook',['../struct_book_system.html#abd98df330ab4a2a2b65912e70d78baee',1,'BookSystem']]]
+  ['deletebook_0',['deleteBook',['../librarysystem_8h.html#ace4cde8d98cd38ced47ffb6e88fd57bd',1,'deleteBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#ace4cde8d98cd38ced47ffb6e88fd57bd',1,'deleteBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]]
 ];

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['database_0',['dataBase',['../structdata_base.html',1,'']]],
-  ['deletebook_1',['deleteBook',['../struct_book_system.html#abd98df330ab4a2a2b65912e70d78baee',1,'BookSystem']]]
+  ['clearscreen_0',['clearScreen',['../librarysystem_8cpp.html#a9d7e8af417b6d543da691e9c0e2f6f9f',1,'librarysystem.cpp']]],
+  ['commontypes_2eh_1',['commonTypes.h',['../common_types_8h.html',1,'']]]
 ];

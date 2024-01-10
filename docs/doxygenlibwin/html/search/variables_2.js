@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['surname_0',['surname',['../struct_user.html#a2ed359f3148bd0b95ec8d964c278dbbd',1,'User']]]
+  ['name_0',['name',['../struct_book.html#ade1aac8a3f7112df7253ad91fee2778f',1,'Book']]]
 ];

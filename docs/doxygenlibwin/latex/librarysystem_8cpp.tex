@@ -1,59 +1,1238 @@
-\doxysection{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/src/librarysystem.cpp File Reference}
-\hypertarget{librarysystem_8cpp}{}\label{librarysystem_8cpp}\index{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/src/librarysystem.cpp@{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/src/librarysystem.cpp}}
+\doxysection{src/librarysystem/src/librarysystem.cpp File Reference}
+\hypertarget{librarysystem_8cpp}{}\label{librarysystem_8cpp}\index{src/librarysystem/src/librarysystem.cpp@{src/librarysystem/src/librarysystem.cpp}}
+
+
+Implementation file for the Library System.  
+
+
+{\ttfamily \#include \"{}../header/librarysystem.\+h\"{}}\newline
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include $<$stdexcept$>$}\newline
-{\ttfamily \#include \"{}librarysystem.\+h\"{}}\newline
+{\ttfamily \#include $<$regex$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
-Include dependency graph for librarysystem.\+cpp\+:\nopagebreak
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for librarysystem.\+cpp\+:
+\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{librarysystem_8cpp__incl}
 \end{center}
 \end{figure}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{librarysystem_8cpp_af08ec37a8c99d747fb60fa15bc28678b}{\+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}}
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{librarysystem_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
-\item 
-bool \mbox{\hyperlink{librarysystem_8cpp_adc53ae8c72d75f7fd7054169f0808f69}{user\+Operations}} ()
-\item 
-bool \mbox{\hyperlink{librarysystem_8cpp_a73f5ab77c6860bf0c0e6a86b46cf1298}{adnin\+Operations}} ()
-\item 
-bool \mbox{\hyperlink{librarysystem_8cpp_a8c8550dee3fe391fe425061cfee209b5}{guest\+Operations}} ()
-\item 
-int \mbox{\hyperlink{librarysystem_8cpp_a8396c50bf544009fb2fc4907b00cbad3}{main\+Menu}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Clears the console screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_acf1f3c3851eba9e703d2b470da6a1501}{enter\+To\+Contunie}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Waits for a key press from the user to continue and returns true. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a3761b895725dc51420e51cc07ef81431}{handle\+Input\+Error}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Handles input errors by clearing the input stream and displaying an error message. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{librarysystem_8cpp_acc0b8aeaed79ae44252c3d43fbbf07e3}{get\+Input}} (istream \&in)
+\begin{DoxyCompactList}\small\item\em Gets an integer input from the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a563a42979a8555ac3757d491125917d5}{register\+User}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Registers a new user by obtaining email and password from the user. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_aca21e3deeeed6f2f5d9dbf335834d9b5}{login\+User}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Allows a user to log in by providing email and password. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a8d6efefeed7ce21164b19f693636fd53}{book\+Cataloging\+Menu}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays a book cataloging menu and performs corresponding actions based on user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a13ceb4148caff661b17bb5aae4b35114}{loan\+Management\+Menu}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays a loan management menu and performs corresponding actions based on user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a5a9f6505728a4da807876ad4ba58ea7d}{wish\+List\+Menu}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays a wishlist menu and performs corresponding actions based on user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a349dfa43675dbbf6d3f65b6c0261c1c4}{reading\+Tracker\+Menu}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays a reading tracker menu and performs corresponding actions based on user input. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ae5d187389456e7918630eae659fdfce1}{print\+Guest\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the menu for guest operations. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a7c2b1e66f7bef37d709532e26a033c85}{print\+Main\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the main menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_aaa17afd03df57397f4b2d2de77084c98}{print\+User\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the user operations menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a9a39b32432895f6c60d85f6874c30927}{print\+Book\+Cataloging\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the book cataloging menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_acdd388e4094195b3d7cc608202f27d51}{print\+Loan\+Management\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the loan management menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}{print\+Wish\+List\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the wishlist management menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a5bf1f1645a2041b24a591d55cbbf698a}{print\+Reading\+Tracker\+Menu}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Prints the reading tracker menu screen and prompts the user to make a selection. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{librarysystem_8cpp_abee7de3388d76c9b3ce4dddf3b854607}{get\+New\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a new unique identifier for books. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_aa92a85119b2dd5eb202ac038b0c7ea0d}{add\+Book}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Adds a new book to the book catalog. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ace4cde8d98cd38ced47ffb6e88fd57bd}{delete\+Book}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Deletes a book from the book catalog based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_aecefdc778d8382b3426dfc141bffe5a4}{update\+Book}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Updates the name of a book in the catalog based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a7490eebe775301b73f9bbf392a17135c}{view\+Catalog}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the catalog of books from the \"{}\+Books.\+bin\"{} file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a21614414231293fad16e4be048d4d070}{view\+Catalog\+For\+Func}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the catalog of books for internal function use. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ad231f70192ef9dc871dabfd19a91b004}{list\+Wish\+List}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the wishlist of books from the \"{}wishlist.\+bin\"{} file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_abbffaaeb8efb5e50fcb48936ea8c0038}{list\+Wish\+List\+For\+Func}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the wishlist of books for internal function use. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a3f1f433eb1f95891d8964b582c5ad20c}{add\+To\+Wish\+List}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Adds a book to the wishlist based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a2bcdc5888afb3c04978aab087f4b0d49}{remove\+From\+Wish\+List}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Removes a book from the wishlist based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a3321e215f888db53bbdef761f48df758}{borrow\+Book}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Borrows a book from the catalog based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ae95926f6243b21d6a263a4811e4851d6}{lend\+Book}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Returns a borrowed book to the catalog based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a9e9da7fdede214d4a689a982e7aa019f}{view\+Loans}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the list of borrowed books from the \"{}\+Loans.\+bin\"{} file. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ad1580de9038b83a11f94a376802c25c5}{view\+Loans\+For\+Func}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the list of borrowed books for internal function use. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a58e3aaac795f12c90c7eb2dba8392adc}{log\+Progress}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the progress and status of each book in the catalog. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ab85fd7297091d985dab837b02fb52e65}{mark\+As\+Read}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Marks a book as read in the catalog based on the provided ID. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_afc7cf16b78fadf9f4f7a7e17b1fd71ce}{list\+Un\+Marked\+Books}} (ostream \&out)
+\begin{DoxyCompactList}\small\item\em Lists unmarked books from the catalog. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a6bbc6ef7b3ec4012ccf75a74721a09dd}{view\+History}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Displays the history of marked books from the catalog. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_a6ed82a2b108b314b4d0eefe0f0329ebe}{user\+Operations}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Redirects user to specific operations based on their choice in the user menu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{librarysystem_8cpp_ad696b86625f9e1d9e694fec67aa1857f}{guest\+Operation}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Redirects guest to specific operations based on their choice in the guest menu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{librarysystem_8cpp_ab5206f1ba964127d1f7a2491c4254813}{main\+Menu}} (istream \&in, ostream \&out)
+\begin{DoxyCompactList}\small\item\em Redirects the user to specific actions based on their choice in the main menu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation file for the Library System. 
+
+This file contains the implementation of the Library System, including functions for clearing the console screen and other utility functions. 
+
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{librarysystem_8cpp_af08ec37a8c99d747fb60fa15bc28678b}\label{librarysystem_8cpp_af08ec37a8c99d747fb60fa15bc28678b} 
+\index{librarysystem.cpp@{librarysystem.cpp}!\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}}
+\index{\_CRT\_SECURE\_NO\_WARNINGS@{\_CRT\_SECURE\_NO\_WARNINGS}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{\_CRT\_SECURE\_NO\_WARNINGS}{\_CRT\_SECURE\_NO\_WARNINGS}}
+{\footnotesize\ttfamily \#define \+\_\+\+CRT\+\_\+\+SECURE\+\_\+\+NO\+\_\+\+WARNINGS}
+
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{librarysystem_8cpp_a73f5ab77c6860bf0c0e6a86b46cf1298}\label{librarysystem_8cpp_a73f5ab77c6860bf0c0e6a86b46cf1298} 
-\index{librarysystem.cpp@{librarysystem.cpp}!adninOperations@{adninOperations}}
-\index{adninOperations@{adninOperations}!librarysystem.cpp@{librarysystem.cpp}}
-\doxysubsubsection{\texorpdfstring{adninOperations()}{adninOperations()}}
-{\footnotesize\ttfamily bool adnin\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\Hypertarget{librarysystem_8cpp_aa92a85119b2dd5eb202ac038b0c7ea0d}\label{librarysystem_8cpp_aa92a85119b2dd5eb202ac038b0c7ea0d} 
+\index{librarysystem.cpp@{librarysystem.cpp}!addBook@{addBook}}
+\index{addBook@{addBook}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily bool add\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
 
-\Hypertarget{librarysystem_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{librarysystem_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f} 
+
+
+Adds a new book to the book catalog. 
+
+Adds a new book to the library catalog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is added successfully, false otherwise.
+\end{DoxyReturn}
+This function prompts the user to enter the name of the book, assigns a new unique ID to the book, and adds the book to the \"{}\+Books.\+bin\"{} file. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_aa92a85119b2dd5eb202ac038b0c7ea0d}{addBook}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ added\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a3f1f433eb1f95891d8964b582c5ad20c}\label{librarysystem_8cpp_a3f1f433eb1f95891d8964b582c5ad20c} 
+\index{librarysystem.cpp@{librarysystem.cpp}!addToWishList@{addToWishList}}
+\index{addToWishList@{addToWishList}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{addToWishList()}{addToWishList()}}
+{\footnotesize\ttfamily bool add\+To\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Adds a book to the wishlist based on the provided ID. 
+
+Adds a book to the user\textquotesingle{}s wishlist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is successfully added to the wishlist, false otherwise.
+\end{DoxyReturn}
+This function displays the catalog, prompts the user to enter the ID of the book to add to the wishlist, and adds the selected book to the \"{}wishlist.\+bin\"{} file. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a3f1f433eb1f95891d8964b582c5ad20c}{addToWishList}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ added\ to\ the\ wishlist\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a8d6efefeed7ce21164b19f693636fd53}\label{librarysystem_8cpp_a8d6efefeed7ce21164b19f693636fd53} 
+\index{librarysystem.cpp@{librarysystem.cpp}!bookCatalogingMenu@{bookCatalogingMenu}}
+\index{bookCatalogingMenu@{bookCatalogingMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{bookCatalogingMenu()}{bookCatalogingMenu()}}
+{\footnotesize\ttfamily bool book\+Cataloging\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays a book cataloging menu and performs corresponding actions based on user input. 
+
+Handles the book cataloging menu, allowing users to perform operations on books.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true when the user chooses to exit the book cataloging menu.
+\end{DoxyReturn}
+This function continuously displays a menu for book cataloging operations, reads the user\textquotesingle{}s choice, and performs the corresponding action. The menu includes options to add, delete, update, or view the catalog. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_af6804503860b8380610b0c8872a74ec8}{bookCatalogingMenu}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ chose\ to\ exit\ the\ book\ cataloging\ menu}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Additional\ logic\ or\ error\ handling}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a3321e215f888db53bbdef761f48df758}\label{librarysystem_8cpp_a3321e215f888db53bbdef761f48df758} 
+\index{librarysystem.cpp@{librarysystem.cpp}!borrowBook@{borrowBook}}
+\index{borrowBook@{borrowBook}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{borrowBook()}{borrowBook()}}
+{\footnotesize\ttfamily bool borrow\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Borrows a book from the catalog based on the provided ID. 
+
+Borrows a book from the library catalog by a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is successfully borrowed, false otherwise.
+\end{DoxyReturn}
+This function displays the catalog, prompts the user to enter the ID of the book to borrow, and moves the selected book from \"{}\+Books.\+bin\"{} to \"{}\+Loans.\+bin\"{}. The book is temporarily removed from the catalog until it is returned. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a3321e215f888db53bbdef761f48df758}{borrowBook}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ borrowed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{librarysystem_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f} 
 \index{librarysystem.cpp@{librarysystem.cpp}!clearScreen@{clearScreen}}
 \index{clearScreen@{clearScreen}!librarysystem.cpp@{librarysystem.cpp}}
 \doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
 {\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{librarysystem_8cpp_a8c8550dee3fe391fe425061cfee209b5}\label{librarysystem_8cpp_a8c8550dee3fe391fe425061cfee209b5} 
-\index{librarysystem.cpp@{librarysystem.cpp}!guestOperations@{guestOperations}}
-\index{guestOperations@{guestOperations}!librarysystem.cpp@{librarysystem.cpp}}
-\doxysubsubsection{\texorpdfstring{guestOperations()}{guestOperations()}}
-{\footnotesize\ttfamily bool guest\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
-\Hypertarget{librarysystem_8cpp_a8396c50bf544009fb2fc4907b00cbad3}\label{librarysystem_8cpp_a8396c50bf544009fb2fc4907b00cbad3} 
+
+Clears the console screen. 
+
+This function is a utility to clear the console screen. It uses platform-\/specific commands to clear the screen for both Windows and non-\/\+Windows systems. \Hypertarget{librarysystem_8cpp_ace4cde8d98cd38ced47ffb6e88fd57bd}\label{librarysystem_8cpp_ace4cde8d98cd38ced47ffb6e88fd57bd} 
+\index{librarysystem.cpp@{librarysystem.cpp}!deleteBook@{deleteBook}}
+\index{deleteBook@{deleteBook}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteBook()}{deleteBook()}}
+{\footnotesize\ttfamily bool delete\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Deletes a book from the book catalog based on the provided ID. 
+
+Deletes a book from the library catalog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is deleted successfully, false otherwise.
+\end{DoxyReturn}
+This function displays the catalog, prompts the user to enter the ID of the book to delete, and removes the specified book from the \"{}\+Books.\+bin\"{} file. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ace4cde8d98cd38ced47ffb6e88fd57bd}{deleteBook}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ deleted\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_acf1f3c3851eba9e703d2b470da6a1501}\label{librarysystem_8cpp_acf1f3c3851eba9e703d2b470da6a1501} 
+\index{librarysystem.cpp@{librarysystem.cpp}!enterToContunie@{enterToContunie}}
+\index{enterToContunie@{enterToContunie}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{enterToContunie()}{enterToContunie()}}
+{\footnotesize\ttfamily bool enter\+To\+Contunie (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Waits for a key press from the user to continue and returns true. 
+
+Pauses execution and waits for the user to press any key to continue.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true when the user presses any key, otherwise returns false.
+\end{DoxyReturn}
+This function waits for a key press from the user, allowing the program to pause. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_acf1f3c3851eba9e703d2b470da6a1501}{enterToContunie}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Continue\ with\ the\ program\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_acc0b8aeaed79ae44252c3d43fbbf07e3}\label{librarysystem_8cpp_acc0b8aeaed79ae44252c3d43fbbf07e3} 
+\index{librarysystem.cpp@{librarysystem.cpp}!getInput@{getInput}}
+\index{getInput@{getInput}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily int get\+Input (\begin{DoxyParamCaption}\item[{istream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Gets an integer input from the user. 
+
+Gets input from the user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The integer input obtained from the user.
+\end{DoxyReturn}
+This function prompts the user to enter an integer through the specified input stream. It retrieves the user\textquotesingle{}s input and returns the entered integer. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ userChoice\ =\ \mbox{\hyperlink{librarysystem_8h_acc0b8aeaed79ae44252c3d43fbbf07e3}{getInput}}(cin);}
+\DoxyCodeLine{\textcolor{comment}{//\ Now\ 'userChoice'\ contains\ the\ integer\ entered\ by\ the\ user}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_abee7de3388d76c9b3ce4dddf3b854607}\label{librarysystem_8cpp_abee7de3388d76c9b3ce4dddf3b854607} 
+\index{librarysystem.cpp@{librarysystem.cpp}!getNewId@{getNewId}}
+\index{getNewId@{getNewId}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{getNewId()}{getNewId()}}
+{\footnotesize\ttfamily int get\+New\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retrieves a new unique identifier for books. 
+
+Generates a new unique ID for books based on existing IDs.
+
+\begin{DoxyReturn}{Returns}
+Returns an integer representing a new unique identifier for books.
+\end{DoxyReturn}
+This function reads the existing book IDs from the \"{}\+Books.\+bin\"{} file, finds the highest ID, and returns a new unique ID for a book by incrementing the highest existing ID. If the file does not exist, it returns 1 as the starting ID. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ newBookId\ =\ \mbox{\hyperlink{librarysystem_8h_abee7de3388d76c9b3ce4dddf3b854607}{getNewId}}();}
+\DoxyCodeLine{\textcolor{comment}{//\ Use\ 'newBookId'\ as\ the\ ID\ for\ a\ new\ book}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ad696b86625f9e1d9e694fec67aa1857f}\label{librarysystem_8cpp_ad696b86625f9e1d9e694fec67aa1857f} 
+\index{librarysystem.cpp@{librarysystem.cpp}!guestOperation@{guestOperation}}
+\index{guestOperation@{guestOperation}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{guestOperation()}{guestOperation()}}
+{\footnotesize\ttfamily bool guest\+Operation (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Redirects guest to specific operations based on their choice in the guest menu. 
+
+Redirects a guest user to specific operations based on their choice in the guest menu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns false when the guest chooses to exit.
+\end{DoxyReturn}
+This function presents a guest menu and redirects the guest to specific operations (viewing catalog). It returns false when the guest chooses to exit. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ad696b86625f9e1d9e694fec67aa1857f}{guestOperation}}(cin,\ cout)\ ==\ \textcolor{keyword}{false})\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Guest\ exited\ the\ system}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a3761b895725dc51420e51cc07ef81431}\label{librarysystem_8cpp_a3761b895725dc51420e51cc07ef81431} 
+\index{librarysystem.cpp@{librarysystem.cpp}!handleInputError@{handleInputError}}
+\index{handleInputError@{handleInputError}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{handleInputError()}{handleInputError()}}
+{\footnotesize\ttfamily bool handle\+Input\+Error (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Handles input errors by clearing the input stream and displaying an error message. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns false after clearing input and displaying an error message.
+\end{DoxyReturn}
+This function is designed to handle input errors, specifically when the user enters letters instead of numbers. It clears the input stream, ignores any remaining characters up to the newline, and prints an error message to the output stream. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{librarysystem_8h_a3761b895725dc51420e51cc07ef81431}{handleInputError}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Handle\ the\ error\ or\ prompt\ the\ user\ for\ input\ again}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ae95926f6243b21d6a263a4811e4851d6}\label{librarysystem_8cpp_ae95926f6243b21d6a263a4811e4851d6} 
+\index{librarysystem.cpp@{librarysystem.cpp}!lendBook@{lendBook}}
+\index{lendBook@{lendBook}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{lendBook()}{lendBook()}}
+{\footnotesize\ttfamily bool lend\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Returns a borrowed book to the catalog based on the provided ID. 
+
+Lends a book from the library catalog to a user.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is successfully returned, false otherwise.
+\end{DoxyReturn}
+This function displays the loans, prompts the user to enter the ID of the book to return, and moves the selected book from \"{}\+Loans.\+bin\"{} back to \"{}\+Books.\+bin\"{}. The book is returned to the catalog. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ae95926f6243b21d6a263a4811e4851d6}{lendBook}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ returned\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_afc7cf16b78fadf9f4f7a7e17b1fd71ce}\label{librarysystem_8cpp_afc7cf16b78fadf9f4f7a7e17b1fd71ce} 
+\index{librarysystem.cpp@{librarysystem.cpp}!listUnMarkedBooks@{listUnMarkedBooks}}
+\index{listUnMarkedBooks@{listUnMarkedBooks}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{listUnMarkedBooks()}{listUnMarkedBooks()}}
+{\footnotesize\ttfamily bool list\+Un\+Marked\+Books (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Lists unmarked books from the catalog. 
+
+Displays the list of books that have not been marked as read.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if there are unmarked books and they are listed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each unmarked book in the \"{}\+Books.\+bin\"{} file. It returns true if there are unmarked books and false if either there are no unmarked books or an error occurs. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_afc7cf16b78fadf9f4f7a7e17b1fd71ce}{listUnMarkedBooks}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Unmarked\ books\ listed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ No\ unmarked\ books\ or\ an\ error\ occurred}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ad231f70192ef9dc871dabfd19a91b004}\label{librarysystem_8cpp_ad231f70192ef9dc871dabfd19a91b004} 
+\index{librarysystem.cpp@{librarysystem.cpp}!listWishList@{listWishList}}
+\index{listWishList@{listWishList}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{listWishList()}{listWishList()}}
+{\footnotesize\ttfamily bool list\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the wishlist of books from the \"{}wishlist.\+bin\"{} file. 
+
+Displays the user\textquotesingle{}s wishlist of books.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object (unused). \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the wishlist is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each book in the \"{}wishlist.\+bin\"{} file, presenting them as a wishlist. It prompts the user to press enter to exit after displaying the wishlist. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ad231f70192ef9dc871dabfd19a91b004}{listWishList}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Wishlist\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_abbffaaeb8efb5e50fcb48936ea8c0038}\label{librarysystem_8cpp_abbffaaeb8efb5e50fcb48936ea8c0038} 
+\index{librarysystem.cpp@{librarysystem.cpp}!listWishListForFunc@{listWishListForFunc}}
+\index{listWishListForFunc@{listWishListForFunc}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{listWishListForFunc()}{listWishListForFunc()}}
+{\footnotesize\ttfamily bool list\+Wish\+List\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the wishlist of books for internal function use. 
+
+Displays the user\textquotesingle{}s wishlist of books (for function use).
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the wishlist is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each book in the \"{}wishlist.\+bin\"{} file, presenting them as a wishlist. It is designed for internal function use and does not require an input stream parameter. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_abbffaaeb8efb5e50fcb48936ea8c0038}{listWishListForFunc}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Wishlist\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a13ceb4148caff661b17bb5aae4b35114}\label{librarysystem_8cpp_a13ceb4148caff661b17bb5aae4b35114} 
+\index{librarysystem.cpp@{librarysystem.cpp}!loanManagementMenu@{loanManagementMenu}}
+\index{loanManagementMenu@{loanManagementMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{loanManagementMenu()}{loanManagementMenu()}}
+{\footnotesize\ttfamily bool loan\+Management\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays a loan management menu and performs corresponding actions based on user input. 
+
+Handles the loan management menu, allowing users to lend and borrow books.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true when the user chooses to exit the loan management menu.
+\end{DoxyReturn}
+This function continuously displays a menu for loan management operations, reads the user\textquotesingle{}s choice, and performs the corresponding action. The menu includes options to lend, borrow, or view loans. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a9b2e17d0aed5b004ccd8bab3070a707d}{loanManagementMenu}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ chose\ to\ exit\ the\ loan\ management\ menu}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Additional\ logic\ or\ error\ handling}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_aca21e3deeeed6f2f5d9dbf335834d9b5}\label{librarysystem_8cpp_aca21e3deeeed6f2f5d9dbf335834d9b5} 
+\index{librarysystem.cpp@{librarysystem.cpp}!loginUser@{loginUser}}
+\index{loginUser@{loginUser}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{loginUser()}{loginUser()}}
+{\footnotesize\ttfamily bool login\+User (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Allows a user to log in by providing email and password. 
+
+Logs in a user to the library system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the login is successful, false otherwise.
+\end{DoxyReturn}
+This function prompts the user to enter their email and password, reads user information from a binary file named \"{}users.\+bin,\"{} and checks if the provided credentials match any registered user. If a match is found, the user is logged in, and user operations are performed. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_aca21e3deeeed6f2f5d9dbf335834d9b5}{loginUser}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ logged\ in\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ for\ login\ failure}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a58e3aaac795f12c90c7eb2dba8392adc}\label{librarysystem_8cpp_a58e3aaac795f12c90c7eb2dba8392adc} 
+\index{librarysystem.cpp@{librarysystem.cpp}!logProgress@{logProgress}}
+\index{logProgress@{logProgress}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{logProgress()}{logProgress()}}
+{\footnotesize\ttfamily bool log\+Progress (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the progress and status of each book in the catalog. 
+
+Displays the user\textquotesingle{}s reading progress and marked books.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the progress is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID, name, and status (read or unread) of each book in the \"{}\+Books.\+bin\"{} file. It prompts the user to press any key to continue after displaying the progress. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a58e3aaac795f12c90c7eb2dba8392adc}{logProgress}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Progress\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ab5206f1ba964127d1f7a2491c4254813}\label{librarysystem_8cpp_ab5206f1ba964127d1f7a2491c4254813} 
 \index{librarysystem.cpp@{librarysystem.cpp}!mainMenu@{mainMenu}}
 \index{mainMenu@{mainMenu}!librarysystem.cpp@{librarysystem.cpp}}
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
-{\footnotesize\ttfamily int main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
 
-\Hypertarget{librarysystem_8cpp_adc53ae8c72d75f7fd7054169f0808f69}\label{librarysystem_8cpp_adc53ae8c72d75f7fd7054169f0808f69} 
+
+
+Redirects the user to specific actions based on their choice in the main menu. 
+
+Displays the main menu and redirects the user based on their choice.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 when the user chooses to exit the program.
+\end{DoxyReturn}
+This function presents the main menu and redirects the user to specific actions (login, register, guest operations, exit program) based on their choice. It returns 0 when the user chooses to exit the program. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ab5206f1ba964127d1f7a2491c4254813}{mainMenu}}(cin,\ cout)\ ==\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ exited\ the\ program}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ab85fd7297091d985dab837b02fb52e65}\label{librarysystem_8cpp_ab85fd7297091d985dab837b02fb52e65} 
+\index{librarysystem.cpp@{librarysystem.cpp}!markAsRead@{markAsRead}}
+\index{markAsRead@{markAsRead}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{markAsRead()}{markAsRead()}}
+{\footnotesize\ttfamily bool mark\+As\+Read (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Marks a book as read in the catalog based on the provided ID. 
+
+Marks a book as read in the user\textquotesingle{}s reading history.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is successfully marked as read, false otherwise.
+\end{DoxyReturn}
+This function displays the list of unmarked books, prompts the user to enter the ID of the book to mark as read, and updates the status of the selected book to \"{}read\"{} in the \"{}\+Books.\+bin\"{} file. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ab85fd7297091d985dab837b02fb52e65}{markAsRead}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ marked\ as\ read\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a9a39b32432895f6c60d85f6874c30927}\label{librarysystem_8cpp_a9a39b32432895f6c60d85f6874c30927} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printBookCatalogingMenu@{printBookCatalogingMenu}}
+\index{printBookCatalogingMenu@{printBookCatalogingMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printBookCatalogingMenu()}{printBookCatalogingMenu()}}
+{\footnotesize\ttfamily bool print\+Book\+Cataloging\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the book cataloging menu screen and prompts the user to make a selection. 
+
+Prints the book cataloging menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the book cataloging menu.
+\end{DoxyReturn}
+This function clears the screen and displays options for book cataloging operations, such as adding a book, deleting a book, updating a book, viewing the catalog, and returning to user operations. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a9a39b32432895f6c60d85f6874c30927}{printBookCatalogingMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ cataloging\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ae5d187389456e7918630eae659fdfce1}\label{librarysystem_8cpp_ae5d187389456e7918630eae659fdfce1} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printGuestMenu@{printGuestMenu}}
+\index{printGuestMenu@{printGuestMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printGuestMenu()}{printGuestMenu()}}
+{\footnotesize\ttfamily bool print\+Guest\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the menu for guest operations. 
+
+Prints the guest menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true after printing the menu.
+\end{DoxyReturn}
+This function clears the screen and prints the guest menu options, prompting the user to select an operation (view catalog or return to the main menu). It returns true after printing the menu. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ae5d187389456e7918630eae659fdfce1}{printGuestMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Guest\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_acdd388e4094195b3d7cc608202f27d51}\label{librarysystem_8cpp_acdd388e4094195b3d7cc608202f27d51} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printLoanManagementMenu@{printLoanManagementMenu}}
+\index{printLoanManagementMenu@{printLoanManagementMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printLoanManagementMenu()}{printLoanManagementMenu()}}
+{\footnotesize\ttfamily bool print\+Loan\+Management\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the loan management menu screen and prompts the user to make a selection. 
+
+Prints the loan management menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the loan management menu.
+\end{DoxyReturn}
+This function clears the screen and displays options for loan management operations, such as lending a book, borrowing a book, viewing loans, and returning to user operations. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_acdd388e4094195b3d7cc608202f27d51}{printLoanManagementMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Loan\ management\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a7c2b1e66f7bef37d709532e26a033c85}\label{librarysystem_8cpp_a7c2b1e66f7bef37d709532e26a033c85} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printMainMenu@{printMainMenu}}
+\index{printMainMenu@{printMainMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printMainMenu()}{printMainMenu()}}
+{\footnotesize\ttfamily bool print\+Main\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the main menu screen and prompts the user to make a selection. 
+
+Prints the main menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the main menu.
+\end{DoxyReturn}
+This function clears the screen and displays the main menu options, prompting the user to select an option by entering a number. The options include login, register, guest mode, and exit. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a7c2b1e66f7bef37d709532e26a033c85}{printMainMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Main\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a5bf1f1645a2041b24a591d55cbbf698a}\label{librarysystem_8cpp_a5bf1f1645a2041b24a591d55cbbf698a} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printReadingTrackerMenu@{printReadingTrackerMenu}}
+\index{printReadingTrackerMenu@{printReadingTrackerMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printReadingTrackerMenu()}{printReadingTrackerMenu()}}
+{\footnotesize\ttfamily bool print\+Reading\+Tracker\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the reading tracker menu screen and prompts the user to make a selection. 
+
+Prints the reading tracker menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the reading tracker menu.
+\end{DoxyReturn}
+This function clears the screen and displays options for reading tracker operations, such as logging progress, marking as read, viewing history, and returning to user operations. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a5bf1f1645a2041b24a591d55cbbf698a}{printReadingTrackerMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Reading\ tracker\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_aaa17afd03df57397f4b2d2de77084c98}\label{librarysystem_8cpp_aaa17afd03df57397f4b2d2de77084c98} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printUserMenu@{printUserMenu}}
+\index{printUserMenu@{printUserMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printUserMenu()}{printUserMenu()}}
+{\footnotesize\ttfamily bool print\+User\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the user operations menu screen and prompts the user to make a selection. 
+
+Prints the user menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the user operations menu.
+\end{DoxyReturn}
+This function clears the screen and displays options for user operations, such as book cataloging, loan management, wishlist management, reading tracker, and returning to the main menu. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_aaa17afd03df57397f4b2d2de77084c98}{printUserMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ operations\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}\label{librarysystem_8cpp_a77dcba8c2ea0a6fe0cb3a0753a89f8d4} 
+\index{librarysystem.cpp@{librarysystem.cpp}!printWishListMenu@{printWishListMenu}}
+\index{printWishListMenu@{printWishListMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{printWishListMenu()}{printWishListMenu()}}
+{\footnotesize\ttfamily bool print\+Wish\+List\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Prints the wishlist management menu screen and prompts the user to make a selection. 
+
+Prints the wishlist menu screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Always returns true after printing the wishlist management menu.
+\end{DoxyReturn}
+This function clears the screen and displays options for wishlist management operations, such as viewing the wishlist, adding to the wishlist, removing from the wishlist, and returning to user operations. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}{printWishListMenu}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Wishlist\ management\ menu\ printed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a349dfa43675dbbf6d3f65b6c0261c1c4}\label{librarysystem_8cpp_a349dfa43675dbbf6d3f65b6c0261c1c4} 
+\index{librarysystem.cpp@{librarysystem.cpp}!readingTrackerMenu@{readingTrackerMenu}}
+\index{readingTrackerMenu@{readingTrackerMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{readingTrackerMenu()}{readingTrackerMenu()}}
+{\footnotesize\ttfamily bool reading\+Tracker\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays a reading tracker menu and performs corresponding actions based on user input. 
+
+Handles the reading tracker menu, allowing users to track their reading progress.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 when the user chooses to exit the reading tracker menu.
+\end{DoxyReturn}
+This function continuously displays a menu for reading tracker operations, reads the user\textquotesingle{}s choice, and performs the corresponding action. The menu includes options to log progress, mark as read, or view reading history. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a93cf8c988c604099e5fe00934fe6cb81}{readingTrackerMenu}}(cin,\ cout)\ ==\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ chose\ to\ exit\ the\ reading\ tracker\ menu}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Additional\ logic\ or\ error\ handling}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a563a42979a8555ac3757d491125917d5}\label{librarysystem_8cpp_a563a42979a8555ac3757d491125917d5} 
+\index{librarysystem.cpp@{librarysystem.cpp}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily bool register\+User (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Registers a new user by obtaining email and password from the user. 
+
+Registers a new user in the library system.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the user registration is successful, false otherwise.
+\end{DoxyReturn}
+This function prompts the user to enter their email and password, creates a new \doxylink{struct_user}{User} object, and stores the user information in a binary file named \"{}users.\+bin\"{}. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a563a42979a8555ac3757d491125917d5}{registerUser}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ registered\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ for\ user\ registration\ failure}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a2bcdc5888afb3c04978aab087f4b0d49}\label{librarysystem_8cpp_a2bcdc5888afb3c04978aab087f4b0d49} 
+\index{librarysystem.cpp@{librarysystem.cpp}!removeFromWishList@{removeFromWishList}}
+\index{removeFromWishList@{removeFromWishList}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{removeFromWishList()}{removeFromWishList()}}
+{\footnotesize\ttfamily bool remove\+From\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Removes a book from the wishlist based on the provided ID. 
+
+Removes a book from the user\textquotesingle{}s wishlist.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is successfully removed from the wishlist, false otherwise.
+\end{DoxyReturn}
+This function displays the wishlist, prompts the user to enter the ID of the book to remove from the wishlist, and removes the selected book from the \"{}wishlist.\+bin\"{} file. It returns true on success and false on failure. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a2bcdc5888afb3c04978aab087f4b0d49}{removeFromWishList}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ removed\ from\ the\ wishlist\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_aecefdc778d8382b3426dfc141bffe5a4}\label{librarysystem_8cpp_aecefdc778d8382b3426dfc141bffe5a4} 
+\index{librarysystem.cpp@{librarysystem.cpp}!updateBook@{updateBook}}
+\index{updateBook@{updateBook}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{updateBook()}{updateBook()}}
+{\footnotesize\ttfamily bool update\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Updates the name of a book in the catalog based on the provided ID. 
+
+Updates the information of an existing book in the library catalog.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the book is updated successfully, false otherwise.
+\end{DoxyReturn}
+This function displays the catalog, prompts the user to enter the ID of the book to update, and allows the user to input a new name for the book. It updates the book\textquotesingle{}s name in the \"{}\+Books.\+bin\"{} file. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_aecefdc778d8382b3426dfc141bffe5a4}{updateBook}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Book\ updated\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a6ed82a2b108b314b4d0eefe0f0329ebe}\label{librarysystem_8cpp_a6ed82a2b108b314b4d0eefe0f0329ebe} 
 \index{librarysystem.cpp@{librarysystem.cpp}!userOperations@{userOperations}}
 \index{userOperations@{userOperations}!librarysystem.cpp@{librarysystem.cpp}}
 \doxysubsubsection{\texorpdfstring{userOperations()}{userOperations()}}
-{\footnotesize\ttfamily bool user\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool user\+Operations (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
 
+
+
+Redirects user to specific operations based on their choice in the user menu. 
+
+Redirects the user to specific operations based on their choice in the user menu.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 0 when the user chooses to return to the main menu.
+\end{DoxyReturn}
+This function presents a user menu and redirects the user to specific operations (book cataloging, loan management, wishlist management, reading tracker) based on their choice. It returns 0 when the user chooses to return to the main menu. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a6ed82a2b108b314b4d0eefe0f0329ebe}{userOperations}}(cin,\ cout)\ ==\ 0)\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ returned\ to\ the\ main\ menu}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a7490eebe775301b73f9bbf392a17135c}\label{librarysystem_8cpp_a7490eebe775301b73f9bbf392a17135c} 
+\index{librarysystem.cpp@{librarysystem.cpp}!viewCatalog@{viewCatalog}}
+\index{viewCatalog@{viewCatalog}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{viewCatalog()}{viewCatalog()}}
+{\footnotesize\ttfamily bool view\+Catalog (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the catalog of books from the \"{}\+Books.\+bin\"{} file. 
+
+Displays the entire catalog of books in the library.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object (unused). \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the catalog is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each book in the \"{}\+Books.\+bin\"{} file. It prompts the user to press enter to return to the main menu after displaying the catalog. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a7490eebe775301b73f9bbf392a17135c}{viewCatalog}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Catalog\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a21614414231293fad16e4be048d4d070}\label{librarysystem_8cpp_a21614414231293fad16e4be048d4d070} 
+\index{librarysystem.cpp@{librarysystem.cpp}!viewCatalogForFunc@{viewCatalogForFunc}}
+\index{viewCatalogForFunc@{viewCatalogForFunc}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{viewCatalogForFunc()}{viewCatalogForFunc()}}
+{\footnotesize\ttfamily bool view\+Catalog\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the catalog of books for internal function use. 
+
+Displays the entire catalog of books in the library (for function use).
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the catalog is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each book in the \"{}\+Books.\+bin\"{} file. It is designed for internal function use and does not require an input stream parameter. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a21614414231293fad16e4be048d4d070}{viewCatalogForFunc}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Catalog\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a6bbc6ef7b3ec4012ccf75a74721a09dd}\label{librarysystem_8cpp_a6bbc6ef7b3ec4012ccf75a74721a09dd} 
+\index{librarysystem.cpp@{librarysystem.cpp}!viewHistory@{viewHistory}}
+\index{viewHistory@{viewHistory}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{viewHistory()}{viewHistory()}}
+{\footnotesize\ttfamily bool view\+History (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the history of marked books from the catalog. 
+
+Displays the user\textquotesingle{}s reading history of marked books.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if there are marked books and their history is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each marked book in the \"{}\+Books.\+bin\"{} file. It prompts the user to press any key to continue after displaying the history. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a6bbc6ef7b3ec4012ccf75a74721a09dd}{viewHistory}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ History\ of\ marked\ books\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ No\ marked\ books\ or\ an\ error\ occurred}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a9e9da7fdede214d4a689a982e7aa019f}\label{librarysystem_8cpp_a9e9da7fdede214d4a689a982e7aa019f} 
+\index{librarysystem.cpp@{librarysystem.cpp}!viewLoans@{viewLoans}}
+\index{viewLoans@{viewLoans}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{viewLoans()}{viewLoans()}}
+{\footnotesize\ttfamily bool view\+Loans (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the list of borrowed books from the \"{}\+Loans.\+bin\"{} file. 
+
+Displays the list of books that are currently on loan.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object (unused). \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the list of borrowed books is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each borrowed book in the \"{}\+Loans.\+bin\"{} file. It prompts the user to press any key to return to the main menu after displaying the list of loans. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_a9e9da7fdede214d4a689a982e7aa019f}{viewLoans}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ List\ of\ loans\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_ad1580de9038b83a11f94a376802c25c5}\label{librarysystem_8cpp_ad1580de9038b83a11f94a376802c25c5} 
+\index{librarysystem.cpp@{librarysystem.cpp}!viewLoansForFunc@{viewLoansForFunc}}
+\index{viewLoansForFunc@{viewLoansForFunc}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{viewLoansForFunc()}{viewLoansForFunc()}}
+{\footnotesize\ttfamily bool view\+Loans\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays the list of borrowed books for internal function use. 
+
+Displays the list of books that are currently on loan (for function use).
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true if the list of borrowed books is displayed successfully, false otherwise.
+\end{DoxyReturn}
+This function reads and prints the ID and name of each borrowed book in the \"{}\+Loans.\+bin\"{} file. It is designed for internal function use and does not require an input stream parameter. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (\mbox{\hyperlink{librarysystem_8h_ad1580de9038b83a11f94a376802c25c5}{viewLoansForFunc}}(cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ List\ of\ loans\ displayed\ successfully}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Error\ handling\ or\ additional\ logic}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ \Hypertarget{librarysystem_8cpp_a5a9f6505728a4da807876ad4ba58ea7d}\label{librarysystem_8cpp_a5a9f6505728a4da807876ad4ba58ea7d} 
+\index{librarysystem.cpp@{librarysystem.cpp}!wishListMenu@{wishListMenu}}
+\index{wishListMenu@{wishListMenu}!librarysystem.cpp@{librarysystem.cpp}}
+\doxysubsubsection{\texorpdfstring{wishListMenu()}{wishListMenu()}}
+{\footnotesize\ttfamily bool wish\+List\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+
+
+Displays a wishlist menu and performs corresponding actions based on user input. 
+
+Handles the wishlist menu, allowing users to manage their book wishlists.
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Input stream object. \\
+\hline
+{\em out} & Output stream object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns false when the user chooses to exit the wishlist menu.
+\end{DoxyReturn}
+This function continuously displays a menu for wishlist operations, reads the user\textquotesingle{}s choice, and performs the corresponding action. The menu includes options to list, add to, or remove from the wishlist. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{librarysystem_8h_a19a9109a09b42cf017e6ee2ea99d5fab}{wishListMenu}}(cin,\ cout))\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ User\ chose\ to\ exit\ the\ wishlist\ menu}}
+\DoxyCodeLine{\}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\ \ \ \ \textcolor{comment}{//\ Additional\ logic\ or\ error\ handling}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

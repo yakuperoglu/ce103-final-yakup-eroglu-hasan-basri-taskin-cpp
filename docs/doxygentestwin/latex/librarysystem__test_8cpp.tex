@@ -1,12 +1,14 @@
-\doxysection{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/tests/librarysystem/librarysystem\+\_\+test.cpp File Reference}
-\hypertarget{librarysystem__test_8cpp}{}\label{librarysystem__test_8cpp}\index{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/tests/librarysystem/librarysystem\_test.cpp@{ Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/tests/librarysystem/librarysystem\_test.cpp}}
+\doxysection{src/tests/librarysystem/librarysystem\+\_\+test.cpp File Reference}
+\hypertarget{librarysystem__test_8cpp}{}\label{librarysystem__test_8cpp}\index{src/tests/librarysystem/librarysystem\_test.cpp@{src/tests/librarysystem/librarysystem\_test.cpp}}
 {\ttfamily \#include \"{}gtest/gtest.\+h\"{}}\newline
-{\ttfamily \#include \"{}../../librarysystem/header/librarysystem.\+h\"{}}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+{\ttfamily \#include \"{}librarysystem.\+h\"{}}\newline
 Include dependency graph for librarysystem\+\_\+test.\+cpp\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=286pt]{librarysystem__test_8cpp__incl}
+\includegraphics[width=350pt]{librarysystem__test_8cpp__incl}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Classes}
@@ -16,6 +18,128 @@ class \mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a6e1dc34e9f64e756a9104948d84a1862}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Enter\+To\+Continue\+\_\+\+Success)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a4e2944ad688a936809e63f86fb562439}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Register\+User\+Test)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac1fc99cb65b37c0fcbaaebf325e0192c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Outputs\+Error\+Message\+And\+Returns\+False)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a724d28f2d114b1c055bbb8cbe36a9d0c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Get\+Input\+True\+Test)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a7eebb2409127d1276c913841e69ecc52}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Get\+Input\+False\+Test)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ae9971010580fd4560a9906f78311ed11}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Guest\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a001ad7d7ed2f360f54fd3262a26c7cdd}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Main\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ae90cccb893523a61fbdd5989397642c9}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+User\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a0441f84527b330d33d5cb0d318cab0f7}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Book\+Cataloging\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_af4a2feb6d8f5d3f084f924502cf3a790}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Loan\+Management\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a4902ba2c2315c5b75b3ab94d6f55182f}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Wish\+List\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_aad35f7d4ad19f6416ebf95ee8f21970f}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Print\+Reading\+Tracker\+Menu\+Outputs\+Correctly)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a46f71ca24e4870460350d07ffa774ae5}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Add\+Book)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac69ded2b1723e7821187e794821c1dc4}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Delete\+Book)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a70d59278c58509d925e3f1e52effe39a}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Delete\+Bookfounfalse)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a91206b4e7327aa15b9b0045ea7421dbe}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Delete\+Bookfoundtrue)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a7ea4848fa8b1b3d19e9c26b353e8e0ed}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Delete\+Book\+Succes)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ad572bbe233bb034239ecdfc70aff2677}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Update\+Book)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a2907e6b075aed23a041ee161fbe9c8f9}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+View\+Catalog)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ad542fe3db9fd4c84b490ae81ed48c551}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Invalid\+Option)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_af19d292ef0b85b95deaa8faad663c239}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a17d6d3b6af0f8a5f084ba1eeabff3212}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Book\+Cataloging\+Menu\+\_\+\+Exit\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac2caddb000a0f741c51f6db2a12a4b1b}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+\+Lend\+Book)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a03958e52d5727157ac014f50632e13d5}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+\+View\+Loans)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a260762b839b63a10ebe9dcaf4fda118d}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+\+Borrow\+Book)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ab8e1704479f65222f116f41c089c05d8}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+default)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_aa833160599ffab4ed903b9a5b6247062}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_acb1e5f54f04833d2c6b4687a8b939afc}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Loan\+Management\+Menu\+\_\+\+Exit\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac2b336e89a720427ad793d3cb843ae78}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+list\+Wishlist)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a5c50d927f3b7b410d2d58ca0f5a04cc7}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+add\+To\+Wishlist)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a0cfe278a36ff1d499496c25b4ae6ede4}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+\+Remove\+From\+Wishlist)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a93f7499493280a80eee2b65414833989}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+\+Remove\+From\+Wishlistfoundtrue)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a8eb379d9d662fa41262eb46abb4fe8a6}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+\+Invalid\+Input)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a319efbd7c49251cfbc3508481c7226f0}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, wish\+List\+Menu\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a3799950e051f5a1051044bd0d5d2ab84}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, reading\+Tracker\+Menu\+\_\+log\+Progress)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a665b5883213e5b7d7546bef794dbdd7f}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, reading\+Tracker\+Menu\+\_\+\+Mark\+As\+Read)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a13e478fc37f13dba73ac87a10d910a36}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, reading\+Tracker\+Menu\+\_\+\+View\+History)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_afa1db10769cccd899a7f50f74e41d7cb}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, reading\+Tracker\+Menu\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a0f98fa58a93deae7133ad4b5c575be91}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Register\+User)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_af85c412895df5dcd561358070fb3d0f8}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Login\+User)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a5facfcd971c4ca99c3592bea21f0c347}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Login\+User\+Fail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ad7ea1c83412c54591d07866ff8395fbd}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Guest\+Operation)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac2ded13fe0ccb1258e65049933751089}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Exit\+Program)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a8185ddeff1b0cb59096da5eda415916f}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Invalid\+Choice)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a0a9f516feceae47bae5d1ea5a4d8fc66}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Main\+Menu\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac29a807c6df276b1514f3400ddec9807}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Guest\+Operation\+\_\+\+Return\+To\+Main\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_af66d4687e1838d8b37cbc94a9361ebd8}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Guest\+Operation\+\_\+\+Invalid\+Choice)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_acad4758b7796c3c6e99c3f09b150423c}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Guest\+Operation\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_ac099be236fd910b9c41d872c15592fb9}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Book\+Cataloging\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a88b3c84af18270c6794818d797e96ae4}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Loan\+Management\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a08be6f7e6875c4f42c2f39ebe2354004}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Wish\+List\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a75fd9c24124c7a5e0f96617ee0664f54}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Reading\+Tracker\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a57151bf5d371bf8cddf576870fdc8c10}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Infail)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_acecc491e862cc1ba95f83ac9b3f61b70}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, User\+Operations\+\_\+\+Return\+To\+Main\+Menu)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_abb3f2fb12e7a62d51edc20a3b95f8c73}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, View\+Loans\+For\+Func\+\_\+\+Successful)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_acd1a499155c1f420b452774c67ee2b2e}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Remove\+From\+Wish\+List\+\_\+\+Not\+Successful)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a2c26a635b038fb621e4f62dde4da7681}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Remove\+From\+Wish\+List\+\_\+\+Book\+Not\+Found)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a1c1343f63a94944cf0386947f7834a33}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Remove\+From\+Wish\+List\+\_\+\+File\+Error)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_adf61a055292af31c529d0596f75c0a98}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Add\+To\+Wish\+List\+\_\+\+Not\+Successful)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_a4c21d967b771e79afbe23fa92ccebed1}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Add\+To\+Wish\+List\+\_\+\+Book\+Not\+Found)
+\item 
+\mbox{\hyperlink{librarysystem__test_8cpp_aa0b907527437d0f1e1688d8f17a8b415}{TEST\+\_\+F}} (\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}, Add\+To\+Wish\+List\+\_\+\+File\+Error)
 \item 
 int \mbox{\hyperlink{librarysystem__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main}} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv)
 \end{DoxyCompactItemize}
@@ -30,5 +154,615 @@ int \mbox{\hyperlink{librarysystem__test_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}
 
 
 
-Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00519}{519}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a4c21d967b771e79afbe23fa92ccebed1}\label{librarysystem__test_8cpp_a4c21d967b771e79afbe23fa92ccebed1} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [1/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Add\+To\+Wish\+List\+\_\+\+Book\+Not\+Found}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00508}{508}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_aa0b907527437d0f1e1688d8f17a8b415}\label{librarysystem__test_8cpp_aa0b907527437d0f1e1688d8f17a8b415} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [2/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Add\+To\+Wish\+List\+\_\+\+File\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00515}{515}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_adf61a055292af31c529d0596f75c0a98}\label{librarysystem__test_8cpp_adf61a055292af31c529d0596f75c0a98} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [3/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Add\+To\+Wish\+List\+\_\+\+Not\+Successful}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00501}{501}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a46f71ca24e4870460350d07ffa774ae5}\label{librarysystem__test_8cpp_a46f71ca24e4870460350d07ffa774ae5} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [4/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Add\+Book}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00151}{151}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac69ded2b1723e7821187e794821c1dc4}\label{librarysystem__test_8cpp_ac69ded2b1723e7821187e794821c1dc4} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [5/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Delete\+Book}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00159}{159}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a91206b4e7327aa15b9b0045ea7421dbe}\label{librarysystem__test_8cpp_a91206b4e7327aa15b9b0045ea7421dbe} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [6/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Delete\+Bookfoundtrue}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00175}{175}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a70d59278c58509d925e3f1e52effe39a}\label{librarysystem__test_8cpp_a70d59278c58509d925e3f1e52effe39a} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [7/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Delete\+Bookfounfalse}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00167}{167}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a7ea4848fa8b1b3d19e9c26b353e8e0ed}\label{librarysystem__test_8cpp_a7ea4848fa8b1b3d19e9c26b353e8e0ed} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [8/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Delete\+Book\+Succes}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00183}{183}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a17d6d3b6af0f8a5f084ba1eeabff3212}\label{librarysystem__test_8cpp_a17d6d3b6af0f8a5f084ba1eeabff3212} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [9/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Exit\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00223}{223}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_af19d292ef0b85b95deaa8faad663c239}\label{librarysystem__test_8cpp_af19d292ef0b85b95deaa8faad663c239} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [10/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00215}{215}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ad542fe3db9fd4c84b490ae81ed48c551}\label{librarysystem__test_8cpp_ad542fe3db9fd4c84b490ae81ed48c551} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [11/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Invalid\+Option}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00207}{207}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ad572bbe233bb034239ecdfc70aff2677}\label{librarysystem__test_8cpp_ad572bbe233bb034239ecdfc70aff2677} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [12/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+Update\+Book}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00191}{191}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a2907e6b075aed23a041ee161fbe9c8f9}\label{librarysystem__test_8cpp_a2907e6b075aed23a041ee161fbe9c8f9} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [13/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Book\+Cataloging\+Menu\+\_\+\+View\+Catalog}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00199}{199}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a6e1dc34e9f64e756a9104948d84a1862}\label{librarysystem__test_8cpp_a6e1dc34e9f64e756a9104948d84a1862} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [14/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Enter\+To\+Continue\+\_\+\+Success}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a7eebb2409127d1276c913841e69ecc52}\label{librarysystem__test_8cpp_a7eebb2409127d1276c913841e69ecc52} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [15/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Get\+Input\+False\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a724d28f2d114b1c055bbb8cbe36a9d0c}\label{librarysystem__test_8cpp_a724d28f2d114b1c055bbb8cbe36a9d0c} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [16/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Get\+Input\+True\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_acad4758b7796c3c6e99c3f09b150423c}\label{librarysystem__test_8cpp_acad4758b7796c3c6e99c3f09b150423c} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [17/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Guest\+Operation\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00424}{424}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_af66d4687e1838d8b37cbc94a9361ebd8}\label{librarysystem__test_8cpp_af66d4687e1838d8b37cbc94a9361ebd8} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [18/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Guest\+Operation\+\_\+\+Invalid\+Choice}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00416}{416}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac29a807c6df276b1514f3400ddec9807}\label{librarysystem__test_8cpp_ac29a807c6df276b1514f3400ddec9807} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [19/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Guest\+Operation\+\_\+\+Return\+To\+Main\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00409}{409}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a260762b839b63a10ebe9dcaf4fda118d}\label{librarysystem__test_8cpp_a260762b839b63a10ebe9dcaf4fda118d} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [20/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+\+Borrow\+Book}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00244}{244}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ab8e1704479f65222f116f41c089c05d8}\label{librarysystem__test_8cpp_ab8e1704479f65222f116f41c089c05d8} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [21/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+default}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00252}{252}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_acb1e5f54f04833d2c6b4687a8b939afc}\label{librarysystem__test_8cpp_acb1e5f54f04833d2c6b4687a8b939afc} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [22/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+\+Exit\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00268}{268}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_aa833160599ffab4ed903b9a5b6247062}\label{librarysystem__test_8cpp_aa833160599ffab4ed903b9a5b6247062} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [23/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00260}{260}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac2caddb000a0f741c51f6db2a12a4b1b}\label{librarysystem__test_8cpp_ac2caddb000a0f741c51f6db2a12a4b1b} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [24/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+\+Lend\+Book}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00228}{228}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a03958e52d5727157ac014f50632e13d5}\label{librarysystem__test_8cpp_a03958e52d5727157ac014f50632e13d5} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [25/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Loan\+Management\+Menu\+\_\+\+View\+Loans}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00236}{236}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac2ded13fe0ccb1258e65049933751089}\label{librarysystem__test_8cpp_ac2ded13fe0ccb1258e65049933751089} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [26/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Exit\+Program}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00386}{386}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ad7ea1c83412c54591d07866ff8395fbd}\label{librarysystem__test_8cpp_ad7ea1c83412c54591d07866ff8395fbd} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [27/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Guest\+Operation}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00378}{378}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a0a9f516feceae47bae5d1ea5a4d8fc66}\label{librarysystem__test_8cpp_a0a9f516feceae47bae5d1ea5a4d8fc66} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [28/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00401}{401}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a8185ddeff1b0cb59096da5eda415916f}\label{librarysystem__test_8cpp_a8185ddeff1b0cb59096da5eda415916f} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [29/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Invalid\+Choice}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00393}{393}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_af85c412895df5dcd561358070fb3d0f8}\label{librarysystem__test_8cpp_af85c412895df5dcd561358070fb3d0f8} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [30/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Login\+User}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00362}{362}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a5facfcd971c4ca99c3592bea21f0c347}\label{librarysystem__test_8cpp_a5facfcd971c4ca99c3592bea21f0c347} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [31/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Login\+User\+Fail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00370}{370}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a0f98fa58a93deae7133ad4b5c575be91}\label{librarysystem__test_8cpp_a0f98fa58a93deae7133ad4b5c575be91} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [32/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Main\+Menu\+\_\+\+Register\+User}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00354}{354}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac1fc99cb65b37c0fcbaaebf325e0192c}\label{librarysystem__test_8cpp_ac1fc99cb65b37c0fcbaaebf325e0192c} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [33/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Outputs\+Error\+Message\+And\+Returns\+False}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a0441f84527b330d33d5cb0d318cab0f7}\label{librarysystem__test_8cpp_a0441f84527b330d33d5cb0d318cab0f7} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [34/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Book\+Cataloging\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ae9971010580fd4560a9906f78311ed11}\label{librarysystem__test_8cpp_ae9971010580fd4560a9906f78311ed11} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [35/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Guest\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_af4a2feb6d8f5d3f084f924502cf3a790}\label{librarysystem__test_8cpp_af4a2feb6d8f5d3f084f924502cf3a790} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [36/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Loan\+Management\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a001ad7d7ed2f360f54fd3262a26c7cdd}\label{librarysystem__test_8cpp_a001ad7d7ed2f360f54fd3262a26c7cdd} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [37/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Main\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_aad35f7d4ad19f6416ebf95ee8f21970f}\label{librarysystem__test_8cpp_aad35f7d4ad19f6416ebf95ee8f21970f} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [38/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Reading\+Tracker\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ae90cccb893523a61fbdd5989397642c9}\label{librarysystem__test_8cpp_ae90cccb893523a61fbdd5989397642c9} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [39/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+User\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a4902ba2c2315c5b75b3ab94d6f55182f}\label{librarysystem__test_8cpp_a4902ba2c2315c5b75b3ab94d6f55182f} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [40/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Print\+Wish\+List\+Menu\+Outputs\+Correctly}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_afa1db10769cccd899a7f50f74e41d7cb}\label{librarysystem__test_8cpp_afa1db10769cccd899a7f50f74e41d7cb} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [41/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{reading\+Tracker\+Menu\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00346}{346}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a3799950e051f5a1051044bd0d5d2ab84}\label{librarysystem__test_8cpp_a3799950e051f5a1051044bd0d5d2ab84} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [42/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{reading\+Tracker\+Menu\+\_\+log\+Progress}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00321}{321}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a665b5883213e5b7d7546bef794dbdd7f}\label{librarysystem__test_8cpp_a665b5883213e5b7d7546bef794dbdd7f} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [43/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{reading\+Tracker\+Menu\+\_\+\+Mark\+As\+Read}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00329}{329}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a13e478fc37f13dba73ac87a10d910a36}\label{librarysystem__test_8cpp_a13e478fc37f13dba73ac87a10d910a36} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [44/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{reading\+Tracker\+Menu\+\_\+\+View\+History}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00338}{338}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a4e2944ad688a936809e63f86fb562439}\label{librarysystem__test_8cpp_a4e2944ad688a936809e63f86fb562439} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [45/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Register\+User\+Test}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a2c26a635b038fb621e4f62dde4da7681}\label{librarysystem__test_8cpp_a2c26a635b038fb621e4f62dde4da7681} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [46/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Remove\+From\+Wish\+List\+\_\+\+Book\+Not\+Found}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00490}{490}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a1c1343f63a94944cf0386947f7834a33}\label{librarysystem__test_8cpp_a1c1343f63a94944cf0386947f7834a33} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [47/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Remove\+From\+Wish\+List\+\_\+\+File\+Error}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00497}{497}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_acd1a499155c1f420b452774c67ee2b2e}\label{librarysystem__test_8cpp_acd1a499155c1f420b452774c67ee2b2e} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [48/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{Remove\+From\+Wish\+List\+\_\+\+Not\+Successful}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00483}{483}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac099be236fd910b9c41d872c15592fb9}\label{librarysystem__test_8cpp_ac099be236fd910b9c41d872c15592fb9} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [49/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Book\+Cataloging\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00432}{432}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a57151bf5d371bf8cddf576870fdc8c10}\label{librarysystem__test_8cpp_a57151bf5d371bf8cddf576870fdc8c10} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [50/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00464}{464}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a88b3c84af18270c6794818d797e96ae4}\label{librarysystem__test_8cpp_a88b3c84af18270c6794818d797e96ae4} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [51/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Loan\+Management\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00440}{440}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a75fd9c24124c7a5e0f96617ee0664f54}\label{librarysystem__test_8cpp_a75fd9c24124c7a5e0f96617ee0664f54} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [52/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Reading\+Tracker\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00456}{456}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_acecc491e862cc1ba95f83ac9b3f61b70}\label{librarysystem__test_8cpp_acecc491e862cc1ba95f83ac9b3f61b70} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [53/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Return\+To\+Main\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00472}{472}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a08be6f7e6875c4f42c2f39ebe2354004}\label{librarysystem__test_8cpp_a08be6f7e6875c4f42c2f39ebe2354004} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [54/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{User\+Operations\+\_\+\+Wish\+List\+Menu}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00448}{448}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_abb3f2fb12e7a62d51edc20a3b95f8c73}\label{librarysystem__test_8cpp_abb3f2fb12e7a62d51edc20a3b95f8c73} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [55/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{View\+Loans\+For\+Func\+\_\+\+Successful}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00477}{477}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a5c50d927f3b7b410d2d58ca0f5a04cc7}\label{librarysystem__test_8cpp_a5c50d927f3b7b410d2d58ca0f5a04cc7} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [56/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+add\+To\+Wishlist}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00281}{281}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a319efbd7c49251cfbc3508481c7226f0}\label{librarysystem__test_8cpp_a319efbd7c49251cfbc3508481c7226f0} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [57/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+\+Infail}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00313}{313}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a8eb379d9d662fa41262eb46abb4fe8a6}\label{librarysystem__test_8cpp_a8eb379d9d662fa41262eb46abb4fe8a6} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [58/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+\+Invalid\+Input}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00305}{305}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_ac2b336e89a720427ad793d3cb843ae78}\label{librarysystem__test_8cpp_ac2b336e89a720427ad793d3cb843ae78} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [59/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+list\+Wishlist}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00273}{273}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a0cfe278a36ff1d499496c25b4ae6ede4}\label{librarysystem__test_8cpp_a0cfe278a36ff1d499496c25b4ae6ede4} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [60/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+\+Remove\+From\+Wishlist}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00289}{289}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
+
+\Hypertarget{librarysystem__test_8cpp_a93f7499493280a80eee2b65414833989}\label{librarysystem__test_8cpp_a93f7499493280a80eee2b65414833989} 
+\index{librarysystem\_test.cpp@{librarysystem\_test.cpp}!TEST\_F@{TEST\_F}}
+\index{TEST\_F@{TEST\_F}!librarysystem\_test.cpp@{librarysystem\_test.cpp}}
+\doxysubsubsection{\texorpdfstring{TEST\_F()}{TEST\_F()}\hspace{0.1cm}{\footnotesize\ttfamily [61/61]}}
+{\footnotesize\ttfamily TEST\+\_\+F (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_librarysystem_test}{Librarysystem\+Test}}}]{,  }\item[{wish\+List\+Menu\+\_\+\+Remove\+From\+Wishlistfoundtrue}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{librarysystem__test_8cpp_source_l00297}{297}} of file \mbox{\hyperlink{librarysystem__test_8cpp_source}{librarysystem\+\_\+test.\+cpp}}.
 

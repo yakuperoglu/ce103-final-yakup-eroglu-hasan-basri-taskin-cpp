@@ -1,6 +1,11 @@
 var searchData=
 [
-  ['viewcatalog_35',['viewCatalog',['../structBookSystem.html#afafdcd45359538d7c1855b719b2e650d',1,'BookSystem']]],
-  ['viewhistory_36',['viewHistory',['../structReadingTracker.html#a4e88992e2bb701c52619bb63a92e1189',1,'ReadingTracker']]],
-  ['viewloans_37',['viewLoans',['../structLoanManagment.html#a8e0a2e2503a3a5704be5888828bc9394',1,'LoanManagment']]]
+  ['password_36',['password',['../structUser.html#a0f3b24543c494393db204c349a79ba2a',1,'User']]],
+  ['printbookcatalogingmenu_37',['printBookCatalogingMenu',['../librarysystem_8h.html#a9a39b32432895f6c60d85f6874c30927',1,'printBookCatalogingMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a9a39b32432895f6c60d85f6874c30927',1,'printBookCatalogingMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printguestmenu_38',['printGuestMenu',['../librarysystem_8h.html#ae5d187389456e7918630eae659fdfce1',1,'printGuestMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#ae5d187389456e7918630eae659fdfce1',1,'printGuestMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printloanmanagementmenu_39',['printLoanManagementMenu',['../librarysystem_8h.html#acdd388e4094195b3d7cc608202f27d51',1,'printLoanManagementMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#acdd388e4094195b3d7cc608202f27d51',1,'printLoanManagementMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printmainmenu_40',['printMainMenu',['../librarysystem_8h.html#a7c2b1e66f7bef37d709532e26a033c85',1,'printMainMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a7c2b1e66f7bef37d709532e26a033c85',1,'printMainMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printreadingtrackermenu_41',['printReadingTrackerMenu',['../librarysystem_8h.html#a5bf1f1645a2041b24a591d55cbbf698a',1,'printReadingTrackerMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a5bf1f1645a2041b24a591d55cbbf698a',1,'printReadingTrackerMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printusermenu_42',['printUserMenu',['../librarysystem_8h.html#aaa17afd03df57397f4b2d2de77084c98',1,'printUserMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#aaa17afd03df57397f4b2d2de77084c98',1,'printUserMenu(ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['printwishlistmenu_43',['printWishListMenu',['../librarysystem_8h.html#a77dcba8c2ea0a6fe0cb3a0753a89f8d4',1,'printWishListMenu(ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a77dcba8c2ea0a6fe0cb3a0753a89f8d4',1,'printWishListMenu(ostream &amp;out):&#160;librarysystem.cpp']]]
 ];

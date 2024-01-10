@@ -12,11 +12,11 @@
       <node id="7">
         <label>librarysystem.h</label>
         <link refid="librarysystem_8h"/>
-        <childnode refid="4" relation="include">
+        <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label> Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp</label>
+        <label>src/librarysystemapp/src/librarysystemapp.cpp</label>
         <link refid="librarysystemapp_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -54,12 +54,17 @@
         <argsstring>()</argsstring>
         <name>main</name>
         <briefdescription>
+<para>Main function to run the Personal Library System. </para>
         </briefdescription>
         <detaileddescription>
+<para>The main function initializes the library system and invokes the main menu, allowing users to interact with the library operations. It uses functions from the <ref refid="librarysystem_8h" kindref="compound">librarysystem.h</ref> header to handle various functionalities.</para>
+<para><simplesect kind="return"><para>0 on successful execution. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp" line="10" column="5" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp" bodystart="10" bodyend="13"/>
+        <location file="src/librarysystemapp/src/librarysystemapp.cpp" line="28" column="5" bodyfile="src/librarysystemapp/src/librarysystemapp.cpp" bodystart="28" bodyend="31"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -67,20 +72,21 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="librarysystem_8h" kindref="compound">librarysystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystemapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="librarysystem_8h_1a8396c50bf544009fb2fc4907b00cbad3" kindref="member">mainMenu</ref>();</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stack&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="librarysystem_8h" kindref="compound">librarysystem.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystemapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="librarysystem_8h_1ab5206f1ba964127d1f7a2491c4254813" kindref="member">mainMenu</ref>(std::cin,<sp/>std::cout);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp"/>
+    <location file="src/librarysystemapp/src/librarysystemapp.cpp"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_25c8acead498a99fd681a8c082a29418" kind="dir">
+    <compoundname>src/tests/librarysystem</compoundname>
+    <innerfile refid="librarysystem__test_8cpp">librarysystem_test.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/tests/librarysystem/"/>
+  </compounddef>
+</doxygen>

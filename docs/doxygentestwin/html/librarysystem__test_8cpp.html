@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.7"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Librarysystem Windows  Library API Unit Test Documentation:  Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp File Reference</title>
+<title>Librarysystem Windows  Library API Unit Test Documentation: src/tests/librarysystem/librarysystem_test.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_8a3860dd5935e8fee55e35104af27de6.html">For Final</a></li><li class="navelem"><a class="el" href="dir_1776cbf63099dab01b27e516fa70f9e5.html">ce103-final-yakup-eroglu-hasan-basri-taskin-cpp</a></li><li class="navelem"><a class="el" href="dir_bbee96ab8f6c5d72a0ac118276c914df.html">src</a></li><li class="navelem"><a class="el" href="dir_ba6f3bd5be3ab9afc90eb1491e4d4644.html">tests</a></li><li class="navelem"><a class="el" href="dir_3ba9bf1d1e2f10d4480995808576e71b.html">librarysystem</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_d93a1d4020dea85bb71b237545b5e722.html">tests</a></li><li class="navelem"><a class="el" href="dir_25c8acead498a99fd681a8c082a29418.html">librarysystem</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,11 +82,13 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;gtest/gtest.h&quot;</code><br />
-<code>#include &quot;../../librarysystem/header/librarysystem.h&quot;</code><br />
+<code>#include &lt;sstream&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
+<code>#include &quot;librarysystem.h&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for librarysystem_test.cpp:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem__test_8cpp__incl.svg" width="286" height="192"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="librarysystem__test_8cpp__incl.svg" width="408" height="128"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <p><a href="librarysystem__test_8cpp_source.html">Go to the source code of this file.</a></p>
@@ -98,6 +100,128 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a6e1dc34e9f64e756a9104948d84a1862"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a6e1dc34e9f64e756a9104948d84a1862">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, EnterToContinue_Success)</td></tr>
+<tr class="separator:a6e1dc34e9f64e756a9104948d84a1862"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e2944ad688a936809e63f86fb562439"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a4e2944ad688a936809e63f86fb562439">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, RegisterUserTest)</td></tr>
+<tr class="separator:a4e2944ad688a936809e63f86fb562439"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1fc99cb65b37c0fcbaaebf325e0192c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac1fc99cb65b37c0fcbaaebf325e0192c">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, OutputsErrorMessageAndReturnsFalse)</td></tr>
+<tr class="separator:ac1fc99cb65b37c0fcbaaebf325e0192c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a724d28f2d114b1c055bbb8cbe36a9d0c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a724d28f2d114b1c055bbb8cbe36a9d0c">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, GetInputTrueTest)</td></tr>
+<tr class="separator:a724d28f2d114b1c055bbb8cbe36a9d0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7eebb2409127d1276c913841e69ecc52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a7eebb2409127d1276c913841e69ecc52">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, GetInputFalseTest)</td></tr>
+<tr class="separator:a7eebb2409127d1276c913841e69ecc52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9971010580fd4560a9906f78311ed11"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ae9971010580fd4560a9906f78311ed11">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintGuestMenuOutputsCorrectly)</td></tr>
+<tr class="separator:ae9971010580fd4560a9906f78311ed11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a001ad7d7ed2f360f54fd3262a26c7cdd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a001ad7d7ed2f360f54fd3262a26c7cdd">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintMainMenuOutputsCorrectly)</td></tr>
+<tr class="separator:a001ad7d7ed2f360f54fd3262a26c7cdd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae90cccb893523a61fbdd5989397642c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ae90cccb893523a61fbdd5989397642c9">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintUserMenuOutputsCorrectly)</td></tr>
+<tr class="separator:ae90cccb893523a61fbdd5989397642c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0441f84527b330d33d5cb0d318cab0f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a0441f84527b330d33d5cb0d318cab0f7">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintBookCatalogingMenuOutputsCorrectly)</td></tr>
+<tr class="separator:a0441f84527b330d33d5cb0d318cab0f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4a2feb6d8f5d3f084f924502cf3a790"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#af4a2feb6d8f5d3f084f924502cf3a790">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintLoanManagementMenuOutputsCorrectly)</td></tr>
+<tr class="separator:af4a2feb6d8f5d3f084f924502cf3a790"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4902ba2c2315c5b75b3ab94d6f55182f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a4902ba2c2315c5b75b3ab94d6f55182f">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintWishListMenuOutputsCorrectly)</td></tr>
+<tr class="separator:a4902ba2c2315c5b75b3ab94d6f55182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aad35f7d4ad19f6416ebf95ee8f21970f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#aad35f7d4ad19f6416ebf95ee8f21970f">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, PrintReadingTrackerMenuOutputsCorrectly)</td></tr>
+<tr class="separator:aad35f7d4ad19f6416ebf95ee8f21970f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46f71ca24e4870460350d07ffa774ae5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a46f71ca24e4870460350d07ffa774ae5">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_AddBook)</td></tr>
+<tr class="separator:a46f71ca24e4870460350d07ffa774ae5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac69ded2b1723e7821187e794821c1dc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac69ded2b1723e7821187e794821c1dc4">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_DeleteBook)</td></tr>
+<tr class="separator:ac69ded2b1723e7821187e794821c1dc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a70d59278c58509d925e3f1e52effe39a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a70d59278c58509d925e3f1e52effe39a">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_DeleteBookfounfalse)</td></tr>
+<tr class="separator:a70d59278c58509d925e3f1e52effe39a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91206b4e7327aa15b9b0045ea7421dbe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a91206b4e7327aa15b9b0045ea7421dbe">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_DeleteBookfoundtrue)</td></tr>
+<tr class="separator:a91206b4e7327aa15b9b0045ea7421dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea4848fa8b1b3d19e9c26b353e8e0ed"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a7ea4848fa8b1b3d19e9c26b353e8e0ed">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_DeleteBookSucces)</td></tr>
+<tr class="separator:a7ea4848fa8b1b3d19e9c26b353e8e0ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad572bbe233bb034239ecdfc70aff2677"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ad572bbe233bb034239ecdfc70aff2677">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_UpdateBook)</td></tr>
+<tr class="separator:ad572bbe233bb034239ecdfc70aff2677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2907e6b075aed23a041ee161fbe9c8f9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a2907e6b075aed23a041ee161fbe9c8f9">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_ViewCatalog)</td></tr>
+<tr class="separator:a2907e6b075aed23a041ee161fbe9c8f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad542fe3db9fd4c84b490ae81ed48c551"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ad542fe3db9fd4c84b490ae81ed48c551">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_InvalidOption)</td></tr>
+<tr class="separator:ad542fe3db9fd4c84b490ae81ed48c551"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af19d292ef0b85b95deaa8faad663c239"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#af19d292ef0b85b95deaa8faad663c239">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_Infail)</td></tr>
+<tr class="separator:af19d292ef0b85b95deaa8faad663c239"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d6d3b6af0f8a5f084ba1eeabff3212"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a17d6d3b6af0f8a5f084ba1eeabff3212">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, BookCatalogingMenu_ExitMenu)</td></tr>
+<tr class="separator:a17d6d3b6af0f8a5f084ba1eeabff3212"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2caddb000a0f741c51f6db2a12a4b1b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac2caddb000a0f741c51f6db2a12a4b1b">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_LendBook)</td></tr>
+<tr class="separator:ac2caddb000a0f741c51f6db2a12a4b1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03958e52d5727157ac014f50632e13d5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a03958e52d5727157ac014f50632e13d5">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_ViewLoans)</td></tr>
+<tr class="separator:a03958e52d5727157ac014f50632e13d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a260762b839b63a10ebe9dcaf4fda118d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a260762b839b63a10ebe9dcaf4fda118d">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_BorrowBook)</td></tr>
+<tr class="separator:a260762b839b63a10ebe9dcaf4fda118d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8e1704479f65222f116f41c089c05d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ab8e1704479f65222f116f41c089c05d8">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_default)</td></tr>
+<tr class="separator:ab8e1704479f65222f116f41c089c05d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa833160599ffab4ed903b9a5b6247062"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#aa833160599ffab4ed903b9a5b6247062">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_Infail)</td></tr>
+<tr class="separator:aa833160599ffab4ed903b9a5b6247062"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1e5f54f04833d2c6b4687a8b939afc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#acb1e5f54f04833d2c6b4687a8b939afc">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, LoanManagementMenu_ExitMenu)</td></tr>
+<tr class="separator:acb1e5f54f04833d2c6b4687a8b939afc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2b336e89a720427ad793d3cb843ae78"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac2b336e89a720427ad793d3cb843ae78">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_listWishlist)</td></tr>
+<tr class="separator:ac2b336e89a720427ad793d3cb843ae78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c50d927f3b7b410d2d58ca0f5a04cc7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a5c50d927f3b7b410d2d58ca0f5a04cc7">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_addToWishlist)</td></tr>
+<tr class="separator:a5c50d927f3b7b410d2d58ca0f5a04cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0cfe278a36ff1d499496c25b4ae6ede4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a0cfe278a36ff1d499496c25b4ae6ede4">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_RemoveFromWishlist)</td></tr>
+<tr class="separator:a0cfe278a36ff1d499496c25b4ae6ede4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93f7499493280a80eee2b65414833989"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a93f7499493280a80eee2b65414833989">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_RemoveFromWishlistfoundtrue)</td></tr>
+<tr class="separator:a93f7499493280a80eee2b65414833989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8eb379d9d662fa41262eb46abb4fe8a6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a8eb379d9d662fa41262eb46abb4fe8a6">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_InvalidInput)</td></tr>
+<tr class="separator:a8eb379d9d662fa41262eb46abb4fe8a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a319efbd7c49251cfbc3508481c7226f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a319efbd7c49251cfbc3508481c7226f0">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, wishListMenu_Infail)</td></tr>
+<tr class="separator:a319efbd7c49251cfbc3508481c7226f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3799950e051f5a1051044bd0d5d2ab84"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a3799950e051f5a1051044bd0d5d2ab84">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, readingTrackerMenu_logProgress)</td></tr>
+<tr class="separator:a3799950e051f5a1051044bd0d5d2ab84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a665b5883213e5b7d7546bef794dbdd7f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a665b5883213e5b7d7546bef794dbdd7f">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, readingTrackerMenu_MarkAsRead)</td></tr>
+<tr class="separator:a665b5883213e5b7d7546bef794dbdd7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13e478fc37f13dba73ac87a10d910a36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a13e478fc37f13dba73ac87a10d910a36">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, readingTrackerMenu_ViewHistory)</td></tr>
+<tr class="separator:a13e478fc37f13dba73ac87a10d910a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa1db10769cccd899a7f50f74e41d7cb"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#afa1db10769cccd899a7f50f74e41d7cb">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, readingTrackerMenu_Infail)</td></tr>
+<tr class="separator:afa1db10769cccd899a7f50f74e41d7cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f98fa58a93deae7133ad4b5c575be91"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a0f98fa58a93deae7133ad4b5c575be91">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_RegisterUser)</td></tr>
+<tr class="separator:a0f98fa58a93deae7133ad4b5c575be91"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af85c412895df5dcd561358070fb3d0f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#af85c412895df5dcd561358070fb3d0f8">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_LoginUser)</td></tr>
+<tr class="separator:af85c412895df5dcd561358070fb3d0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5facfcd971c4ca99c3592bea21f0c347"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a5facfcd971c4ca99c3592bea21f0c347">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_LoginUserFail)</td></tr>
+<tr class="separator:a5facfcd971c4ca99c3592bea21f0c347"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7ea1c83412c54591d07866ff8395fbd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ad7ea1c83412c54591d07866ff8395fbd">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_GuestOperation)</td></tr>
+<tr class="separator:ad7ea1c83412c54591d07866ff8395fbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ded13fe0ccb1258e65049933751089"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac2ded13fe0ccb1258e65049933751089">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_ExitProgram)</td></tr>
+<tr class="separator:ac2ded13fe0ccb1258e65049933751089"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8185ddeff1b0cb59096da5eda415916f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a8185ddeff1b0cb59096da5eda415916f">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_InvalidChoice)</td></tr>
+<tr class="separator:a8185ddeff1b0cb59096da5eda415916f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a9f516feceae47bae5d1ea5a4d8fc66"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a0a9f516feceae47bae5d1ea5a4d8fc66">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, MainMenu_Infail)</td></tr>
+<tr class="separator:a0a9f516feceae47bae5d1ea5a4d8fc66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac29a807c6df276b1514f3400ddec9807"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac29a807c6df276b1514f3400ddec9807">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, GuestOperation_ReturnToMainMenu)</td></tr>
+<tr class="separator:ac29a807c6df276b1514f3400ddec9807"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af66d4687e1838d8b37cbc94a9361ebd8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#af66d4687e1838d8b37cbc94a9361ebd8">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, GuestOperation_InvalidChoice)</td></tr>
+<tr class="separator:af66d4687e1838d8b37cbc94a9361ebd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acad4758b7796c3c6e99c3f09b150423c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#acad4758b7796c3c6e99c3f09b150423c">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, GuestOperation_Infail)</td></tr>
+<tr class="separator:acad4758b7796c3c6e99c3f09b150423c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac099be236fd910b9c41d872c15592fb9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#ac099be236fd910b9c41d872c15592fb9">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_BookCatalogingMenu)</td></tr>
+<tr class="separator:ac099be236fd910b9c41d872c15592fb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88b3c84af18270c6794818d797e96ae4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a88b3c84af18270c6794818d797e96ae4">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_LoanManagementMenu)</td></tr>
+<tr class="separator:a88b3c84af18270c6794818d797e96ae4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08be6f7e6875c4f42c2f39ebe2354004"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a08be6f7e6875c4f42c2f39ebe2354004">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_WishListMenu)</td></tr>
+<tr class="separator:a08be6f7e6875c4f42c2f39ebe2354004"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a75fd9c24124c7a5e0f96617ee0664f54"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a75fd9c24124c7a5e0f96617ee0664f54">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_ReadingTrackerMenu)</td></tr>
+<tr class="separator:a75fd9c24124c7a5e0f96617ee0664f54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a57151bf5d371bf8cddf576870fdc8c10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a57151bf5d371bf8cddf576870fdc8c10">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_Infail)</td></tr>
+<tr class="separator:a57151bf5d371bf8cddf576870fdc8c10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acecc491e862cc1ba95f83ac9b3f61b70"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#acecc491e862cc1ba95f83ac9b3f61b70">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, UserOperations_ReturnToMainMenu)</td></tr>
+<tr class="separator:acecc491e862cc1ba95f83ac9b3f61b70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb3f2fb12e7a62d51edc20a3b95f8c73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#abb3f2fb12e7a62d51edc20a3b95f8c73">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, ViewLoansForFunc_Successful)</td></tr>
+<tr class="separator:abb3f2fb12e7a62d51edc20a3b95f8c73"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd1a499155c1f420b452774c67ee2b2e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#acd1a499155c1f420b452774c67ee2b2e">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, RemoveFromWishList_NotSuccessful)</td></tr>
+<tr class="separator:acd1a499155c1f420b452774c67ee2b2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c26a635b038fb621e4f62dde4da7681"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a2c26a635b038fb621e4f62dde4da7681">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, RemoveFromWishList_BookNotFound)</td></tr>
+<tr class="separator:a2c26a635b038fb621e4f62dde4da7681"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c1343f63a94944cf0386947f7834a33"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a1c1343f63a94944cf0386947f7834a33">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, RemoveFromWishList_FileError)</td></tr>
+<tr class="separator:a1c1343f63a94944cf0386947f7834a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf61a055292af31c529d0596f75c0a98"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#adf61a055292af31c529d0596f75c0a98">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, AddToWishList_NotSuccessful)</td></tr>
+<tr class="separator:adf61a055292af31c529d0596f75c0a98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c21d967b771e79afbe23fa92ccebed1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a4c21d967b771e79afbe23fa92ccebed1">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, AddToWishList_BookNotFound)</td></tr>
+<tr class="separator:a4c21d967b771e79afbe23fa92ccebed1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa0b907527437d0f1e1688d8f17a8b415"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#aa0b907527437d0f1e1688d8f17a8b415">TEST_F</a> (<a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>, AddToWishList_FileError)</td></tr>
+<tr class="separator:aa0b907527437d0f1e1688d8f17a8b415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="librarysystem__test_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -128,7 +252,1837 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00015">15</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00519">519</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c21d967b771e79afbe23fa92ccebed1" name="a4c21d967b771e79afbe23fa92ccebed1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c21d967b771e79afbe23fa92ccebed1">&#9670;&#160;</a></span>TEST_F() <span class="overload">[1/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AddToWishList_BookNotFound&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00508">508</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa0b907527437d0f1e1688d8f17a8b415" name="aa0b907527437d0f1e1688d8f17a8b415"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa0b907527437d0f1e1688d8f17a8b415">&#9670;&#160;</a></span>TEST_F() <span class="overload">[2/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AddToWishList_FileError&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00515">515</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adf61a055292af31c529d0596f75c0a98" name="adf61a055292af31c529d0596f75c0a98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf61a055292af31c529d0596f75c0a98">&#9670;&#160;</a></span>TEST_F() <span class="overload">[3/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">AddToWishList_NotSuccessful&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00501">501</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a46f71ca24e4870460350d07ffa774ae5" name="a46f71ca24e4870460350d07ffa774ae5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46f71ca24e4870460350d07ffa774ae5">&#9670;&#160;</a></span>TEST_F() <span class="overload">[4/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_AddBook&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00151">151</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac69ded2b1723e7821187e794821c1dc4" name="ac69ded2b1723e7821187e794821c1dc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac69ded2b1723e7821187e794821c1dc4">&#9670;&#160;</a></span>TEST_F() <span class="overload">[5/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_DeleteBook&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00159">159</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a91206b4e7327aa15b9b0045ea7421dbe" name="a91206b4e7327aa15b9b0045ea7421dbe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91206b4e7327aa15b9b0045ea7421dbe">&#9670;&#160;</a></span>TEST_F() <span class="overload">[6/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_DeleteBookfoundtrue&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00175">175</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a70d59278c58509d925e3f1e52effe39a" name="a70d59278c58509d925e3f1e52effe39a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70d59278c58509d925e3f1e52effe39a">&#9670;&#160;</a></span>TEST_F() <span class="overload">[7/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_DeleteBookfounfalse&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00167">167</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7ea4848fa8b1b3d19e9c26b353e8e0ed" name="a7ea4848fa8b1b3d19e9c26b353e8e0ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ea4848fa8b1b3d19e9c26b353e8e0ed">&#9670;&#160;</a></span>TEST_F() <span class="overload">[8/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_DeleteBookSucces&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00183">183</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a17d6d3b6af0f8a5f084ba1eeabff3212" name="a17d6d3b6af0f8a5f084ba1eeabff3212"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17d6d3b6af0f8a5f084ba1eeabff3212">&#9670;&#160;</a></span>TEST_F() <span class="overload">[9/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_ExitMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00223">223</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af19d292ef0b85b95deaa8faad663c239" name="af19d292ef0b85b95deaa8faad663c239"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af19d292ef0b85b95deaa8faad663c239">&#9670;&#160;</a></span>TEST_F() <span class="overload">[10/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00215">215</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad542fe3db9fd4c84b490ae81ed48c551" name="ad542fe3db9fd4c84b490ae81ed48c551"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad542fe3db9fd4c84b490ae81ed48c551">&#9670;&#160;</a></span>TEST_F() <span class="overload">[11/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_InvalidOption&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00207">207</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad572bbe233bb034239ecdfc70aff2677" name="ad572bbe233bb034239ecdfc70aff2677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad572bbe233bb034239ecdfc70aff2677">&#9670;&#160;</a></span>TEST_F() <span class="overload">[12/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_UpdateBook&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00191">191</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2907e6b075aed23a041ee161fbe9c8f9" name="a2907e6b075aed23a041ee161fbe9c8f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2907e6b075aed23a041ee161fbe9c8f9">&#9670;&#160;</a></span>TEST_F() <span class="overload">[13/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">BookCatalogingMenu_ViewCatalog&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00199">199</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6e1dc34e9f64e756a9104948d84a1862" name="a6e1dc34e9f64e756a9104948d84a1862"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e1dc34e9f64e756a9104948d84a1862">&#9670;&#160;</a></span>TEST_F() <span class="overload">[14/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">EnterToContinue_Success&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00023">23</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a7eebb2409127d1276c913841e69ecc52" name="a7eebb2409127d1276c913841e69ecc52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7eebb2409127d1276c913841e69ecc52">&#9670;&#160;</a></span>TEST_F() <span class="overload">[15/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GetInputFalseTest&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00054">54</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a724d28f2d114b1c055bbb8cbe36a9d0c" name="a724d28f2d114b1c055bbb8cbe36a9d0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a724d28f2d114b1c055bbb8cbe36a9d0c">&#9670;&#160;</a></span>TEST_F() <span class="overload">[16/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GetInputTrueTest&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00048">48</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acad4758b7796c3c6e99c3f09b150423c" name="acad4758b7796c3c6e99c3f09b150423c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acad4758b7796c3c6e99c3f09b150423c">&#9670;&#160;</a></span>TEST_F() <span class="overload">[17/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GuestOperation_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00424">424</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af66d4687e1838d8b37cbc94a9361ebd8" name="af66d4687e1838d8b37cbc94a9361ebd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af66d4687e1838d8b37cbc94a9361ebd8">&#9670;&#160;</a></span>TEST_F() <span class="overload">[18/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GuestOperation_InvalidChoice&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00416">416</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac29a807c6df276b1514f3400ddec9807" name="ac29a807c6df276b1514f3400ddec9807"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac29a807c6df276b1514f3400ddec9807">&#9670;&#160;</a></span>TEST_F() <span class="overload">[19/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GuestOperation_ReturnToMainMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00409">409</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a260762b839b63a10ebe9dcaf4fda118d" name="a260762b839b63a10ebe9dcaf4fda118d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a260762b839b63a10ebe9dcaf4fda118d">&#9670;&#160;</a></span>TEST_F() <span class="overload">[20/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_BorrowBook&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00244">244</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ab8e1704479f65222f116f41c089c05d8" name="ab8e1704479f65222f116f41c089c05d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8e1704479f65222f116f41c089c05d8">&#9670;&#160;</a></span>TEST_F() <span class="overload">[21/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_default&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00252">252</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acb1e5f54f04833d2c6b4687a8b939afc" name="acb1e5f54f04833d2c6b4687a8b939afc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb1e5f54f04833d2c6b4687a8b939afc">&#9670;&#160;</a></span>TEST_F() <span class="overload">[22/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_ExitMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00268">268</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aa833160599ffab4ed903b9a5b6247062" name="aa833160599ffab4ed903b9a5b6247062"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa833160599ffab4ed903b9a5b6247062">&#9670;&#160;</a></span>TEST_F() <span class="overload">[23/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00260">260</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2caddb000a0f741c51f6db2a12a4b1b" name="ac2caddb000a0f741c51f6db2a12a4b1b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2caddb000a0f741c51f6db2a12a4b1b">&#9670;&#160;</a></span>TEST_F() <span class="overload">[24/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_LendBook&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00228">228</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a03958e52d5727157ac014f50632e13d5" name="a03958e52d5727157ac014f50632e13d5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a03958e52d5727157ac014f50632e13d5">&#9670;&#160;</a></span>TEST_F() <span class="overload">[25/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LoanManagementMenu_ViewLoans&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00236">236</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2ded13fe0ccb1258e65049933751089" name="ac2ded13fe0ccb1258e65049933751089"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ded13fe0ccb1258e65049933751089">&#9670;&#160;</a></span>TEST_F() <span class="overload">[26/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_ExitProgram&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00386">386</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ad7ea1c83412c54591d07866ff8395fbd" name="ad7ea1c83412c54591d07866ff8395fbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7ea1c83412c54591d07866ff8395fbd">&#9670;&#160;</a></span>TEST_F() <span class="overload">[27/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_GuestOperation&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00378">378</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0a9f516feceae47bae5d1ea5a4d8fc66" name="a0a9f516feceae47bae5d1ea5a4d8fc66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a9f516feceae47bae5d1ea5a4d8fc66">&#9670;&#160;</a></span>TEST_F() <span class="overload">[28/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00401">401</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8185ddeff1b0cb59096da5eda415916f" name="a8185ddeff1b0cb59096da5eda415916f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8185ddeff1b0cb59096da5eda415916f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[29/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_InvalidChoice&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00393">393</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af85c412895df5dcd561358070fb3d0f8" name="af85c412895df5dcd561358070fb3d0f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af85c412895df5dcd561358070fb3d0f8">&#9670;&#160;</a></span>TEST_F() <span class="overload">[30/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_LoginUser&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00362">362</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5facfcd971c4ca99c3592bea21f0c347" name="a5facfcd971c4ca99c3592bea21f0c347"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5facfcd971c4ca99c3592bea21f0c347">&#9670;&#160;</a></span>TEST_F() <span class="overload">[31/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_LoginUserFail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00370">370</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f98fa58a93deae7133ad4b5c575be91" name="a0f98fa58a93deae7133ad4b5c575be91"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f98fa58a93deae7133ad4b5c575be91">&#9670;&#160;</a></span>TEST_F() <span class="overload">[32/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">MainMenu_RegisterUser&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00354">354</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac1fc99cb65b37c0fcbaaebf325e0192c" name="ac1fc99cb65b37c0fcbaaebf325e0192c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1fc99cb65b37c0fcbaaebf325e0192c">&#9670;&#160;</a></span>TEST_F() <span class="overload">[33/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputsErrorMessageAndReturnsFalse&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00039">39</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0441f84527b330d33d5cb0d318cab0f7" name="a0441f84527b330d33d5cb0d318cab0f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0441f84527b330d33d5cb0d318cab0f7">&#9670;&#160;</a></span>TEST_F() <span class="overload">[34/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintBookCatalogingMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00098">98</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae9971010580fd4560a9906f78311ed11" name="ae9971010580fd4560a9906f78311ed11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9971010580fd4560a9906f78311ed11">&#9670;&#160;</a></span>TEST_F() <span class="overload">[35/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintGuestMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00060">60</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af4a2feb6d8f5d3f084f924502cf3a790" name="af4a2feb6d8f5d3f084f924502cf3a790"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4a2feb6d8f5d3f084f924502cf3a790">&#9670;&#160;</a></span>TEST_F() <span class="overload">[36/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintLoanManagementMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00112">112</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a001ad7d7ed2f360f54fd3262a26c7cdd" name="a001ad7d7ed2f360f54fd3262a26c7cdd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a001ad7d7ed2f360f54fd3262a26c7cdd">&#9670;&#160;</a></span>TEST_F() <span class="overload">[37/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintMainMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00071">71</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aad35f7d4ad19f6416ebf95ee8f21970f" name="aad35f7d4ad19f6416ebf95ee8f21970f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aad35f7d4ad19f6416ebf95ee8f21970f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[38/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintReadingTrackerMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00138">138</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae90cccb893523a61fbdd5989397642c9" name="ae90cccb893523a61fbdd5989397642c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae90cccb893523a61fbdd5989397642c9">&#9670;&#160;</a></span>TEST_F() <span class="overload">[39/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintUserMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00084">84</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4902ba2c2315c5b75b3ab94d6f55182f" name="a4902ba2c2315c5b75b3ab94d6f55182f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4902ba2c2315c5b75b3ab94d6f55182f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[40/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">PrintWishListMenuOutputsCorrectly&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00125">125</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afa1db10769cccd899a7f50f74e41d7cb" name="afa1db10769cccd899a7f50f74e41d7cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa1db10769cccd899a7f50f74e41d7cb">&#9670;&#160;</a></span>TEST_F() <span class="overload">[41/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">readingTrackerMenu_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00346">346</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a3799950e051f5a1051044bd0d5d2ab84" name="a3799950e051f5a1051044bd0d5d2ab84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3799950e051f5a1051044bd0d5d2ab84">&#9670;&#160;</a></span>TEST_F() <span class="overload">[42/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">readingTrackerMenu_logProgress&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00321">321</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a665b5883213e5b7d7546bef794dbdd7f" name="a665b5883213e5b7d7546bef794dbdd7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a665b5883213e5b7d7546bef794dbdd7f">&#9670;&#160;</a></span>TEST_F() <span class="overload">[43/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">readingTrackerMenu_MarkAsRead&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00329">329</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a13e478fc37f13dba73ac87a10d910a36" name="a13e478fc37f13dba73ac87a10d910a36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a13e478fc37f13dba73ac87a10d910a36">&#9670;&#160;</a></span>TEST_F() <span class="overload">[44/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">readingTrackerMenu_ViewHistory&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00338">338</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4e2944ad688a936809e63f86fb562439" name="a4e2944ad688a936809e63f86fb562439"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e2944ad688a936809e63f86fb562439">&#9670;&#160;</a></span>TEST_F() <span class="overload">[45/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RegisterUserTest&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00030">30</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2c26a635b038fb621e4f62dde4da7681" name="a2c26a635b038fb621e4f62dde4da7681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2c26a635b038fb621e4f62dde4da7681">&#9670;&#160;</a></span>TEST_F() <span class="overload">[46/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RemoveFromWishList_BookNotFound&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00490">490</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a1c1343f63a94944cf0386947f7834a33" name="a1c1343f63a94944cf0386947f7834a33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1343f63a94944cf0386947f7834a33">&#9670;&#160;</a></span>TEST_F() <span class="overload">[47/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RemoveFromWishList_FileError&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00497">497</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acd1a499155c1f420b452774c67ee2b2e" name="acd1a499155c1f420b452774c67ee2b2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd1a499155c1f420b452774c67ee2b2e">&#9670;&#160;</a></span>TEST_F() <span class="overload">[48/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">RemoveFromWishList_NotSuccessful&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00483">483</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac099be236fd910b9c41d872c15592fb9" name="ac099be236fd910b9c41d872c15592fb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac099be236fd910b9c41d872c15592fb9">&#9670;&#160;</a></span>TEST_F() <span class="overload">[49/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_BookCatalogingMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00432">432</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a57151bf5d371bf8cddf576870fdc8c10" name="a57151bf5d371bf8cddf576870fdc8c10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a57151bf5d371bf8cddf576870fdc8c10">&#9670;&#160;</a></span>TEST_F() <span class="overload">[50/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00464">464</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a88b3c84af18270c6794818d797e96ae4" name="a88b3c84af18270c6794818d797e96ae4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88b3c84af18270c6794818d797e96ae4">&#9670;&#160;</a></span>TEST_F() <span class="overload">[51/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_LoanManagementMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00440">440</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a75fd9c24124c7a5e0f96617ee0664f54" name="a75fd9c24124c7a5e0f96617ee0664f54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75fd9c24124c7a5e0f96617ee0664f54">&#9670;&#160;</a></span>TEST_F() <span class="overload">[52/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_ReadingTrackerMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00456">456</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="acecc491e862cc1ba95f83ac9b3f61b70" name="acecc491e862cc1ba95f83ac9b3f61b70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acecc491e862cc1ba95f83ac9b3f61b70">&#9670;&#160;</a></span>TEST_F() <span class="overload">[53/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_ReturnToMainMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00472">472</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a08be6f7e6875c4f42c2f39ebe2354004" name="a08be6f7e6875c4f42c2f39ebe2354004"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a08be6f7e6875c4f42c2f39ebe2354004">&#9670;&#160;</a></span>TEST_F() <span class="overload">[54/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UserOperations_WishListMenu&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00448">448</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abb3f2fb12e7a62d51edc20a3b95f8c73" name="abb3f2fb12e7a62d51edc20a3b95f8c73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb3f2fb12e7a62d51edc20a3b95f8c73">&#9670;&#160;</a></span>TEST_F() <span class="overload">[55/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ViewLoansForFunc_Successful&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00477">477</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a5c50d927f3b7b410d2d58ca0f5a04cc7" name="a5c50d927f3b7b410d2d58ca0f5a04cc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c50d927f3b7b410d2d58ca0f5a04cc7">&#9670;&#160;</a></span>TEST_F() <span class="overload">[56/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_addToWishlist&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00281">281</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a319efbd7c49251cfbc3508481c7226f0" name="a319efbd7c49251cfbc3508481c7226f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a319efbd7c49251cfbc3508481c7226f0">&#9670;&#160;</a></span>TEST_F() <span class="overload">[57/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_Infail&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00313">313</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a8eb379d9d662fa41262eb46abb4fe8a6" name="a8eb379d9d662fa41262eb46abb4fe8a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8eb379d9d662fa41262eb46abb4fe8a6">&#9670;&#160;</a></span>TEST_F() <span class="overload">[58/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_InvalidInput&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00305">305</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac2b336e89a720427ad793d3cb843ae78" name="ac2b336e89a720427ad793d3cb843ae78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2b336e89a720427ad793d3cb843ae78">&#9670;&#160;</a></span>TEST_F() <span class="overload">[59/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_listWishlist&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00273">273</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0cfe278a36ff1d499496c25b4ae6ede4" name="a0cfe278a36ff1d499496c25b4ae6ede4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0cfe278a36ff1d499496c25b4ae6ede4">&#9670;&#160;</a></span>TEST_F() <span class="overload">[60/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_RemoveFromWishlist&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00289">289</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a93f7499493280a80eee2b65414833989" name="a93f7499493280a80eee2b65414833989"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93f7499493280a80eee2b65414833989">&#9670;&#160;</a></span>TEST_F() <span class="overload">[61/61]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TEST_F </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_librarysystem_test.html">LibrarysystemTest</a>&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">wishListMenu_RemoveFromWishlistfoundtrue&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="librarysystem__test_8cpp_source.html#l00297">297</a> of file <a class="el" href="librarysystem__test_8cpp_source.html">librarysystem_test.cpp</a>.</p>
 
 </div>
 </div>

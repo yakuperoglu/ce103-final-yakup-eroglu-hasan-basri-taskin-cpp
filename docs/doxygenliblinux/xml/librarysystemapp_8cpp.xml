@@ -15,11 +15,8 @@
       <node id="4">
         <label>string</label>
       </node>
-      <node id="7">
-        <label>librarysystem.h</label>
-        <link refid="librarysystem_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
+      <node id="3">
+        <label>stack</label>
       </node>
       <node id="1">
         <label>src/librarysystemapp/src/librarysystemapp.cpp</label>
@@ -37,11 +34,14 @@
         <childnode refid="7" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>stack</label>
-      </node>
       <node id="5">
         <label>sstream</label>
+      </node>
+      <node id="7">
+        <label>librarysystem.h</label>
+        <link refid="librarysystem_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>iostream</label>
@@ -77,7 +77,7 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystemapp_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()<sp/>{</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="librarysystem_8h_1a8396c50bf544009fb2fc4907b00cbad3" kindref="member">mainMenu</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><ref refid="librarysystem_8h_1ab5206f1ba964127d1f7a2491c4254813" kindref="member">mainMenu</ref>(std::cin,<sp/>std::cout);</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="13"><highlight class="normal">}</highlight></codeline>
     </programlisting>
