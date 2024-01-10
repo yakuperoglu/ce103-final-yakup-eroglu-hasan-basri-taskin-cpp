@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['booksystem_40',['BookSystem',['../structBookSystem.html',1,'']]]
+  ['book_57',['Book',['../structBook.html',1,'']]]
 ];

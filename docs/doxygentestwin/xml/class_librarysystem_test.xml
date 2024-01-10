@@ -3,6 +3,36 @@
   <compounddef id="class_librarysystem_test" kind="class" language="C++" prot="public">
     <compoundname>LibrarysystemTest</compoundname>
     <basecompoundref prot="public" virt="non-virtual">testing::Test</basecompoundref>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_librarysystem_test_1a7f3f1a24f1cf782ddb0d5e64b923181b" prot="protected" static="no" mutable="no">
+        <type>std::ostringstream</type>
+        <definition>std::ostringstream LibrarysystemTest::out</definition>
+        <argsstring></argsstring>
+        <name>out</name>
+        <qualifiedname>LibrarysystemTest::out</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="8" column="20" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="8" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_librarysystem_test_1a1a977553a52b975b1cfc7b07f666cf25" prot="protected" static="no" mutable="no">
+        <type>std::istringstream</type>
+        <definition>std::istringstream LibrarysystemTest::in</definition>
+        <argsstring></argsstring>
+        <name>in</name>
+        <qualifiedname>LibrarysystemTest::in</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="9" column="20" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="protected-func">
       <memberdef kind="function" id="class_librarysystem_test_1ae06d15fccfe480822db83caf449bba65" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -16,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" line="6" column="8" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" bodystart="6" bodyend="7"/>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="10" column="6" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="10" bodyend="13"/>
       </memberdef>
       <memberdef kind="function" id="class_librarysystem_test_1ac1b5cb74c061ecab507ab13da0745ef6" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -30,7 +60,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" line="9" column="8" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" bodystart="9" bodyend="10"/>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="15" column="6" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="15" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_librarysystem_test_1a8d2292ccb5482998330e17305adc883e" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void LibrarysystemTest::simulateUserInput</definition>
+        <argsstring>(const std::string &amp;input)</argsstring>
+        <name>simulateUserInput</name>
+        <qualifiedname>LibrarysystemTest::simulateUserInput</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>input</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/tests/librarysystem/librarysystem_test.cpp" line="18" column="6" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="18" bodyend="21"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -59,9 +107,12 @@
         <label>testing::Test</label>
       </node>
     </collaborationgraph>
-    <location file=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" line="4" column="1" bodyfile=" Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" bodystart="4" bodyend="11"/>
+    <location file="src/tests/librarysystem/librarysystem_test.cpp" line="6" column="1" bodyfile="src/tests/librarysystem/librarysystem_test.cpp" bodystart="6" bodyend="22"/>
     <listofallmembers>
+      <member refid="class_librarysystem_test_1a1a977553a52b975b1cfc7b07f666cf25" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>in</name></member>
+      <member refid="class_librarysystem_test_1a7f3f1a24f1cf782ddb0d5e64b923181b" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>out</name></member>
       <member refid="class_librarysystem_test_1ae06d15fccfe480822db83caf449bba65" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>SetUp</name></member>
+      <member refid="class_librarysystem_test_1a8d2292ccb5482998330e17305adc883e" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>simulateUserInput</name></member>
       <member refid="class_librarysystem_test_1ac1b5cb74c061ecab507ab13da0745ef6" prot="protected" virt="non-virtual"><scope>LibrarysystemTest</scope><name>TearDown</name></member>
     </listofallmembers>
   </compounddef>

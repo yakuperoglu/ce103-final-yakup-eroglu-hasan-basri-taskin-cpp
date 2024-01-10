@@ -1,5 +1,5 @@
-if(EXISTS "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake")
-  include("/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake")
+if(EXISTS "/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake")
+  include("/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake")
 else()
   add_test(librarysystem_tests_NOT_BUILT librarysystem_tests_NOT_BUILT)
 endif()

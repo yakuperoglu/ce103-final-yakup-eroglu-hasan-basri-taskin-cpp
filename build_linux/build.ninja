@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/
+cmake_ninja_workdir = /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/
 
 #############################################
 # Utility command for test
 
 build CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -57,7 +57,7 @@ build test: phony CMakeFiles/test.util
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -68,7 +68,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -86,7 +86,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles/install.util: CUSTOM_COMMAND all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -98,7 +98,7 @@ build install: phony CMakeFiles/install.util
 # Utility command for install/local
 
 build CMakeFiles/install/local.util: CUSTOM_COMMAND all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -110,7 +110,7 @@ build install/local: phony CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build CMakeFiles/install/strip.util: CUSTOM_COMMAND all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -119,7 +119,7 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -131,11 +131,11 @@ build install/strip: phony CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_utility: phony || src/utility/CMakeFiles/utility.dir
 
-build src/utility/CMakeFiles/utility.dir/src/mathUtility.cpp.o: CXX_COMPILER__utility_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/src/mathUtility.cpp || cmake_object_order_depends_target_utility
+build src/utility/CMakeFiles/utility.dir/src/mathUtility.cpp.o: CXX_COMPILER__utility_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/src/mathUtility.cpp || cmake_object_order_depends_target_utility
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV -DLOCK6G_UTILIY_LIB_EXPORTS
   DEP_FILE = src/utility/CMakeFiles/utility.dir/src/mathUtility.cpp.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -std=gnu++11
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header
   OBJECT_DIR = src/utility/CMakeFiles/utility.dir
   OBJECT_FILE_DIR = src/utility/CMakeFiles/utility.dir/src
   TARGET_COMPILE_PDB = src/utility/CMakeFiles/utility.dir/utility.pdb
@@ -163,7 +163,7 @@ build src/utility/libutility.a: CXX_STATIC_LIBRARY_LINKER__utility_Debug src/uti
 # Utility command for test
 
 build src/utility/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -175,7 +175,7 @@ build src/utility/test: phony src/utility/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build src/utility/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -186,7 +186,7 @@ build src/utility/edit_cache: phony src/utility/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build src/utility/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -204,7 +204,7 @@ build src/utility/list_install_components: phony
 # Utility command for install
 
 build src/utility/CMakeFiles/install.util: CUSTOM_COMMAND src/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -216,7 +216,7 @@ build src/utility/install: phony src/utility/CMakeFiles/install.util
 # Utility command for install/local
 
 build src/utility/CMakeFiles/install/local.util: CUSTOM_COMMAND src/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -228,7 +228,7 @@ build src/utility/install/local: phony src/utility/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build src/utility/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -237,7 +237,7 @@ build src/utility/install/strip: phony src/utility/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -249,11 +249,11 @@ build src/utility/install/strip: phony src/utility/CMakeFiles/install/strip.util
 
 build cmake_object_order_depends_target_librarysystem: phony || cmake_object_order_depends_target_utility
 
-build src/librarysystem/CMakeFiles/librarysystem.dir/src/librarysystem.cpp.o: CXX_COMPILER__librarysystem_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp || cmake_object_order_depends_target_librarysystem
+build src/librarysystem/CMakeFiles/librarysystem.dir/src/librarysystem.cpp.o: CXX_COMPILER__librarysystem_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp || cmake_object_order_depends_target_librarysystem
   DEFINES = -DCORUH_LIBRARYSYSTEM_LIB_EXPORTS -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/librarysystem/CMakeFiles/librarysystem.dir/src/librarysystem.cpp.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -std=gnu++11
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header
   OBJECT_DIR = src/librarysystem/CMakeFiles/librarysystem.dir
   OBJECT_FILE_DIR = src/librarysystem/CMakeFiles/librarysystem.dir/src
   TARGET_COMPILE_PDB = src/librarysystem/CMakeFiles/librarysystem.dir/librarysystem.pdb
@@ -281,7 +281,7 @@ build src/librarysystem/liblibrarysystem.a: CXX_STATIC_LIBRARY_LINKER__librarysy
 # Utility command for test
 
 build src/librarysystem/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -293,7 +293,7 @@ build src/librarysystem/test: phony src/librarysystem/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build src/librarysystem/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -304,7 +304,7 @@ build src/librarysystem/edit_cache: phony src/librarysystem/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build src/librarysystem/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -322,7 +322,7 @@ build src/librarysystem/list_install_components: phony
 # Utility command for install
 
 build src/librarysystem/CMakeFiles/install.util: CUSTOM_COMMAND src/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -334,7 +334,7 @@ build src/librarysystem/install: phony src/librarysystem/CMakeFiles/install.util
 # Utility command for install/local
 
 build src/librarysystem/CMakeFiles/install/local.util: CUSTOM_COMMAND src/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -346,7 +346,7 @@ build src/librarysystem/install/local: phony src/librarysystem/CMakeFiles/instal
 # Utility command for install/strip
 
 build src/librarysystem/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -355,7 +355,7 @@ build src/librarysystem/install/strip: phony src/librarysystem/CMakeFiles/instal
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -367,11 +367,11 @@ build src/librarysystem/install/strip: phony src/librarysystem/CMakeFiles/instal
 
 build cmake_object_order_depends_target_librarysystemapp: phony || cmake_object_order_depends_target_librarysystem cmake_object_order_depends_target_utility
 
-build src/librarysystemapp/CMakeFiles/librarysystemapp.dir/src/librarysystemapp.cpp.o: CXX_COMPILER__librarysystemapp_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp || cmake_object_order_depends_target_librarysystemapp
+build src/librarysystemapp/CMakeFiles/librarysystemapp.dir/src/librarysystemapp.cpp.o: CXX_COMPILER__librarysystemapp_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp || cmake_object_order_depends_target_librarysystemapp
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/librarysystemapp/CMakeFiles/librarysystemapp.dir/src/librarysystemapp.cpp.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -std=gnu++11
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/../librarysystem/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/../librarysystem/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header
   OBJECT_DIR = src/librarysystemapp/CMakeFiles/librarysystemapp.dir
   OBJECT_FILE_DIR = src/librarysystemapp/CMakeFiles/librarysystemapp.dir/src
   TARGET_COMPILE_PDB = src/librarysystemapp/CMakeFiles/librarysystemapp.dir/
@@ -401,7 +401,7 @@ build build/Debug/librarysystemapp: CXX_EXECUTABLE_LINKER__librarysystemapp_Debu
 # Utility command for test
 
 build src/librarysystemapp/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -413,7 +413,7 @@ build src/librarysystemapp/test: phony src/librarysystemapp/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build src/librarysystemapp/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -424,7 +424,7 @@ build src/librarysystemapp/edit_cache: phony src/librarysystemapp/CMakeFiles/edi
 # Utility command for rebuild_cache
 
 build src/librarysystemapp/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -442,7 +442,7 @@ build src/librarysystemapp/list_install_components: phony
 # Utility command for install
 
 build src/librarysystemapp/CMakeFiles/install.util: CUSTOM_COMMAND src/librarysystemapp/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -454,7 +454,7 @@ build src/librarysystemapp/install: phony src/librarysystemapp/CMakeFiles/instal
 # Utility command for install/local
 
 build src/librarysystemapp/CMakeFiles/install/local.util: CUSTOM_COMMAND src/librarysystemapp/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -466,7 +466,7 @@ build src/librarysystemapp/install/local: phony src/librarysystemapp/CMakeFiles/
 # Utility command for install/strip
 
 build src/librarysystemapp/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/librarysystemapp/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -475,7 +475,7 @@ build src/librarysystemapp/install/strip: phony src/librarysystemapp/CMakeFiles/
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/CMakeLists.txt
 # =============================================================================
 
 
@@ -483,7 +483,7 @@ build src/librarysystemapp/install/strip: phony src/librarysystemapp/CMakeFiles/
 # Utility command for test
 
 build src/tests/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -495,7 +495,7 @@ build src/tests/test: phony src/tests/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build src/tests/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -506,7 +506,7 @@ build src/tests/edit_cache: phony src/tests/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build src/tests/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -524,7 +524,7 @@ build src/tests/list_install_components: phony
 # Utility command for install
 
 build src/tests/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -536,7 +536,7 @@ build src/tests/install: phony src/tests/CMakeFiles/install.util
 # Utility command for install/local
 
 build src/tests/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -548,7 +548,7 @@ build src/tests/install/local: phony src/tests/CMakeFiles/install/local.util
 # Utility command for install/strip
 
 build src/tests/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -557,7 +557,7 @@ build src/tests/install/strip: phony src/tests/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
 # =============================================================================
 
 
@@ -565,7 +565,7 @@ build src/tests/install/strip: phony src/tests/CMakeFiles/install/strip.util
 # Utility command for test
 
 build src/tests/googletest-build/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -577,7 +577,7 @@ build src/tests/googletest-build/test: phony src/tests/googletest-build/CMakeFil
 # Utility command for edit_cache
 
 build src/tests/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -588,7 +588,7 @@ build src/tests/googletest-build/edit_cache: phony src/tests/googletest-build/CM
 # Utility command for rebuild_cache
 
 build src/tests/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -606,7 +606,7 @@ build src/tests/googletest-build/list_install_components: phony
 # Utility command for install
 
 build src/tests/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/googletest-build/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -618,7 +618,7 @@ build src/tests/googletest-build/install: phony src/tests/googletest-build/CMake
 # Utility command for install/local
 
 build src/tests/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/googletest-build/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -630,7 +630,7 @@ build src/tests/googletest-build/install/local: phony src/tests/googletest-build
 # Utility command for install/strip
 
 build src/tests/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/googletest-build/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -639,7 +639,7 @@ build src/tests/googletest-build/install/strip: phony src/tests/googletest-build
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -651,11 +651,11 @@ build src/tests/googletest-build/install/strip: phony src/tests/googletest-build
 
 build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
 
-build src/tests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+build src/tests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/include" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/include -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/googletest-build/googlemock/CMakeFiles/gmock.dir
   OBJECT_FILE_DIR = src/tests/googletest-build/googlemock/CMakeFiles/gmock.dir/src
   TARGET_COMPILE_PDB = lib/libgmockpdb_debug_postfix-NOTFOUND.pdb
@@ -687,11 +687,11 @@ build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Debug src/tests/googletes
 
 build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
 
-build src/tests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+build src/tests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
-  INCLUDES = -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/googletest-build/googlemock/CMakeFiles/gmock_main.dir
   OBJECT_FILE_DIR = src/tests/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
   TARGET_COMPILE_PDB = lib/libgmock_mainpdb_debug_postfix-NOTFOUND.pdb
@@ -719,7 +719,7 @@ build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Debug src/tests
 # Utility command for test
 
 build src/tests/googletest-build/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -731,7 +731,7 @@ build src/tests/googletest-build/googlemock/test: phony src/tests/googletest-bui
 # Utility command for edit_cache
 
 build src/tests/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -742,7 +742,7 @@ build src/tests/googletest-build/googlemock/edit_cache: phony src/tests/googlete
 # Utility command for rebuild_cache
 
 build src/tests/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -760,7 +760,7 @@ build src/tests/googletest-build/googlemock/list_install_components: phony
 # Utility command for install
 
 build src/tests/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/googletest-build/googlemock/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -772,7 +772,7 @@ build src/tests/googletest-build/googlemock/install: phony src/tests/googletest-
 # Utility command for install/local
 
 build src/tests/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/googletest-build/googlemock/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -784,7 +784,7 @@ build src/tests/googletest-build/googlemock/install/local: phony src/tests/googl
 # Utility command for install/strip
 
 build src/tests/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/googletest-build/googlemock/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -793,7 +793,7 @@ build src/tests/googletest-build/googlemock/install/strip: phony src/tests/googl
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googlemock/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -805,11 +805,11 @@ build src/tests/googletest-build/googlemock/install/strip: phony src/tests/googl
 
 build cmake_object_order_depends_target_gtest: phony || src/tests/googletest-build/googletest/CMakeFiles/gtest.dir
 
-build src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+build src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/googletest-build/googletest/CMakeFiles/gtest.dir
   OBJECT_FILE_DIR = src/tests/googletest-build/googletest/CMakeFiles/gtest.dir/src
   TARGET_COMPILE_PDB = lib/libgtestpdb_debug_postfix-NOTFOUND.pdb
@@ -841,11 +841,11 @@ build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Debug src/tests/googletes
 
 build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
 
-build src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+build src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers -std=c++14
-  INCLUDES = -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir
   OBJECT_FILE_DIR = src/tests/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
   TARGET_COMPILE_PDB = lib/libgtest_mainpdb_debug_postfix-NOTFOUND.pdb
@@ -873,7 +873,7 @@ build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Debug src/tests
 # Utility command for test
 
 build src/tests/googletest-build/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -885,7 +885,7 @@ build src/tests/googletest-build/googletest/test: phony src/tests/googletest-bui
 # Utility command for edit_cache
 
 build src/tests/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -896,7 +896,7 @@ build src/tests/googletest-build/googletest/edit_cache: phony src/tests/googlete
 # Utility command for rebuild_cache
 
 build src/tests/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -914,7 +914,7 @@ build src/tests/googletest-build/googletest/list_install_components: phony
 # Utility command for install
 
 build src/tests/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/googletest-build/googletest/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -926,7 +926,7 @@ build src/tests/googletest-build/googletest/install: phony src/tests/googletest-
 # Utility command for install/local
 
 build src/tests/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/googletest-build/googletest/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -938,7 +938,7 @@ build src/tests/googletest-build/googletest/install/local: phony src/tests/googl
 # Utility command for install/strip
 
 build src/tests/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/googletest-build/googletest/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -947,7 +947,7 @@ build src/tests/googletest-build/googletest/install/strip: phony src/tests/googl
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -959,11 +959,11 @@ build src/tests/googletest-build/googletest/install/strip: phony src/tests/googl
 
 build cmake_object_order_depends_target_utility_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_utility
 
-build src/tests/utility/CMakeFiles/utility_tests.dir/utility_test.cpp.o: CXX_COMPILER__utility_tests_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility/utility_test.cpp || cmake_object_order_depends_target_utility_tests
+build src/tests/utility/CMakeFiles/utility_tests.dir/utility_test.cpp.o: CXX_COMPILER__utility_tests_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility/utility_test.cpp || cmake_object_order_depends_target_utility_tests
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/utility/CMakeFiles/utility_tests.dir/utility_test.cpp.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -std=gnu++14
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility/../../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility/../../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/utility -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/utility/CMakeFiles/utility_tests.dir
   OBJECT_FILE_DIR = src/tests/utility/CMakeFiles/utility_tests.dir
   TARGET_COMPILE_PDB = src/tests/utility/CMakeFiles/utility_tests.dir/
@@ -982,7 +982,7 @@ build build/Debug/utility_tests src/tests/utility/utility_tests[1]_tests.cmake |
   LINK_FLAGS = -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage
   LINK_LIBRARIES = src/utility/libutility.a  lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a
   OBJECT_DIR = src/tests/utility/CMakeFiles/utility_tests.dir
-  POST_BUILD = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake -D TEST_TARGET=utility_tests -D "TEST_EXECUTABLE=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/build/Debug/utility_tests" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=utility_tests_TESTS -D "CTEST_FILE=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility/utility_tests[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.22/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake -D TEST_TARGET=utility_tests -D TEST_EXECUTABLE=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/build/Debug/utility_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=utility_tests_TESTS -D CTEST_FILE=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility/utility_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.22/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
   TARGET_COMPILE_PDB = src/tests/utility/CMakeFiles/utility_tests.dir/
@@ -994,7 +994,7 @@ build build/Debug/utility_tests src/tests/utility/utility_tests[1]_tests.cmake |
 # Utility command for test
 
 build src/tests/utility/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -1006,7 +1006,7 @@ build src/tests/utility/test: phony src/tests/utility/CMakeFiles/test.util
 # Utility command for edit_cache
 
 build src/tests/utility/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1017,7 +1017,7 @@ build src/tests/utility/edit_cache: phony src/tests/utility/CMakeFiles/edit_cach
 # Utility command for rebuild_cache
 
 build src/tests/utility/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1035,7 +1035,7 @@ build src/tests/utility/list_install_components: phony
 # Utility command for install
 
 build src/tests/utility/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1047,7 +1047,7 @@ build src/tests/utility/install: phony src/tests/utility/CMakeFiles/install.util
 # Utility command for install/local
 
 build src/tests/utility/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1059,7 +1059,7 @@ build src/tests/utility/install/local: phony src/tests/utility/CMakeFiles/instal
 # Utility command for install/strip
 
 build src/tests/utility/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/utility/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -1068,7 +1068,7 @@ build src/tests/utility/install/strip: phony src/tests/utility/CMakeFiles/instal
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
+# /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -1080,11 +1080,11 @@ build src/tests/utility/install/strip: phony src/tests/utility/CMakeFiles/instal
 
 build cmake_object_order_depends_target_librarysystem_tests: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main cmake_object_order_depends_target_librarysystem cmake_object_order_depends_target_utility
 
-build src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.o: CXX_COMPILER__librarysystem_tests_Debug /mnt/c/Users/Yakup/Documents/GitHub/For$ Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp || cmake_object_order_depends_target_librarysystem_tests
+build src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.o: CXX_COMPILER__librarysystem_tests_Debug /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp || cmake_object_order_depends_target_librarysystem_tests
   DEFINES = -DENABLE_LIBRARYSYSTEM_LOGGER -DENABLE_LIBRARYSYSTEM_TEST -DENABLE_UTILITY_LOGGER -DENABLE_UTILITY_TEST -DGCC_ENV
   DEP_FILE = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.o.d
   FLAGS = -g -g -O0 -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage -std=gnu++14
-  INCLUDES = -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/../../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/../../librarysystem/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header" -I"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include" -isystem "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest"
+  INCLUDES = -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/../../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/../../librarysystem/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/../utility/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/header -I/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/utility/header -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/include -isystem /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest
   OBJECT_DIR = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir
   OBJECT_FILE_DIR = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir
   TARGET_COMPILE_PDB = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/
@@ -1103,7 +1103,7 @@ build build/Debug/librarysystem_tests src/tests/librarysystem/librarysystem_test
   LINK_FLAGS = -Wall -Wextra -Wunused-function -Wno-unknown-pragmas -fprofile-arcs -ftest-coverage
   LINK_LIBRARIES = src/librarysystem/liblibrarysystem.a  src/utility/libutility.a  lib/libgtest.a  lib/libgtest_main.a  lib/libgtest.a
   OBJECT_DIR = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir
-  POST_BUILD = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake -D TEST_TARGET=librarysystem_tests -D "TEST_EXECUTABLE=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/build/Debug/librarysystem_tests" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=librarysystem_tests_TESTS -D "CTEST_FILE=/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.22/Modules/GoogleTestAddTests.cmake
+  POST_BUILD = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake -D TEST_TARGET=librarysystem_tests -D TEST_EXECUTABLE=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/build/Debug/librarysystem_tests -D TEST_EXECUTOR= -D TEST_WORKING_DIR=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem -D TEST_EXTRA_ARGS= -D TEST_PROPERTIES= -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=librarysystem_tests_TESTS -D CTEST_FILE=/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/librarysystem_tests[1]_tests.cmake -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /usr/share/cmake-3.22/Modules/GoogleTestAddTests.cmake
   PRE_LINK = :
   RESTAT = 1
   TARGET_COMPILE_PDB = src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/
@@ -1115,7 +1115,7 @@ build build/Debug/librarysystem_tests src/tests/librarysystem/librarysystem_test
 # Utility command for test
 
 build src/tests/librarysystem/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/ctest --force-new-ctest-process
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
@@ -1127,7 +1127,7 @@ build src/tests/librarysystem/test: phony src/tests/librarysystem/CMakeFiles/tes
 # Utility command for edit_cache
 
 build src/tests/librarysystem/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -1138,7 +1138,7 @@ build src/tests/librarysystem/edit_cache: phony src/tests/librarysystem/CMakeFil
 # Utility command for rebuild_cache
 
 build src/tests/librarysystem/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake --regenerate-during-build -S"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp" -B"/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux"
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake --regenerate-during-build -S/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp -B/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -1156,7 +1156,7 @@ build src/tests/librarysystem/list_install_components: phony
 # Utility command for install
 
 build src/tests/librarysystem/CMakeFiles/install.util: CUSTOM_COMMAND src/tests/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
@@ -1168,7 +1168,7 @@ build src/tests/librarysystem/install: phony src/tests/librarysystem/CMakeFiles/
 # Utility command for install/local
 
 build src/tests/librarysystem/CMakeFiles/install/local.util: CUSTOM_COMMAND src/tests/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -1180,7 +1180,7 @@ build src/tests/librarysystem/install/local: phony src/tests/librarysystem/CMake
 # Utility command for install/strip
 
 build src/tests/librarysystem/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/tests/librarysystem/all
-  COMMAND = cd "/mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem" && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+  COMMAND = cd /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem && /usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
@@ -1226,70 +1226,70 @@ build utility_tests: phony build/Debug/utility_tests
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux
 
 build all: phony src/utility/all src/librarysystem/all src/librarysystemapp/all src/tests/all
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystem
 
 build src/librarysystem/all: phony src/librarysystem/liblibrarysystem.a
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/librarysystemapp
 
 build src/librarysystemapp/all: phony build/Debug/librarysystemapp
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests
 
 build src/tests/all: phony src/tests/utility/all src/tests/librarysystem/all
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build
 
 build src/tests/googletest-build/all: phony src/tests/googletest-build/googlemock/all
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googlemock
 
 build src/tests/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a src/tests/googletest-build/googletest/all
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/googletest-build/googletest
 
 build src/tests/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem
 
 build src/tests/librarysystem/all: phony build/Debug/librarysystem_tests
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/utility
 
 build src/tests/utility/all: phony build/Debug/utility_tests
 
 # =============================================================================
 
 #############################################
-# Folder: /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility
+# Folder: /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/utility
 
 build src/utility/all: phony src/utility/libutility.a
 

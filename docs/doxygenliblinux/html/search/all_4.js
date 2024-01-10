@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['email_9',['email',['../structUser.html#ac35b7c63228119cb91acdbd7ed32b8cb',1,'User']]]
+  ['deletebook_8',['deleteBook',['../librarysystem_8h.html#ace4cde8d98cd38ced47ffb6e88fd57bd',1,'deleteBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#ace4cde8d98cd38ced47ffb6e88fd57bd',1,'deleteBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]]
 ];

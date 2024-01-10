@@ -1,51 +1,71 @@
 #ifndef LIBRARYSYSTEM_H
 #define LIBRARYSYSTEM_H
+#define MAX_STRINGSIZE 100
+#include <iostream>
 
-#include <string>
+using namespace std;
 
-int mainMenu();
+typedef struct {
+  int id;
+  char name[MAX_STRINGSIZE];
+  bool isMarked;
+} Book;
 
-bool userOperations();
+typedef struct {
+  char email[MAX_STRINGSIZE];
+  char password[MAX_STRINGSIZE];
+} User;
 
-struct User {
-  std::string email;
-  std::string name;
-  std::string surname;
-};
+int getInput(istream &in);// gets input from user.
 
-struct UserAuthentication {
-  User login(const std::string &email, const std::string &password);
-  bool registerUser(const std::string &email, const std::string &name, const std::string &surname, const std::string &password);
-};
+bool enterToContunie(istream &in, ostream &out);
 
-struct BookSystem {
-  static bool addBook();
-  static bool updateBook();
-  static bool deleteBook();
-  static bool viewCatalog();
-};
+int getNewId();
 
-struct LoanManagment {
-  static bool lendBook();
-  static bool borrowBook();
-  static bool viewLoans();
-};
+bool handleInputError(istream &in, ostream &out);// This function prevents entering letters instead of numbers.
 
-struct WishList {
-  static bool wishList();
-  static bool addToWishList();
-  static bool removeFromWishList();
-};
+int mainMenu(istream &in, ostream &out);// Main Function.
 
+bool userOperations(istream &in, ostream &out);// holds some operations which user can do.
 
-struct ReadingTracker {
-  static bool logProgress();
-  static bool markAsRead();
-  static bool viewHistory();
-};
+bool guestOperation(istream &in, ostream &out);
 
-struct dataBase {
+bool registerUser(istream &in, ostream &out);
 
-};
+bool loginUser(istream &in, ostream &out);
+
+bool bookCatalogingMenu(istream &input, ostream &output);
+bool loanManagementMenu(istream &input, ostream &output);
+bool wishListMenu(istream &input, ostream &output);
+bool readingTrackerMenu(istream &input, ostream &output);
+
+bool printMainMenu(ostream &out);
+bool printGuestMenu(ostream &out);
+bool printUserMenu(ostream &out);
+bool printBookCatalogingMenu(ostream &out);
+bool printLoanManagementMenu(ostream &out);
+bool printWishListMenu(ostream &out);
+bool printReadingTrackerMenu(ostream &out);
+
+bool addBook(istream &in, ostream &out);
+bool updateBook(istream &in, ostream &out);
+bool deleteBook(istream &in, ostream &out);
+bool viewCatalog(istream &in, ostream &out);
+bool viewCatalogForFunc(ostream &out);
+
+bool lendBook(istream &in, ostream &out);
+bool borrowBook(istream &in, ostream &out);
+bool viewLoans(istream &in, ostream &out);
+bool viewLoansForFunc(ostream &out);
+
+bool listWishList(istream &in, ostream &out);
+bool listWishListForFunc(ostream &out);
+bool addToWishList(istream &in, ostream &out);
+bool removeFromWishList(istream &in, ostream &out);
+
+bool listUnMarkedBooks(ostream &out);
+bool logProgress(istream &in, ostream &out);
+bool markAsRead(istream &in, ostream &out);
+bool viewHistory(istream &in, ostream &out);
 
 #endif

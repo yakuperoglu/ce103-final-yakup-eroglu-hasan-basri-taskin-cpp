@@ -93,9 +93,7 @@ lcov --rc lcov_branch_coverage=1 --remove coverage_linux.info 'tests/*' --output
 lcov --rc lcov_branch_coverage=1 --list coverage_linux.info
 
 echo "Generate Test Report"
-reportgenerator "-title:Librarysystem Library Unit Test Coverage Report (Linux)" "-reports:**/coverage_linux.info" "-targetdir:docs/coveragereportliblinux" "-reporttypes:Html" 
-
-"-sourcedirs:src/utility/src;src/utility/header;src/librarysystem/src;src/librarysystem/header;src/librarysystemapp/src;src/librarysystemapp/header;src/tests/utility;src/tests/librarysystem" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*" "-historydir:report_test_hist_linux"
+reportgenerator "-title:Librarysystem Library Unit Test Coverage Report (Linux)" "-reports:**/coverage_linux.info" "-targetdir:docs/coveragereportliblinux" "-reporttypes:Html" "-sourcedirs:src/utility/src;src/utility/header;src/librarysystem/src;src/librarysystem/header;src/librarysystemapp/src;src/librarysystemapp/header;src/tests/utility;src/tests/librarysystem" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*" "-historydir:report_test_hist_linux"
 reportgenerator "-reports:**/coverage_linux.info" "-targetdir:assets/codecoverageliblinux" "-reporttypes:Badges" "-sourcedirs:src/utility/src;src/utility/header;src/librarysystem/src;src/librarysystem/header;src/librarysystemapp/src;src/librarysystemapp/header;src/tests/utility;src/tests/librarysystem" "-filefilters:-*minkernel\*;-*gtest*;-*a\_work\*;-*gtest-*;-*gtest.cc;-*gtest.h;-*build*"
 
 echo "Copy the 'assets' folder and its contents to 'docs' recursively"

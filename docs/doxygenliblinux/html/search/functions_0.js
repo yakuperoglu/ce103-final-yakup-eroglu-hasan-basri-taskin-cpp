@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['addbook_55',['addBook',['../structBookSystem.html#ad74e6a1f7fe2b6c0ea8d96bc0cf02c5e',1,'BookSystem']]],
-  ['addtowishlist_56',['addToWishList',['../structWishList.html#a5233f14d72d13fbb88d69df73cb186b0',1,'WishList']]],
-  ['adninoperations_57',['adninOperations',['../librarysystem_8cpp.html#a73f5ab77c6860bf0c0e6a86b46cf1298',1,'librarysystem.cpp']]]
+  ['addbook_67',['addBook',['../librarysystem_8h.html#aa92a85119b2dd5eb202ac038b0c7ea0d',1,'addBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#aa92a85119b2dd5eb202ac038b0c7ea0d',1,'addBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['addtowishlist_68',['addToWishList',['../librarysystem_8h.html#a3f1f433eb1f95891d8964b582c5ad20c',1,'addToWishList(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a3f1f433eb1f95891d8964b582c5ad20c',1,'addToWishList(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]]
 ];

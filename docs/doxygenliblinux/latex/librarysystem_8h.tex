@@ -1,6 +1,6 @@
 \hypertarget{librarysystem_8h}{}\doxysection{src/librarysystem/header/librarysystem.h File Reference}
 \label{librarysystem_8h}\index{src/librarysystem/header/librarysystem.h@{src/librarysystem/header/librarysystem.h}}
-{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
 Include dependency graph for librarysystem.\+h\+:
 \nopagebreak
 \begin{figure}[H]
@@ -20,39 +20,323 @@ This graph shows which files directly or indirectly include this file\+:
 \doxysubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
+struct \mbox{\hyperlink{structBook}{Book}}
+\item 
 struct \mbox{\hyperlink{structUser}{User}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structUserAuthentication}{User\+Authentication}}
-\item 
-struct \mbox{\hyperlink{structBookSystem}{Book\+System}}
-\item 
-struct \mbox{\hyperlink{structLoanManagment}{Loan\+Managment}}
-\item 
-struct \mbox{\hyperlink{structWishList}{Wish\+List}}
-\item 
-struct \mbox{\hyperlink{structReadingTracker}{Reading\+Tracker}}
-\item 
-struct \mbox{\hyperlink{structdataBase}{data\+Base}}
+\#define \mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\+\_\+\+STRINGSIZE}}~100
 \end{DoxyCompactItemize}
 \doxysubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{librarysystem_8h_a8396c50bf544009fb2fc4907b00cbad3}{main\+Menu}} ()
+int \mbox{\hyperlink{librarysystem_8h_acc0b8aeaed79ae44252c3d43fbbf07e3}{get\+Input}} (istream \&in)
 \item 
-bool \mbox{\hyperlink{librarysystem_8h_adc53ae8c72d75f7fd7054169f0808f69}{user\+Operations}} ()
+bool \mbox{\hyperlink{librarysystem_8h_acf1f3c3851eba9e703d2b470da6a1501}{enter\+To\+Contunie}} (istream \&in, ostream \&out)
+\item 
+int \mbox{\hyperlink{librarysystem_8h_abee7de3388d76c9b3ce4dddf3b854607}{get\+New\+Id}} ()
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a3761b895725dc51420e51cc07ef81431}{handle\+Input\+Error}} (istream \&in, ostream \&out)
+\item 
+int \mbox{\hyperlink{librarysystem_8h_ab5206f1ba964127d1f7a2491c4254813}{main\+Menu}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a6ed82a2b108b314b4d0eefe0f0329ebe}{user\+Operations}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ad696b86625f9e1d9e694fec67aa1857f}{guest\+Operation}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a563a42979a8555ac3757d491125917d5}{register\+User}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_aca21e3deeeed6f2f5d9dbf335834d9b5}{login\+User}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_af6804503860b8380610b0c8872a74ec8}{book\+Cataloging\+Menu}} (istream \&input, ostream \&output)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a9b2e17d0aed5b004ccd8bab3070a707d}{loan\+Management\+Menu}} (istream \&input, ostream \&output)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a19a9109a09b42cf017e6ee2ea99d5fab}{wish\+List\+Menu}} (istream \&input, ostream \&output)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a93cf8c988c604099e5fe00934fe6cb81}{reading\+Tracker\+Menu}} (istream \&input, ostream \&output)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a7c2b1e66f7bef37d709532e26a033c85}{print\+Main\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ae5d187389456e7918630eae659fdfce1}{print\+Guest\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_aaa17afd03df57397f4b2d2de77084c98}{print\+User\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a9a39b32432895f6c60d85f6874c30927}{print\+Book\+Cataloging\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_acdd388e4094195b3d7cc608202f27d51}{print\+Loan\+Management\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}{print\+Wish\+List\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a5bf1f1645a2041b24a591d55cbbf698a}{print\+Reading\+Tracker\+Menu}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_aa92a85119b2dd5eb202ac038b0c7ea0d}{add\+Book}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_aecefdc778d8382b3426dfc141bffe5a4}{update\+Book}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ace4cde8d98cd38ced47ffb6e88fd57bd}{delete\+Book}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a7490eebe775301b73f9bbf392a17135c}{view\+Catalog}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a21614414231293fad16e4be048d4d070}{view\+Catalog\+For\+Func}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ae95926f6243b21d6a263a4811e4851d6}{lend\+Book}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a3321e215f888db53bbdef761f48df758}{borrow\+Book}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a9e9da7fdede214d4a689a982e7aa019f}{view\+Loans}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ad1580de9038b83a11f94a376802c25c5}{view\+Loans\+For\+Func}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ad231f70192ef9dc871dabfd19a91b004}{list\+Wish\+List}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_abbffaaeb8efb5e50fcb48936ea8c0038}{list\+Wish\+List\+For\+Func}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a3f1f433eb1f95891d8964b582c5ad20c}{add\+To\+Wish\+List}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a2bcdc5888afb3c04978aab087f4b0d49}{remove\+From\+Wish\+List}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_afc7cf16b78fadf9f4f7a7e17b1fd71ce}{list\+Un\+Marked\+Books}} (ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a58e3aaac795f12c90c7eb2dba8392adc}{log\+Progress}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_ab85fd7297091d985dab837b02fb52e65}{mark\+As\+Read}} (istream \&in, ostream \&out)
+\item 
+bool \mbox{\hyperlink{librarysystem_8h_a6bbc6ef7b3ec4012ccf75a74721a09dd}{view\+History}} (istream \&in, ostream \&out)
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}\label{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}} 
+\index{librarysystem.h@{librarysystem.h}!MAX\_STRINGSIZE@{MAX\_STRINGSIZE}}
+\index{MAX\_STRINGSIZE@{MAX\_STRINGSIZE}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_STRINGSIZE}{MAX\_STRINGSIZE}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+STRINGSIZE~100}
+
+
+
 \doxysubsection{Function Documentation}
-\mbox{\Hypertarget{librarysystem_8h_a8396c50bf544009fb2fc4907b00cbad3}\label{librarysystem_8h_a8396c50bf544009fb2fc4907b00cbad3}} 
+\mbox{\Hypertarget{librarysystem_8h_aa92a85119b2dd5eb202ac038b0c7ea0d}\label{librarysystem_8h_aa92a85119b2dd5eb202ac038b0c7ea0d}} 
+\index{librarysystem.h@{librarysystem.h}!addBook@{addBook}}
+\index{addBook@{addBook}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{addBook()}{addBook()}}
+{\footnotesize\ttfamily bool add\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a3f1f433eb1f95891d8964b582c5ad20c}\label{librarysystem_8h_a3f1f433eb1f95891d8964b582c5ad20c}} 
+\index{librarysystem.h@{librarysystem.h}!addToWishList@{addToWishList}}
+\index{addToWishList@{addToWishList}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{addToWishList()}{addToWishList()}}
+{\footnotesize\ttfamily bool add\+To\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_af6804503860b8380610b0c8872a74ec8}\label{librarysystem_8h_af6804503860b8380610b0c8872a74ec8}} 
+\index{librarysystem.h@{librarysystem.h}!bookCatalogingMenu@{bookCatalogingMenu}}
+\index{bookCatalogingMenu@{bookCatalogingMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{bookCatalogingMenu()}{bookCatalogingMenu()}}
+{\footnotesize\ttfamily bool book\+Cataloging\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{ostream \&}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a3321e215f888db53bbdef761f48df758}\label{librarysystem_8h_a3321e215f888db53bbdef761f48df758}} 
+\index{librarysystem.h@{librarysystem.h}!borrowBook@{borrowBook}}
+\index{borrowBook@{borrowBook}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{borrowBook()}{borrowBook()}}
+{\footnotesize\ttfamily bool borrow\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ace4cde8d98cd38ced47ffb6e88fd57bd}\label{librarysystem_8h_ace4cde8d98cd38ced47ffb6e88fd57bd}} 
+\index{librarysystem.h@{librarysystem.h}!deleteBook@{deleteBook}}
+\index{deleteBook@{deleteBook}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{deleteBook()}{deleteBook()}}
+{\footnotesize\ttfamily bool delete\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_acf1f3c3851eba9e703d2b470da6a1501}\label{librarysystem_8h_acf1f3c3851eba9e703d2b470da6a1501}} 
+\index{librarysystem.h@{librarysystem.h}!enterToContunie@{enterToContunie}}
+\index{enterToContunie@{enterToContunie}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{enterToContunie()}{enterToContunie()}}
+{\footnotesize\ttfamily bool enter\+To\+Contunie (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_acc0b8aeaed79ae44252c3d43fbbf07e3}\label{librarysystem_8h_acc0b8aeaed79ae44252c3d43fbbf07e3}} 
+\index{librarysystem.h@{librarysystem.h}!getInput@{getInput}}
+\index{getInput@{getInput}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{getInput()}{getInput()}}
+{\footnotesize\ttfamily int get\+Input (\begin{DoxyParamCaption}\item[{istream \&}]{in }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_abee7de3388d76c9b3ce4dddf3b854607}\label{librarysystem_8h_abee7de3388d76c9b3ce4dddf3b854607}} 
+\index{librarysystem.h@{librarysystem.h}!getNewId@{getNewId}}
+\index{getNewId@{getNewId}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{getNewId()}{getNewId()}}
+{\footnotesize\ttfamily int get\+New\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ad696b86625f9e1d9e694fec67aa1857f}\label{librarysystem_8h_ad696b86625f9e1d9e694fec67aa1857f}} 
+\index{librarysystem.h@{librarysystem.h}!guestOperation@{guestOperation}}
+\index{guestOperation@{guestOperation}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{guestOperation()}{guestOperation()}}
+{\footnotesize\ttfamily bool guest\+Operation (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a3761b895725dc51420e51cc07ef81431}\label{librarysystem_8h_a3761b895725dc51420e51cc07ef81431}} 
+\index{librarysystem.h@{librarysystem.h}!handleInputError@{handleInputError}}
+\index{handleInputError@{handleInputError}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{handleInputError()}{handleInputError()}}
+{\footnotesize\ttfamily bool handle\+Input\+Error (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ae95926f6243b21d6a263a4811e4851d6}\label{librarysystem_8h_ae95926f6243b21d6a263a4811e4851d6}} 
+\index{librarysystem.h@{librarysystem.h}!lendBook@{lendBook}}
+\index{lendBook@{lendBook}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{lendBook()}{lendBook()}}
+{\footnotesize\ttfamily bool lend\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_afc7cf16b78fadf9f4f7a7e17b1fd71ce}\label{librarysystem_8h_afc7cf16b78fadf9f4f7a7e17b1fd71ce}} 
+\index{librarysystem.h@{librarysystem.h}!listUnMarkedBooks@{listUnMarkedBooks}}
+\index{listUnMarkedBooks@{listUnMarkedBooks}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{listUnMarkedBooks()}{listUnMarkedBooks()}}
+{\footnotesize\ttfamily bool list\+Un\+Marked\+Books (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ad231f70192ef9dc871dabfd19a91b004}\label{librarysystem_8h_ad231f70192ef9dc871dabfd19a91b004}} 
+\index{librarysystem.h@{librarysystem.h}!listWishList@{listWishList}}
+\index{listWishList@{listWishList}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{listWishList()}{listWishList()}}
+{\footnotesize\ttfamily bool list\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_abbffaaeb8efb5e50fcb48936ea8c0038}\label{librarysystem_8h_abbffaaeb8efb5e50fcb48936ea8c0038}} 
+\index{librarysystem.h@{librarysystem.h}!listWishListForFunc@{listWishListForFunc}}
+\index{listWishListForFunc@{listWishListForFunc}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{listWishListForFunc()}{listWishListForFunc()}}
+{\footnotesize\ttfamily bool list\+Wish\+List\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a9b2e17d0aed5b004ccd8bab3070a707d}\label{librarysystem_8h_a9b2e17d0aed5b004ccd8bab3070a707d}} 
+\index{librarysystem.h@{librarysystem.h}!loanManagementMenu@{loanManagementMenu}}
+\index{loanManagementMenu@{loanManagementMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{loanManagementMenu()}{loanManagementMenu()}}
+{\footnotesize\ttfamily bool loan\+Management\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{ostream \&}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_aca21e3deeeed6f2f5d9dbf335834d9b5}\label{librarysystem_8h_aca21e3deeeed6f2f5d9dbf335834d9b5}} 
+\index{librarysystem.h@{librarysystem.h}!loginUser@{loginUser}}
+\index{loginUser@{loginUser}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{loginUser()}{loginUser()}}
+{\footnotesize\ttfamily bool login\+User (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a58e3aaac795f12c90c7eb2dba8392adc}\label{librarysystem_8h_a58e3aaac795f12c90c7eb2dba8392adc}} 
+\index{librarysystem.h@{librarysystem.h}!logProgress@{logProgress}}
+\index{logProgress@{logProgress}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{logProgress()}{logProgress()}}
+{\footnotesize\ttfamily bool log\+Progress (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ab5206f1ba964127d1f7a2491c4254813}\label{librarysystem_8h_ab5206f1ba964127d1f7a2491c4254813}} 
 \index{librarysystem.h@{librarysystem.h}!mainMenu@{mainMenu}}
 \index{mainMenu@{mainMenu}!librarysystem.h@{librarysystem.h}}
 \doxysubsubsection{\texorpdfstring{mainMenu()}{mainMenu()}}
-{\footnotesize\ttfamily int main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily int main\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
 
-\mbox{\Hypertarget{librarysystem_8h_adc53ae8c72d75f7fd7054169f0808f69}\label{librarysystem_8h_adc53ae8c72d75f7fd7054169f0808f69}} 
+\mbox{\Hypertarget{librarysystem_8h_ab85fd7297091d985dab837b02fb52e65}\label{librarysystem_8h_ab85fd7297091d985dab837b02fb52e65}} 
+\index{librarysystem.h@{librarysystem.h}!markAsRead@{markAsRead}}
+\index{markAsRead@{markAsRead}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{markAsRead()}{markAsRead()}}
+{\footnotesize\ttfamily bool mark\+As\+Read (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a9a39b32432895f6c60d85f6874c30927}\label{librarysystem_8h_a9a39b32432895f6c60d85f6874c30927}} 
+\index{librarysystem.h@{librarysystem.h}!printBookCatalogingMenu@{printBookCatalogingMenu}}
+\index{printBookCatalogingMenu@{printBookCatalogingMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printBookCatalogingMenu()}{printBookCatalogingMenu()}}
+{\footnotesize\ttfamily bool print\+Book\+Cataloging\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ae5d187389456e7918630eae659fdfce1}\label{librarysystem_8h_ae5d187389456e7918630eae659fdfce1}} 
+\index{librarysystem.h@{librarysystem.h}!printGuestMenu@{printGuestMenu}}
+\index{printGuestMenu@{printGuestMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printGuestMenu()}{printGuestMenu()}}
+{\footnotesize\ttfamily bool print\+Guest\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_acdd388e4094195b3d7cc608202f27d51}\label{librarysystem_8h_acdd388e4094195b3d7cc608202f27d51}} 
+\index{librarysystem.h@{librarysystem.h}!printLoanManagementMenu@{printLoanManagementMenu}}
+\index{printLoanManagementMenu@{printLoanManagementMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printLoanManagementMenu()}{printLoanManagementMenu()}}
+{\footnotesize\ttfamily bool print\+Loan\+Management\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a7c2b1e66f7bef37d709532e26a033c85}\label{librarysystem_8h_a7c2b1e66f7bef37d709532e26a033c85}} 
+\index{librarysystem.h@{librarysystem.h}!printMainMenu@{printMainMenu}}
+\index{printMainMenu@{printMainMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printMainMenu()}{printMainMenu()}}
+{\footnotesize\ttfamily bool print\+Main\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a5bf1f1645a2041b24a591d55cbbf698a}\label{librarysystem_8h_a5bf1f1645a2041b24a591d55cbbf698a}} 
+\index{librarysystem.h@{librarysystem.h}!printReadingTrackerMenu@{printReadingTrackerMenu}}
+\index{printReadingTrackerMenu@{printReadingTrackerMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printReadingTrackerMenu()}{printReadingTrackerMenu()}}
+{\footnotesize\ttfamily bool print\+Reading\+Tracker\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_aaa17afd03df57397f4b2d2de77084c98}\label{librarysystem_8h_aaa17afd03df57397f4b2d2de77084c98}} 
+\index{librarysystem.h@{librarysystem.h}!printUserMenu@{printUserMenu}}
+\index{printUserMenu@{printUserMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printUserMenu()}{printUserMenu()}}
+{\footnotesize\ttfamily bool print\+User\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}\label{librarysystem_8h_a77dcba8c2ea0a6fe0cb3a0753a89f8d4}} 
+\index{librarysystem.h@{librarysystem.h}!printWishListMenu@{printWishListMenu}}
+\index{printWishListMenu@{printWishListMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{printWishListMenu()}{printWishListMenu()}}
+{\footnotesize\ttfamily bool print\+Wish\+List\+Menu (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a93cf8c988c604099e5fe00934fe6cb81}\label{librarysystem_8h_a93cf8c988c604099e5fe00934fe6cb81}} 
+\index{librarysystem.h@{librarysystem.h}!readingTrackerMenu@{readingTrackerMenu}}
+\index{readingTrackerMenu@{readingTrackerMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{readingTrackerMenu()}{readingTrackerMenu()}}
+{\footnotesize\ttfamily bool reading\+Tracker\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{ostream \&}]{output }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a563a42979a8555ac3757d491125917d5}\label{librarysystem_8h_a563a42979a8555ac3757d491125917d5}} 
+\index{librarysystem.h@{librarysystem.h}!registerUser@{registerUser}}
+\index{registerUser@{registerUser}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{registerUser()}{registerUser()}}
+{\footnotesize\ttfamily bool register\+User (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a2bcdc5888afb3c04978aab087f4b0d49}\label{librarysystem_8h_a2bcdc5888afb3c04978aab087f4b0d49}} 
+\index{librarysystem.h@{librarysystem.h}!removeFromWishList@{removeFromWishList}}
+\index{removeFromWishList@{removeFromWishList}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{removeFromWishList()}{removeFromWishList()}}
+{\footnotesize\ttfamily bool remove\+From\+Wish\+List (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_aecefdc778d8382b3426dfc141bffe5a4}\label{librarysystem_8h_aecefdc778d8382b3426dfc141bffe5a4}} 
+\index{librarysystem.h@{librarysystem.h}!updateBook@{updateBook}}
+\index{updateBook@{updateBook}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{updateBook()}{updateBook()}}
+{\footnotesize\ttfamily bool update\+Book (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a6ed82a2b108b314b4d0eefe0f0329ebe}\label{librarysystem_8h_a6ed82a2b108b314b4d0eefe0f0329ebe}} 
 \index{librarysystem.h@{librarysystem.h}!userOperations@{userOperations}}
 \index{userOperations@{userOperations}!librarysystem.h@{librarysystem.h}}
 \doxysubsubsection{\texorpdfstring{userOperations()}{userOperations()}}
-{\footnotesize\ttfamily bool user\+Operations (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily bool user\+Operations (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a7490eebe775301b73f9bbf392a17135c}\label{librarysystem_8h_a7490eebe775301b73f9bbf392a17135c}} 
+\index{librarysystem.h@{librarysystem.h}!viewCatalog@{viewCatalog}}
+\index{viewCatalog@{viewCatalog}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{viewCatalog()}{viewCatalog()}}
+{\footnotesize\ttfamily bool view\+Catalog (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a21614414231293fad16e4be048d4d070}\label{librarysystem_8h_a21614414231293fad16e4be048d4d070}} 
+\index{librarysystem.h@{librarysystem.h}!viewCatalogForFunc@{viewCatalogForFunc}}
+\index{viewCatalogForFunc@{viewCatalogForFunc}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{viewCatalogForFunc()}{viewCatalogForFunc()}}
+{\footnotesize\ttfamily bool view\+Catalog\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a6bbc6ef7b3ec4012ccf75a74721a09dd}\label{librarysystem_8h_a6bbc6ef7b3ec4012ccf75a74721a09dd}} 
+\index{librarysystem.h@{librarysystem.h}!viewHistory@{viewHistory}}
+\index{viewHistory@{viewHistory}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{viewHistory()}{viewHistory()}}
+{\footnotesize\ttfamily bool view\+History (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a9e9da7fdede214d4a689a982e7aa019f}\label{librarysystem_8h_a9e9da7fdede214d4a689a982e7aa019f}} 
+\index{librarysystem.h@{librarysystem.h}!viewLoans@{viewLoans}}
+\index{viewLoans@{viewLoans}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{viewLoans()}{viewLoans()}}
+{\footnotesize\ttfamily bool view\+Loans (\begin{DoxyParamCaption}\item[{istream \&}]{in,  }\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_ad1580de9038b83a11f94a376802c25c5}\label{librarysystem_8h_ad1580de9038b83a11f94a376802c25c5}} 
+\index{librarysystem.h@{librarysystem.h}!viewLoansForFunc@{viewLoansForFunc}}
+\index{viewLoansForFunc@{viewLoansForFunc}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{viewLoansForFunc()}{viewLoansForFunc()}}
+{\footnotesize\ttfamily bool view\+Loans\+For\+Func (\begin{DoxyParamCaption}\item[{ostream \&}]{out }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{librarysystem_8h_a19a9109a09b42cf017e6ee2ea99d5fab}\label{librarysystem_8h_a19a9109a09b42cf017e6ee2ea99d5fab}} 
+\index{librarysystem.h@{librarysystem.h}!wishListMenu@{wishListMenu}}
+\index{wishListMenu@{wishListMenu}!librarysystem.h@{librarysystem.h}}
+\doxysubsubsection{\texorpdfstring{wishListMenu()}{wishListMenu()}}
+{\footnotesize\ttfamily bool wish\+List\+Menu (\begin{DoxyParamCaption}\item[{istream \&}]{input,  }\item[{ostream \&}]{output }\end{DoxyParamCaption})}
 

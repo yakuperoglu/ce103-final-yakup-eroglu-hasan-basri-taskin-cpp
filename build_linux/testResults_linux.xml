@@ -1,18 +1,1293 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuite name="(empty)"
-	tests="1"
-	failures="0"
+	tests="62"
+	failures="18"
 	disabled="0"
 	skipped="0"
 	hostname=""
-	time="0"
-	timestamp="2023-12-20T14:16:17"
+	time="1"
+	timestamp="2024-01-10T10:45:20"
 	>
-	<testcase name="utility_tests" classname="utility_tests" time="0.0136292" status="run">
-		<system-out>Running main() from /mnt/c/Users/Yakup/Documents/GitHub/For Final/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest_main.cc
+	<testcase name="utility_tests" classname="utility_tests" time="0.035553" status="run">
+		<system-out>Running main() from /mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/googletest/googletest/src/gtest_main.cc
 [==========] Running 0 tests from 0 test suites.
 [==========] 0 tests from 0 test suites ran. (0 ms total)
 [  PASSED  ] 0 tests.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.EnterToContinue_Success" classname="LibrarysystemTest.EnterToContinue_Success" time="0.038153" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.EnterToContinue_Success
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.EnterToContinue_Success
+[       OK ] LibrarysystemTest.EnterToContinue_Success (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.RegisterUserTest" classname="LibrarysystemTest.RegisterUserTest" time="0.0402439" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.RegisterUserTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.RegisterUserTest
+[       OK ] LibrarysystemTest.RegisterUserTest (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.OutputsErrorMessageAndReturnsFalse" classname="LibrarysystemTest.OutputsErrorMessageAndReturnsFalse" time="0.0415883" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.OutputsErrorMessageAndReturnsFalse
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.OutputsErrorMessageAndReturnsFalse
+[       OK ] LibrarysystemTest.OutputsErrorMessageAndReturnsFalse (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.GetInputTrueTest" classname="LibrarysystemTest.GetInputTrueTest" time="0.0404707" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.GetInputTrueTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.GetInputTrueTest
+[       OK ] LibrarysystemTest.GetInputTrueTest (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.GetInputFalseTest" classname="LibrarysystemTest.GetInputFalseTest" time="0.0400282" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.GetInputFalseTest
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.GetInputFalseTest
+[       OK ] LibrarysystemTest.GetInputFalseTest (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintGuestMenuOutputsCorrectly" classname="LibrarysystemTest.PrintGuestMenuOutputsCorrectly" time="0.0411308" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintGuestMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintGuestMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintGuestMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintMainMenuOutputsCorrectly" classname="LibrarysystemTest.PrintMainMenuOutputsCorrectly" time="0.0423842" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintMainMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintMainMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintMainMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintUserMenuOutputsCorrectly" classname="LibrarysystemTest.PrintUserMenuOutputsCorrectly" time="0.043639" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintUserMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintUserMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintUserMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintBookCatalogingMenuOutputsCorrectly" classname="LibrarysystemTest.PrintBookCatalogingMenuOutputsCorrectly" time="0.0449294" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintBookCatalogingMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintBookCatalogingMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintBookCatalogingMenuOutputsCorrectly (13 ms)
+[----------] 1 test from LibrarysystemTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintLoanManagementMenuOutputsCorrectly" classname="LibrarysystemTest.PrintLoanManagementMenuOutputsCorrectly" time="0.0431264" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintLoanManagementMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintLoanManagementMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintLoanManagementMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintWishListMenuOutputsCorrectly" classname="LibrarysystemTest.PrintWishListMenuOutputsCorrectly" time="0.0443117" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintWishListMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintWishListMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintWishListMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.PrintReadingTrackerMenuOutputsCorrectly" classname="LibrarysystemTest.PrintReadingTrackerMenuOutputsCorrectly" time="0.0453833" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.PrintReadingTrackerMenuOutputsCorrectly
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.PrintReadingTrackerMenuOutputsCorrectly
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.PrintReadingTrackerMenuOutputsCorrectly (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_AddBook" classname="LibrarysystemTest.BookCatalogingMenu_AddBook" time="0.0561622" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_AddBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_AddBook
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.BookCatalogingMenu_AddBook (36 ms)
+[----------] 1 test from LibrarysystemTest (36 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (36 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_DeleteBook" classname="LibrarysystemTest.BookCatalogingMenu_DeleteBook" time="0.0659867" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_DeleteBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_DeleteBook
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:164: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: You must enter a numeric ID.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the number of the book you want to delete: You must enter a numeric ID.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -7,5 +7,5 @@
+ 5. Return User Operations
+ Please enter a number to select:
+-1.2
++1.asd
+ 
+ Please enter the number of the book you want to delete: You must enter a numeric ID.
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBook (44 ms)
+[----------] 1 test from LibrarysystemTest (44 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (45 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBook
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse" classname="LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse" time="0.0718742" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:172: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: Book with ID 99 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the number of the book you want to delete: Book with ID 50 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -7,7 +7,7 @@
+ 5. Return User Operations
+ Please enter a number to select:
+-1.2
++1.asd
+ 
+-Please enter the number of the book you want to delete: Book with ID 99 not found.
++Please enter the number of the book you want to delete: Book with ID 50 not found.
+ welcome to Book Operations
+ 
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse (39 ms)
+[----------] 1 test from LibrarysystemTest (39 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (39 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfounfalse
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue" classname="LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue" time="0.0699181" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:180: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPlease enter the number of the book you want to delete: Book with ID 5 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the number of the book you want to delete: Book with ID 7 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -7,6 +7,7 @@
+ 5. Return User Operations
+ Please enter a number to select:
++1.asd
+ 
+-Please enter the number of the book you want to delete: Book with ID 5 not found.
++Please enter the number of the book you want to delete: Book with ID 7 not found.
+ welcome to Book Operations
+ 
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue (39 ms)
+[----------] 1 test from LibrarysystemTest (39 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (39 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookfoundtrue
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces" classname="LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces" time="0.0694719" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:188: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: Book deleted successfully.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the number of the book you want to delete: Book with ID 3 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -7,7 +7,7 @@
+ 5. Return User Operations
+ Please enter a number to select:
+-1.2
++1.asd
+ 
+-Please enter the number of the book you want to delete: Book deleted successfully.
++Please enter the number of the book you want to delete: Book with ID 3 not found.
+ welcome to Book Operations
+ 
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces (38 ms)
+[----------] 1 test from LibrarysystemTest (38 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (38 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_DeleteBookSucces
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_UpdateBook" classname="LibrarysystemTest.BookCatalogingMenu_UpdateBook" time="0.0669812" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_UpdateBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_UpdateBook
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:196: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPlease enter the number of the book you want to update: welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the number of the book you want to update: welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ +7,5 @@
+ 5. Return User Operations
+ Please enter a number to select:
++1.asd
+ 
+ Please enter the number of the book you want to update: welcome to Book Operations
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_UpdateBook (39 ms)
+[----------] 1 test from LibrarysystemTest (39 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (39 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_UpdateBook
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_ViewCatalog" classname="LibrarysystemTest.BookCatalogingMenu_ViewCatalog" time="0.0686927" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_ViewCatalog
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_ViewCatalog
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:204: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPress enter to return to Main Menuwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nInvalid input. Please enter a number.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPress enter to return to Main Menuwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nInvalid input. Please enter a number.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ +7,5 @@
+ 5. Return User Operations
+ Please enter a number to select:
++1.asd
+ 
+ Press enter to return to Main Menuwelcome to Book Operations
+
+
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_ViewCatalog (50 ms)
+[----------] 1 test from LibrarysystemTest (50 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (50 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.BookCatalogingMenu_ViewCatalog
+
+ 1 FAILED TEST
+libgcov profiling error:/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.gcda:Merge mismatch for function 499
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_InvalidOption" classname="LibrarysystemTest.BookCatalogingMenu_InvalidOption" time="0.0669287" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_InvalidOption
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_InvalidOption
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.BookCatalogingMenu_InvalidOption (23 ms)
+[----------] 1 test from LibrarysystemTest (23 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (23 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_Infail" classname="LibrarysystemTest.BookCatalogingMenu_Infail" time="0.0599225" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.BookCatalogingMenu_Infail (23 ms)
+[----------] 1 test from LibrarysystemTest (23 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (24 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.BookCatalogingMenu_ExitMenu" classname="LibrarysystemTest.BookCatalogingMenu_ExitMenu" time="0.0504215" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.BookCatalogingMenu_ExitMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.BookCatalogingMenu_ExitMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.BookCatalogingMenu_ExitMenu (13 ms)
+[----------] 1 test from LibrarysystemTest (13 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_LendBook" classname="LibrarysystemTest.LoanManagementMenu_LendBook" time="0.100906" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_LendBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_LendBook
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:233: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to return: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to return: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ +1,9 @@
++welcome to LoanManagement
++
++1. Lend Book
++2. Borrow Book
++3. View Loans
++4. Return User Operations
++Please enter a number to select:
+ welcome to LoanManagement
+ 
+@@ +15,12 @@
+ 
+ Please enter the ID of the book you want to return: welcome to LoanManagement
++
++1. Lend Book
++2. Borrow Book
++3. View Loans
++4. Return User Operations
++Please enter a number to select:
++Invalid option. Please try again.
++welcome to LoanManagement
+ 
+ 1. Lend Book
+
+
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_LendBook (73 ms)
+[----------] 1 test from LibrarysystemTest (73 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (74 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_LendBook
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_ViewLoans" classname="LibrarysystemTest.LoanManagementMenu_ViewLoans" time="0.0539169" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_ViewLoans
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_ViewLoans
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:241: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nLoaned Books:\n\nPress any key to return to Main Menuwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -6,7 +6,5 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-Loaned Books:
+-
+-Press any key to return to Main Menuwelcome to LoanManagement
++welcome to LoanManagement
+ 
+ 1. Lend Book
+
+
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_ViewLoans (35 ms)
+[----------] 1 test from LibrarysystemTest (35 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (35 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_ViewLoans
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_BorrowBook" classname="LibrarysystemTest.LoanManagementMenu_BorrowBook" time="0.108437" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_BorrowBook
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_BorrowBook
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:249: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to borrow: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n1.asd\n\nPlease enter the ID of the book you want to borrow: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ +6,5 @@
+ 4. Return User Operations
+ Please enter a number to select:
++1.asd
+ 
+ Please enter the ID of the book you want to borrow: welcome to LoanManagement
+
+
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_BorrowBook (50 ms)
+[----------] 1 test from LibrarysystemTest (50 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (50 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.LoanManagementMenu_BorrowBook
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_default" classname="LibrarysystemTest.LoanManagementMenu_default" time="0.0495405" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_default
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_default
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.LoanManagementMenu_default (24 ms)
+[----------] 1 test from LibrarysystemTest (24 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (25 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_Infail" classname="LibrarysystemTest.LoanManagementMenu_Infail" time="0.0884212" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.LoanManagementMenu_Infail (27 ms)
+[----------] 1 test from LibrarysystemTest (27 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (27 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.LoanManagementMenu_ExitMenu" classname="LibrarysystemTest.LoanManagementMenu_ExitMenu" time="0.057927" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.LoanManagementMenu_ExitMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.LoanManagementMenu_ExitMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.LoanManagementMenu_ExitMenu (19 ms)
+[----------] 1 test from LibrarysystemTest (19 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (23 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_listWishlist" classname="LibrarysystemTest.wishListMenu_listWishlist" time="0.0694214" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_listWishlist
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_listWishlist
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:278: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nWishlist:\n1 2\n1 2\n\nPress Enter to exit.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -6,9 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-Wishlist:
+-1 2
+-1 2
+-
+-Press Enter to exit.
+ welcome to WishlistManageMenu
+ 
+
+
+[  FAILED  ] LibrarysystemTest.wishListMenu_listWishlist (41 ms)
+[----------] 1 test from LibrarysystemTest (41 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (41 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.wishListMenu_listWishlist
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_addToWishlist" classname="LibrarysystemTest.wishListMenu_addToWishlist" time="0.075827" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_addToWishlist
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_addToWishlist
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:286: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nEnter the ID of the book to add to the wishlist: Book not found.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ +1,9 @@
++welcome to WishlistManageMenu
++
++1. View Wishlist
++2. Add To Wishlist
++3. Remove From Wishlist
++4. Return User Operations
++Please enter a number to select:
+ welcome to WishlistManageMenu
+ 
+@@ -6,5 +13,5 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-Enter the ID of the book to add to the wishlist: Book not found.
++Invalid option. Please try again.
+ welcome to WishlistManageMenu
+ 
+
+
+[  FAILED  ] LibrarysystemTest.wishListMenu_addToWishlist (58 ms)
+[----------] 1 test from LibrarysystemTest (58 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (58 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.wishListMenu_addToWishlist
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_RemoveFromWishlist" classname="LibrarysystemTest.wishListMenu_RemoveFromWishlist" time="0.0937144" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_RemoveFromWishlist
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_RemoveFromWishlist
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:294: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nWishlist:\nEnter the ID of the book to remove from the wishlist: Book not found.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -6,6 +6,12 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-Wishlist:
+-Enter the ID of the book to remove from the wishlist: Book not found.
++welcome to WishlistManageMenu
++
++1. View Wishlist
++2. Add To Wishlist
++3. Remove From Wishlist
++4. Return User Operations
++Please enter a number to select:
++Invalid option. Please try again.
+ welcome to WishlistManageMenu
+ 
+
+
+[  FAILED  ] LibrarysystemTest.wishListMenu_RemoveFromWishlist (50 ms)
+[----------] 1 test from LibrarysystemTest (50 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (50 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.wishListMenu_RemoveFromWishlist
+
+ 1 FAILED TEST
+libgcov profiling error:/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.gcda:Merge mismatch for function 93
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue" classname="LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue" time="0.103947" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:302: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nWishlist:\n1 2\n1 2\nEnter the ID of the book to remove from the wishlist: Book not found.\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\nwelcome to WishlistManageMenu\n\n1. View Wishlist\n2. Add To Wishlist\n3. Remove From Wishlist\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -6,8 +6,11 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-Wishlist:
+-1 2
+-1 2
+-Enter the ID of the book to remove from the wishlist: Book not found.
++welcome to WishlistManageMenu
++
++1. View Wishlist
++2. Add To Wishlist
++3. Remove From Wishlist
++4. Return User Operations
++Please enter a number to select:
+ welcome to WishlistManageMenu
+ 
+
+
+[  FAILED  ] LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue (70 ms)
+[----------] 1 test from LibrarysystemTest (70 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (71 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.wishListMenu_RemoveFromWishlistfoundtrue
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_InvalidInput" classname="LibrarysystemTest.wishListMenu_InvalidInput" time="0.0780126" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_InvalidInput
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_InvalidInput
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.wishListMenu_InvalidInput (23 ms)
+[----------] 1 test from LibrarysystemTest (23 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (23 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.wishListMenu_Infail" classname="LibrarysystemTest.wishListMenu_Infail" time="0.0628963" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.wishListMenu_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.wishListMenu_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.wishListMenu_Infail (24 ms)
+[----------] 1 test from LibrarysystemTest (24 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (25 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.readingTrackerMenu_logProgress" classname="LibrarysystemTest.readingTrackerMenu_logProgress" time="0.0724833" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.readingTrackerMenu_logProgress
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.readingTrackerMenu_logProgress
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:326: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "welcome to ReadingTrackerMenu\n\n1. Log Progress\n2. Mark As Read\n3. View History\n4. Return User Operations\nPlease enter a number to select:\nThere are no books.\n\nPress any key to continuewelcome to ReadingTrackerMenu\n\n1. Log Progress\n2. Mark As Read\n3. View History\n4. Return User Operations\nPlease enter a number to select:\n"
+  out.str()
+    Which is: "welcome to ReadingTrackerMenu\n\n1. Log Progress\n2. Mark As Read\n3. View History\n4. Return User Operations\nPlease enter a number to select:\n1. 2 (Unread)\n\nPress any key to continuewelcome to ReadingTrackerMenu\n\n1. Log Progress\n2. Mark As Read\n3. View History\n4. Return User Operations\nPlease enter a number to select:\n"
+With diff:
+@@ -6,5 +6,5 @@
+ 4. Return User Operations
+ Please enter a number to select:
+-There are no books.
++1. 2 (Unread)
+ 
+ Press any key to continuewelcome to ReadingTrackerMenu
+
+
+[  FAILED  ] LibrarysystemTest.readingTrackerMenu_logProgress (53 ms)
+[----------] 1 test from LibrarysystemTest (53 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (54 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.readingTrackerMenu_logProgress
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.readingTrackerMenu_MarkAsRead" classname="LibrarysystemTest.readingTrackerMenu_MarkAsRead" time="0.121045" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.readingTrackerMenu_MarkAsRead
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.readingTrackerMenu_MarkAsRead
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.readingTrackerMenu_MarkAsRead (73 ms)
+[----------] 1 test from LibrarysystemTest (73 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (73 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.readingTrackerMenu_ViewHistory" classname="LibrarysystemTest.readingTrackerMenu_ViewHistory" time="0.0764962" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.readingTrackerMenu_ViewHistory
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.readingTrackerMenu_ViewHistory
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.readingTrackerMenu_ViewHistory (49 ms)
+[----------] 1 test from LibrarysystemTest (49 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (49 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.readingTrackerMenu_Infail" classname="LibrarysystemTest.readingTrackerMenu_Infail" time="0.0750738" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.readingTrackerMenu_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.readingTrackerMenu_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.readingTrackerMenu_Infail (22 ms)
+[----------] 1 test from LibrarysystemTest (22 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (22 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_RegisterUser" classname="LibrarysystemTest.MainMenu_RegisterUser" time="0.0797781" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_RegisterUser
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_RegisterUser
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_RegisterUser (52 ms)
+[----------] 1 test from LibrarysystemTest (52 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (53 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_LoginUser" classname="LibrarysystemTest.MainMenu_LoginUser" time="0.115507" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_LoginUser
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_LoginUser
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_LoginUser (75 ms)
+[----------] 1 test from LibrarysystemTest (75 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (76 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_LoginUserFail" classname="LibrarysystemTest.MainMenu_LoginUserFail" time="0.0905998" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_LoginUserFail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_LoginUserFail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_LoginUserFail (61 ms)
+[----------] 1 test from LibrarysystemTest (61 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (61 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_GuestOperation" classname="LibrarysystemTest.MainMenu_GuestOperation" time="0.125573" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_GuestOperation
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_GuestOperation
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_GuestOperation (101 ms)
+[----------] 1 test from LibrarysystemTest (101 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (102 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_ExitProgram" classname="LibrarysystemTest.MainMenu_ExitProgram" time="0.0834346" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_ExitProgram
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_ExitProgram
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_ExitProgram (20 ms)
+[----------] 1 test from LibrarysystemTest (20 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (20 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_InvalidChoice" classname="LibrarysystemTest.MainMenu_InvalidChoice" time="0.0771476" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_InvalidChoice
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_InvalidChoice
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_InvalidChoice (44 ms)
+[----------] 1 test from LibrarysystemTest (44 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (44 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.MainMenu_Infail" classname="LibrarysystemTest.MainMenu_Infail" time="0.0888345" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.MainMenu_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.MainMenu_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.MainMenu_Infail (37 ms)
+[----------] 1 test from LibrarysystemTest (37 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (37 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.GuestOperation_ReturnToMainMenu" classname="LibrarysystemTest.GuestOperation_ReturnToMainMenu" time="0.0526219" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.GuestOperation_ReturnToMainMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.GuestOperation_ReturnToMainMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.GuestOperation_ReturnToMainMenu (14 ms)
+[----------] 1 test from LibrarysystemTest (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.GuestOperation_InvalidChoice" classname="LibrarysystemTest.GuestOperation_InvalidChoice" time="0.0741703" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.GuestOperation_InvalidChoice
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.GuestOperation_InvalidChoice
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.GuestOperation_InvalidChoice (26 ms)
+[----------] 1 test from LibrarysystemTest (26 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (26 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.GuestOperation_Infail" classname="LibrarysystemTest.GuestOperation_Infail" time="0.0667796" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.GuestOperation_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.GuestOperation_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.GuestOperation_Infail (26 ms)
+[----------] 1 test from LibrarysystemTest (26 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (26 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_BookCatalogingMenu" classname="LibrarysystemTest.UserOperations_BookCatalogingMenu" time="0.0858224" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_BookCatalogingMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_BookCatalogingMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_BookCatalogingMenu (64 ms)
+[----------] 1 test from LibrarysystemTest (64 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (64 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_LoanManagementMenu" classname="LibrarysystemTest.UserOperations_LoanManagementMenu" time="0.0918845" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_LoanManagementMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_LoanManagementMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_LoanManagementMenu (64 ms)
+[----------] 1 test from LibrarysystemTest (64 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (65 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_WishListMenu" classname="LibrarysystemTest.UserOperations_WishListMenu" time="0.0886491" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_WishListMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_WishListMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_WishListMenu (60 ms)
+[----------] 1 test from LibrarysystemTest (60 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (60 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_ReadingTrackerMenu" classname="LibrarysystemTest.UserOperations_ReadingTrackerMenu" time="0.0928279" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_ReadingTrackerMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_ReadingTrackerMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_ReadingTrackerMenu (61 ms)
+[----------] 1 test from LibrarysystemTest (61 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (62 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_Infail" classname="LibrarysystemTest.UserOperations_Infail" time="0.0813938" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_Infail
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_Infail
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_Infail (49 ms)
+[----------] 1 test from LibrarysystemTest (49 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (49 ms total)
+[  PASSED  ] 1 test.
+libgcov profiling error:/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/build_linux/src/tests/librarysystem/CMakeFiles/librarysystem_tests.dir/librarysystem_test.cpp.gcda:Merge mismatch for function 516
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.UserOperations_ReturnToMainMenu" classname="LibrarysystemTest.UserOperations_ReturnToMainMenu" time="0.0714012" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.UserOperations_ReturnToMainMenu
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.UserOperations_ReturnToMainMenu
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.UserOperations_ReturnToMainMenu (25 ms)
+[----------] 1 test from LibrarysystemTest (25 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (25 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.ViewLoansForFunc_Successful" classname="LibrarysystemTest.ViewLoansForFunc_Successful" time="0.0576804" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.ViewLoansForFunc_Successful
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.ViewLoansForFunc_Successful
+/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:480: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: ""
+  out.str()
+    Which is: "1.asd\n"
+
+[  FAILED  ] LibrarysystemTest.ViewLoansForFunc_Successful (0 ms)
+[----------] 1 test from LibrarysystemTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (0 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.ViewLoansForFunc_Successful
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.RemoveFromWishList_NotSuccessful" classname="LibrarysystemTest.RemoveFromWishList_NotSuccessful" time="0.0512946" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.RemoveFromWishList_NotSuccessful
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.RemoveFromWishList_NotSuccessful
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:487: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "Wishlist:\nEnter the ID of the book to remove from the wishlist: Book not found.\n"
+  out.str()
+    Which is: ""
+With diff:
+@@ -1,2 +1,1 @@
+-Wishlist:
+-Enter the ID of the book to remove from the wishlist: Book not found.\n
++""
+
+
+[  FAILED  ] LibrarysystemTest.RemoveFromWishList_NotSuccessful (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.RemoveFromWishList_NotSuccessful
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.RemoveFromWishList_BookNotFound" classname="LibrarysystemTest.RemoveFromWishList_BookNotFound" time="0.0455712" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.RemoveFromWishList_BookNotFound
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.RemoveFromWishList_BookNotFound
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:494: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "Wishlist:\nEnter the ID of the book to remove from the wishlist: Book not found.\n"
+  out.str()
+    Which is: ""
+With diff:
+@@ -1,2 +1,1 @@
+-Wishlist:
+-Enter the ID of the book to remove from the wishlist: Book not found.\n
++""
+
+
+[  FAILED  ] LibrarysystemTest.RemoveFromWishList_BookNotFound (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (13 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.RemoveFromWishList_BookNotFound
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.RemoveFromWishList_FileError" classname="LibrarysystemTest.RemoveFromWishList_FileError" time="0.051044" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.RemoveFromWishList_FileError
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.RemoveFromWishList_FileError
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.RemoveFromWishList_FileError (17 ms)
+[----------] 1 test from LibrarysystemTest (17 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (17 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.AddToWishList_NotSuccessful" classname="LibrarysystemTest.AddToWishList_NotSuccessful" time="0.0420437" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.AddToWishList_NotSuccessful
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.AddToWishList_NotSuccessful
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.AddToWishList_NotSuccessful (16 ms)
+[----------] 1 test from LibrarysystemTest (16 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (16 ms total)
+[  PASSED  ] 1 test.
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.AddToWishList_BookNotFound" classname="LibrarysystemTest.AddToWishList_BookNotFound" time="0.0452586" status="fail">
+		<failure message=""/>
+		<system-out>Note: Google Test filter = LibrarysystemTest.AddToWishList_BookNotFound
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.AddToWishList_BookNotFound
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:510: Failure
+Value of: addToWishList(in, out)
+  Actual: true
+Expected: false
+
+/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp:512: Failure
+Expected equality of these values:
+  expectedOutput
+    Which is: "Enter the ID of the book to add to the wishlist: Book not found.\n"
+  out.str()
+    Which is: "1.2\nEnter the ID of the book to add to the wishlist: Book added to the wishlist.\n"
+With diff:
+@@ -1,1 +1,2 @@
+-Enter the ID of the book to add to the wishlist: Book not found.\n
++1.2
++Enter the ID of the book to add to the wishlist: Book added to the wishlist.\n
+
+
+[  FAILED  ] LibrarysystemTest.AddToWishList_BookNotFound (14 ms)
+[----------] 1 test from LibrarysystemTest (14 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (14 ms total)
+[  PASSED  ] 0 tests.
+[  FAILED  ] 1 test, listed below:
+[  FAILED  ] LibrarysystemTest.AddToWishList_BookNotFound
+
+ 1 FAILED TEST
+</system-out>
+	</testcase>
+	<testcase name="LibrarysystemTest.AddToWishList_FileError" classname="LibrarysystemTest.AddToWishList_FileError" time="0.0393344" status="run">
+		<system-out>Note: Google Test filter = LibrarysystemTest.AddToWishList_FileError
+[==========] Running 1 test from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 1 test from LibrarysystemTest
+[ RUN      ] LibrarysystemTest.AddToWishList_FileError
+[NON-XML-CHAR-0x1B][H[NON-XML-CHAR-0x1B][2J[NON-XML-CHAR-0x1B][3J[       OK ] LibrarysystemTest.AddToWishList_FileError (12 ms)
+[----------] 1 test from LibrarysystemTest (12 ms total)
+
+[----------] Global test environment tear-down
+[==========] 1 test from 1 test suite ran. (12 ms total)
+[  PASSED  ] 1 test.
 </system-out>
 	</testcase>
 </testsuite>

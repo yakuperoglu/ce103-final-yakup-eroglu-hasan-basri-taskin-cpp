@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.1" xml:lang="en-US">
+  <compounddef id="structBook" kind="struct" language="C++" prot="public">
+    <compoundname>Book</compoundname>
+    <includes refid="librarysystem_8h" local="no">librarysystem.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structBook_1a11f9b412838b3bf70af317313e020420" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Book::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="9" column="7" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="9" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBook_1ade1aac8a3f7112df7253ad91fee2778f" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Book::name[MAX_STRINGSIZE]</definition>
+        <argsstring>[MAX_STRINGSIZE]</argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="10" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structBook_1abfb77437720af14838bda0d082de13d0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Book::isMarked</definition>
+        <argsstring></argsstring>
+        <name>isMarked</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/librarysystem/header/librarysystem.h" line="11" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>Book</label>
+        <link refid="structBook"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/librarysystem/header/librarysystem.h" line="8" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="8" bodyend="12"/>
+    <listofallmembers>
+      <member refid="structBook_1a11f9b412838b3bf70af317313e020420" prot="public" virt="non-virtual"><scope>Book</scope><name>id</name></member>
+      <member refid="structBook_1abfb77437720af14838bda0d082de13d0" prot="public" virt="non-virtual"><scope>Book</scope><name>isMarked</name></member>
+      <member refid="structBook_1ade1aac8a3f7112df7253ad91fee2778f" prot="public" virt="non-virtual"><scope>Book</scope><name>name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

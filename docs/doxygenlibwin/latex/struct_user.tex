@@ -2,6 +2,11 @@
 \hypertarget{struct_user}{}\label{struct_user}\index{User@{User}}
 
 
+Structure representing a user in the library system.  
+
+
+
+
 {\ttfamily \#include $<$librarysystem.\+h$>$}
 
 
@@ -10,41 +15,36 @@ Collaboration diagram for User\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=135pt]{struct_user__coll__graph}
+\includegraphics[width=139pt]{struct_user__coll__graph}
 \end{center}
 \end{figure}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-std\+::string \mbox{\hyperlink{struct_user_ac35b7c63228119cb91acdbd7ed32b8cb}{email}}
+char \mbox{\hyperlink{struct_user_ae11634917cb01aadd3d516f539ac77de}{email}} \mbox{[}\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\+\_\+\+STRINGSIZE}}\mbox{]}
 \item 
-std\+::string \mbox{\hyperlink{struct_user_a085d8d69282b6298964eab8351584536}{name}}
-\item 
-std\+::string \mbox{\hyperlink{struct_user_a2ed359f3148bd0b95ec8d964c278dbbd}{surname}}
+char \mbox{\hyperlink{struct_user_a0f3b24543c494393db204c349a79ba2a}{password}} \mbox{[}\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\+\_\+\+STRINGSIZE}}\mbox{]}
 \end{DoxyCompactItemize}
 
 
+\doxysubsection{Detailed Description}
+Structure representing a user in the library system. 
+
 \doxysubsection{Member Data Documentation}
-\Hypertarget{struct_user_ac35b7c63228119cb91acdbd7ed32b8cb}\label{struct_user_ac35b7c63228119cb91acdbd7ed32b8cb} 
+\Hypertarget{struct_user_ae11634917cb01aadd3d516f539ac77de}\label{struct_user_ae11634917cb01aadd3d516f539ac77de} 
 \index{User@{User}!email@{email}}
 \index{email@{email}!User@{User}}
 \doxysubsubsection{\texorpdfstring{email}{email}}
-{\footnotesize\ttfamily std\+::string User\+::email}
+{\footnotesize\ttfamily char User\+::email\mbox{[}\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\+\_\+\+STRINGSIZE}}\mbox{]}}
 
-\Hypertarget{struct_user_a085d8d69282b6298964eab8351584536}\label{struct_user_a085d8d69282b6298964eab8351584536} 
-\index{User@{User}!name@{name}}
-\index{name@{name}!User@{User}}
-\doxysubsubsection{\texorpdfstring{name}{name}}
-{\footnotesize\ttfamily std\+::string User\+::name}
+Email of the user. \Hypertarget{struct_user_a0f3b24543c494393db204c349a79ba2a}\label{struct_user_a0f3b24543c494393db204c349a79ba2a} 
+\index{User@{User}!password@{password}}
+\index{password@{password}!User@{User}}
+\doxysubsubsection{\texorpdfstring{password}{password}}
+{\footnotesize\ttfamily char User\+::password\mbox{[}\mbox{\hyperlink{librarysystem_8h_a81e98630adbd3ec882814bc99dbf0465}{MAX\+\_\+\+STRINGSIZE}}\mbox{]}}
 
-\Hypertarget{struct_user_a2ed359f3148bd0b95ec8d964c278dbbd}\label{struct_user_a2ed359f3148bd0b95ec8d964c278dbbd} 
-\index{User@{User}!surname@{surname}}
-\index{surname@{surname}!User@{User}}
-\doxysubsubsection{\texorpdfstring{surname}{surname}}
-{\footnotesize\ttfamily std\+::string User\+::surname}
-
-
+Password of the user. 
 
 The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 
- Final/ce103-\/final-\/yakup-\/eroglu-\/hasan-\/basri-\/taskin-\/cpp/src/librarysystem/header/\mbox{\hyperlink{librarysystem_8h}{librarysystem.\+h}}\end{DoxyCompactItemize}
+src/librarysystem/header/\mbox{\hyperlink{librarysystem_8h}{librarysystem.\+h}}\end{DoxyCompactItemize}
