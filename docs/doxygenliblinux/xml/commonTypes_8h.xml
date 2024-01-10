@@ -3,10 +3,12 @@
   <compounddef id="commonTypes_8h" kind="file" language="C++">
     <compoundname>commonTypes.h</compoundname>
     <briefdescription>
+<para>Header file for the utility. this file is completely empty. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="src/utility/header/commonTypes.h"/>
   </compounddef>

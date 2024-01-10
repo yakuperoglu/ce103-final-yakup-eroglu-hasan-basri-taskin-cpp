@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bookcatalogingmenu_69',['bookCatalogingMenu',['../librarysystem_8h.html#af6804503860b8380610b0c8872a74ec8',1,'bookCatalogingMenu(istream &amp;input, ostream &amp;output):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a8d6efefeed7ce21164b19f693636fd53',1,'bookCatalogingMenu(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]],
-  ['borrowbook_70',['borrowBook',['../librarysystem_8h.html#a3321e215f888db53bbdef761f48df758',1,'borrowBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a3321e215f888db53bbdef761f48df758',1,'borrowBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]]
+  ['bookcatalogingmenu_71',['bookCatalogingMenu',['../librarysystem_8h.html#af6804503860b8380610b0c8872a74ec8',1,'bookCatalogingMenu(istream &amp;input, ostream &amp;output):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a8d6efefeed7ce21164b19f693636fd53',1,'bookCatalogingMenu(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]],
+  ['borrowbook_72',['borrowBook',['../librarysystem_8h.html#a3321e215f888db53bbdef761f48df758',1,'borrowBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp'],['../librarysystem_8cpp.html#a3321e215f888db53bbdef761f48df758',1,'borrowBook(istream &amp;in, ostream &amp;out):&#160;librarysystem.cpp']]]
 ];
