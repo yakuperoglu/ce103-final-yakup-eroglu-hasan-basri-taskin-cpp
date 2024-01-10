@@ -44,10 +44,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Maximum size for character arrays in the structures. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="3" column="17" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="3" bodyend="-1"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="13" column="9" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -61,12 +62,39 @@
           <declname>in</declname>
         </param>
         <briefdescription>
+<para>Gets input from the user. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Integer input obtained from the user.</para>
+</simplesect>
+Gets input from the user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The integer input obtained from the user.</para>
+</simplesect>
+This function prompts the user to enter an integer through the specified input stream. It retrieves the user&apos;s input and returns the entered integer. <programlisting><codeline><highlight class="normal">int<sp/>userChoice<sp/>=<sp/>getInput(cin);</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Now<sp/>&apos;userChoice&apos;<sp/>contains<sp/>the<sp/>integer<sp/>entered<sp/>by<sp/>the<sp/>user</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="19" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="35" bodyend="39" declfile="src/librarysystem/header/librarysystem.h" declline="19" declcolumn="5"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="48" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="91" bodyend="95" declfile="src/librarysystem/header/librarysystem.h" declline="48" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1acf1f3c3851eba9e703d2b470da6a1501" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -82,12 +110,56 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Pauses execution and waits for the user to press any key to continue. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after the user presses a key.</para>
+</simplesect>
+Pauses execution and waits for the user to press any key to continue.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true when the user presses any key, otherwise returns false.</para>
+</simplesect>
+This function waits for a key press from the user, allowing the program to pause. <programlisting><codeline><highlight class="normal">if<sp/>(enterToContunie(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Continue<sp/>with<sp/>the<sp/>program<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="21" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="21" bodyend="26" declfile="src/librarysystem/header/librarysystem.h" declline="21" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="57" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="48" bodyend="53" declfile="src/librarysystem/header/librarysystem.h" declline="57" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1abee7de3388d76c9b3ce4dddf3b854607" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -95,12 +167,21 @@
         <argsstring>()</argsstring>
         <name>getNewId</name>
         <briefdescription>
+<para>Generates a new unique ID for books based on existing IDs. </para>
         </briefdescription>
         <detaileddescription>
+<para><simplesect kind="return"><para>New unique ID for books.</para>
+</simplesect>
+Generates a new unique ID for books based on existing IDs.</para>
+<para><simplesect kind="return"><para>Returns an integer representing a new unique identifier for books.</para>
+</simplesect>
+This function reads the existing book IDs from the &quot;Books.bin&quot; file, finds the highest ID, and returns a new unique ID for a book by incrementing the highest existing ID. If the file does not exist, it returns 1 as the starting ID. <programlisting><codeline><highlight class="normal">int<sp/>newBookId<sp/>=<sp/>getNewId();</highlight></codeline>
+<codeline><highlight class="normal">//<sp/>Use<sp/>&apos;newBookId&apos;<sp/>as<sp/>the<sp/>ID<sp/>for<sp/>a<sp/>new<sp/>book</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="23" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="306" bodyend="317" declfile="src/librarysystem/header/librarysystem.h" declline="23" declcolumn="5"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="64" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="591" bodyend="603" declfile="src/librarysystem/header/librarysystem.h" declline="64" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a3761b895725dc51420e51cc07ef81431" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,12 +197,55 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Handles input errors by clearing the input stream and displaying an error message. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false to indicate an input error.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false after clearing input and displaying an error message.</para>
+</simplesect>
+This function is designed to handle input errors, specifically when the user enters letters instead of numbers. It clears the input stream, ignores any remaining characters up to the newline, and prints an error message to the output stream. <programlisting><codeline><highlight class="normal">if<sp/>(!handleInputError(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Handle<sp/>the<sp/>error<sp/>or<sp/>prompt<sp/>the<sp/>user<sp/>for<sp/>input<sp/>again</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="25" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="28" bodyend="33" declfile="src/librarysystem/header/librarysystem.h" declline="25" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="73" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="71" bodyend="76" declfile="src/librarysystem/header/librarysystem.h" declline="73" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ab5206f1ba964127d1f7a2491c4254813" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -137,12 +261,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the main menu and redirects the user based on their choice. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to exit the program.</para>
+</simplesect>
+Displays the main menu and redirects the user based on their choice.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to exit the program.</para>
+</simplesect>
+This function presents the main menu and redirects the user to specific actions (login, register, guest operations, exit program) based on their choice. It returns 0 when the user chooses to exit the program. <programlisting><codeline><highlight class="normal">if<sp/>(mainMenu(cin,<sp/>cout)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>exited<sp/>the<sp/>program</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="27" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="861" bodyend="900" declfile="src/librarysystem/header/librarysystem.h" declline="27" declcolumn="5"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="82" column="5" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1483" bodyend="1522" declfile="src/librarysystem/header/librarysystem.h" declline="82" declcolumn="5"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a6ed82a2b108b314b4d0eefe0f0329ebe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -158,12 +328,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Redirects the user to specific operations based on their choice in the user menu. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to return to the main menu.</para>
+</simplesect>
+Redirects the user to specific operations based on their choice in the user menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to return to the main menu.</para>
+</simplesect>
+This function presents a user menu and redirects the user to specific operations (book cataloging, loan management, wishlist management, reading tracker) based on their choice. It returns 0 when the user chooses to return to the main menu. <programlisting><codeline><highlight class="normal">if<sp/>(userOperations(cin,<sp/>cout)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>returned<sp/>to<sp/>the<sp/>main<sp/>menu</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="29" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="791" bodyend="829" declfile="src/librarysystem/header/librarysystem.h" declline="29" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="91" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1378" bodyend="1416" declfile="src/librarysystem/header/librarysystem.h" declline="91" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ad696b86625f9e1d9e694fec67aa1857f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -179,12 +395,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Redirects a guest user to specific operations based on their choice in the guest menu. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false when the guest chooses to exit.</para>
+</simplesect>
+Redirects a guest user to specific operations based on their choice in the guest menu.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false when the guest chooses to exit.</para>
+</simplesect>
+This function presents a guest menu and redirects the guest to specific operations (viewing catalog). It returns false when the guest chooses to exit. <programlisting><codeline><highlight class="normal">if<sp/>(guestOperation(cin,<sp/>cout)<sp/>==<sp/>false)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Guest<sp/>exited<sp/>the<sp/>system</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="31" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="831" bodyend="859" declfile="src/librarysystem/header/librarysystem.h" declline="31" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="100" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1435" bodyend="1463" declfile="src/librarysystem/header/librarysystem.h" declline="100" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a563a42979a8555ac3757d491125917d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -200,12 +462,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Registers a new user in the library system. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if user registration is successful.</para>
+</simplesect>
+Registers a new user in the library system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the user registration is successful, false otherwise.</para>
+</simplesect>
+This function prompts the user to enter their email and password, creates a new <ref refid="structUser" kindref="compound">User</ref> object, and stores the user information in a binary file named &quot;users.bin&quot;. <programlisting><codeline><highlight class="normal">if<sp/>(registerUser(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>registered<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>for<sp/>user<sp/>registration<sp/>failure</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="33" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="41" bodyend="57" declfile="src/librarysystem/header/librarysystem.h" declline="33" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="109" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="114" bodyend="129" declfile="src/librarysystem/header/librarysystem.h" declline="109" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1aca21e3deeeed6f2f5d9dbf335834d9b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -221,12 +529,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Logs in a user to the library system. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if login is successful.</para>
+</simplesect>
+Logs in a user to the library system.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the login is successful, false otherwise.</para>
+</simplesect>
+This function prompts the user to enter their email and password, reads user information from a binary file named &quot;users.bin,&quot; and checks if the provided credentials match any registered user. If a match is found, the user is logged in, and user operations are performed. <programlisting><codeline><highlight class="normal">if<sp/>(loginUser(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>logged<sp/>in<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>for<sp/>login<sp/>failure</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="35" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="59" bodyend="85" declfile="src/librarysystem/header/librarysystem.h" declline="35" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="118" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="149" bodyend="175" declfile="src/librarysystem/header/librarysystem.h" declline="118" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1af6804503860b8380610b0c8872a74ec8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -236,18 +590,66 @@
         <param>
           <type>istream &amp;</type>
           <declname>input</declname>
+          <defname>in</defname>
         </param>
         <param>
           <type>ostream &amp;</type>
           <declname>output</declname>
+          <defname>out</defname>
         </param>
         <briefdescription>
+<para>Handles the book cataloging menu, allowing users to perform operations on books. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true when the user chooses to return to the main menu.</para>
+</simplesect>
+Handles the book cataloging menu, allowing users to perform operations on books.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true when the user chooses to exit the book cataloging menu.</para>
+</simplesect>
+This function continuously displays a menu for book cataloging operations, reads the user&apos;s choice, and performs the corresponding action. The menu includes options to add, delete, update, or view the catalog. <programlisting><codeline><highlight class="normal">if<sp/>(bookCatalogingMenu(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>chose<sp/>to<sp/>exit<sp/>the<sp/>book<sp/>cataloging<sp/>menu</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Additional<sp/>logic<sp/>or<sp/>error<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="37" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="87" bodyend="124" declfile="src/librarysystem/header/librarysystem.h" declline="37" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="127" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="194" bodyend="231" declfile="src/librarysystem/header/librarysystem.h" declline="127" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a9b2e17d0aed5b004ccd8bab3070a707d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -257,18 +659,66 @@
         <param>
           <type>istream &amp;</type>
           <declname>input</declname>
+          <defname>in</defname>
         </param>
         <param>
           <type>ostream &amp;</type>
           <declname>output</declname>
+          <defname>out</defname>
         </param>
         <briefdescription>
+<para>Handles the loan management menu, allowing users to lend and borrow books. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true when the user chooses to return to the main menu.</para>
+</simplesect>
+Handles the loan management menu, allowing users to lend and borrow books.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true when the user chooses to exit the loan management menu.</para>
+</simplesect>
+This function continuously displays a menu for loan management operations, reads the user&apos;s choice, and performs the corresponding action. The menu includes options to lend, borrow, or view loans. <programlisting><codeline><highlight class="normal">if<sp/>(loanManagementMenu(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>chose<sp/>to<sp/>exit<sp/>the<sp/>loan<sp/>management<sp/>menu</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Additional<sp/>logic<sp/>or<sp/>error<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="38" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="126" bodyend="158" declfile="src/librarysystem/header/librarysystem.h" declline="38" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="136" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="250" bodyend="282" declfile="src/librarysystem/header/librarysystem.h" declline="136" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a19a9109a09b42cf017e6ee2ea99d5fab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -278,18 +728,66 @@
         <param>
           <type>istream &amp;</type>
           <declname>input</declname>
+          <defname>in</defname>
         </param>
         <param>
           <type>ostream &amp;</type>
           <declname>output</declname>
+          <defname>out</defname>
         </param>
         <briefdescription>
+<para>Handles the wishlist menu, allowing users to manage their book wishlists. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false when the user chooses to exit the wishlist menu.</para>
+</simplesect>
+Handles the wishlist menu, allowing users to manage their book wishlists.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns false when the user chooses to exit the wishlist menu.</para>
+</simplesect>
+This function continuously displays a menu for wishlist operations, reads the user&apos;s choice, and performs the corresponding action. The menu includes options to list, add to, or remove from the wishlist. <programlisting><codeline><highlight class="normal">if<sp/>(!wishListMenu(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>chose<sp/>to<sp/>exit<sp/>the<sp/>wishlist<sp/>menu</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Additional<sp/>logic<sp/>or<sp/>error<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="39" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="160" bodyend="193" declfile="src/librarysystem/header/librarysystem.h" declline="39" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="145" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="301" bodyend="334" declfile="src/librarysystem/header/librarysystem.h" declline="145" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a93cf8c988c604099e5fe00934fe6cb81" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -299,18 +797,66 @@
         <param>
           <type>istream &amp;</type>
           <declname>input</declname>
+          <defname>in</defname>
         </param>
         <param>
           <type>ostream &amp;</type>
           <declname>output</declname>
+          <defname>out</defname>
         </param>
         <briefdescription>
+<para>Handles the reading tracker menu, allowing users to track their reading progress. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>output</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to return to the main menu.</para>
+</simplesect>
+Handles the reading tracker menu, allowing users to track their reading progress.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns 0 when the user chooses to exit the reading tracker menu.</para>
+</simplesect>
+This function continuously displays a menu for reading tracker operations, reads the user&apos;s choice, and performs the corresponding action. The menu includes options to log progress, mark as read, or view reading history. <programlisting><codeline><highlight class="normal">if<sp/>(readingTrackerMenu(cin,<sp/>cout)<sp/>==<sp/>0)<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>chose<sp/>to<sp/>exit<sp/>the<sp/>reading<sp/>tracker<sp/>menu</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Additional<sp/>logic<sp/>or<sp/>error<sp/>handling</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="40" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="195" bodyend="227" declfile="src/librarysystem/header/librarysystem.h" declline="40" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="154" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="354" bodyend="386" declfile="src/librarysystem/header/librarysystem.h" declline="154" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a7c2b1e66f7bef37d709532e26a033c85" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -322,12 +868,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the main menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the main menu.</para>
+</simplesect>
+Prints the main menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the main menu.</para>
+</simplesect>
+This function clears the screen and displays the main menu options, prompting the user to select an option by entering a number. The options include login, register, guest mode, and exit. <programlisting><codeline><highlight class="normal">if<sp/>(printMainMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Main<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="42" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="238" bodyend="247" declfile="src/librarysystem/header/librarysystem.h" declline="42" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="162" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="430" bodyend="439" declfile="src/librarysystem/header/librarysystem.h" declline="162" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ae5d187389456e7918630eae659fdfce1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -339,12 +915,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the guest menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the guest menu.</para>
+</simplesect>
+Prints the guest menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the menu.</para>
+</simplesect>
+This function clears the screen and prints the guest menu options, prompting the user to select an operation (view catalog or return to the main menu). It returns true after printing the menu. <programlisting><codeline><highlight class="normal">if<sp/>(printGuestMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Guest<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="43" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="229" bodyend="236" declfile="src/librarysystem/header/librarysystem.h" declline="43" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="170" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="405" bodyend="412" declfile="src/librarysystem/header/librarysystem.h" declline="170" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1aaa17afd03df57397f4b2d2de77084c98" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -356,12 +962,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the user menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the user menu.</para>
+</simplesect>
+Prints the user menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the user operations menu.</para>
+</simplesect>
+This function clears the screen and displays options for user operations, such as book cataloging, loan management, wishlist management, reading tracker, and returning to the main menu. <programlisting><codeline><highlight class="normal">if<sp/>(printUserMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>User<sp/>operations<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="44" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="249" bodyend="259" declfile="src/librarysystem/header/librarysystem.h" declline="44" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="178" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="457" bodyend="467" declfile="src/librarysystem/header/librarysystem.h" declline="178" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a9a39b32432895f6c60d85f6874c30927" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -373,12 +1009,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the book cataloging menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the book cataloging menu.</para>
+</simplesect>
+Prints the book cataloging menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the book cataloging menu.</para>
+</simplesect>
+This function clears the screen and displays options for book cataloging operations, such as adding a book, deleting a book, updating a book, viewing the catalog, and returning to user operations. <programlisting><codeline><highlight class="normal">if<sp/>(printBookCatalogingMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>cataloging<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="45" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="261" bodyend="271" declfile="src/librarysystem/header/librarysystem.h" declline="45" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="186" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="485" bodyend="495" declfile="src/librarysystem/header/librarysystem.h" declline="186" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1acdd388e4094195b3d7cc608202f27d51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -390,12 +1056,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the loan management menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the loan management menu.</para>
+</simplesect>
+Prints the loan management menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the loan management menu.</para>
+</simplesect>
+This function clears the screen and displays options for loan management operations, such as lending a book, borrowing a book, viewing loans, and returning to user operations. <programlisting><codeline><highlight class="normal">if<sp/>(printLoanManagementMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Loan<sp/>management<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="46" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="273" bodyend="282" declfile="src/librarysystem/header/librarysystem.h" declline="46" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="194" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="513" bodyend="522" declfile="src/librarysystem/header/librarysystem.h" declline="194" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a77dcba8c2ea0a6fe0cb3a0753a89f8d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -407,12 +1103,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the wishlist menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the wishlist menu.</para>
+</simplesect>
+Prints the wishlist menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the wishlist management menu.</para>
+</simplesect>
+This function clears the screen and displays options for wishlist management operations, such as viewing the wishlist, adding to the wishlist, removing from the wishlist, and returning to user operations. <programlisting><codeline><highlight class="normal">if<sp/>(printWishListMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Wishlist<sp/>management<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="47" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="284" bodyend="293" declfile="src/librarysystem/header/librarysystem.h" declline="47" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="202" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="540" bodyend="549" declfile="src/librarysystem/header/librarysystem.h" declline="202" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a5bf1f1645a2041b24a591d55cbbf698a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -424,12 +1150,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Prints the reading tracker menu screen. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true after printing the reading tracker menu.</para>
+</simplesect>
+Prints the reading tracker menu screen.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Always returns true after printing the reading tracker menu.</para>
+</simplesect>
+This function clears the screen and displays options for reading tracker operations, such as logging progress, marking as read, viewing history, and returning to user operations. <programlisting><codeline><highlight class="normal">if<sp/>(printReadingTrackerMenu(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Reading<sp/>tracker<sp/>menu<sp/>printed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="48" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="295" bodyend="304" declfile="src/librarysystem/header/librarysystem.h" declline="48" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="210" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="567" bodyend="576" declfile="src/librarysystem/header/librarysystem.h" declline="210" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1aa92a85119b2dd5eb202ac038b0c7ea0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -445,12 +1201,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Adds a new book to the library catalog. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is added successfully.</para>
+</simplesect>
+Adds a new book to the library catalog.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is added successfully, false otherwise.</para>
+</simplesect>
+This function prompts the user to enter the name of the book, assigns a new unique ID to the book, and adds the book to the &quot;Books.bin&quot; file. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(addBook(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>added<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="50" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="319" bodyend="339" declfile="src/librarysystem/header/librarysystem.h" declline="50" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="219" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="622" bodyend="641" declfile="src/librarysystem/header/librarysystem.h" declline="219" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1aecefdc778d8382b3426dfc141bffe5a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -466,12 +1268,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Updates the information of an existing book in the library catalog. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is updated successfully.</para>
+</simplesect>
+Updates the information of an existing book in the library catalog.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is updated successfully, false otherwise.</para>
+</simplesect>
+This function displays the catalog, prompts the user to enter the ID of the book to update, and allows the user to input a new name for the book. It updates the book&apos;s name in the &quot;Books.bin&quot; file. <programlisting><codeline><highlight class="normal">if<sp/>(updateBook(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>updated<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="51" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="388" bodyend="418" declfile="src/librarysystem/header/librarysystem.h" declline="51" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="228" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="724" bodyend="755" declfile="src/librarysystem/header/librarysystem.h" declline="228" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ace4cde8d98cd38ced47ffb6e88fd57bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -487,12 +1335,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Deletes a book from the library catalog. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is deleted successfully.</para>
+</simplesect>
+Deletes a book from the library catalog.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is deleted successfully, false otherwise.</para>
+</simplesect>
+This function displays the catalog, prompts the user to enter the ID of the book to delete, and removes the specified book from the &quot;Books.bin&quot; file. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(deleteBook(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>deleted<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="52" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="341" bodyend="386" declfile="src/librarysystem/header/librarysystem.h" declline="52" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="237" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="660" bodyend="705" declfile="src/librarysystem/header/librarysystem.h" declline="237" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a7490eebe775301b73f9bbf392a17135c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -508,12 +1402,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the entire catalog of books in the library. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the catalog is displayed successfully.</para>
+</simplesect>
+Displays the entire catalog of books in the library.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object (unused). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the catalog is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each book in the &quot;Books.bin&quot; file. It prompts the user to press enter to return to the main menu after displaying the catalog. <programlisting><codeline><highlight class="normal">if<sp/>(viewCatalog(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Catalog<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="53" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="420" bodyend="438" declfile="src/librarysystem/header/librarysystem.h" declline="53" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="246" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="774" bodyend="791" declfile="src/librarysystem/header/librarysystem.h" declline="246" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a21614414231293fad16e4be048d4d070" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -525,12 +1465,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the entire catalog of books in the library (for function use). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the catalog is displayed successfully.</para>
+</simplesect>
+Displays the entire catalog of books in the library (for function use).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the catalog is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each book in the &quot;Books.bin&quot; file. It is designed for internal function use and does not require an input stream parameter. <programlisting><codeline><highlight class="normal">if<sp/>(viewCatalogForFunc(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Catalog<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="54" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="440" bodyend="452" declfile="src/librarysystem/header/librarysystem.h" declline="54" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="254" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="809" bodyend="821" declfile="src/librarysystem/header/librarysystem.h" declline="254" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ae95926f6243b21d6a263a4811e4851d6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -546,12 +1516,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Lends a book from the library catalog to a user. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully lent.</para>
+</simplesect>
+Lends a book from the library catalog to a user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully returned, false otherwise.</para>
+</simplesect>
+This function displays the loans, prompts the user to enter the ID of the book to return, and moves the selected book from &quot;Loans.bin&quot; back to &quot;Books.bin&quot;. The book is returned to the catalog. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(lendBook(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>returned<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="56" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="594" bodyend="631" declfile="src/librarysystem/header/librarysystem.h" declline="56" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="263" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1063" bodyend="1101" declfile="src/librarysystem/header/librarysystem.h" declline="263" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a3321e215f888db53bbdef761f48df758" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -567,12 +1583,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Borrows a book from the library catalog by a user. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully borrowed.</para>
+</simplesect>
+Borrows a book from the library catalog by a user.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully borrowed, false otherwise.</para>
+</simplesect>
+This function displays the catalog, prompts the user to enter the ID of the book to borrow, and moves the selected book from &quot;Books.bin&quot; to &quot;Loans.bin&quot;. The book is temporarily removed from the catalog until it is returned. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(borrowBook(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>borrowed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="57" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="559" bodyend="592" declfile="src/librarysystem/header/librarysystem.h" declline="57" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="272" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1011" bodyend="1043" declfile="src/librarysystem/header/librarysystem.h" declline="272" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a9e9da7fdede214d4a689a982e7aa019f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -588,12 +1650,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the list of books that are currently on loan. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the list of loans is displayed successfully.</para>
+</simplesect>
+Displays the list of books that are currently on loan.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object (unused). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the list of borrowed books is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each borrowed book in the &quot;Loans.bin&quot; file. It prompts the user to press any key to return to the main menu after displaying the list of loans. <programlisting><codeline><highlight class="normal">if<sp/>(viewLoans(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>List<sp/>of<sp/>loans<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="58" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="633" bodyend="651" declfile="src/librarysystem/header/librarysystem.h" declline="58" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="281" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1120" bodyend="1138" declfile="src/librarysystem/header/librarysystem.h" declline="281" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ad1580de9038b83a11f94a376802c25c5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -605,12 +1713,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the list of books that are currently on loan (for function use). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the list of loans is displayed successfully.</para>
+</simplesect>
+Displays the list of books that are currently on loan (for function use).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the list of borrowed books is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each borrowed book in the &quot;Loans.bin&quot; file. It is designed for internal function use and does not require an input stream parameter. <programlisting><codeline><highlight class="normal">if<sp/>(viewLoansForFunc(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>List<sp/>of<sp/>loans<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="59" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="653" bodyend="665" declfile="src/librarysystem/header/librarysystem.h" declline="59" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="289" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1156" bodyend="1168" declfile="src/librarysystem/header/librarysystem.h" declline="289" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ad231f70192ef9dc871dabfd19a91b004" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -626,12 +1764,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the user&apos;s wishlist of books. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the wishlist is displayed successfully.</para>
+</simplesect>
+Displays the user&apos;s wishlist of books.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object (unused). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the wishlist is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each book in the &quot;wishlist.bin&quot; file, presenting them as a wishlist. It prompts the user to press enter to exit after displaying the wishlist. <programlisting><codeline><highlight class="normal">if<sp/>(listWishList(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Wishlist<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="61" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="454" bodyend="472" declfile="src/librarysystem/header/librarysystem.h" declline="61" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="298" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="840" bodyend="858" declfile="src/librarysystem/header/librarysystem.h" declline="298" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1abbffaaeb8efb5e50fcb48936ea8c0038" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -643,12 +1827,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the user&apos;s wishlist of books (for function use). </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the wishlist is displayed successfully.</para>
+</simplesect>
+Displays the user&apos;s wishlist of books (for function use).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the wishlist is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each book in the &quot;wishlist.bin&quot; file, presenting them as a wishlist. It is designed for internal function use and does not require an input stream parameter. <programlisting><codeline><highlight class="normal">if<sp/>(listWishListForFunc(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Wishlist<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="62" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="474" bodyend="488" declfile="src/librarysystem/header/librarysystem.h" declline="62" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="306" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="876" bodyend="890" declfile="src/librarysystem/header/librarysystem.h" declline="306" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a3f1f433eb1f95891d8964b582c5ad20c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -664,12 +1878,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Adds a book to the user&apos;s wishlist. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully added to the wishlist.</para>
+</simplesect>
+Adds a book to the user&apos;s wishlist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully added to the wishlist, false otherwise.</para>
+</simplesect>
+This function displays the catalog, prompts the user to enter the ID of the book to add to the wishlist, and adds the selected book to the &quot;wishlist.bin&quot; file. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(addToWishList(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>added<sp/>to<sp/>the<sp/>wishlist<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="63" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="490" bodyend="520" declfile="src/librarysystem/header/librarysystem.h" declline="63" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="315" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="909" bodyend="939" declfile="src/librarysystem/header/librarysystem.h" declline="315" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a2bcdc5888afb3c04978aab087f4b0d49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -685,12 +1945,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Removes a book from the user&apos;s wishlist. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully removed from the wishlist.</para>
+</simplesect>
+Removes a book from the user&apos;s wishlist.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully removed from the wishlist, false otherwise.</para>
+</simplesect>
+This function displays the wishlist, prompts the user to enter the ID of the book to remove from the wishlist, and removes the selected book from the &quot;wishlist.bin&quot; file. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(removeFromWishList(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>removed<sp/>from<sp/>the<sp/>wishlist<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="64" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="522" bodyend="557" declfile="src/librarysystem/header/librarysystem.h" declline="64" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="324" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="958" bodyend="991" declfile="src/librarysystem/header/librarysystem.h" declline="324" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1afc7cf16b78fadf9f4f7a7e17b1fd71ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -702,12 +2008,42 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the list of books that have not been marked as read. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the list of unmarked books is displayed successfully.</para>
+</simplesect>
+Displays the list of books that have not been marked as read.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if there are unmarked books and they are listed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each unmarked book in the &quot;Books.bin&quot; file. It returns true if there are unmarked books and false if either there are no unmarked books or an error occurs. <programlisting><codeline><highlight class="normal">if<sp/>(listUnMarkedBooks(cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Unmarked<sp/>books<sp/>listed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>No<sp/>unmarked<sp/>books<sp/>or<sp/>an<sp/>error<sp/>occurred</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="66" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="742" bodyend="763" declfile="src/librarysystem/header/librarysystem.h" declline="66" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="332" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1294" bodyend="1315" declfile="src/librarysystem/header/librarysystem.h" declline="332" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a58e3aaac795f12c90c7eb2dba8392adc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -723,12 +2059,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the user&apos;s reading progress and marked books. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the progress is displayed successfully.</para>
+</simplesect>
+Displays the user&apos;s reading progress and marked books.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the progress is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID, name, and status (read or unread) of each book in the &quot;Books.bin&quot; file. It prompts the user to press any key to continue after displaying the progress. <programlisting><codeline><highlight class="normal">if<sp/>(logProgress(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Progress<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="67" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="667" bodyend="703" declfile="src/librarysystem/header/librarysystem.h" declline="67" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="341" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1187" bodyend="1221" declfile="src/librarysystem/header/librarysystem.h" declline="341" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1ab85fd7297091d985dab837b02fb52e65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -744,12 +2126,58 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Marks a book as read in the user&apos;s reading history. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully marked as read.</para>
+</simplesect>
+Marks a book as read in the user&apos;s reading history.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the book is successfully marked as read, false otherwise.</para>
+</simplesect>
+This function displays the list of unmarked books, prompts the user to enter the ID of the book to mark as read, and updates the status of the selected book to &quot;read&quot; in the &quot;Books.bin&quot; file. It returns true on success and false on failure. <programlisting><codeline><highlight class="normal">if<sp/>(markAsRead(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Book<sp/>marked<sp/>as<sp/>read<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>Error<sp/>handling<sp/>or<sp/>additional<sp/>logic</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="68" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="705" bodyend="740" declfile="src/librarysystem/header/librarysystem.h" declline="68" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="350" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1241" bodyend="1276" declfile="src/librarysystem/header/librarysystem.h" declline="350" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="librarysystem_8h_1a6bbc6ef7b3ec4012ccf75a74721a09dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -765,90 +2193,162 @@
           <declname>out</declname>
         </param>
         <briefdescription>
+<para>Displays the user&apos;s reading history of marked books. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if the reading history is displayed successfully.</para>
+</simplesect>
+Displays the user&apos;s reading history of marked books.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input stream object. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output stream object. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Returns true if there are marked books and their history is displayed successfully, false otherwise.</para>
+</simplesect>
+This function reads and prints the ID and name of each marked book in the &quot;Books.bin&quot; file. It prompts the user to press any key to continue after displaying the history. <programlisting><codeline><highlight class="normal">if<sp/>(viewHistory(cin,<sp/>cout))<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>History<sp/>of<sp/>marked<sp/>books<sp/>displayed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">}<sp/>else<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>No<sp/>marked<sp/>books<sp/>or<sp/>an<sp/>error<sp/>occurred</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+</programlisting> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="69" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="765" bodyend="789" declfile="src/librarysystem/header/librarysystem.h" declline="69" declcolumn="6"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="359" column="6" bodyfile="src/librarysystem/src/librarysystem.cpp" bodystart="1334" bodyend="1358" declfile="src/librarysystem/header/librarysystem.h" declline="359" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Header file for the Personal Library System. </para>
     </briefdescription>
     <detaileddescription>
+<para>This file defines constants and includes necessary headers for the implementation of the Personal Library System. It also sets a maximum size for character arrays used in the structures. </para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_STRINGSIZE<sp/>100</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="5"><highlight class="normal"></highlight></codeline>
-<codeline lineno="6"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="7"><highlight class="normal"></highlight></codeline>
-<codeline lineno="8" refid="structBook" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="9" refid="structBook_1a11f9b412838b3bf70af317313e020420" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structBook_1a11f9b412838b3bf70af317313e020420" kindref="member">id</ref>;</highlight></codeline>
-<codeline lineno="10" refid="structBook_1ade1aac8a3f7112df7253ad91fee2778f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];</highlight></codeline>
-<codeline lineno="11" refid="structBook_1abfb77437720af14838bda0d082de13d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBook_1abfb77437720af14838bda0d082de13d0" kindref="member">isMarked</ref>;</highlight></codeline>
-<codeline lineno="12"><highlight class="normal">}<sp/><ref refid="structBook" kindref="compound">Book</ref>;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight></codeline>
-<codeline lineno="14" refid="structUser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="15" refid="structUser_1ae11634917cb01aadd3d516f539ac77de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>email[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];</highlight></codeline>
-<codeline lineno="16" refid="structUser_1a0f3b24543c494393db204c349a79ba2a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];</highlight></codeline>
-<codeline lineno="17"><highlight class="normal">}<sp/><ref refid="structUser" kindref="compound">User</ref>;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acc0b8aeaed79ae44252c3d43fbbf07e3" kindref="member">getInput</ref>(istream<sp/>&amp;in);</highlight><highlight class="comment">//<sp/>gets<sp/>input<sp/>from<sp/>user.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acf1f3c3851eba9e703d2b470da6a1501" kindref="member">enterToContunie</ref>(istream&amp;<sp/>in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1abee7de3388d76c9b3ce4dddf3b854607" kindref="member">getNewId</ref>();</highlight></codeline>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>LIBRARYSYSTEM_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MAX_STRINGSIZE<sp/>100<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3761b895725dc51420e51cc07ef81431" kindref="member">handleInputError</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>prevents<sp/>entering<sp/>letters<sp/>instead<sp/>of<sp/>numbers.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ab5206f1ba964127d1f7a2491c4254813" kindref="member">mainMenu</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight><highlight class="comment">//<sp/>Main<sp/>Function.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a6ed82a2b108b314b4d0eefe0f0329ebe" kindref="member">userOperations</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight><highlight class="comment">//<sp/>holds<sp/>some<sp/>operations<sp/>which<sp/>user<sp/>can<sp/>do.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad696b86625f9e1d9e694fec67aa1857f" kindref="member">guestOperation</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a563a42979a8555ac3757d491125917d5" kindref="member">registerUser</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aca21e3deeeed6f2f5d9dbf335834d9b5" kindref="member">loginUser</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1af6804503860b8380610b0c8872a74ec8" kindref="member">bookCatalogingMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9b2e17d0aed5b004ccd8bab3070a707d" kindref="member">loanManagementMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a19a9109a09b42cf017e6ee2ea99d5fab" kindref="member">wishListMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a93cf8c988c604099e5fe00934fe6cb81" kindref="member">readingTrackerMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
+<codeline lineno="28" refid="structBook" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29" refid="structBook_1a11f9b412838b3bf70af317313e020420" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="structBook_1a11f9b412838b3bf70af317313e020420" kindref="member">id</ref>;<sp/></highlight></codeline>
+<codeline lineno="30" refid="structBook_1ade1aac8a3f7112df7253ad91fee2778f" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>name[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];<sp/></highlight></codeline>
+<codeline lineno="31" refid="structBook_1abfb77437720af14838bda0d082de13d0" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="structBook_1abfb77437720af14838bda0d082de13d0" kindref="member">isMarked</ref>;<sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}<sp/><ref refid="structBook" kindref="compound">Book</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="structUser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="38" refid="structUser_1ae11634917cb01aadd3d516f539ac77de" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>email[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];<sp/></highlight></codeline>
+<codeline lineno="39" refid="structUser_1a0f3b24543c494393db204c349a79ba2a" refkind="member"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>password[<ref refid="librarysystem_8h_1a81e98630adbd3ec882814bc99dbf0465" kindref="member">MAX_STRINGSIZE</ref>];<sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">}<sp/><ref refid="structUser" kindref="compound">User</ref>;</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a7c2b1e66f7bef37d709532e26a033c85" kindref="member">printMainMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ae5d187389456e7918630eae659fdfce1" kindref="member">printGuestMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aaa17afd03df57397f4b2d2de77084c98" kindref="member">printUserMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9a39b32432895f6c60d85f6874c30927" kindref="member">printBookCatalogingMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acdd388e4094195b3d7cc608202f27d51" kindref="member">printLoanManagementMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a77dcba8c2ea0a6fe0cb3a0753a89f8d4" kindref="member">printWishListMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a5bf1f1645a2041b24a591d55cbbf698a" kindref="member">printReadingTrackerMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acc0b8aeaed79ae44252c3d43fbbf07e3" kindref="member">getInput</ref>(istream<sp/>&amp;in);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aa92a85119b2dd5eb202ac038b0c7ea0d" kindref="member">addBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aecefdc778d8382b3426dfc141bffe5a4" kindref="member">updateBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ace4cde8d98cd38ced47ffb6e88fd57bd" kindref="member">deleteBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a7490eebe775301b73f9bbf392a17135c" kindref="member">viewCatalog</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a21614414231293fad16e4be048d4d070" kindref="member">viewCatalogForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ae95926f6243b21d6a263a4811e4851d6" kindref="member">lendBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3321e215f888db53bbdef761f48df758" kindref="member">borrowBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9e9da7fdede214d4a689a982e7aa019f" kindref="member">viewLoans</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad1580de9038b83a11f94a376802c25c5" kindref="member">viewLoansForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad231f70192ef9dc871dabfd19a91b004" kindref="member">listWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1abbffaaeb8efb5e50fcb48936ea8c0038" kindref="member">listWishListForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3f1f433eb1f95891d8964b582c5ad20c" kindref="member">addToWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a2bcdc5888afb3c04978aab087f4b0d49" kindref="member">removeFromWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acf1f3c3851eba9e703d2b470da6a1501" kindref="member">enterToContunie</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1abee7de3388d76c9b3ce4dddf3b854607" kindref="member">getNewId</ref>();</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1afc7cf16b78fadf9f4f7a7e17b1fd71ce" kindref="member">listUnMarkedBooks</ref>(ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a58e3aaac795f12c90c7eb2dba8392adc" kindref="member">logProgress</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ab85fd7297091d985dab837b02fb52e65" kindref="member">markAsRead</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a6bbc6ef7b3ec4012ccf75a74721a09dd" kindref="member">viewHistory</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
-<codeline lineno="70"><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3761b895725dc51420e51cc07ef81431" kindref="member">handleInputError</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ab5206f1ba964127d1f7a2491c4254813" kindref="member">mainMenu</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a6ed82a2b108b314b4d0eefe0f0329ebe" kindref="member">userOperations</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad696b86625f9e1d9e694fec67aa1857f" kindref="member">guestOperation</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a563a42979a8555ac3757d491125917d5" kindref="member">registerUser</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aca21e3deeeed6f2f5d9dbf335834d9b5" kindref="member">loginUser</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1af6804503860b8380610b0c8872a74ec8" kindref="member">bookCatalogingMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9b2e17d0aed5b004ccd8bab3070a707d" kindref="member">loanManagementMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a19a9109a09b42cf017e6ee2ea99d5fab" kindref="member">wishListMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a93cf8c988c604099e5fe00934fe6cb81" kindref="member">readingTrackerMenu</ref>(istream<sp/>&amp;input,<sp/>ostream<sp/>&amp;output);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a7c2b1e66f7bef37d709532e26a033c85" kindref="member">printMainMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ae5d187389456e7918630eae659fdfce1" kindref="member">printGuestMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aaa17afd03df57397f4b2d2de77084c98" kindref="member">printUserMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9a39b32432895f6c60d85f6874c30927" kindref="member">printBookCatalogingMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1acdd388e4094195b3d7cc608202f27d51" kindref="member">printLoanManagementMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="202"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a77dcba8c2ea0a6fe0cb3a0753a89f8d4" kindref="member">printWishListMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a5bf1f1645a2041b24a591d55cbbf698a" kindref="member">printReadingTrackerMenu</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aa92a85119b2dd5eb202ac038b0c7ea0d" kindref="member">addBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1aecefdc778d8382b3426dfc141bffe5a4" kindref="member">updateBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ace4cde8d98cd38ced47ffb6e88fd57bd" kindref="member">deleteBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a7490eebe775301b73f9bbf392a17135c" kindref="member">viewCatalog</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="247"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a21614414231293fad16e4be048d4d070" kindref="member">viewCatalogForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ae95926f6243b21d6a263a4811e4851d6" kindref="member">lendBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"></highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3321e215f888db53bbdef761f48df758" kindref="member">borrowBook</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a9e9da7fdede214d4a689a982e7aa019f" kindref="member">viewLoans</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad1580de9038b83a11f94a376802c25c5" kindref="member">viewLoansForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ad231f70192ef9dc871dabfd19a91b004" kindref="member">listWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1abbffaaeb8efb5e50fcb48936ea8c0038" kindref="member">listWishListForFunc</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight></codeline>
+<codeline lineno="315"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a3f1f433eb1f95891d8964b582c5ad20c" kindref="member">addToWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"></highlight></codeline>
+<codeline lineno="324"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a2bcdc5888afb3c04978aab087f4b0d49" kindref="member">removeFromWishList</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1afc7cf16b78fadf9f4f7a7e17b1fd71ce" kindref="member">listUnMarkedBooks</ref>(ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a58e3aaac795f12c90c7eb2dba8392adc" kindref="member">logProgress</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="342"><highlight class="normal"></highlight></codeline>
+<codeline lineno="350"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1ab85fd7297091d985dab837b02fb52e65" kindref="member">markAsRead</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="librarysystem_8h_1a6bbc6ef7b3ec4012ccf75a74721a09dd" kindref="member">viewHistory</ref>(istream<sp/>&amp;in,<sp/>ostream<sp/>&amp;out);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="src/librarysystem/header/librarysystem.h"/>
   </compounddef>

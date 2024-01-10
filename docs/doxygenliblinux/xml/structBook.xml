@@ -12,10 +12,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Unique identifier for the book. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="9" column="7" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="9" bodyend="-1"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="29" column="7" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structBook_1ade1aac8a3f7112df7253ad91fee2778f" prot="public" static="no" mutable="no">
         <type>char</type>
@@ -25,10 +26,11 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Name of the book. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="10" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="10" bodyend="-1"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="30" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="structBook_1abfb77437720af14838bda0d082de13d0" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -38,13 +40,15 @@
         <briefdescription>
         </briefdescription>
         <detaileddescription>
+<para>Flag indicating whether the book is marked (read) or not. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="src/librarysystem/header/librarysystem.h" line="11" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="11" bodyend="-1"/>
+        <location file="src/librarysystem/header/librarysystem.h" line="31" column="8" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="31" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>Structure representing a book in the library. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -54,7 +58,7 @@
         <link refid="structBook"/>
       </node>
     </collaborationgraph>
-    <location file="src/librarysystem/header/librarysystem.h" line="8" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="8" bodyend="12"/>
+    <location file="src/librarysystem/header/librarysystem.h" line="28" column="1" bodyfile="src/librarysystem/header/librarysystem.h" bodystart="28" bodyend="32"/>
     <listofallmembers>
       <member refid="structBook_1a11f9b412838b3bf70af317313e020420" prot="public" virt="non-virtual"><scope>Book</scope><name>id</name></member>
       <member refid="structBook_1abfb77437720af14838bda0d082de13d0" prot="public" virt="non-virtual"><scope>Book</scope><name>isMarked</name></member>

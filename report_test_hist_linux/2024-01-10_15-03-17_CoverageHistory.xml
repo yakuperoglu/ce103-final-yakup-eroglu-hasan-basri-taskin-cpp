@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<coverage version="1.0" date="2024-01-10_15-03-17" tag="">
+  <assembly name="Default">
+    <class name="/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystem/src/librarysystem.cpp" coveredlines="483" coverablelines="538" totallines="1522" coveredbranches="316" totalbranches="645" coveredcodeelements="38" totalcodeelements="38" />
+    <class name="/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/librarysystemapp/src/librarysystemapp.cpp" coveredlines="3" coverablelines="3" totallines="31" coveredbranches="0" totalbranches="0" coveredcodeelements="1" totalcodeelements="1" />
+    <class name="/mnt/c/Users/Yakup/Documents/GitHub/ForFinal/ce103-final-yakup-eroglu-hasan-basri-taskin-cpp/src/tests/librarysystem/librarysystem_test.cpp" coveredlines="376" coverablelines="376" totallines="526" coveredbranches="518" totalbranches="1720" coveredcodeelements="65" totalcodeelements="248" />
+  </assembly>
+</coverage>
