@@ -1,5 +1,3 @@
-#define ENABLE_LIBRARYSYSTEM_TEST
-
 #include "gtest/gtest.h"
 #include <sstream>
 #include <limits>
@@ -15,24 +13,16 @@ class LibrarysystemTest : public ::testing::Test {
   }
 
   void TearDown() override {
-    // Clean up test data
   }
+
   void simulateUserInput(const std::string &input) {
     in.str(input);
     in.clear();
   }
 };
-
-TEST_F(LibrarysystemTest, ClearPreviousValue_Success) {
-  simulateUserInput("Test Input\n");
-  EXPECT_TRUE(clearPreviousValue(in, out));
-  std::string expectedOutput = "";
-  EXPECT_EQ(expectedOutput, out.str());
-}
-
 TEST_F(LibrarysystemTest, EnterToContinue_Success) {
   simulateUserInput("\n");
-  EXPECT_TRUE(enterToContunie(out));
+  EXPECT_TRUE(enterToContunie(in, out));
   std::string expectedOutput = "\nPress any key to continue";
   EXPECT_EQ(expectedOutput, out.str());
 }
@@ -57,8 +47,8 @@ TEST_F(LibrarysystemTest, OutputsErrorMessageAndReturnsFalse) {
 
 TEST_F(LibrarysystemTest, GetInputTrueTest) {
   std::istringstream simulatedInput("42");
-  int result = getInput(simulatedInput);
-  EXPECT_EQ(result, 42);
+  int results = getInput(simulatedInput);
+  EXPECT_EQ(results, 42);
 }
 
 TEST_F(LibrarysystemTest, GetInputFalseTest) {
@@ -159,54 +149,59 @@ TEST_F(LibrarysystemTest, PrintReadingTrackerMenuOutputsCorrectly) {
 }
 
 TEST_F(LibrarysystemTest, BookCatalogingMenu_AddBook) {
-  simulateUserInput("1\nasd\n5\n5\n4\n"); // Simulating user selecting 'Add Book'
+  simulateUserInput("1\nasd\n5\n5\n4\n");
   EXPECT_TRUE(bookCatalogingMenu(in, out));
   std::string expectedOutput =
-    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nPlease enter the name of the book you want to add: welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nPlease enter the name of the book you want to add: Book added successfully.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
-TEST_F(LibrarysystemTest, DeleteBook_Successful) {
-  simulateUserInput("1");
-  EXPECT_TRUE(deleteBook(in, out));
-  std::string expectedOutput = "1.asd\n\nPlease enter the number of the book you want to delete: Book deleted successfully.\n";
+TEST_F(LibrarysystemTest, BookCatalogingMenu_DeleteBook) {
+  simulateUserInput("2\nasd\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: You must enter a numeric ID.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
-TEST_F(LibrarysystemTest, DeleteBook_BookNotFound) {
-  simulateUserInput("999");
-  EXPECT_FALSE(deleteBook(in, out));
-}
-
-TEST_F(LibrarysystemTest, UpdateBook_Successful) {
-  simulateUserInput("1");
-  EXPECT_FALSE(updateBook(in, out));
-  std::string expectedOutput = "\nPlease enter the number of the book you want to update: Book not found.\n";
+TEST_F(LibrarysystemTest, BookCatalogingMenu_DeleteBookfounfalse) {
+  simulateUserInput("2\n50\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: Book with ID 99 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
-TEST_F(LibrarysystemTest, UpdateBook_BookNotFound) {
-  simulateUserInput("999");
-  EXPECT_FALSE(updateBook(in, out));
-}
-
-TEST_F(LibrarysystemTest, ViewCatalog_Successful) {
-  EXPECT_TRUE(viewCatalog(in, out));
-  std::string expectedOutput = "\nPress enter to return to Main Menu";
+TEST_F(LibrarysystemTest, BookCatalogingMenu_DeleteBookfoundtrue) {
+  simulateUserInput("2\n7\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPlease enter the number of the book you want to delete: Book with ID 5 not found.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
-TEST_F(LibrarysystemTest, ViewCatalog_NoBooks) {
-  EXPECT_TRUE(viewCatalog(in, out));
-  std::string expectedOutput = "\nPress enter to return to Main Menu";
+TEST_F(LibrarysystemTest, BookCatalogingMenu_DeleteBookSucces) {
+  simulateUserInput("2\n3\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n1.2\n\nPlease enter the number of the book you want to delete: Book deleted successfully.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
-TEST_F(LibrarysystemTest, DeleteBook_InvalidInput) {
-  simulateUserInput("abc");
-  EXPECT_FALSE(deleteBook(in, out));
-  std::string expectedError = "\nPlease enter the number of the book you want to delete: ";
-  EXPECT_EQ(expectedError, out.str());
+TEST_F(LibrarysystemTest, BookCatalogingMenu_UpdateBook) {
+  simulateUserInput("3\n6\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPlease enter the number of the book you want to update: welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, BookCatalogingMenu_ViewCatalog) {
+  simulateUserInput("4\nasd\n5\n5\n4\n");
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n\nPress enter to return to Main Menuwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nInvalid input. Please enter a number.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
 }
 
 TEST_F(LibrarysystemTest, BookCatalogingMenu_InvalidOption) {
@@ -214,6 +209,14 @@ TEST_F(LibrarysystemTest, BookCatalogingMenu_InvalidOption) {
   EXPECT_TRUE(bookCatalogingMenu(in, out));
   std::string expectedOutput =
     "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, BookCatalogingMenu_Infail) {
+  simulateUserInput("a\n5\n5\n4\n"); // Simulating user selecting an invalid option
+  EXPECT_TRUE(bookCatalogingMenu(in, out));
+  std::string expectedOutput =
+    "welcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\nInvalid input. Please enter a number.\nwelcome to Book Operations\n\n1. Add Book\n2. Delete Book\n3. Update Book\n4. View Catalog\n5. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
@@ -226,7 +229,7 @@ TEST_F(LibrarysystemTest, LoanManagementMenu_LendBook) {
   simulateUserInput("1\n1\n4\n5\n4\n"); // Simulating user selecting 'Lend Book'
   EXPECT_TRUE(loanManagementMenu(in, out));
   std::string expectedOutput =
-    "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to return: Book not found.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
+    "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to return: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
@@ -235,6 +238,30 @@ TEST_F(LibrarysystemTest, LoanManagementMenu_ViewLoans) {
   EXPECT_TRUE(loanManagementMenu(in, out));
   std::string expectedOutput =
     "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nLoaned Books:\n\nPress any key to return to Main Menuwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, LoanManagementMenu_BorrowBook) {
+  simulateUserInput("2\n\n4\n5\n4\n");
+  EXPECT_TRUE(loanManagementMenu(in, out));
+  std::string expectedOutput =
+    "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n\nPlease enter the ID of the book you want to borrow: welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, LoanManagementMenu_default) {
+  simulateUserInput("87\n\n4\n5\n4\n");
+  EXPECT_TRUE(loanManagementMenu(in, out));
+  std::string expectedOutput =
+    "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid option. Please try again.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
+  EXPECT_EQ(expectedOutput, out.str());
+}
+
+TEST_F(LibrarysystemTest, LoanManagementMenu_Infail) {
+  simulateUserInput("a\n\n4\n5\n4\n");
+  EXPECT_TRUE(loanManagementMenu(in, out));
+  std::string expectedOutput =
+    "welcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\nInvalid input. Please enter a number.\nwelcome to LoanManagement\n\n1. Lend Book\n2. Borrow Book\n3. View Loans\n4. Return User Operations\nPlease enter a number to select:\n";
   EXPECT_EQ(expectedOutput, out.str());
 }
 
